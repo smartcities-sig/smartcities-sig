@@ -26,6 +26,7 @@ smartcities-sig/
 ├── governance/
 │   ├── charter.md
 │   ├── participation-agreement.md
+│   ├── code-of-conduct.md
 │   ├── decision-making.md
 │   ├── contribution-model.md
 │   ├── meeting-policy.md
@@ -59,6 +60,7 @@ smartcities-sig/
 │   │   ├── scope-and-objectives.md
 │   │   ├── collaboration-model.md
 │   │   ├── ecosystem-positioning.md
+│   │   ├── folder-structure.md
 │   │   └── historical-context.md
 │   │
 │   ├── ecosystem/
