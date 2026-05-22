@@ -61,6 +61,14 @@ The Smart Cities SIG is intended to complement existing standards organizations,
 
 Participants remain independently responsible for their own standards activities, organizational decisions, and related intellectual property considerations.
 
+## Repository License
+
+Unless otherwise stated, repository content and publicly released initiative outputs are intended to be made available under the repository license:
+
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Participants acknowledge that contributions submitted to the initiative may be publicly shared and reused consistent with the repository license and the open collaboration objectives of the Smart Cities SIG.
+
 ## Acceptance
 
 By participating in the Smart Cities SIG, the participant acknowledges and agrees to the principles and collaboration expectations described in this Participation Agreement.
