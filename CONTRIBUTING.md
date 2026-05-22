@@ -63,6 +63,47 @@ Contributions should prioritize:
 - reusability,
 - and practical implementation value.
 
+## Choosing the Right Contribution Path
+
+Contributors should choose the contribution path that best matches the type and maturity of the proposed input.
+
+Use a GitHub Issue when:
+- proposing a new idea, question, concern, or scope item,
+- requesting clarification,
+- raising a gap, dependency, or risk,
+- or starting a discussion before content is ready.
+
+Use a Pull Request when:
+- proposing specific changes to repository content,
+- updating existing documentation,
+- adding agreed material,
+- correcting errors,
+- or contributing content that is ready for review.
+
+Use a supporting document when:
+- providing background analysis,
+- sharing workshop or meeting material,
+- contributing presentations or reference information,
+- or supplying supporting context for ongoing discussions.
+
+Supporting documents should follow the repository naming conventions defined in this document in:
+
+[file naming conventions](#file-naming-conventions)
+
+Before introducing significant new proposals, contributors are encouraged to review the current initiative roadmap and execution phase defined in:
+
+[program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
+
+This helps ensure proposals and contributions are aligned with the current phase and delivery objectives of the initiative.
+
+As the initiative progresses toward validation and delivery phases, contributions are expected to prioritize:
+- stabilization,
+- interoperability validation,
+- test activities,
+- and completion of agreed Proof of Concept outputs.
+
+Significant new scope areas or major directional changes introduced late in the execution cycle may be deferred to future phases or subsequent initiative cycles.
+
 ## Scope Management
 
 To maintain execution focus and support timely delivery of the initiative objectives:
