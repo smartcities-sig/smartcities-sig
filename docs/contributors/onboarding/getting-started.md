@@ -1,24 +1,79 @@
 # Getting Started
 
-Welcome to the Smart Cities SIG.
+## Purpose of This Document
 
-This document provides a lightweight introduction to the initiative, participation model, collaboration practices, and repository structure.
+This document provides a lightweight onboarding and orientation guide for participants joining the Smart Cities SIG.
 
-## Purpose of the Smart Cities SIG
+The objective is to help new participants quickly understand:
+- what the initiative is,
+- why it exists,
+- where to find key information,
+- how collaboration works,
+- and how to begin contributing effectively within the Smart Cities SIG ecosystem.
 
-The Smart Cities SIG is a collaborative and implementation-neutral ecosystem initiative intended to help municipalities, standards organizations, industry participants, academia, and ecosystem contributors collaboratively analyze and refine smart city interoperability needs and reusable approaches.
+This document is intended to help municipalities, standards organizations, industry participants, academia, and ecosystem contributors participate constructively without requiring deep prior knowledge of the initiative structure or standards processes.
 
-The initiative focuses on:
-- practical collaboration,
+---
+
+# What is the Smart Cities SIG?
+
+The Smart Cities SIG is a collaborative and implementation-neutral ecosystem initiative focused on:
 - interoperability alignment,
-- reusable profiles and semantic mappings,
-- and Proof of Concept activities driven by real operational needs and use cases.
+- reusable interoperability approaches,
+- semantic and standards mappings,
+- and practical Proof of Concept activities driven by real operational needs and use cases.
 
-Additional information is available in:
+The initiative aims to help municipalities and ecosystem participants collaboratively analyze interoperability challenges and reusable approaches across smart city domains.
+
+Additional background information is available in:
+- [README.md](/README.md)
 - [docs/strategy/vision.md](/docs/strategy/vision.md)
 - [docs/strategy/ecosystem-positioning.md](/docs/strategy/ecosystem-positioning.md)
 
-## Participation Model
+---
+
+# Why Does the Initiative Exist?
+
+The Smart Cities SIG was created to help provide a practical and collaborative environment where:
+- municipalities can bring real operational needs, business requirements, use cases, and interoperability pain points,
+- ecosystem participants can collaboratively analyze interoperability challenges,
+- and participating organizations can help refine reusable interoperability approaches and ecosystem alignment activities.
+
+The initiative is intended to complement existing standards organizations, ecosystem alliances, interoperability programs, and related industry initiatives rather than compete with them.
+
+The official scope and objectives of the initiative are described in:
+- [governance/charter.md](/governance/charter.md)
+
+---
+
+# Recommended First Steps
+
+New participants are encouraged to review the following documents in order:
+
+1. [README.md](/README.md)  
+   High-level overview of the initiative.
+
+2. [docs/strategy/vision.md](/docs/strategy/vision.md)  
+   Long-term interoperability vision and ecosystem objectives.
+
+3. [docs/strategy/ecosystem-positioning.md](/docs/strategy/ecosystem-positioning.md)  
+   Explains how the Smart Cities SIG positions itself within the broader ecosystem.
+
+4. [governance/charter.md](/governance/charter.md)  
+   Official initiative scope and objectives.
+
+5. [governance/the-way-we-work.md](/governance/the-way-we-work.md)  
+   Operational collaboration model and working practices.
+
+6. [CONTRIBUTING.md](/CONTRIBUTING.md)  
+   Contribution expectations and collaboration guidance.
+
+7. [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)  
+   Current roadmap, milestones, and execution phases.
+
+---
+
+# Participation Expectations
 
 Participation in the Smart Cities SIG is:
 - open,
@@ -26,26 +81,21 @@ Participation in the Smart Cities SIG is:
 - implementation-neutral,
 - and voluntary.
 
-Organizations participating in the initiative are expected to review and sign the participation agreement before actively contributing to the initiative activities.
+Participants are expected to:
+- collaborate constructively,
+- support practical interoperability discussions,
+- respect roadmap priorities and execution phases,
+- and contribute openly within the collaboration framework of the initiative.
 
-Please review:
+Organizations actively participating in the initiative are expected to review and sign:
 - [governance/participation-agreement.md](/governance/participation-agreement.md)
+
+Participants are also encouraged to review:
 - [governance/code-of-conduct.md](/governance/code-of-conduct.md)
 
-## Repository Structure
+---
 
-The repository is organized to support:
-- governance documentation,
-- program coordination,
-- profile development,
-- meeting records,
-- ecosystem collaboration artifacts,
-- and supporting interoperability activities.
-
-The target repository structure is described in:
-- [docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
-
-## Meetings and Collaboration
+# How Collaboration Works
 
 The initiative primarily collaborates through:
 - meetings,
@@ -60,18 +110,25 @@ Meeting records and collaboration activities are maintained under:
 The operational collaboration model is described in:
 - [governance/the-way-we-work.md](/governance/the-way-we-work.md)
 
-## Contributions
+Participants are encouraged to first observe ongoing discussions, roadmap priorities, and active Proof of Concept activities before introducing significant new proposals or scope extensions.
 
-Contributors are encouraged to:
-- discuss interoperability challenges and reusable approaches,
-- contribute supporting material and use cases,
+---
+
+# How to Contribute
+
+Participants are encouraged to:
+- contribute interoperability challenges and use cases,
+- share operational pain points and lessons learned,
 - participate in Proof of Concept activities,
+- contribute supporting material and reusable approaches,
 - and collaborate openly with other ecosystem participants.
 
 Contribution guidance is available in:
 - [CONTRIBUTING.md](/CONTRIBUTING.md)
 
-## Roadmap and Execution Phases
+---
+
+# Roadmap and Execution Phases
 
 The initiative follows a phased execution model intended to support practical delivery and interoperability validation activities aligned with the Smart City Expo Barcelona timeline.
 
@@ -80,12 +137,29 @@ Contributors are encouraged to review the current roadmap and execution phase be
 The roadmap is maintained in:
 - [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
 
-## Questions and Coordination
+---
+
+# Repository Structure
+
+The repository is organized to support:
+- governance documentation,
+- program coordination,
+- profile development,
+- meeting records,
+- ecosystem collaboration artifacts,
+- and supporting interoperability activities.
+
+The target repository structure is described in:
+- [docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
+
+---
+
+# Questions and Coordination
 
 Questions related to participation, onboarding, or collaboration activities may be raised through:
 - GitHub Issues,
 - initiative meetings,
-- or the designated SIG coordination contacts.
+- or designated SIG coordination contacts.
 
 Additional tooling and access information is available in:
 - [onboarding/tooling-access.md](/onboarding/tooling-access.md)
