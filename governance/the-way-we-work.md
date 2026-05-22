@@ -58,21 +58,6 @@ Discussions and collaboration activities should remain:
 - practical,
 - and aligned with the agreed objectives of the initiative.
 
-## Proposal and Discussion Flow
-
-Contributors are encouraged to:
-- discuss significant proposals early,
-- use GitHub Issues and meetings for alignment discussions,
-- and introduce new ideas incrementally.
-
-Significant new work items, profile areas, or scope extensions should first be discussed through meetings or GitHub Issues before implementation or detailed development activities begin.
-
-The initiative encourages:
-- collaborative alignment,
-- practical discussion,
-- and incremental progress
-rather than heavyweight approval processes.
-
 ## Lightweight Decision-Making
 
 The Smart Cities SIG primarily operates through:
@@ -84,39 +69,33 @@ The initiative does not rely on formal voting procedures for normal operational 
 
 Where needed, initiative coordinators may facilitate discussions to support alignment and maintain initiative progress.
 
-## Pull Requests and Contributions
+The initiative encourages:
+- practical discussion,
+- incremental progress,
+- and ecosystem alignment
+rather than heavyweight approval processes.
 
-Contributors are encouraged to:
-- keep Pull Requests focused and reviewable,
-- avoid unrelated bundled changes,
-- maintain traceability through GitHub discussions and meeting records,
-- and align contributions with agreed Proof of Concept objectives.
+## Coordination and Execution Focus
 
-Contributors should use existing repository structures, templates, and collaboration practices where applicable.
+The initiative prioritizes:
+- timely delivery of agreed Proof of Concept outputs,
+- interoperability validation,
+- practical collaboration,
+- and execution discipline.
 
-Additional contribution guidance is available in:
+Participants are encouraged to remain aware of the current initiative roadmap and execution phase when introducing new ideas or proposals.
 
-[CONTRIBUTING.md](/CONTRIBUTING.md)
-
-## Scope and Timeline Discipline
-
-Contributors are encouraged to review the current initiative roadmap and execution phase before introducing significant new proposals, scope extensions, or major structural changes.
-
-The current roadmap and execution planning are maintained under:
+The initiative roadmap and execution planning are maintained under:
 
 [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
 
-As the initiative progresses toward validation and delivery phases, discussions are expected to prioritize:
+As the initiative progresses toward validation and delivery phases, activities are expected to increasingly prioritize:
 - stabilization,
 - interoperability validation,
 - test activities,
-- and completion of agreed Proof of Concept outputs.
+- and completion of agreed outputs.
 
-Late-stage introduction of major new scope areas or significant directional changes may be deferred to future phases or subsequent initiative cycles in order to protect agreed timelines and delivery objectives.
-
-The initiative prioritizes timely delivery of agreed Proof of Concept outputs over expansion of scope or perfection of non-critical topics.
-
-## Deliverables and Traceability
+## Traceability and Transparency
 
 The initiative emphasizes:
 - transparent collaboration,
@@ -129,39 +108,11 @@ Meeting minutes, GitHub Issues, Pull Requests, and related repository activities
 - decisions,
 - and collaboration activities.
 
-Participants are encouraged to maintain discussions and contributions within public collaboration channels whenever feasible.
+Participants are encouraged to maintain discussions and collaboration activities within public repositories and collaboration channels whenever feasible.
 
-## Repository and Documentation Practices
+Additional contribution guidance and repository practices are defined in:
 
-The repository is intended to centralize:
-- governance documentation,
-- program coordination,
-- profile development,
-- meeting records,
-- ecosystem collaboration artifacts,
-- and supporting documentation.
-
-Contributors are encouraged to follow the repository structure and content organization guidelines defined in:
-
-[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
-
-Supporting documents, presentations, reports, proposals, and meeting-related artifacts should use a date-prefixed filename format using:
-
-```text
-YYYYMMDD
-```
-
-Examples:
-
-```text
-20260521-smart-lighting-mapping-review.md
-20260603-water-use-case-workshop.pptx
-```
-
-This convention supports:
-- chronological traceability,
-- repository consistency,
-- and long-term searchability.
+[CONTRIBUTING.md](/CONTRIBUTING.md)
 
 ## Escalation and Coordination
 
