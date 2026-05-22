@@ -74,6 +74,7 @@ smartcities-sig/
 │           └── tooling-access.md
 │
 ├── profiles/
+│   ├── profile-development-methodology.md
 │   ├── lighting/
 │   │   ├── profile.yml
 │   │   ├── README.md
