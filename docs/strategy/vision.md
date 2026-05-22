@@ -28,5 +28,3 @@ while establishing reusable collaboration and interoperability approaches that m
 
 The Smart Cities SIG recognizes that successful smart city interoperability requires coordination across municipalities, standards organizations, industry participants, and ecosystem initiatives, and aims to provide a practical and reusable foundation for that collaboration.
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9a516037-d28e-4e42-8ef8-53f2748b371d" />
-
