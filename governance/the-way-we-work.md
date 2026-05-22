@@ -11,10 +11,10 @@ The objective is to support:
 - and execution-focused ecosystem coordination.
 
 This document complements:
-- [charter.md](/governance/charter)
-- [CONTRIBUTING.md](/CONTRIBUTING)
-- [governance/code-of-conduct.md](/governance/code-of-conduct)
-- [governance/participation-agreement.md](/governance/participation-agreement)
+- [charter.md](/governance/charter.md)
+- [CONTRIBUTING.md](/CONTRIBUTING.md)
+- [governance/code-of-conduct.md](/governance/code-of-conduct.md)
+- [governance/participation-agreement.md](/governance/participation-agreement.md)
 
 ## Working Model
 
