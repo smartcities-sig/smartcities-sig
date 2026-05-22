@@ -96,7 +96,7 @@ Contributors should use existing repository structures, templates, and collabora
 
 Additional contribution guidance is available in:
 
-[CONTRIBUTING.md](/CONTRIBUTING)
+[CONTRIBUTING.md](/CONTRIBUTING.md)
 
 ## Scope and Timeline Discipline
 
@@ -104,7 +104,7 @@ Contributors are encouraged to review the current initiative roadmap and executi
 
 The current roadmap and execution planning are maintained under:
 
-[program/roadmap/release-planning.md](/program/roadmap/release-planning)
+[program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
 
 As the initiative progresses toward validation and delivery phases, discussions are expected to prioritize:
 - stabilization,
@@ -143,7 +143,7 @@ The repository is intended to centralize:
 
 Contributors are encouraged to follow the repository structure and content organization guidelines defined in:
 
-[docs/strategy/folder-structure.md](/docs/strategy/folder-structure)
+[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
 
 Supporting documents, presentations, reports, proposals, and meeting-related artifacts should use a date-prefixed filename format using:
 
@@ -173,7 +173,7 @@ The initiative coordinators may moderate discussions or participation activities
 
 Additional collaboration behavior expectations are defined in:
 
-[governance/code-of-conduct.md](/governance/code-of-conduct)
+[governance/code-of-conduct.md](/governance/code-of-conduct.md)
 
 ## Evolution of the Working Model
 
