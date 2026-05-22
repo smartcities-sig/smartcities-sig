@@ -26,7 +26,6 @@ smartcities-sig/
 ├── governance/
 │   ├── charter.md
 │   ├── participation-agreement.md
-│   ├── code-of-conduct.md
 │   ├── decision-making.md
 │   ├── contribution-model.md
 │   ├── meeting-policy.md
@@ -34,9 +33,7 @@ smartcities-sig/
 │
 ├── program/
 │   ├── roadmap/
-│   │   ├── release-planning.md
-│   │   ├── milestones.md
-│   │   └── timeline.md
+│   │   └──  release-planning.md
 │   │
 │   ├── meetings/
 │   │   ├── minutes/
