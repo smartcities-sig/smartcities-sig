@@ -26,9 +26,7 @@ smartcities-sig/
 ├── governance/
 │   ├── charter.md
 │   ├── participation-agreement.md
-│   ├── decision-making.md
-│   ├── contribution-model.md
-│   ├── meeting-policy.md
+│   ├── the-way-we-work.md
 │   └── code-of-conduct.md
 │
 ├── program/
