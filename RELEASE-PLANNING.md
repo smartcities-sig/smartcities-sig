@@ -55,6 +55,7 @@ gantt
 ### Phase Summary and Key Milestones
 
 <table>
+  <caption><strong>Phase Summary and Key Milestones</strong></caption>
   <thead>
     <tr>
       <th>Phase</th>
