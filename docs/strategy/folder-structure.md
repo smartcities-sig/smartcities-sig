@@ -52,8 +52,6 @@ smartcities-sig/
 ├── docs/
 │   ├── strategy/
 │   │   ├── vision.md
-│   │   ├── scope-and-objectives.md
-│   │   ├── collaboration-model.md
 │   │   ├── ecosystem-positioning.md
 │   │   ├── folder-structure.md
 │   │   └── historical-context.md
@@ -72,8 +70,7 @@ smartcities-sig/
 │       │   └── oma.md
 │       │
 │       └── onboarding/
-│           ├── contributor-guide.md
-│           ├── participation-process.md
+│           ├── getting-started.md
 │           └── tooling-access.md
 │
 ├── profiles/
