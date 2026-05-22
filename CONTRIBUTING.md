@@ -23,7 +23,7 @@ The project intentionally aims to remain agile and execution-focused in order to
 
 Contributors and participants are expected to follow the collaboration and participation guidelines defined in:
 
-[governance/code-of-conduct.md](/governance/code-of-conduct)
+[governance/code-of-conduct.md](/governance/code-of-conduct.md)
 
 ## Public Repository
 
@@ -40,7 +40,7 @@ Do not submit confidential, proprietary, or restricted information.
 
 Organizations and ecosystem participants actively contributing to the initiative may be requested to review and sign the participation agreement defined under:
 
-[governance/participation-agreement.md](/governance/participation-agreement)
+[governance/participation-agreement.md](/governance/participation-agreement.md)
 
 The participation agreement is intended to support:
 - open collaboration,
@@ -89,7 +89,7 @@ Technical examples and implementation experiences may be discussed for interoper
 
 Contributors are encouraged to follow the repository structure and content organization guidelines defined in:
 
-[docs/strategy/folder-structure.md](/docs/strategy/folder-structure)
+[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
 
 Folders and documents should only be created when necessary and should align with the existing organization model.
 
@@ -117,7 +117,7 @@ This convention helps maintain:
 
 Meetings are documented under:
 
-[program/meetings/minutes/](/program/meetings/minutes)
+[program/meetings/minutes/](/program/meetings/minutes.md)
 
 Meeting minutes serve as the primary operational record and may include:
 - agenda items,
