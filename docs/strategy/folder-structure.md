@@ -73,48 +73,89 @@ smartcities-sig/
 │           ├── getting-started.md
 │           └── tooling-access.md
 │
+├── methodology/
+│   ├── README.md
+│   │
+│   ├── operational-analysis/
+│   │   ├── municipality-operational-reverse-engineering-methodology.md
+│   │   ├── operational-requirement-decomposition.md
+│   │   ├── semantic-analysis-guidelines.md
+│   │   ├── interoperability-abstraction-methodology.md
+│   │   └── contextual-metadata-analysis.md
+│   │
+│   ├── profile-development/
+│   │   ├── profile-development-methodology.md
+│   │   ├── profile-lifecycle.md
+│   │   ├── profile-authoring-guidelines.md
+│   │   ├── profile-review-process.md
+│   │   └── profile-versioning-strategy.md
+│   │
+│   ├── interoperability-validation/
+│   │   ├── validation-methodology.md
+│   │   ├── interoperability-test-design.md
+│   │   ├── semantic-validation-guidelines.md
+│   │   └── operational-scenario-validation.md
+│   │
+│   ├── semantic-governance/
+│   │   ├── semantic-governance-principles.md
+│   │   ├── terminology-management.md
+│   │   ├── provenance-and-context.md
+│   │   └── interoperability-semantics-principles.md
+│   │
+│   └── templates/
+│       ├── municipality-analysis-template.md
+│       ├── semantic-analysis-template.md
+│       ├── profile-template.md
+│       └── validation-template.md
+│
+├── shared-models/
+│   ├── README.md
+│   │
+│   ├── measurement/
+│   ├── context/
+│   ├── provenance/
+│   ├── temporal/
+│   ├── operational-zones/
+│   ├── service-outcomes/
+│   └── governance/
+│
 ├── profiles/
-│   ├── profile-development-methodology.md
 │   ├── lighting/
-│   │   ├── profile.yml
 │   │   ├── README.md
 │   │   ├── use-cases/
-│   │   ├── requirements/
-│   │   ├── mappings/
-│   │   ├── device-profiles/
+│   │   ├── analysis/
+│   │   ├── semantic-model/
+│   │   ├── interoperability/
 │   │   ├── validation/
-│   │   ├── test-cases/
-│   │   ├── presentations/
 │   │   ├── references/
-│   │   ├── drafts/
-│   │   └── approved/
+│   │   └── releases/
 │   │
-│   └── water/
-│       ├── profile.yml
-│       ├── README.md
-│       ├── use-cases/
-│       ├── requirements/
-│       ├── mappings/
-│       ├── device-profiles/
-│       ├── validation/
-│       ├── test-cases/
-│       ├── presentations/
-│       ├── references/
-│       ├── drafts/
-│       └── approved/
+│   ├── water/
+│   │   ├── README.md
+│   │   ├── use-cases/
+│   │   ├── analysis/
+│   │   ├── semantic-model/
+│   │   ├── interoperability/
+│   │   ├── validation/
+│   │   ├── references/
+│   │   └── releases/
+│   │
+│   └── cross-domain/
+│       ├── shared-observations/
+│       ├── reusable-patterns/
+│       ├── common-semantics/
+│       └── interoperability-gaps/
 │
 ├── templates/
-│   ├── profile-template.md
-│   ├── use-case-template.md
 │   ├── meeting-minutes-template.md
-│   ├── validation-report-template.md
-│   └── mapping-template.md
+│   ├── presentation-template.md
+│   └── contribution-template.md
 │
 ├── working/
 │   ├── exploratory-analysis/
 │   ├── brainstorming/
-│   ├── early-mappings/
-│   └── temporary-discussions/
+│   ├── temporary-discussions/
+│   └── early-concepts/
 │
 └── archive/
     ├── deprecated-content/
