@@ -73,44 +73,32 @@ smartcities-sig/
 │           ├── getting-started.md
 │           └── tooling-access.md
 │
-├── methodology/
-│   ├── README.md
-│   │
-│   ├── operational-analysis/
-│   │   ├── municipality-operational-reverse-engineering-methodology.md
-│   │   ├── operational-requirement-decomposition.md
-│   │   ├── semantic-analysis-guidelines.md
-│   │   ├── interoperability-abstraction-methodology.md
-│   │   └── contextual-metadata-analysis.md
-│   │
-│   ├── profile-development/
-│   │   ├── profile-development-methodology.md
-│   │   ├── profile-lifecycle.md
-│   │   ├── profile-authoring-guidelines.md
-│   │   ├── profile-review-process.md
-│   │   └── profile-versioning-strategy.md
-│   │
-│   ├── interoperability-validation/
-│   │   ├── validation-methodology.md
-│   │   ├── interoperability-test-design.md
-│   │   ├── semantic-validation-guidelines.md
-│   │   └── operational-scenario-validation.md
-│   │
-│   ├── semantic-governance/
-│   │   ├── semantic-governance-principles.md
-│   │   ├── terminology-management.md
-│   │   ├── provenance-and-context.md
-│   │   └── interoperability-semantics-principles.md
-│   │
-│   └── templates/
-│       ├── municipality-analysis-template.md
-│       ├── semantic-analysis-template.md
-│       ├── profile-template.md
-│       └── validation-template.md
+|── methodology/
+|   │
+|   ├── README.md
+|   │
+|   ├── core-methodology/
+|   |   ├── methodology-overview.md
+|   |   ├── stage-1-operational-meaning.md
+|   │   ├── stage-2-reusable-abstractions.md
+|   │   ├── stage-3-standards-mapping.md
+|   │   └── public-lighting-walkthrough.md
+|   │
+|   ├── supporting-concepts/
+|   │   ├── semantic-distinctions.md
+|   │   ├── context-and-provenance.md
+|   │   ├── inferred-vs-measured-values.md
+|   │   └── interoperability-validation-thinking.md
+|   │
+|   ├── digital-twin-integration/
+|   │   ├── digital-twin-consumption-model.md
+|   │   └── smart-data-objects-as-context-carriers.md
+|   └── examples/
+|       ├── lighting/
+|       └── water/
 │
 ├── shared-models/
 │   ├── README.md
-│   │
 │   ├── measurement/
 │   ├── context/
 │   ├── provenance/
@@ -126,6 +114,10 @@ smartcities-sig/
 │   │   ├── analysis/
 │   │   ├── semantic-model/
 │   │   ├── interoperability/
+|   │   ├── digital-twin/
+|   |   |   ├── digital-twin-view.md
+|   |   |   ├── smart-data-object-requirements.md
+|   |   |   └── consumption-scenarios.md
 │   │   ├── validation/
 │   │   ├── references/
 │   │   └── releases/
@@ -136,6 +128,10 @@ smartcities-sig/
 │   │   ├── analysis/
 │   │   ├── semantic-model/
 │   │   ├── interoperability/
+|   │   ├── digital-twin/
+|   |   |   ├── digital-twin-view.md
+|   |   |   ├── smart-data-object-requirements.md
+|   |   |   └── consumption-scenarios.md
 │   │   ├── validation/
 │   │   ├── references/
 │   │   └── releases/
