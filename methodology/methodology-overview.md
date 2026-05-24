@@ -71,3 +71,5 @@ The model illustrates how municipality operational realities are progressively t
 The SIG acts as a collaborative coordination space where municipalities, standards organizations, Smart Data Object ecosystems, Digital Twin platforms, universities, vendors, and interoperability contributors jointly analyze and align interoperability requirements while preserving operational meaning and contextual integrity.
 
 <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9f5f7d3c-eb7f-456b-a29e-0c1aa7a9a0f3" />
+
+*Figure — Smart Cities SIG Operational Semantic Translation Model*
