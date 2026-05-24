@@ -9,51 +9,55 @@ The objective of this walkthrough is not to:
 - prescribe a specific standards implementation,
 - or define a completed semantic model.
 
-Instead, the objective is to demonstrate how municipality operational realities can be progressively transformed into:
+Instead, the objective is to demonstrate how municipality operational realities can progressively evolve into:
 - operational understanding,
 - reusable interoperability abstractions,
 - ecosystem coordination considerations,
-- and semantically reliable Digital Twin integration thinking.
+- semantically enriched interoperability structures,
+- and trustworthy Digital Twin integration thinking.
 
-This walkthrough became one of the foundational examples used to shape the Smart Cities SIG methodology itself.
+This walkthrough became one of the foundational practical examples used to shape the Smart Cities SIG methodology itself.
 
 The walkthrough follows the three-stage methodology described in:
-
-- [`methodology-overview.md`](methodology-overview.md)
-- [`stage-1-operational-meaning.md`](stage-1-operational-meaning.md)
-- [`stage-2-reusable-abstractions.md`](stage-2-reusable-abstractions.md)
-- [`stage-3-standards-mapping.md`](step-3-standards-mapping.md)
+- [`methodology-overview.md`](./methodology-overview.md)
+- [`stage-1-operational-meaning.md`](./stage-1-operational-meaning.md)
+- [`stage-2-reusable-abstractions.md`](./stage-2-reusable-abstractions.md)
+- [`stage-3-standards-mapping.md`](./stage-3-standards-mapping.md)
 
 ---
 
 # Municipality Operational Reality
 
+The lighting document is not simply asking for:
+- lamp telemetry,
+- isolated IoT measurements,
+- or device-level monitoring.
+
+Instead, the municipality is implicitly asking:
+
+> What must be known about a public lighting service so that municipalities, platforms, Digital Twins, and external ecosystems can interpret the information consistently and operationally reliably?
+
 The municipality operational objective identified in the source material was:
 
 > Ensure public street lighting service in the most efficient possible way.
 
-This objective immediately revealed two operational perspectives:
-- service effectiveness,
-- and operational efficiency.
+This objective immediately revealed two parallel operational viewpoints:
 
-The municipality material also revealed that the operational challenge is not limited to:
-- switching lights on and off,
-- or collecting telemetry.
+| Viewpoint | What It Measures | Why It Matters |
+|---|---|---|
+| Service-effectiveness view | Lux on street surface | Is the street adequately illuminated? |
+| Cost/energy view | Lumens emitted, watts consumed, line power | What does it cost to provide the service? |
 
-Instead, the municipality operational reality included concerns related to:
-- lighting quality,
-- energy optimization,
-- operational reliability,
-- environmental influence,
-- teleoperation,
-- aggregation,
-- contextual interpretation,
-- and semantic consistency.
+One of the earliest semantic observations emerged immediately:
 
-The material also repeatedly emphasized:
-- the importance of shared semantics,
-- contextual integrity,
-- and Digital Twin representation reliability.
+- lux,
+- lumens,
+- and watts
+are not equivalent measurements.
+
+They represent different operational meanings and different perspectives of the service.
+
+This distinction later became one of the foundational semantic examples of the methodology.
 
 ---
 
@@ -61,30 +65,61 @@ The material also repeatedly emphasized:
 
 ## Initial Operational Observations
 
-The initial analysis identified that the municipality material was describing more than technical infrastructure measurements.
+The municipality material revealed concerns related to:
+- operational trustworthiness,
+- comparability,
+- contextual interpretation,
+- aggregation,
+- environmental influence,
+- teleoperation reliability,
+- and semantic consistency.
 
-The municipality was implicitly describing:
-- operational trust concerns,
-- comparability concerns,
-- semantic interpretation challenges,
-- and Digital Twin reliability requirements.
+The analysis therefore focused first on:
+- understanding what the municipality was trying to achieve,
+- and understanding what the operational information actually meant.
 
-The analysis therefore focused first on understanding:
-- what the municipality was trying to achieve operationally,
-- and what the operational information actually meant.
+The municipality operational concerns extended beyond:
+- simple telemetry collection,
+- or isolated infrastructure measurements.
+
+Instead, the municipality was implicitly describing:
+- interoperability reliability challenges,
+- Digital Twin trust concerns,
+- and semantic interpretation problems.
 
 ---
 
-## Lux, Lumens, and Watts
+# Operational Pain Points
 
-One of the earliest observations involved the distinction between:
+The walkthrough progressively identified several real operational pain points.
+
+| Operational Pain Point | Interoperability Meaning |
+|---|---|
+| Measurements may occur at the luminaire or at the cabinet/line head | Data must identify the measurement point and scope |
+| Cabinet measurements may represent many luminaires | Data must describe aggregation and number of represented luminaires |
+| Lux may be desired but only lumens may be available | Data must distinguish directly measured values from inferred/proxy values |
+| Trees, buildings, fog, humidity, orientation, and inclination affect lighting outcomes | Context metadata is required for reliable interpretation |
+| Data resolution affects comparability | Minimum precision and temporal granularity must be represented |
+| Operational systems may aggregate historical data | Real-time vs historical resolution must remain explicit |
+| Teleoperation depends on latency and packet loss | Network behavior becomes part of operational trustworthiness |
+
+One of the strongest observations from the walkthrough was:
+
+> The municipality is not only asking what data exists, but whether the data is comparable, interpretable, contextualized, and operationally trustworthy.
+
+This became one of the central conceptual foundations of the methodology.
+
+---
+
+# Semantic Distinction Analysis
+
+## Lux vs Lumens vs Watts
+
+One of the earliest discoveries was that:
 - lux,
 - lumens,
-- and watts.
-
-Initially, these appeared to be simple technical measurements.
-
-However, further analysis revealed that these measurements represented fundamentally different operational meanings.
+- and watts
+represent fundamentally different operational meanings.
 
 | Measurement | Operational Meaning |
 |---|---|
@@ -92,190 +127,279 @@ However, further analysis revealed that these measurements represented fundament
 | Lumens | Infrastructure output behavior |
 | Watts | Resource consumption |
 
-This became one of the most important semantic distinctions identified during the walkthrough.
+This distinction became one of the strongest examples used throughout the methodology.
 
-The municipality operational objective was not simply:
-- to emit lumens,
-- or consume watts efficiently.
+The municipality operational objective was not:
+- simply to emit lumens,
+- or simply to minimize watts consumed.
 
 The real operational objective was:
-- *to provide effective public illumination in an operationally efficient way.*
+- to provide effective public illumination while maintaining operational efficiency.
 
-This distinction later influenced the reusable abstraction analysis.
+This distinction later influenced:
+- reusable abstraction analysis,
+- interoperability thinking,
+- and Digital Twin interpretation considerations.
 
 ---
 
 ## Service Outcome vs Infrastructure Output
 
-The walkthrough progressively identified an important distinction between:
-- what the municipality operationally wants to achieve,
-- and what the infrastructure physically produces.
+The walkthrough identified an important distinction between:
+- what the municipality wants to achieve operationally,
+- and what the infrastructure physically emits.
 
-For example:
-- lumens represent infrastructure behavior,
-- while lux at street level represents the actual service outcome experienced in public space.
+Examples:
+- lumens represent infrastructure output,
+- while lux at street level represents the actual public-space service outcome experienced by citizens.
 
-This distinction demonstrated that:
+This observation demonstrated that:
 - infrastructure telemetry alone may not fully represent operational effectiveness.
 
-The municipality operational objective therefore depends on:
-- contextual interpretation,
-- environmental conditions,
-- and operational semantics.
+Operational interpretation therefore requires:
+- contextual understanding,
+- semantic distinctions,
+- and environmental awareness.
 
 ---
 
 ## Measured vs Inferred Values
 
-The municipality material also identified situations where:
+The municipality material also described situations where:
 - direct measurements may not be available,
-- and values may need to be inferred.
+- and operational values may need to be inferred.
 
 Examples included:
 - estimating lux from lumens,
-- or inferring operational conditions from aggregated measurements.
+- or deriving operational conditions from aggregated infrastructure measurements.
 
-This observation introduced important interoperability concerns:
+This observation introduced several important interoperability concerns:
+
+| Semantic Distinction | Why It Matters |
+|---|---|
+| Direct measurement vs inferred value | Trust and interpretation differ |
+| Real-time data vs historical aggregated data | Time resolution affects comparability and Digital Twin usefulness |
+| Device-provided location vs installation-recorded location | Source of context metadata must remain identifiable |
+
+The walkthrough progressively identified that:
 - provenance,
-- measurement trustworthiness,
-- contextual interpretation,
-- and comparability.
-
-The analysis identified that:
-- directly measured values,
-- inferred values,
-- and aggregated operational information
+- trustworthiness,
+- aggregation,
+- and contextual interpretation
 must remain semantically distinguishable.
-
-This later became important for:
-- Smart Data Object realization,
-- semantic consistency,
-- and Digital Twin trustworthiness.
 
 ---
 
 ## Measurement Scope and Aggregation
 
-The walkthrough also identified that operational measurements may represent:
+The municipality material revealed that operational measurements may represent:
 - individual luminaires,
 - electrical cabinets,
-- operational zones,
-- or aggregated infrastructure groups.
+- operational lines,
+- or aggregated operational zones.
 
-This introduced several operational interpretation challenges:
-- what operational scope does the value represent?
-- what aggregation assumptions exist?
-- how should the value be interpreted operationally?
-
-For example:
-- a cabinet measurement may represent multiple luminaires simultaneously,
-- while a street-level measurement may represent the service experienced by citizens.
-
-This distinction later contributed to interoperability abstraction thinking related to:
+This introduced important interoperability concerns related to:
 - operational scope,
 - aggregation semantics,
-- and contextual interpretation.
+- and interpretation reliability.
+
+Examples included:
+- cabinet measurements representing multiple luminaires,
+- aggregated operational measurements,
+- and grouped operational zones.
+
+The walkthrough progressively identified that:
+- operational scope must remain explicit,
+- otherwise measurements may become semantically ambiguous.
 
 ---
 
 ## Environmental and Contextual Dependencies
 
-The municipality material repeatedly emphasized that operational interpretation depends heavily on environmental conditions.
+The municipality material repeatedly emphasized that operational interpretation depends heavily on environmental and physical context.
 
 Examples included:
+- weather,
 - fog,
 - humidity,
+- vegetation,
+- nearby buildings,
 - shadows,
-- nearby vegetation,
-- weather,
-- and orientation.
+- orientation,
+- and inclination.
 
-The walkthrough progressively identified that:
+This observation became one of the foundational principles of the walkthrough:
+
+> Interoperability requires contextual integrity.
+
+The walkthrough progressively demonstrated that:
 - measurements alone are insufficient,
-- and operational interpretation requires contextual information.
+- and operational interpretation requires contextual metadata.
 
 For example:
-- the same infrastructure output may produce different service outcomes depending on environmental conditions.
-
-This became one of the foundational observations of the walkthrough:
-- interoperability requires contextual integrity.
+- identical infrastructure outputs may produce different public-service outcomes depending on environmental conditions.
 
 ---
 
 ## Provenance and Metadata Considerations
 
-The walkthrough also identified the importance of operational provenance and metadata.
+The municipality material also introduced operational metadata and provenance concerns.
 
 Examples included:
-- installation location,
 - management zones,
-- maintenance responsibilities,
-- infrastructure grouping,
+- contracts,
+- maintenance responsibility,
+- warranty information,
+- useful life,
+- installation records,
 - and operational ownership.
 
-The analysis recognized that:
-- operational meaning cannot be reliably preserved without provenance and contextual metadata.
+The walkthrough identified that:
+- operational meaning cannot be reliably preserved without provenance and metadata awareness.
 
-This later became important for:
-- semantic consistency,
-- interoperability reliability,
-- and Digital Twin trustworthiness.
+This later influenced:
+- interoperability abstraction thinking,
+- Smart Data Object considerations,
+- and Digital Twin trustworthiness analysis.
 
 ---
 
 ## Teleoperation and Operational Reliability
 
-The municipality material also introduced concerns related to:
+The municipality material also described concerns related to:
 - teleoperation,
 - latency,
 - packet loss,
-- and operational fallback behavior.
+- and fallback operational behavior.
 
 This demonstrated that interoperability concerns extend beyond:
 - static semantic models,
-- or isolated measurements.
+- or isolated device measurements.
 
-Operational reliability itself became an important interoperability consideration.
+Operational reliability itself became an important interoperability concern.
 
 The walkthrough therefore identified:
 - operational responsiveness,
-- reliability guarantees,
-- and fallback operational behavior
+- fallback operation,
+- and network reliability
 as important parts of interoperability thinking.
+
+---
+
+# Information Exchange Requirements
+
+The walkthrough progressively identified several interoperability-oriented information exchange requirements.
+
+| Requirement Area | Required Information |
+|---|---|
+| Measurement value | Lux, lumens, watts, voltage, frequency, active/reactive power |
+| Measurement time | Start or end timestamp clarity |
+| Measurement scope | Individual luminaire, cabinet, line segment, group |
+| Measurement quality | Precision, min/max range, temporal resolution |
+| Measurement method | Direct, inferred, proxy, aggregated |
+| Operational context | Weather, forecast, humidity, fog, temperature |
+| Physical context | Orientation, inclination, vegetation, shadowing |
+| Asset context | Management zone, contracts, warranty, useful life |
+| Control context | Cabinet control, line actuation, fallback behavior |
+| Network context | Latency, packet loss, teleoperation capability |
+
+One of the strongest conclusions from this section was:
+
+> Interoperability requires significantly more than telemetry exchange.
+
+Reliable interoperability also requires:
+- contextual interpretation,
+- provenance awareness,
+- operational semantics,
+- and trustworthiness preservation.
 
 ---
 
 # Stage 2 — Reusable Abstractions Emergence
 
-As the operational meaning analysis progressed, several reusable interoperability abstractions began to emerge.
+As the operational analysis progressed, several reusable interoperability abstractions began to emerge.
 
-These abstractions did not originate from predefined standards models.
+These abstractions did not originate from:
+- predefined standards,
+- schemas,
+- or implementation architectures.
 
 Instead, they emerged progressively from the municipality operational analysis itself.
 
-Examples included:
-
-| Candidate Reusable Abstraction | Operational Meaning |
+| Candidate Reusable Abstraction | Description |
 |---|---|
-| `ServiceOutcomeMeasurement` | Operational effect experienced in public space |
-| `InfrastructureOutputMeasurement` | Physical infrastructure output behavior |
-| `ResourceConsumptionMeasurement` | Resources consumed to provide the service |
-| `MeasurementScope` | Operational or physical scope represented by the measurement |
-| `Provenance` | Origin and trustworthiness of operational information |
-| `ContextualMetadata` | Environmental and operational interpretation context |
-| `AggregationContext` | Operational grouping and aggregation semantics |
-| `OperationalZone` | Logical operational grouping area |
+| `MeasuredServiceOutcome` | Actual public-service result, such as lux on a street surface |
+| `DeviceOutput` | What the luminaire emits, such as lumens |
+| `EnergyConsumption` | Watts consumed, active/reactive power, voltage, frequency |
+| `MeasurementPoint` | Luminaire, cabinet, line head, street surface |
+| `MeasurementScope` | Single asset, line, zone, group, managed area |
+| `MeasurementMethod` | Direct, inferred, proxy, aggregated |
+| `TemporalResolution` | Time interval and aggregation policy |
+| `OperationalContext` | Weather, fog, humidity, temperature |
+| `PhysicalContext` | Orientation, vegetation, obstructions, nearby buildings |
+| `AssetResponsibilityContext` | Contracts, management zones, maintenance ownership |
+| `NetworkOperabilityContext` | Latency, packet loss, teleoperation reliability |
+| `FallbackBehavior` | Local operation independent from intelligent control |
 
-The walkthrough demonstrated that many of these concepts may later apply beyond public lighting to:
+The walkthrough also progressively identified that many of these abstractions may later apply across multiple municipality domains, including:
 - water management,
 - environmental monitoring,
+- waste management,
 - transportation,
-- and other municipality services.
+- and energy optimization.
 
-This revealed the importance of:
+This reinforced the importance of:
 - reusable interoperability thinking,
 - semantic consistency,
-- and contextual preservation across domains.
+- and contextual preservation.
+
+---
+
+# Candidate Profile Concepts
+
+As reusable abstractions emerged, several candidate profile concepts also became visible.
+
+These were not treated as finalized standards profiles, but as:
+- emerging interoperability realization ideas.
+
+Examples included:
+
+| Candidate Profile Concept | Focus Area |
+|---|---|
+| Public Lighting Service Outcome Profile | Lux, street-surface context, obstruction, environmental conditions |
+| Public Lighting Energy Efficiency Profile | Watts, voltage, frequency, cabinet aggregation |
+| Public Lighting Asset Context Profile | Asset identity, management zone, contracts, warranty |
+| Public Lighting Teleoperation Readiness Profile | Latency, packet loss, operational responsiveness |
+| Measurement Provenance & Quality Profile | Precision, aggregation, inference, temporal resolution |
+
+The walkthrough demonstrated how:
+- municipality operational analysis
+can progressively evolve into:
+- reusable interoperability profile thinking.
+
+---
+
+# Interoperability Validation Scenarios
+
+The walkthrough also identified several candidate interoperability validation scenarios.
+
+These scenarios intentionally remained:
+- operational,
+- ecosystem-neutral,
+- and non-technology-specific.
+
+| Scenario | Validation Intent |
+|---|---|
+| Luminaire reports lux and watts | Confirm service outcome and energy consumption remain semantically distinguishable |
+| Cabinet reports power for a line | Confirm aggregation scope and represented luminaires remain explicit |
+| Platform receives lumens but not lux | Confirm infrastructure output is not misinterpreted as service outcome |
+| Historical data aggregated hourly | Confirm temporal resolution and aggregation policy remain preserved |
+| Tree obstruction affects lighting | Confirm physical context metadata explains reduced lux |
+| Teleoperation command issued | Confirm latency and response behavior can be characterized |
+| Location comes from installation record | Confirm provenance and metadata origin remain identifiable |
+
+This became one of the strongest practical outputs of the walkthrough:
+- interoperability validation must preserve operational meaning and semantic reliability.
 
 ---
 
@@ -283,18 +407,11 @@ This revealed the importance of:
 
 Once the operational meaning and reusable abstractions became clearer, the walkthrough progressively evolved toward ecosystem realization thinking.
 
-At this stage, the analysis did not attempt to impose:
+At this stage, the walkthrough did not attempt to impose:
 - a single standards model,
 - or a fixed technical architecture.
 
 Instead, the walkthrough explored how different ecosystem participants may contribute interoperable realization mechanisms.
-
-Examples included:
-- device interoperability contributions,
-- semantic integration mechanisms,
-- Smart Data Object realization,
-- interoperability validation considerations,
-- and Digital Twin integration thinking.
 
 ---
 
@@ -302,12 +419,12 @@ Examples included:
 
 The walkthrough identified that organizations such as OMA may contribute:
 - device interoperability models,
-- LwM2M objects,
-- and operational telemetry interoperability assets.
+- telemetry interoperability assets,
+- and LwM2M object structures.
 
 These contributions may help preserve:
-- device-level operational semantics,
-- telemetry consistency,
+- device interoperability consistency,
+- operational telemetry semantics,
 - and interoperability alignment.
 
 ---
@@ -317,28 +434,30 @@ These contributions may help preserve:
 The walkthrough progressively identified that Smart Data Objects may act as semantic integration mechanisms capable of carrying:
 - operational meaning,
 - contextual metadata,
-- provenance information,
+- provenance,
 - interoperability abstractions,
 - and semantic consistency.
 
-This became one of the most important observations of the walkthrough:
-- Smart Data Objects are not simply technical schemas,
-- but semantic interoperability carriers.
+One of the strongest conclusions from the walkthrough became:
+
+> Smart Data Objects are not merely technical schemas.
+>
+> They are semantic interoperability carriers.
 
 ---
 
 ## Digital Twin Consumption Perspective
 
-The walkthrough also reinforced that:
+The walkthrough repeatedly demonstrated that:
 - trustworthy Digital Twins require semantically reliable interoperability.
 
-The municipality operational material repeatedly demonstrated that:
+The municipality operational material consistently reinforced that:
 - raw telemetry alone is insufficient,
-- contextual information is essential,
+- context matters,
 - provenance matters,
 - and operational meaning must remain preserved.
 
-The walkthrough therefore progressively evolved toward the following understanding:
+The walkthrough therefore progressively evolved toward the following operational semantic translation model:
 
 ```text
 Operational Meaning
