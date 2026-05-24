@@ -61,3 +61,5 @@ Standards & Ecosystem Mapping
 Smart Data Objects & Ecosystem Realization
         ↓
 Digital Twin Consumption
+
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9f5f7d3c-eb7f-456b-a29e-0c1aa7a9a0f3" />
