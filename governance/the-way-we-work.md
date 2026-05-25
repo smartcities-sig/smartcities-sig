@@ -136,3 +136,4 @@ The Smart Cities SIG is expected to evolve over time based on:
 - and future collaboration opportunities.
 
 Repository structures, collaboration practices, and operational processes may evolve incrementally as the initiative matures.
+
