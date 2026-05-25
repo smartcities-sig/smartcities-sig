@@ -77,7 +77,7 @@ Participants remain independently responsible for their own organizational decis
 
 ## Voluntary Participation
 
-Participation in the Smart Cities SIG is voluntary.
+Participation in the Smart Cities SIG is voluntary and free of charge.
 
 Participants may join, contribute to, or discontinue participation in the initiative at their discretion, subject to applicable collaboration and governance practices.
 
