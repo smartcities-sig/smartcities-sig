@@ -59,6 +59,7 @@ Joaquin Prado (OMA) will act as Program Manager to support:
   - October
 - Proposed recurring schedule:
   - Wednesdays at 6:30 AM PT / 3:30 PM CEST
+  - [CONTRIBUTING.md](/CONTRIBUTING.md)
 
 ### Asynchronous Collaboration
 Because the group will only meet once per month:
