@@ -644,10 +644,15 @@ Joaquin Prado confirmed that communications materials will be circulated for rev
 - 7:00 AM California time
 
 June 24, @ 7:00 AM PT, 4:00 PM CEST
+
 July 22, @ 7:00 AM PT, 4:00 PM CEST
+
 Aug 26, @ 7:00 AM PT, 4:00 PM CEST
+
 Sep 23, @ 7:00 AM PT, 4:00 PM CEST
+
 Oct 28, @ 7:00 AM PT, 4:00 PM CEST
+
 Nov 4 - Presentation Barcelona SmartCities Expo
 
 ---
