@@ -28,6 +28,7 @@
 - [ ] Send recurring meeting invitations
 - [ ] Coordinate participation agreement review workflow
 - [ ] Provide access instructions for GitHub, Slack, and Groups.io
+- [ ] Prepare draft announcement of launching SmartCities-SIG
 
 **All Participants**
 
