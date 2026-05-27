@@ -115,12 +115,10 @@ Because the group will only meet once per month:
 
 ## 6. Tools, Platforms, and Resources
 ### Collaboration Platforms
-- GitHub
-  - https://github.com/smartcities-sig/smartcities-sig
-- Zoom
-- Slack
-  - Invitation [link]([url](https://join.slack.com/t/smartcities-sig/shared_invite/zt-3ywehmbs5-SjZAHz7S7eoYv_JZhcY_4g))
-- Groups.io (pending link)
+- GitHub: https://github.com/smartcities-sig/smartcities-sig
+- Zoom:
+- Slack: [link](https://join.slack.com/t/smartcities-sig/shared_invite/zt-3ywehmbs5-SjZAHz7S7eoYv_JZhcY_4g)
+- Groups.io: (pending link)
 
 ### Repository Structure
 - [Folder Structure Proposal](/docs/strategy/folder-structure.md)
@@ -199,6 +197,7 @@ Participants are requested to:
 - Review The [Way We Work document](/governance/the-way-we-work.md)
 - Review the [methodology walkthrough](/methodology/methodology-overview.md)
 - Provide comments and feedback asynchronously
+- Provide your email address, and GitHub username 
 
 ### Initial Technical Activities
 - Review Madrid Digital material
