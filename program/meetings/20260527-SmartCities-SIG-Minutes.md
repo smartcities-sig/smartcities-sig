@@ -58,7 +58,7 @@ Joaquin Prado (OMA) will act as Program Manager to support:
   - September
   - October
 - Proposed recurring schedule:
-  - Wednesdays at 6:30 AM PT / 3:30 PM CEST
+  - Wednesdays at 7:00 AM PT / 4:00 PM CEST
   - [CONTRIBUTING.md](/CONTRIBUTING.md)
 
 ### Asynchronous Collaboration
@@ -219,11 +219,11 @@ Participants are requested to:
 ## 12. Next Meeting and Closing
 ### Next Meeting
 - Confirm next meeting date and time:
-- June 24, @ 6:30 AM PT, 3:30 PM CEST
-- July 22, @ 6:30 AM PT, 3:30 PM CEST
-- Aug 26, @ 6:30 AM PT, 3:30 PM CEST
-- Sep 23, @ 6:30 AM PT, 3:30 PM CEST
-- Oct 28, @ 6:30 AM PT, 3:30 PM CEST
+- June 24, @ 7:00 AM PT, 3:30 PM CEST
+- July 22, @ 7:00 AM PT, 3:30 PM CEST
+- Aug 26, @ 7:00 AM PT, 3:30 PM CEST
+- Sep 23, @ 7:00 AM PT, 3:30 PM CEST
+- Oct 28, @ 7:00 AM PT, 3:30 PM CEST
 - Nov 4 - Presentation Barcelona SmartCities Expo
 
 ### Action Items
@@ -231,4 +231,13 @@ Participants are requested to:
 - Initial contribution expectations
 - Follow-up coordination activities
 
+## Minutes
+
+### Attendance
+
+### Executive Summary
+
+### 
+
 ### Any Other Business (AOB)
+- None
