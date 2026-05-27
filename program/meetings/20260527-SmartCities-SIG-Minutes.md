@@ -118,7 +118,7 @@ Because the group will only meet once per month:
 - GitHub: https://github.com/smartcities-sig/smartcities-sig
 - Zoom:
 - Slack: [link](https://join.slack.com/t/smartcities-sig/shared_invite/zt-3ywehmbs5-SjZAHz7S7eoYv_JZhcY_4g)
-- Groups.io: (pending link)
+- Groups.io: [link](https://groups.io/g/smartcities-sig)
 
 ### Repository Structure
 - [Folder Structure Proposal](/docs/strategy/folder-structure.md)
