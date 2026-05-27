@@ -68,8 +68,20 @@ The Smart Cities SIG methodology is based on a progressive operational semantic 
 
 The model illustrates how municipality operational realities are progressively transformed into reusable interoperability understanding, ecosystem realization approaches, and semantically reliable Digital Twin consumption.
 
-The SIG acts as a collaborative coordination space where municipalities, standards organizations, Smart Data Object ecosystems, Digital Twin platforms, universities, vendors, and interoperability contributors jointly analyze and align interoperability requirements while preserving operational meaning and contextual integrity.
+The SIG acts as a collaborative coordination space where municipalities, standards organizations, Smart Data Models ecosystems, Digital Twin platforms, universities, vendors, and interoperability contributors jointly analyze and align interoperability requirements while preserving operational meaning and contextual integrity.
 
 <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9f5f7d3c-eb7f-456b-a29e-0c1aa7a9a0f3" />
 
 *Figure — Smart Cities SIG Operational Semantic Translation Model*
+
+### Stage 3 Visualization - Semantic Assembly and Interoperability for Smart City Digital Twins
+
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/bf2e0d31-2550-4abc-92ad-9cf195f6d318" />
+
+This visualization represents Stage 3 of the Smart Cities SIG methodology, where operational pain points identified by municipalities drive a collaborative standards gap analysis across organizations such as Open Mobile Alliance, FIWARE Foundation, academia, and other standards ecosystems.
+
+The diagram illustrates how reusable atomic semantic components — such as OMA Objects and Resources — are evaluated, harmonized, and assembled into contextual Smart Data Objects. These Smart Data Models combine telemetry, metadata, operational context, and semantic relationships into interoperable structures that can be reused across multiple smart city domains including public lighting, water management, mobility, environment, and energy.
+
+The final outcome is a set of contextualized Smart Data Models consumable by Digital Twins, enabling intelligent city operations, interoperability across ecosystems, and seamless integration between standards-based technologies and municipal operational needs.
+
+*Figure - Stage 3 Visualization — Collaborative Semantic Assembly for Smart City Digital Twins*
