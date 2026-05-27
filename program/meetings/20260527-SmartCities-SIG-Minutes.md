@@ -72,7 +72,7 @@ Because the group will only meet once per month:
 
 ### Reference Working Process
 - Review of:
-  - [The Way We Work](https://github.com/smartcities-sig/smartcities-sig/blob/dev/governance/the-way-we-work.md)
+  - [The Way We Work](/governance/the-way-we-work.md)
 - Overview of:
   - Collaboration expectations
   - Open participation principles
@@ -94,16 +94,16 @@ Because the group will only meet once per month:
 
 ## 5. Governance and Contribution Framework
 ### Governance Documents
-- [Charter](https://github.com/smartcities-sig/smartcities-sig/blob/dev/governance/charter.md)
-- [Participation Agreement](https://github.com/smartcities-sig/smartcities-sig/blob/dev/governance/participation-agreement.md)
-- [The Way We Work](https://github.com/smartcities-sig/smartcities-sig/blob/dev/governance/the-way-we-work.md)
+- [Charter](/governance/charter.md)
+- [Participation Agreement](/governance/participation-agreement.md)
+- [The Way We Work](governance/the-way-we-work.md)
 
 ### Interim Roles
 - Interim Chair: Juan Muñoz (Madrid Digital)
 - Program Manager: Joaquin Prado (OMA)
 
 ### Contribution Process
-- [CONTRIBUTING.md](https://github.com/smartcities-sig/smartcities-sig/blob/dev/CONTRIBUTING.md)
+- [CONTRIBUTING.md](/CONTRIBUTING.md)
 - Pull Request and review workflow
 - Protected branches:
   - `main`
@@ -116,12 +116,14 @@ Because the group will only meet once per month:
 ## 6. Tools, Platforms, and Resources
 ### Collaboration Platforms
 - GitHub
+  - https://github.com/smartcities-sig/smartcities-sig
 - Zoom
 - Slack
+  - Invitation [link]([url](https://join.slack.com/t/smartcities-sig/shared_invite/zt-3ywehmbs5-SjZAHz7S7eoYv_JZhcY_4g))
 - Groups.io (pending link)
 
 ### Repository Structure
-- [Folder Structure Proposal](https://github.com/smartcities-sig/smartcities-sig/blob/dev/docs/strategy/folder-structure.md)
+- [Folder Structure Proposal](/docs/strategy/folder-structure.md)
 
 ### Shared Collaboration Resources
 - Groups.io will be used for:
@@ -131,11 +133,15 @@ Because the group will only meet once per month:
   - Shared discussions
   - Document distribution
 
+### Slack Usage
+- Notifications and light discussions no agreements
 ---
 
 ## 7. Methodology Overview
 ### Proposed Interoperability Methodology
+
 The initiative proposes a structured methodology based on:
+0. [Overview](/methodology/methodology-overview.md)
 1. Operational analysis
 2. Extraction of reusable abstractions
 3. Standards mapping
@@ -143,11 +149,11 @@ The initiative proposes a structured methodology based on:
 
 ### Public Lighting Walkthrough
 Review of the first example use case provided by Madrid Digital:
-- [Public Lighting Walkthrough](https://github.com/smartcities-sig/smartcities-sig/blob/dev/methodology/public-lighting-walkthrough.md)
+- [Public Lighting Walkthrough](/methodology/public-lighting-walkthrough.md)
 
 ### Additional Candidate Use Cases
 - Smart Irrigation and Water Management in Public Spaces
-- Additional municipality use cases under evaluation
+- Additional municipality use cases pending evaluation
 
 ---
 
@@ -157,13 +163,13 @@ Review of the first example use case provided by Madrid Digital:
 - Provide operational use cases and requirements
 
 #### SIG Participants
-- Develop reusable interoperability abstractions
-- Analyze operational patterns
-- Coordinate alignment activities
+- 1. Analyze operational patterns
+- 2. Develop reusable interoperability abstractions
+- 3. Coordinate alignment activities
 
 #### Standards Organizations
-- Standards mapping and standards alignment
-- Identification of reusable standards components
+- 1. Identification of reusable standards components
+- 2. Standards mapping and standards alignment
 
 #### Smart Data Models Alignment
 - Coordination with Smart Data Models initiatives
@@ -181,21 +187,22 @@ Target delivery before Smart City Expo Barcelona:
 - Supporting documentation and collaboration framework
 
 ### Roadmap and Milestones
-- [Release Planning and Milestones](https://github.com/smartcities-sig/smartcities-sig/blob/dev/program/roadmap/release-planning.md)
+- [Release Planning and Milestones](/dev/program/roadmap/release-planning.md)
 
 ---
 
 ## 10. Immediate Next Steps
 ### Review Activities
 Participants are requested to:
-- Review the Participation Agreement
-- Review the Charter
-- Review The Way We Work document
-- Review the methodology walkthrough
+- Review the [Participation Agreement](governance/participation-agreement.md)
+- Review the [Charter](/dev/governance/charter.md)
+- Review The [Way We Work document](/governance/the-way-we-work.md)
+- Review the [methodology walkthrough](/methodology/methodology-overview.md)
 - Provide comments and feedback asynchronously
 
 ### Initial Technical Activities
 - Review Madrid Digital material
+  - Juange distribution *(written in Spanish)*
 - Identify priority use cases
 - Refine interoperability objectives
 - Identify relevant standards and data models
@@ -211,7 +218,13 @@ Participants are requested to:
 
 ## 12. Next Meeting and Closing
 ### Next Meeting
-- Confirm next meeting date and time
+- Confirm next meeting date and time:
+- June 24, @ 6:30 AM PT, 3:30 PM CEST
+- July 22, @ 6:30 AM PT, 3:30 PM CEST
+- Aug 26, @ 6:30 AM PT, 3:30 PM CEST
+- Sep 23, @ 6:30 AM PT, 3:30 PM CEST
+- Oct 28, @ 6:30 AM PT, 3:30 PM CEST
+- Nov 4 - Presentation Barcelona SmartCities Expo
 
 ### Action Items
 - Review assignments
