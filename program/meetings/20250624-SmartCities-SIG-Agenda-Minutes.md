@@ -1,4 +1,4 @@
-# Smart Cities Interoperability Initiative – Kickoff Meeting
+# Smart Cities Interoperability Initiative
 ## 24 June 2026
 
 # Agenda
@@ -31,14 +31,14 @@
 
 **All Participants**
 
-- [ ]Review & Comment:
+- [ ] Review & Comment:
   - [ ] [Participation Agreement](/governance/participation-agreement.md)
-  - [Charter](/governance/charter.md)
+  - [ ] [Charter](/governance/charter.md)
   - [ ] [The Way We Work](governance/the-way-we-work.md)
   - [ ] [CONTRIBUTING.md](/CONTRIBUTING.md)
   - [ ] [Methodology](/methodology) documents
 - [ ] Submit pull requests and comments against draft materials
-- [ ] Send GitHub usernames and contact information to Joaquin Prado to gain write access to the draft content
+- [ ] Send GitHub usernames and contact information to Joaquin Prado jprado@omaorg.org to gain write access to the draft content
 - [ ] Begin reviewing Madrid Digital use case material
 
 ---
@@ -84,7 +84,5 @@
 - Oct 28, @ 7:00 AM PT, 4:00 PM CEST
 - Nov 4 - Presentation Barcelona SmartCities Expo
 
-
-
 ### Any Other Business (AOB)
-- None
+- 
