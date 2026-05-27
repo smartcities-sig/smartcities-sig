@@ -31,7 +31,7 @@ Stage 3 exists to answer the following questions:
 - Which ecosystem participants can contribute realization mechanisms?
 - Which standards or interoperability assets already exist?
 - What semantic gaps remain unresolved?
-- How can reusable abstractions be conveyed into Smart Data Objects and Digital Twin ecosystems?
+- How can reusable abstractions be conveyed into Smart Data Models and Digital Twin ecosystems?
 - What interoperability validation considerations emerge?
 - How can semantic consistency be preserved across ecosystem contributions?
 
@@ -90,7 +90,7 @@ At this stage, ecosystem participants may evaluate:
 - interoperability models,
 - semantic structures,
 - device models,
-- Smart Data Objects,
+- Smart Data Models,
 - contextual integration approaches,
 - and Digital Twin realization mechanisms.
 
@@ -107,9 +107,9 @@ The methodology intentionally avoids:
 
 ---
 
-# Smart Data Objects as Semantic Integration Mechanisms
+# Smart Data Models as Semantic Integration Mechanisms
 
-Smart Data Objects act as one of the primary semantic integration mechanisms through which:
+Smart Data Models act as one of the primary semantic integration mechanisms through which:
 - operational meaning,
 - contextual metadata,
 - provenance information,
@@ -117,7 +117,7 @@ Smart Data Objects act as one of the primary semantic integration mechanisms thr
 - and semantic consistency
 may be conveyed into Digital Twin ecosystems.
 
-Smart Data Objects are not treated as isolated technical schemas.
+Smart Data Models are not treated as isolated technical schemas.
 
 Instead, they are viewed as semantically enriched interoperability structures that help preserve:
 - operational intent,
@@ -197,7 +197,7 @@ The Public Street Lighting walkthrough demonstrates several examples of Stage 3 
 
 Examples include:
 - evaluating how OMA/LwM2M objects may contribute device interoperability components,
-- evaluating how Smart Data Objects may carry contextual and semantic information,
+- evaluating how Smart Data Models may carry contextual and semantic information,
 - evaluating FIWARE and Digital Twin consumption considerations,
 - identifying provenance and contextual metadata requirements,
 - and identifying interoperability validation considerations.
@@ -226,6 +226,6 @@ Reusable Interoperability Abstractions
         ↓
 Standards & Ecosystem Mapping
         ↓
-Smart Data Objects & Ecosystem Realization
+Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption

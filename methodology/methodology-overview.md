@@ -41,7 +41,7 @@ The methodology intentionally avoids prematurely forcing municipality operationa
 Instead, the methodology prioritizes:
 1. understanding the municipality operational intent,
 2. identifying reusable interoperability concepts,
-3. and then evaluating how ecosystem participants may contribute standards, semantic models, Smart Data Objects, validation approaches, and Digital Twin integration mechanisms.
+3. and then evaluating how ecosystem participants may contribute standards, semantic models, Smart Data Models, validation approaches, and Digital Twin integration mechanisms.
 
 ---
 
@@ -58,7 +58,7 @@ Reusable Interoperability Abstractions
         ↓
 Standards & Ecosystem Mapping
         ↓
-Smart Data Objects & Ecosystem Realization
+Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption
 ```
@@ -80,7 +80,7 @@ The SIG acts as a collaborative coordination space where municipalities, standar
 
 This visualization represents Stage 3 of the Smart Cities SIG methodology, where operational pain points identified by municipalities drive a collaborative standards gap analysis across organizations such as Open Mobile Alliance, FIWARE Foundation, academia, and other standards ecosystems.
 
-The diagram illustrates how reusable atomic semantic components — such as OMA Objects and Resources — are evaluated, harmonized, and assembled into contextual Smart Data Objects. These Smart Data Models combine telemetry, metadata, operational context, and semantic relationships into interoperable structures that can be reused across multiple smart city domains including public lighting, water management, mobility, environment, and energy.
+The diagram illustrates how reusable atomic semantic components — such as OMA Objects and Resources — are evaluated, harmonized, and assembled into contextual Smart Data Models. These Smart Data Models combine telemetry, metadata, operational context, and semantic relationships into interoperable structures that can be reused across multiple smart city domains including public lighting, water management, mobility, environment, and energy.
 
 The final outcome is a set of contextualized Smart Data Models consumable by Digital Twins, enabling intelligent city operations, interoperability across ecosystems, and seamless integration between standards-based technologies and municipal operational needs.
 

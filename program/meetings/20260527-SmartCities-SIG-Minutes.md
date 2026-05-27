@@ -11,7 +11,7 @@
 
 ### 3. Initiative Overview
 - Background and motivation
-- Collaboration between Madrid Digital, FIWARE, Universidad Politecnica de Madrid, Smart Data Objects, OMA, and participating organizations
+- Collaboration between Madrid Digital, FIWARE, Universidad Politecnica de Madrid, Smart Data Models, OMA, and participating organizations
 - Importance of accelerating practical interoperability work for Smart Cities
 
 ### 4. OMA Support and Coordination
@@ -80,7 +80,7 @@
 - Use cases: Provided by Municipalities
 - Abstractions: SIG work
 - Standards mapping: Standards Organization
-- Smart Data Objects / Smart Data Models alignment: SIG work
+- Smart Data Models / Smart Data Models alignment: SIG work
 
 ### 6. Initial Technical Discussion
 - Review of available Madrid Digital material
