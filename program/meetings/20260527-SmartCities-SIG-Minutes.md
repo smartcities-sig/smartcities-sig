@@ -21,7 +21,7 @@
 - Madrid Digital Office @ City Council
 - Smart Data Models
 - FIWARE Foundation
-- Universidad Politécnica de Madrid
+- Polytechnic University of Madrid
 - Open Mobile Alliance (OMA)
 - Additional participating organizations
 
