@@ -429,9 +429,9 @@ These contributions may help preserve:
 
 ---
 
-## Smart Data Objects as Semantic Integration Mechanisms
+## Smart Data Models as Semantic Integration Mechanisms
 
-The walkthrough progressively identified that Smart Data Objects may act as semantic integration mechanisms capable of carrying:
+The walkthrough progressively identified that Smart Data Models may act as semantic integration mechanisms capable of carrying:
 - operational meaning,
 - contextual metadata,
 - provenance,
@@ -440,7 +440,7 @@ The walkthrough progressively identified that Smart Data Objects may act as sema
 
 One of the strongest conclusions from the walkthrough became:
 
-> Smart Data Objects are not merely technical schemas.
+> Smart Data Models are not merely technical schemas.
 >
 > They are semantic interoperability carriers.
 
@@ -466,6 +466,6 @@ Reusable Interoperability Abstractions
         ↓
 Semantic & Contextual Enrichment
         ↓
-Smart Data Objects & Ecosystem Realization
+Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption

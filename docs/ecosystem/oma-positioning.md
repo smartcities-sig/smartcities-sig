@@ -18,7 +18,7 @@ OMA believes that direct collaboration with municipalities and ecosystem partici
 OMA is particularly interested in understanding how reusable interoperability approaches identified through the Smart Cities SIG may contribute to:
 - reusable interoperability profiles,
 - semantic mappings,
-- Smart Data Objects,
+- Smart Data Models,
 - interoperability guidance,
 - reusable validation methodologies,
 - and interoperability testing approaches.
