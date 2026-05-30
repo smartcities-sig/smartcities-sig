@@ -28,7 +28,7 @@ Participants agree not to knowingly contribute:
 - proprietary restricted material,
 - export-controlled information,
 - material subject to restrictions incompatible with open collaboration, public discussion, reusable interoperability activities, or future interoperability or standards development activities,
-- or content that cannot be publicly discussed, published, reused, or used as input to downstream interoperability or standards-related activities
+- or content that cannot be publicly discussed, published, reused, or used as input to downstream interoperability or standards-related activities.
 
 Participants acknowledge that the initiative is intended to operate using transparent and publicly accessible collaboration practices and that contributions may be publicly reviewed, discussed, published, reused, and referenced by participating organizations, interoperability initiatives, and standards organizations.
 
@@ -42,15 +42,17 @@ Participants agree not to knowingly contribute material subject to patent, licen
 
 Participants further acknowledge that contributions may be reviewed, discussed, incorporated into initiative outputs, and subsequently referenced, reused, or considered as input by standards organizations, interoperability initiatives, industry alliances, academic institutions, municipalities, and other ecosystem stakeholders.
 
+Participants acknowledge that future standards organizations, interoperability initiatives, or ecosystem programs that may consider Smart Cities SIG outputs may maintain their own intellectual property and patent policies, and participation in the Smart Cities SIG does not modify or replace such policies.
+
 Participants remain responsible for evaluating their own intellectual property, patent, contractual, and organizational considerations before contributing material to the initiative.
 
 ## Contribution License
 
-Participants acknowledge that contributions intentionally submitted to the Smart Cities SIG are provided for the purpose of supporting open collaboration, reusable interoperability activities, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability analysis activities.
+Participants acknowledge that contributions intentionally submitted to the Smart Cities SIG are provided for the purpose of supporting open collaboration, reusable interoperability activities, and the development of requirements, use cases, methodologies, interoperability analyses, and related initiative outputs.
 
-To support these objectives, participants grant a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, reproduce, modify, publish, distribute, translate, adapt, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability analysis activities.
+To support these objectives, participants grant a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, reproduce, publish, distribute, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability analysis activities.
 
-This license includes the right for Smart Cities SIG outputs incorporating such contributions to be reviewed, referenced, reused, further analyzed, or considered as input by standards organizations, interoperability initiatives, industry alliances, academic institutions, municipalities, and other ecosystem stakeholders.
+This license includes the right for Smart Cities SIG outputs incorporating such contributions to be reviewed, referenced, reused, and considered as input by standards organizations, interoperability initiatives, industry alliances, academic institutions, municipalities, and other ecosystem stakeholders.
 
 Except for the rights expressly granted under this section, participants retain ownership of their individual contributions.
 
