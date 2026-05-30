@@ -46,27 +46,29 @@ Participants remain responsible for evaluating their own intellectual property, 
 
 ## Contribution License
 
-Participants acknowledge that contributions intentionally submitted to the Smart Cities SIG are provided for the purpose of supporting open collaboration, reusable interoperability activities, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability activities.
+Participants acknowledge that contributions intentionally submitted to the Smart Cities SIG are provided for the purpose of supporting open collaboration, reusable interoperability activities, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability analysis activities.
 
-To support these objectives, participants grant a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, reproduce, modify, publish, distribute, translate, adapt, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability activities.
+To support these objectives, participants grant a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, reproduce, modify, publish, distribute, translate, adapt, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability analysis activities.
 
-This license includes the right for Smart Cities SIG outputs incorporating such contributions to be reviewed, referenced, reused, further developed, or considered by standards organizations, interoperability initiatives, industry alliances, academic institutions, municipalities, and other ecosystem stakeholders.
+This license includes the right for Smart Cities SIG outputs incorporating such contributions to be reviewed, referenced, reused, further analyzed, or considered as input by standards organizations, interoperability initiatives, industry alliances, academic institutions, municipalities, and other ecosystem stakeholders.
 
 Except for the rights expressly granted under this section, participants retain ownership of their individual contributions.
 
 ## Reusable Outputs and Royalty-Free Collaboration Intent
 
-The Smart Cities SIG is intended to support publicly reusable interoperability outputs, collaborative ecosystem alignment activities, and future interoperability and standards development efforts.
+The Smart Cities SIG is intended to support publicly reusable interoperability outputs, collaborative ecosystem alignment activities, and future interoperability and standards-related efforts.
 
 Participants acknowledge that the initiative is intended to encourage practical, implementation-neutral, and reusable collaboration across participating organizations, municipalities, academic institutions, standards organizations, interoperability initiatives, and other ecosystem stakeholders.
 
 Participants agree not to knowingly contribute material that would restrict the open reuse of initiative outputs or introduce royalty-bearing restrictions incompatible with the collaborative, reusable, and interoperability-focused objectives of the initiative.
 
-The initiative is intended to facilitate the development of reusable outputs that may be reviewed, referenced, reused, adapted, or further developed by participating organizations and related interoperability or standards activities.
+The initiative is intended to facilitate the development of reusable outputs that may be reviewed, referenced, reused, adapted, or used as input by participating organizations and related interoperability or standards-related activities.
 
 ## Non-Normative and Exploratory Nature
 
 Unless separately approved through a formal standards development process, Smart Cities SIG outputs are exploratory, informational, and non-normative in nature and do not constitute formal specifications, standards, certification requirements, or compliance obligations.
+
+Smart Cities SIG outputs are intended to describe requirements, use cases, interoperability gaps, methodologies, and ecosystem needs. They are not intended to define specific technical implementations, protocols, APIs, object definitions, conformance requirements, certification requirements, or implementation mandates unless later developed through a separate formal standards or specification process.
 
 Participation in the Smart Cities SIG does not imply endorsement, approval, or adoption of any resulting outputs by participating organizations or standards bodies.
 
@@ -111,9 +113,9 @@ Discontinuing participation does not affect rights or permissions previously gra
 
 The Smart Cities SIG is intended to complement existing standards organizations, interoperability initiatives, ecosystem alliances, academic programs, and industry collaboration efforts rather than replace or supersede them.
 
-Participants acknowledge that Smart Cities SIG outputs may be reviewed, referenced, reused, adapted, or further developed by standards organizations, interoperability initiatives, municipalities, academic institutions, industry alliances, and other ecosystem stakeholders.
+Participants acknowledge that Smart Cities SIG outputs may be reviewed, referenced, reused, adapted, or considered as input by standards organizations, interoperability initiatives, municipalities, academic institutions, industry alliances, and other ecosystem stakeholders.
 
-Participants further acknowledge that Smart Cities SIG outputs may be considered as input to future specifications, profiles, methodologies, reference architectures, implementation guidance, interoperability activities, or related standards development efforts.
+Participants further acknowledge that Smart Cities SIG outputs may be considered as input to future specifications, profiles, methodologies, reference architectures, implementation guidance, interoperability activities, or related standards-related efforts.
 
 Participation in the Smart Cities SIG does not imply endorsement, approval, adoption, or implementation of any resulting outputs by participating organizations or third-party organizations.
 
