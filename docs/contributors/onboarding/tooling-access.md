@@ -1,4 +1,10 @@
-# Tooling and Collaboration Platforms
+---
+title: Tooling and Collaboration Platforms
+description:
+layout: web
+---
+
+# {{ $doc.title }}
 
 The Smart Cities SIG uses a lightweight set of collaboration and coordination platforms intended to support:
 - transparent collaboration,

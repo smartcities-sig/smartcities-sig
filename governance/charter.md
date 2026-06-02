@@ -1,4 +1,10 @@
-# Smart Cities SIG Charter
+---
+title: Smart Cities SIG Charter
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## 1. Purpose
 

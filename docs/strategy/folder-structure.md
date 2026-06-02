@@ -1,4 +1,10 @@
-## Folder Structure
+---
+title: Folder Structure
+description:
+layout: web
+---
+
+# {{ $doc.title }}
 
 This document describes the target repository structure for the Smart Cities SIG initiative.
 

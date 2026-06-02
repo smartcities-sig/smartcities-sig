@@ -1,4 +1,10 @@
-# Stage 2 — Reusable Interoperability Abstractions
+---
+title: Stage 2 — Reusable Interoperability Abstractions
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 

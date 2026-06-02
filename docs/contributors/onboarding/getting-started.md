@@ -1,4 +1,10 @@
-# Getting Started
+---
+title: Getting Started
+description:
+layout: web
+---
+
+# {{ $doc.title }}
 
 ## Purpose of This Document
 
