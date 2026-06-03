@@ -6,44 +6,55 @@ layout: doc
 
 # {{ $doc.title }}
 
-The Smart Cities SIG is an open collaborative initiative under the Open Mobile Alliance (OMA) focused on enabling interoperable and reusable smart city profiles through ecosystem collaboration, lightweight governance, and practical Proof of Concept (PoC) activities.
+The Smart Cities SIG was originated by Madrid Digital @ City Council and is facilitated by the Open Mobile Alliance (OMA).
 
-The initiative brings together cities, industry participants, academia, standards organizations, and ecosystem contributors to collaboratively explore reusable approaches for smart city interoperability using existing standards and open ecosystem models.
+The initiative was created to help municipalities, industry, academia, and standards organizations collaborate on practical smart city interoperability challenges using reusable and standards-based approaches.
 
-## Objectives
+## Why This Initiative
 
-The Smart Cities SIG focuses on:
-- reusable smart city profiles,
-- interoperability requirements,
-- semantic and standards mappings,
-- validation approaches,
-- ecosystem alignment,
-- and practical Proof of Concept outputs.
+Smart city deployments often involve multiple vendors, platforms, standards, and operational domains.
 
-Initial profile areas include:
-- Smart Lighting
-- Water / Smart Water Metering
+The Smart Cities SIG seeks to improve interoperability by helping stakeholders identify common requirements, reuse existing standards where appropriate, and validate interoperability approaches through collaborative Proof of Concept activities.
+
+## What We Do
+
+The Smart Cities SIG explores interoperability challenges across smart city domains and develops reusable outputs that can support future standards, implementations, and ecosystem collaboration.
+
+See the <a href="/governance/charter.md" target="blank">Charter</a> for detailed objectives and scope.
 
 ## Scope
 
-The SIG is implementation-neutral and does not prescribe:
-- vendor-specific solutions,
-- deployment architectures,
-- platforms,
-- or complete technical implementations.
-
 The initiative focuses on interoperability, reusable profiles, mappings, and ecosystem collaboration rather than technical solution ownership.
 
-## Repository Structure
+For a complete definition of scope and non-scope areas, see the <a href="/governance/charter.md" target="blank">Charter</a>.
 
-This repository centralizes:
-- governance documentation,
-- program coordination,
-- meeting records,
-- profile development,
-- presentations,
-- ecosystem collaboration artifacts,
-- and supporting documentation.
+Docs
+- Contributors
+  - Onboarding
+    - Getting Started
+    - Tooling Access
+      
+  - Ecosystem
+  - Strategy
+    - Vision
+    - Ecosystem Positioning
+    - Folder Structure
+    
+Governance
+- Charter
+- Participation Agreement
+- Code of Conduct
+- The Way We Work
+
+Methodology
+- Overview
+- Stage 1
+- Stage 2
+- Stage 3
+
+Program
+- Roadmap
+- Meetings
 
 The target repository structure is documented in:
 
@@ -51,12 +62,31 @@ The target repository structure is documented in:
 
 ## Governance and Participation
 
-Key governance and participation documents include:
-- [CONTRIBUTING.md](/CONTRIBUTING)
-- [governance/participation-agreement.md](/governance/participation-agreement)
-- [governance/code-of-conduct.md](/governance/code-of-conduct)
+Participation expectations and governing documents are available under the <a href="/governance" target="_blank">Governance</a> section of this repository.
 
-The initiative is intended to remain lightweight, execution-focused, and collaborative while supporting transparent and reusable public outputs.
+## Getting Started
+
+New participants should review:
+
+1. <a href="/governance/charter.md" target="blank">Charter</a>
+2. <a href="/governance/participation-agreement.md" target="blank">Participation Agreement</a>
+3. <a href="/governance/the-way-we-work.md" target="blank">The Way We Work</a>
+4. <a href="/governance/methodology" target="blank">Methodology</a>
+5. <a href="/CONTRIBUTING.md" target="blank">CONTRIBUTING</a> Guide
+
+These documents describe the initiative, participation expectations, collaboration model, and the process used to analyze interoperability challenges and develop reusable outputs.
+
+## How We Work
+
+The initiative follows a structured methodology that:
+
+- captures municipal pain points and requirements,
+- analyzes interoperability gaps,
+- maps requirements against existing standards and semantic models,
+- identifies reusable Smart Data Models,
+- validates findings through practical Proof of Concept activities.
+
+The methodology is designed to produce reusable outputs while remaining implementation-neutral.
 
 ## Meetings
 
