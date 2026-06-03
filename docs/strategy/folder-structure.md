@@ -87,8 +87,7 @@ smartcities-sig/
 |   |   ├── methodology-overview.md
 |   |   ├── stage-1-operational-meaning.md
 |   │   ├── stage-2-reusable-abstractions.md
-|   │   ├── stage-3-standards-mapping.md
-|   │   └── public-lighting-walkthrough.md
+|   │   └── stage-3-standards-mapping.md
 |   │
 |   ├── supporting-concepts/
 |   │   ├── semantic-distinctions.md
@@ -115,7 +114,7 @@ smartcities-sig/
 │
 ├── profiles/
 │   ├── lighting/
-│   │   ├── README.md
+│   │   ├── public-lighting-walkthrough.md
 │   │   ├── use-cases/
 │   │   ├── analysis/
 │   │   ├── semantic-model/
@@ -129,7 +128,7 @@ smartcities-sig/
 │   │   └── releases/
 │   │
 │   ├── water/
-│   │   ├── README.md
+│   │   ├── public-watering-walkthrough.md
 │   │   ├── use-cases/
 │   │   ├── analysis/
 │   │   ├── semantic-model/
