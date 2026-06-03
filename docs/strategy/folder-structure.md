@@ -72,7 +72,7 @@ smartcities-sig/
 │   └── contributors/
 │       ├── organizations/
 │       │   ├── madrid-digital-office.md
-│       │   ├── smart-data-objects.md
+│       │   ├── smart-data-models.md
 │       │   └── oma.md
 │       │
 │       └── onboarding/
@@ -97,7 +97,7 @@ smartcities-sig/
 |   │
 |   ├── digital-twin-integration/
 |   │   ├── digital-twin-consumption-model.md
-|   │   └── smart-data-objects-as-context-carriers.md
+|   │   └── smart-data-models-as-context-carriers.md
 |   └── examples/
 |       ├── lighting/
 |       └── water/
