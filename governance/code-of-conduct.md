@@ -1,4 +1,10 @@
-# Code of Conduct
+---
+title: Code of Conduct
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Purpose
 

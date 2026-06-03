@@ -1,4 +1,10 @@
-# Stage 3 — Standards & Ecosystem Mapping
+---
+title: Stage 3 — Standards & Ecosystem Mapping
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 

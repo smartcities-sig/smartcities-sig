@@ -1,4 +1,10 @@
-# Stage 1 — Operational Meaning
+---
+title: Stage 1 — Operational Meaning
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 

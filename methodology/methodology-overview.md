@@ -1,4 +1,10 @@
-# Smart Cities SIG Methodology Overview
+---
+title: Smart Cities SIG Methodology Overview
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 

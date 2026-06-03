@@ -1,4 +1,10 @@
-# Contributing
+---
+title: Contributing
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 Thank you for your interest in contributing to the Smart Cities SIG initiative.
 

@@ -1,4 +1,10 @@
-# Smart Cities Interoperability Initiative – Kickoff Meeting
+---
+title: Smart Cities Interoperability Initiative – Kickoff Meeting
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 ## 27 May 2026
 
 # Agenda

@@ -1,4 +1,10 @@
-# The Way We Work
+---
+title: The Way We Work
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Purpose
 

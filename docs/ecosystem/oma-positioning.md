@@ -1,4 +1,10 @@
-# OMA Positioning
+---
+title: OMA Positioning
+description:
+layout: web
+---
+
+# {{ $doc.title }}
 
 The Open Mobile Alliance (OMA) participates in the Smart Cities SIG as:
 - a supporting standards organization,

@@ -1,4 +1,10 @@
-# Vision
+---
+title: Vision
+description:
+layout: web
+---
+
+# {{ $doc.title }}
 
 The Smart Cities SIG aims to provide a collaborative and implementation-neutral environment where municipalities, industry participants, academia, standards organizations, and ecosystem contributors can work together to identify, refine, validate, and align interoperability needs and reusable profile requirements across smart city ecosystems.
 

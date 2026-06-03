@@ -1,4 +1,10 @@
-# Smart Cities SIG
+---
+title: Smart Cities SIG 
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 The Smart Cities SIG is an open collaborative initiative under the Open Mobile Alliance (OMA) focused on enabling interoperable and reusable smart city profiles through ecosystem collaboration, lightweight governance, and practical Proof of Concept (PoC) activities.
 

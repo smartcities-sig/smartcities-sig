@@ -1,4 +1,10 @@
-# Public Street Lighting Walkthrough
+---
+title: Public Street Lighting Walkthrough
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 
