@@ -100,7 +100,7 @@ Meeting records serve as the primary operational traceability mechanism for the 
 
 Current profile workstreams include:
 - [profiles/lighting/](/profiles/lighting/public-lighting-walkthrough.md)
-- [profiles/water/](/profiles/water/)
+- [profiles/water/](/profiles/water/public-watering-walkthrough.md)
 
 Additional profiles may be introduced incrementally based on ecosystem needs and available contributors.
 
