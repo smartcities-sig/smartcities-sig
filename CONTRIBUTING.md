@@ -10,193 +10,124 @@ Thank you for your interest in contributing to the Smart Cities SIG initiative.
 
 This repository is intended to support open collaboration between cities, industry participants, academia, standards organizations, and ecosystem contributors working on interoperable smart city profiles and related deliverables.
 
-The initiative operates as a collaborative Proof of Concept (PoC) focused on reusable, standards-ready outputs developed through transparent and publicly accessible discussions.
+## Getting Started
 
-## Guiding Principles
+Before contributing, please review the project governance documents:
 
-Contributors are expected to support the following principles:
+- [Charter](/governance/charter.md)
+- [Participation Agreement](/governance/participation-agreement.md)
+- [Code of Conduct](/governance/code-of-conduct.md)
+- [The Way We Work](/governance/the-way-we-work.md)
 
-- Open collaboration
-- Public and reusable outputs
-- Interoperability and ecosystem alignment
-- Practical and implementation-oriented discussions
-- Respectful and constructive participation
-- Lightweight and efficient execution
+These documents describe the purpose of the initiative, participation expectations, collaboration practices, and governance framework.
 
-The project intentionally aims to remain agile and execution-focused in order to meet agreed milestones and delivery timelines.
+## How to Participate
 
-## Code of Conduct
+Public users may:
 
-Contributors and participants are expected to follow the collaboration and participation guidelines defined in:
+- view repository content,
+- open Issues,
+- participate in Discussions,
+- comment on Issues and Pull Requests.
 
-[governance/code-of-conduct.md](/governance/code-of-conduct.md)
+Organizations and individuals actively contributing to initiative deliverables will be requested to review and sign the Participation Agreement before receiving additional repository permissions.
 
-## Public Repository
+## Contribution Paths
 
-This repository is public.
+Choose the contribution path that best matches your input.
 
-By contributing to this repository, contributors acknowledge that:
-- all submissions are publicly visible,
-- discussions may be archived permanently,
-- and contributions may be redistributed under the repository license.
+### GitHub Issue
 
-Do not submit confidential, proprietary, or restricted information.
+Use an Issue when:
 
-## Participation Agreement
-
-Organizations and ecosystem participants actively contributing to the initiative may be requested to review and sign the participation agreement defined under:
-
-[governance/participation-agreement.md](/governance/participation-agreement.md)
-
-The participation agreement is intended to support:
-- open collaboration,
-- reusable public outputs,
-- lightweight governance,
-- and clear contribution expectations across participating organizations.
-
-## Contribution Expectations
-
-Contributors should:
-- keep discussions focused and actionable,
-- avoid unnecessary complexity,
-- minimize duplication of content,
-- use existing templates where applicable,
-- and align contributions with the scope and objectives of the initiative.
-
-Contributions should prioritize:
-- clarity,
-- interoperability,
-- reusability,
-- and practical implementation value.
-
-## Choosing the Right Contribution Path
-
-Contributors should choose the contribution path that best matches the type and maturity of the proposed input.
-
-Use a GitHub Issue when:
-- proposing a new idea, question, concern, or scope item,
+- proposing a new idea,
+- identifying a requirement,
+- raising an interoperability gap,
 - requesting clarification,
-- raising a gap, dependency, or risk,
-- or starting a discussion before content is ready.
+- reporting a concern,
+- or starting a discussion.
+
+### Pull Request
 
 Use a Pull Request when:
+
 - proposing specific changes to repository content,
-- updating existing documentation,
-- adding agreed material,
+- updating existing material,
+- adding agreed content,
 - correcting errors,
-- or contributing content that is ready for review.
+- or contributing content ready for review.
 
-Use a supporting document when:
-- providing background analysis,
-- sharing workshop or meeting material,
-- contributing presentations or reference information,
-- or supplying supporting context for ongoing discussions.
+### Supporting Documents
 
-Supporting documents should follow the repository naming conventions defined in this document in:
+Supporting documents may be used for:
 
-[file naming conventions](#file-naming-conventions)
+- workshop outputs,
+- presentations,
+- reports,
+- background analysis,
+- use cases,
+- requirements gathering,
+- or reference material.
 
-Before introducing significant new proposals, contributors are encouraged to review the current initiative roadmap and execution phase defined in:
+Supporting documents should follow the repository naming and organization practices described below.
 
-[program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
+## Contribution Workflow
 
-This helps ensure proposals and contributions are aligned with the current phase and delivery objectives of the initiative.
+The Smart Cities SIG uses a GitHub-based contribution workflow.
 
-As the initiative progresses toward validation and delivery phases, contributions are expected to prioritize:
-- stabilization,
-- interoperability validation,
-- test activities,
-- and completion of agreed Proof of Concept outputs.
+### Branches
 
-Significant new scope areas or major directional changes introduced late in the execution cycle may be deferred to future phases or subsequent initiative cycles.
+Contributors with repository write access should create feature branches for proposed changes.
 
-## Scope Management
+Protected branches may only be updated through Pull Requests.
 
-To maintain execution focus and support timely delivery of the initiative objectives:
-- contributions should remain aligned with the agreed scope and goals of the SIG,
-- discussions should prioritize interoperability, reusable profiles, mappings, validation approaches, and ecosystem alignment,
-- and new ideas or extensions should be introduced incrementally and with consideration for delivery timelines and agreed milestones.
+### Pull Requests
 
-The project may defer proposals that:
-- significantly expand the scope of the initiative,
-- introduce unrelated workstreams,
-- or negatively impact the ability to deliver the planned Proof of Concept outputs.
+Pull Requests should:
 
-## Implementation Neutrality
+- focus on a specific topic,
+- remain reasonably scoped,
+- include sufficient context for reviewers,
+- and reference related Issues when appropriate.
 
-The Smart Cities SIG focuses on interoperability requirements, reusable profiles, mappings, validation approaches, and ecosystem alignment.
+### Reviews
 
-The SIG does not prescribe vendor-specific implementations, deployment architectures, platforms, or complete technical solutions.
+Pull Requests may be reviewed by initiative maintainers, coordinators, and other contributors.
 
-Technical examples and implementation experiences may be discussed for interoperability and validation purposes, but should not be interpreted as normative recommendations or required implementations.
+Feedback is expected to be constructive and focused on improving the quality and clarity of the contribution.
 
-> **Note:** Participants should avoid using the SIG as a venue for product promotion, competitive positioning, or attempts to prescribe proprietary solutions. Discussions should remain focused on interoperability, reusable profiles, ecosystem alignment, and Proof of Concept objectives.
+## Repository Practices
 
-## Repository Structure
+### File Naming
 
-Contributors are encouraged to follow the repository structure and content organization guidelines defined in:
-
-[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
-
-Folders and documents should only be created when necessary and should align with the existing organization model.
-
-## File Naming Conventions
-
-Supporting documents, presentations, reports, proposals, and meeting-related artifacts should use a date-prefixed filename format using:
+Supporting documents, presentations, reports, proposals, and meeting-related artifacts should use the following date-prefixed format:
 
 ```text
-YYYYMMDD
+YYYYMMDD-description.ext
 ```
 
 Examples:
 
 ```text
-20260521-smart-lighting-mapping-review.md
-20260603-water-use-case-workshop.pptx
+20260521-smart-lighting-workshop.md
+20260603-water-use-case-analysis.pptx
 ```
 
-This convention helps maintain:
-- chronological traceability,
-- repository consistency,
-- and long-term searchability.
+### Repository Structure
 
-## Meetings and Collaboration
+Contributors are encouraged to follow the repository organization guidelines defined in:
 
-Meetings are documented under:
+[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
 
-[program/meetings/minutes/](/program/meetings/minutes.md)
+New folders and content structures should only be introduced when necessary and should align with the existing repository organization model.
 
-Meeting minutes serve as the primary operational record and may include:
-- agenda items,
-- attendance,
-- action items,
-- references,
-- presentation links,
-- and recording references.
+## References
 
-## Intellectual Property and Contributions
+Additional information is available in:
 
-By contributing to this repository, each contributor represents, to the best of their knowledge, that:
-- they have the right to submit the contributed material,
-- contributions are intended for public collaboration and reuse,
-- and submitted materials do not knowingly include confidential or restricted information that would prevent public use of the project outputs.
+- [Charter](/governance/charter.md)
+- [Participation Agreement](/governance/participation-agreement.md)
+- [Code of Conduct](/governance/code-of-conduct.md)
+- [The Way We Work](/governance/the-way-we-work.md)
 
-Additional participation and governance expectations may be defined under the `governance/` folder.
-
-## Contribution Workflow
-
-Unless otherwise specified:
-- contributions should be submitted through GitHub Issues and Pull Requests,
-- discussions should occur publicly within the repository,
-- and changes should remain traceable through repository history.
-
-Contributors are encouraged to keep Pull Requests:
-- focused,
-- reviewable,
-- and scoped to a specific topic or improvement.
-
-## Evolution of the Initiative
-
-This repository structure and governance model may evolve as the initiative matures.
-
-Additional processes, contribution requirements, or intellectual property policies may be introduced if the initiative transitions toward formal standards development or normative deliverables.
+Thank you for contributing to the Smart Cities SIG initiative.
