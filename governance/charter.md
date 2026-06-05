@@ -8,7 +8,7 @@ layout: doc
 
 ## 1. Purpose
 
-The Smart Cities Special Interest Group (SIG) is an initiative originated by Madrid Digital @ City Council and facilitated by the Open Mobile Alliance (OMA) to support collaborative exploration of smart city interoperability needs through open ecosystem participation and practical Proof of Concept (PoC) activities.
+The Smart Cities Special Interest Group (SIG) is an initiative originated by Madrid Digital @ City Council and facilitated by the Open Mobile Alliance (OMA).
 
 The initiative brings together cities, public sector organizations, industry participants, academia, standards organizations, and ecosystem contributors to identify common business requirements, technical requirements, interoperability gaps, and opportunities for ecosystem alignment across smart city domains.
 
