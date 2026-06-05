@@ -46,21 +46,11 @@ Participants acknowledge that future standards organizations, interoperability i
 
 Participants remain responsible for evaluating their own intellectual property, patent, contractual, and organizational considerations before contributing material to the initiative.
 
-## Contribution License
-
-Participants acknowledge that contributions intentionally submitted to the Smart Cities SIG are provided for the purpose of supporting open collaboration, reusable interoperability activities, and the development of requirements, use cases, methodologies, interoperability analyses, and related initiative outputs.
-
-To support these objectives, participants grant a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, reproduce, publish, distribute, and incorporate submitted contributions into Smart Cities SIG outputs and related interoperability analysis activities.
-
-This license includes the right for Smart Cities SIG outputs incorporating such contributions to be reviewed, referenced, reused, and considered as input by standards organizations, interoperability initiatives, industry alliances, academic institutions, municipalities, and other ecosystem stakeholders.
-
-Except for the rights expressly granted under this section, participants retain ownership of their individual contributions.
-
 ## Reusable Outputs and Royalty-Free Collaboration Intent
 
 The Smart Cities SIG is intended to support publicly reusable interoperability outputs, collaborative ecosystem alignment activities, and future interoperability and standards-related efforts.
 
-Participants acknowledge that the initiative is intended to encourage practical, implementation-neutral, and reusable collaboration across participating organizations, municipalities, academic institutions, standards organizations, interoperability initiatives, and other ecosystem stakeholders.
+Participants agree not to knowingly contribute material that would restrict the open reuse of the initiative outputs or introduce royalty-bearing restrictions incompatible with the collaborative and reusable objectives of the initiative.
 
 Participants agree not to knowingly contribute material that would restrict the open reuse of initiative outputs or introduce royalty-bearing restrictions incompatible with the collaborative, reusable, and interoperability-focused objectives of the initiative.
 
@@ -109,19 +99,11 @@ Participation in the Smart Cities SIG is voluntary and free of charge.
 
 Participants may join, contribute to, or discontinue participation in the initiative at their discretion, subject to applicable collaboration and governance practices.
 
-Discontinuing participation does not affect rights or permissions previously granted with respect to contributions submitted before such discontinuation.
-
 ## Relationship to Standards and Ecosystem Activities
 
-The Smart Cities SIG is intended to complement existing standards organizations, interoperability initiatives, ecosystem alliances, academic programs, and industry collaboration efforts rather than replace or supersede them.
+The Smart Cities SIG is intended to complement existing standards organizations, ecosystem alliances, interoperability programs, and industry initiatives rather than replace or supersede them.
 
-Participants acknowledge that Smart Cities SIG outputs may be reviewed, referenced, reused, adapted, or considered as input by standards organizations, interoperability initiatives, municipalities, academic institutions, industry alliances, and other ecosystem stakeholders.
-
-Participants further acknowledge that Smart Cities SIG outputs may be considered as input to future specifications, profiles, methodologies, reference architectures, implementation guidance, interoperability activities, or related standards-related efforts.
-
-Participation in the Smart Cities SIG does not imply endorsement, approval, adoption, or implementation of any resulting outputs by participating organizations or third-party organizations.
-
-Participants remain independently responsible for their own organizational decisions, standards activities, intellectual property considerations, and implementation decisions.
+Participants remain independently responsible for their own standards activities, organizational decisions, and related intellectual property considerations.
 
 ## Repository License
 
