@@ -1,4 +1,10 @@
-# Ecosystem Positioning
+---
+title: Ecosystem Positioning
+description:
+layout: web
+---
+
+# {{ $doc.title }}
 
 The Smart Cities SIG operates as a lightweight, implementation-neutral, and collaborative interoperability coordination environment intended to help municipalities, industry participants, standards organizations, and ecosystem initiatives collaboratively analyze and refine real-world smart city interoperability needs.
 

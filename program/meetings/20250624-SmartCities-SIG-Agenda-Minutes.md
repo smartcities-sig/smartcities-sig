@@ -1,4 +1,10 @@
-# Smart Cities Interoperability Initiative
+---
+title: Smart Cities Interoperability Initiative
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 ## 24 June 2026
 
 # Agenda

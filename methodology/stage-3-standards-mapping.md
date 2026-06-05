@@ -1,8 +1,14 @@
-# Stage 3 — Standards & Ecosystem Mapping
+---
+title: Stage 3 — Standards & Ecosystem Mapping
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 
-The purpose of Stage 3 is to coordinate how the reusable interoperability abstractions identified during Stage 2 may be realized across standards organizations, Smart Data Object ecosystems, Digital Twin platforms, and interoperability initiatives.
+The purpose of Stage 3 is to coordinate how the reusable interoperability abstractions identified during Stage 2 may be realized across standards organizations, Smart Data Model ecosystems, Digital Twin platforms, and interoperability initiatives.
 
 At this stage:
 - operational meaning has already been captured,
@@ -73,7 +79,7 @@ Different ecosystem participants contribute different forms of expertise and rea
 |---|---|
 | Municipalities | Operational realities, pain points, service objectives |
 | OMA / LwM2M contributors | Device interoperability standards and objects |
-| Smart Data Object ecosystems | Semantic integration structures and practices |
+| Smart Data Model ecosystems | Semantic integration structures and practices |
 | FIWARE | Digital platform and Digital Twin integration capabilities |
 | Universities | Semantic analysis and research support |
 | Vendors | Operational implementation realities |

@@ -1,33 +1,47 @@
-# Smart Cities SIG Charter
+---
+title: Smart Cities SIG Charter
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## 1. Purpose
 
-The Smart Cities Special Interest Group (SIG) is an initiative under the Open Mobile Alliance (OMA) established to support collaborative exploration of interoperable and reusable smart city profiles through open ecosystem participation and practical Proof of Concept (PoC) activities.
+The Smart Cities Special Interest Group (SIG) is an initiative originated by Madrid Digital @ City Council and facilitated by the Open Mobile Alliance (OMA) to support collaborative exploration of smart city interoperability needs through open ecosystem participation and practical Proof of Concept (PoC) activities.
 
-The initiative aims to facilitate collaboration between cities, industry participants, academia, standards organizations, and ecosystem contributors to identify reusable approaches for smart city interoperability using existing standards, semantic models, and open ecosystem practices.
+The initiative brings together cities, public sector organizations, industry participants, academia, standards organizations, and ecosystem contributors to identify common business requirements, technical requirements, interoperability gaps, and opportunities for ecosystem alignment across smart city domains.
 
-The SIG operates as a lightweight and execution-focused collaboration initiative intended to accelerate ecosystem alignment and practical interoperability exploration.
+The Smart Cities SIG operates as a lightweight, execution-focused collaboration initiative intended to accelerate understanding of interoperability challenges, promote the reuse of existing standards and semantic models where appropriate, and validate interoperability approaches through practical collaboration and Proof of Concept activities.
+
+The initiative is intended to produce business requirements, technical requirements, use cases, interoperability analyses, methodologies, recommendations, and Proof of Concept findings that may inform future interoperability initiatives, standards activities, implementation programs, and ecosystem collaboration efforts.
+
+The Smart Cities SIG does not develop normative standards, certification programs, conformance requirements, protocols, APIs, object definitions, or implementation mandates. Such activities remain the responsibility of standards organizations, industry alliances, and other ecosystem bodies that may choose to consider the outputs of the initiative as input to their own processes.
 
 ## 2. Objectives
 
 The objectives of the Smart Cities SIG include:
-- identifying reusable smart city interoperability requirements,
-- developing reusable profile definitions,
-- exploring mappings between existing standards and semantic models,
-- supporting ecosystem alignment and collaboration,
-- validating interoperability concepts through practical Proof of Concept activities,
-- identifying gaps, lessons learned, and future opportunities,
-- and promoting reusable and implementation-neutral approaches for smart city interoperability.
+
+- identifying business requirements,
+- identifying technical requirements,
+- documenting interoperability gaps,
+- developing reusable use cases,
+- supporting semantic and standards alignment analysis,
+- validating requirements through Proof of Concept activities,
+- identifying lessons learned and ecosystem recommendations,
+- supporting future interoperability and standards-related activities.
 
 ## 3. Scope
 
 The Smart Cities SIG focuses on:
-- interoperability requirements,
-- reusable profiles,
-- semantic mappings,
-- validation approaches,
-- ecosystem collaboration,
-- and Proof of Concept activities.
+- business requirements
+- technical requirements
+- interoperability gaps
+- use cases
+- methodologies
+- semantic alignment analysis
+- validation findings
+- ecosystem recommendations
 
 The initiative is implementation-neutral and does not prescribe:
 - vendor-specific solutions,
@@ -38,6 +52,8 @@ The initiative is implementation-neutral and does not prescribe:
 The SIG is intended to facilitate ecosystem collaboration and interoperability alignment rather than define production architectures or endorse specific implementations.
 
 Technical examples and implementation experiences may be discussed for interoperability and validation purposes but should not be interpreted as normative recommendations or required implementations.
+
+> The SIG does not create normative specifications, conformance requirements, certification programs, protocols, APIs, object definitions, or implementation mandates.
 
 ## 4. Initial Focus Areas
 
@@ -50,17 +66,20 @@ Additional profile areas may be introduced incrementally based on ecosystem inte
 ## 5. Expected Deliverables
 
 Expected outputs of the initiative may include:
-- reusable profile definitions,
-- interoperability mappings,
-- semantic alignment documentation,
-- validation findings,
-- gap analysis,
-- Proof of Concept outputs,
-- lessons learned,
-- ecosystem recommendations,
-- and supporting presentations or reports.
 
-The initiative may also contribute findings and recommendations to related standards and ecosystem activities where appropriate.
+- business requirements
+- technical requirements
+- use cases
+- interoperability gap analyses
+- semantic alignment analyses
+- validation findings
+- methodologies
+- ecosystem recommendations
+- Proof of Concept findings
+- lessons learned
+- supporting presentations and reports
+
+These outputs are intended to inform interoperability initiatives, standards organizations, municipalities, and ecosystem stakeholders.
 
 ## 6. Participation Model
 
@@ -108,13 +127,7 @@ The initiative intends to present initial findings, lessons learned, and Proof o
 
 ## 9. Intellectual Property and Contributions
 
-The Smart Cities SIG operates as a public and collaborative initiative intended to support reusable ecosystem outputs.
-
-Participants contributing to the initiative may be requested to review and agree to additional participation, contribution, and governance expectations defined in project documentation.
-
-Contributors are expected to avoid submitting confidential, proprietary, or restricted information that would prevent public collaboration or reuse of project outputs.
-
-Unless otherwise stated, repository content is intended to be publicly accessible and reusable under the repository license.
+Participation, contribution rights, reuse rights, and related collaboration expectations are defined in the Participation Agreement.
 
 ## 10. Evolution of the Initiative
 
@@ -125,4 +138,4 @@ The Smart Cities SIG may evolve over time based on:
 - implementation feedback,
 - and future collaboration opportunities.
 
-Additional governance models, contribution processes, profile areas, interoperability activities, or formal standardization efforts may be introduced in future phases if determined appropriate by the Open Mobile Alliance and participating stakeholders.
+The outputs of the initiative may inform future standards-related activities conducted by standards organizations or other ecosystem initiatives.

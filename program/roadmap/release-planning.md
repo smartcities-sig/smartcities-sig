@@ -1,7 +1,10 @@
+---
+title: Release Planning
+description:
+layout: web
+---
 
-
-
-# Release Planning
+# {{ $doc.title }}
 
 This document defines the high-level execution roadmap, milestones, and expected deliverables for the OMA Smart Cities SIG PoC initiative between May 2026 and November 2026.
 

@@ -1,56 +1,101 @@
-# Smart Cities SIG
+---
+title: Smart Cities SIG 
+description:
+layout: doc
+---
 
-The Smart Cities SIG is an open collaborative initiative under the Open Mobile Alliance (OMA) focused on enabling interoperable and reusable smart city profiles through ecosystem collaboration, lightweight governance, and practical Proof of Concept (PoC) activities.
+# {{ $doc.title }}
 
-The initiative brings together cities, industry participants, academia, standards organizations, and ecosystem contributors to collaboratively explore reusable approaches for smart city interoperability using existing standards and open ecosystem models.
+The Smart Cities Special Interest Group (SIG) was originated by Madrid Digital @ City Council and is facilitated by the Open Mobile Alliance (OMA).
 
-## Objectives
+The initiative was created to help municipalities, industry, academia, and standards organizations collaborate on practical smart city interoperability challenges using reusable and standards-based approaches.
 
-The Smart Cities SIG focuses on:
-- reusable smart city profiles,
-- interoperability requirements,
-- semantic and standards mappings,
-- validation approaches,
-- ecosystem alignment,
-- and practical Proof of Concept outputs.
+## Why This Initiative
 
-Initial profile areas include:
-- Smart Lighting
-- Water / Smart Water Metering
+Smart city deployments often involve multiple vendors, platforms, standards, and operational domains.
 
-## Scope
+The Smart Cities SIG seeks to improve interoperability by helping stakeholders identify common requirements, reuse existing standards where appropriate, and validate interoperability approaches through collaborative Proof of Concept activities.
 
-The SIG is implementation-neutral and does not prescribe:
-- vendor-specific solutions,
-- deployment architectures,
-- platforms,
-- or complete technical implementations.
+## What We Do
 
-The initiative focuses on interoperability, reusable profiles, mappings, and ecosystem collaboration rather than technical solution ownership.
+The Smart Cities SIG explores interoperability challenges across smart city domains and develops reusable outputs that can support future standards, implementations, and ecosystem collaboration.
 
-## Repository Structure
+See the <a href="/governance/charter.md" target="blank">Charter</a> for detailed objectives and scope.
 
-This repository centralizes:
-- governance documentation,
-- program coordination,
-- meeting records,
-- profile development,
-- presentations,
-- ecosystem collaboration artifacts,
-- and supporting documentation.
+## Approach
+
+The initiative follows a structured process:
+
+Municipal Requirements
+→ Interoperability Analysis
+→ Standards and Semantic Mapping
+→ Reusable Smart Data Models
+→ Smart City Profiles
+→ Proof of Concept Validation
+
+## Getting Started
+
+New participants should review:
+
+1. <a href="/governance/charter.md" target="blank">Charter</a>
+2. <a href="/governance/participation-agreement.md" target="blank">Participation Agreement</a>
+3. <a href="/governance/the-way-we-work.md" target="blank">The Way We Work</a>
+4. <a href="/methodology" target="blank">Methodology</a>
+5. <a href="/CONTRIBUTING.md" target="blank">CONTRIBUTING</a> Guide
+
+These documents describe the initiative, participation expectations, collaboration model, and the process used to analyze interoperability challenges and develop reusable outputs.
+
+## Repository Guide
+
+The repository is organized into the following folders:
+
+Docs
+- Contributors
+  - Onboarding
+    - Getting Started
+    - Tooling Access
+      
+  - Ecosystem
+  - Strategy
+    - Vision
+    - Ecosystem Positioning
+    - Folder Structure
+    
+Governance
+- Charter
+- Participation Agreement
+- Code of Conduct
+- The Way We Work
+
+Methodology
+- Overview
+- Stage 1
+- Stage 2
+- Stage 3
+
+Program
+- Roadmap
+- Meetings
 
 The target repository structure is documented in:
 
-[docs/strategy/folder-structure.md](/docs/strategy/folder-structure)
+[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
 
 ## Governance and Participation
 
-Key governance and participation documents include:
-- [CONTRIBUTING.md](/CONTRIBUTING)
-- [governance/participation-agreement.md](/governance/participation-agreement)
-- [governance/code-of-conduct.md](/governance/code-of-conduct)
+Participation expectations and governing documents are available under the <a href="/governance" target="_blank">Governance</a> section of this repository.
 
-The initiative is intended to remain lightweight, execution-focused, and collaborative while supporting transparent and reusable public outputs.
+## How We Work
+
+The initiative follows a structured methodology that:
+
+- captures municipal pain points and requirements,
+- analyzes interoperability gaps,
+- maps requirements against existing standards and semantic models,
+- identifies reusable Smart Data Models,
+- validates findings through practical Proof of Concept activities.
+
+The methodology is designed to produce reusable outputs while remaining implementation-neutral.
 
 ## Meetings
 
@@ -63,8 +108,8 @@ Meeting records serve as the primary operational traceability mechanism for the 
 ## Profiles
 
 Current profile workstreams include:
-- [profiles/lighting/](/profiles/lighting)
-- [profiles/water/](/profiles/water)
+- [profiles/lighting/](/profiles/lighting/public-lighting-walkthrough.md)
+- [profiles/water/](/profiles/water/public-watering-walkthrough.md)
 
 Additional profiles may be introduced incrementally based on ecosystem needs and available contributors.
 
@@ -76,10 +121,13 @@ This repository is licensed under:
 
 Unless otherwise noted, all documentation and content in this repository are publicly accessible and reusable under the repository license.
 
-## Status
+## Current Focus
 
-This repository currently supports the initial Smart Cities SIG Proof of Concept activities targeting:
-- ecosystem collaboration,
-- interoperability exploration,
-- reusable profile development,
-- and Smart City Expo World Congress 2026 related deliverables.
+The initial focus areas of the Smart Cities SIG are:
+
+- Public Lighting
+- Water / Smart Water Metering
+
+Additional profile areas may be introduced based on ecosystem interest and contributor participation.
+
+> The initiative is working toward the completion of its initial deliverables and Proof of Concept activities in time to share findings, lessons learned, and reusable outputs at Smart City Expo World Congress 2026 in Barcelona.

@@ -1,4 +1,10 @@
-## Folder Structure
+---
+title: Folder Structure
+description:
+layout: web
+---
+
+# {{ $doc.title }}
 
 This document describes the target repository structure for the Smart Cities SIG initiative.
 
@@ -66,7 +72,7 @@ smartcities-sig/
 │   └── contributors/
 │       ├── organizations/
 │       │   ├── madrid-digital-office.md
-│       │   ├── smart-data-objects.md
+│       │   ├── smart-data-models.md
 │       │   └── oma.md
 │       │
 │       └── onboarding/
@@ -81,8 +87,7 @@ smartcities-sig/
 |   |   ├── methodology-overview.md
 |   |   ├── stage-1-operational-meaning.md
 |   │   ├── stage-2-reusable-abstractions.md
-|   │   ├── stage-3-standards-mapping.md
-|   │   └── public-lighting-walkthrough.md
+|   │   └── stage-3-standards-mapping.md
 |   │
 |   ├── supporting-concepts/
 |   │   ├── semantic-distinctions.md
@@ -92,7 +97,7 @@ smartcities-sig/
 |   │
 |   ├── digital-twin-integration/
 |   │   ├── digital-twin-consumption-model.md
-|   │   └── smart-data-objects-as-context-carriers.md
+|   │   └── smart-data-models-as-context-carriers.md
 |   └── examples/
 |       ├── lighting/
 |       └── water/
@@ -109,7 +114,7 @@ smartcities-sig/
 │
 ├── profiles/
 │   ├── lighting/
-│   │   ├── README.md
+│   │   ├── public-lighting-walkthrough.md
 │   │   ├── use-cases/
 │   │   ├── analysis/
 │   │   ├── semantic-model/
@@ -123,7 +128,7 @@ smartcities-sig/
 │   │   └── releases/
 │   │
 │   ├── water/
-│   │   ├── README.md
+│   │   ├── public-watering-walkthrough.md
 │   │   ├── use-cases/
 │   │   ├── analysis/
 │   │   ├── semantic-model/

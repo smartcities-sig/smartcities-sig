@@ -1,4 +1,10 @@
-# Participation Agreement
+---
+title: Participation Agreement
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Purpose
 
