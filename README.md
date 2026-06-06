@@ -1,5 +1,5 @@
 ---
-title: Smart Cities SIG 
+title: README 
 description:
 layout: doc
 ---
