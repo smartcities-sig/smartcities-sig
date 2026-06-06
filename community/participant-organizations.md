@@ -1,4 +1,14 @@
-# Madrid Positioning 
+---
+title: Participant Organizations
+description:
+layout: web
+---
+
+# {{ $doc.title }}
+
+[LOGOS]
+
+## Madrid Positioning 
 
 [Madrid](https://www.madrid.es/digitalcapital), through the [Digital Office](https://www.madrid.es/madriddigitalcapital) of the Madrid City Council, is actively deploying IoT and 5G technologies across city services to improve interoperability and cybersecurity. It works in partnership with the [Polytechnic University of Madrid](https://www.upm.es/internacional), [OMA](https://www.openmobilealliance.org/), [AIOTI](https://aioti.eu/cities-5-0/), and [EIRA/EggoVERA](https://interoperable-europe.ec.europa.eu/collection/european-interoperability-reference-architecture-eira/news/egoverac-success-data-space-council-madrid), among others.
 
@@ -35,3 +45,37 @@ Madrid supports the initiative by providing coordination based on these principl
 - Practical ecosystem collaboration.
 
 Madrid views the **Smart Cities SIG** as a collaborative ecosystem initiative intended to complement, not compete with, existing standards organizations, ecosystem alliances, interoperability programs, and industry initiatives.
+
+
+## Open Mobile Alliance (OMA) Positioning
+
+The Open Mobile Alliance (OMA) participates in the Smart Cities SIG as:
+- a supporting standards organization,
+- an interoperability enabler,
+- and a facilitator of open ecosystem collaboration.
+
+OMA’s primary interest in the initiative is to help bridge real municipality interoperability needs with reusable and standards-based interoperability approaches through practical collaboration and interoperability validation activities.
+
+OMA views the Smart Cities SIG as a practical interoperability coordination and requirements incubation environment where ecosystem participants can collaboratively:
+- analyze interoperability challenges,
+- refine reusable interoperability requirements,
+- validate reusable approaches,
+- and identify practical interoperability gaps and opportunities.
+
+OMA believes that direct collaboration with municipalities and ecosystem participants can help improve the practical relevance, interoperability alignment, and ecosystem applicability of reusable interoperability approaches and related standards activities.
+
+OMA is particularly interested in understanding how reusable interoperability approaches identified through the Smart Cities SIG may contribute to:
+- reusable interoperability profiles,
+- semantic mappings,
+- Smart Data Models,
+- interoperability guidance,
+- reusable validation methodologies,
+- and interoperability testing approaches.
+
+OMA also supports the initiative by providing lightweight program coordination intended to help maintain:
+- transparency,
+- openness,
+- implementation neutrality,
+- and practical ecosystem collaboration.
+
+OMA views the Smart Cities SIG as a collaborative ecosystem initiative intended to complement existing standards organizations, ecosystem alliances, interoperability programs, and industry initiatives rather than compete with them.

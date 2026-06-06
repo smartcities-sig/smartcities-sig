@@ -30,12 +30,14 @@ smartcities-sig/
 ├── site.config.yml
 │
 ├── governance/
+│   ├── README.md
 │   ├── charter.md
 │   ├── participation-agreement.md
-│   ├── the-way-we-work.md
-│   └── code-of-conduct.md
+│   ├── code-of-conduct.md
+│   └── the-way-we-work.md
 │
 ├── program/
+│   ├── README.md
 │   ├── roadmap/
 │   │   └──  release-planning.md
 │   │
@@ -55,34 +57,24 @@ smartcities-sig/
 │       ├── retrospectives/
 │       └── lessons-learned/
 │
-├── docs/
-│   ├── strategy/
-│   │   ├── vision.md
-│   │   ├── ecosystem-positioning.md
-│   │   ├── folder-structure.md
-│   │   └── historical-context.md
-│   │
-│   ├── ecosystem/
-│   │   ├── oma-positioning.md
-│   │   ├── madrid-positioning.md
-│   │   ├── academia-perspectives.md
-│   │   ├── vendor-perspectives.md
-│   │   └── standards-landscape.md
-│   │
-│   └── contributors/
-│       ├── organizations/
-│       │   ├── madrid-digital-office.md
-│       │   ├── smart-data-models.md
-│       │   └── oma.md
-│       │
-│       └── onboarding/
-│           ├── getting-started.md
-│           └── tooling-access.md
+├── foundation/
+│   ├── README.md
+│   ├── vision.md
+│   ├── historical-context.md
+│   ├── ecosystem-positioning.md
+│   ├── stakeholder-analysis.md
+│   └── standards-landscape.md
+│   
+|── community/
+│   ├── README.md
+│   └── onboarding/
+│   |   ├── getting-started.md
+│   |   └── tooling-access.md
+|   |
+│   └── participant-organizations/
 │
 |── methodology/
-|   │
-|   ├── README.md
-|   │
+│   ├── README.md
 |   ├── core-methodology/
 |   |   ├── methodology-overview.md
 |   |   ├── stage-1-operational-meaning.md
@@ -103,17 +95,17 @@ smartcities-sig/
 |       └── water/
 │
 ├── shared-models/
-│   ├── README.md
 │   ├── measurement/
 │   ├── context/
 │   ├── provenance/
 │   ├── temporal/
 │   ├── operational-zones/
-│   ├── service-outcomes/
-│   └── governance/
+│   └── service-outcomes/
 │
-├── profiles/
+├── domains/
+│   ├── README.md
 │   ├── lighting/
+|   │   ├── README.md
 │   │   ├── public-lighting-walkthrough.md
 │   │   ├── use-cases/
 │   │   ├── analysis/
@@ -128,6 +120,7 @@ smartcities-sig/
 │   │   └── releases/
 │   │
 │   ├── water/
+|   │   ├── README.md
 │   │   ├── public-watering-walkthrough.md
 │   │   ├── use-cases/
 │   │   ├── analysis/
@@ -148,17 +141,20 @@ smartcities-sig/
 │       └── interoperability-gaps/
 │
 ├── templates/
+│   ├── README.md
 │   ├── meeting-minutes-template.md
 │   ├── presentation-template.md
 │   └── contribution-template.md
 │
 ├── working/
+│   ├── README.md
 │   ├── exploratory-analysis/
 │   ├── brainstorming/
 │   ├── temporary-discussions/
 │   └── early-concepts/
 │
 └── archive/
+│   ├── README.md
     ├── deprecated-content/
     ├── obsolete-proposals/
     └── historical-records/
