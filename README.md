@@ -47,39 +47,9 @@ These documents describe the initiative, participation expectations, collaborati
 
 ## Repository Guide
 
-The repository is organized into the following folders:
-
-Docs
-- Contributors
-  - Onboarding
-    - Getting Started
-    - Tooling Access
-      
-  - Ecosystem
-  - Strategy
-    - Vision
-    - Ecosystem Positioning
-    - Folder Structure
-    
-Governance
-- Charter
-- Participation Agreement
-- Code of Conduct
-- The Way We Work
-
-Methodology
-- Overview
-- Stage 1
-- Stage 2
-- Stage 3
-
-Program
-- Roadmap
-- Meetings
-
 The target repository structure is documented in:
 
-[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
+[governance/folder-structure.md](/governance/folder-structure.md)
 
 ## Governance and Participation
 
