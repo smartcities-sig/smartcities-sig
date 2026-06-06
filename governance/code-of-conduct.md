@@ -83,7 +83,7 @@ The initiative may defer discussions or proposals that significantly expand scop
 
 Concerns regarding collaboration behavior or participation issues may be raised with the initiative coordinators or designated SIG leadership.
 
-Concerns may be reviewed and addressed by the initiative coordinators, including the Chair and Vice-Chair(s), in coordination with the Open Mobile Alliance where appropriate.
+Concerns may be reviewed and addressed by the initiative coordinators, including the Chair and Vice-Chair(s).
 
 The initiative coordinators may moderate discussions or participation activities when necessary to maintain productive and respectful collaboration.
 
@@ -93,4 +93,4 @@ The Smart Cities SIG operates as a lightweight collaborative initiative.
 
 Participants are expected to act in good faith and support constructive collaboration aligned with the objectives of the initiative.
 
-The Open Mobile Alliance and initiative coordinators reserve the right to moderate participation or remove disruptive contributions when necessary to protect the integrity and effectiveness of the collaboration environment.
+The initiative coordinators reserve the right to moderate participation or remove disruptive contributions when necessary to protect the integrity and effectiveness of the collaboration environment.

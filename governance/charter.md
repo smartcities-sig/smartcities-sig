@@ -96,19 +96,19 @@ Participation may include:
 The initiative aims to maintain lightweight governance and transparent collaboration while supporting publicly accessible and reusable outputs.
 
 Additional participation expectations, collaboration requirements, and governance policies may be defined in supporting project documentation, including:
+
 - [CONTRIBUTING.md](/CONTRIBUTING.md)
 - [governance/participation-agreement.md](/governance/participation-agreement.md)
 - [governance/code-of-conduct.md](/governance/code-of-conduct.md)
 
 ## 7. Governance and Coordination
 
-The Smart Cities SIG operates under the oversight of the Open Mobile Alliance (OMA).
-
 The initiative may designate:
 - a Chair,
 - Vice-Chair(s),
 - and supporting coordinators
-OMA will facilitate meetings, collaboration activities, and initiative execution.
+
+The initiative will facilitate meetings, collaboration activities, and initiative execution.
 
 The SIG is intended to remain lightweight, execution-focused, and collaboration-oriented.
 

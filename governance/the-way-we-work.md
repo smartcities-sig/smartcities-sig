@@ -71,7 +71,7 @@ The Smart Cities SIG primarily operates through:
 - practical consensus,
 - and execution-oriented discussions.
 
-The initiative does not rely on formal voting procedures for normal operational activities unless explicitly required by the Open Mobile Alliance or initiative leadership.
+The initiative does not rely on formal voting procedures for normal operational activities unless explicitly required by the initiative leadership.
 
 Where needed, initiative coordinators may facilitate discussions to support alignment and maintain initiative progress.
 
@@ -124,7 +124,7 @@ Additional contribution guidance and repository practices are defined in:
 
 Concerns regarding collaboration behavior or participation issues may be raised with the initiative coordinators or designated SIG leadership.
 
-Concerns may be reviewed and addressed by the initiative coordinators, including the Chair and Vice-Chair(s), in coordination with the Open Mobile Alliance where appropriate.
+Concerns may be reviewed and addressed by the initiative coordinators, including the Chair and Vice-Chair(s).
 
 The initiative coordinators may moderate discussions or participation activities when necessary to maintain productive and respectful collaboration.
 

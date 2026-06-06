@@ -91,7 +91,7 @@ Unless otherwise separately agreed in writing, participants retain ownership of 
 
 However, contributions intentionally submitted to initiative repositories, meetings, presentations, workshops, demonstrations, or publicly released initiative outputs may be publicly shared and reused under the applicable repository license.
 
-Participation in the initiative does not transfer ownership of intellectual property to the Open Mobile Alliance or other participants.
+Participation in the initiative does not transfer ownership of intellectual property to any other participants.
 
 ## Independent Participation
 
