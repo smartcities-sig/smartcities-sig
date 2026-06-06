@@ -121,7 +121,7 @@ The initial execution window for the Smart Cities SIG Proof of Concept activitie
 
 The initiative roadmap, milestones, and planning activities are documented under:
 
-[program/roadmap/](/program/roadmap)
+[program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
 
 The initiative intends to present initial findings, lessons learned, and Proof of Concept outputs during Smart City Expo World Congress 2026.
 
