@@ -31,11 +31,6 @@ The Smart Cities SIG is a collaborative and implementation-neutral ecosystem ini
 
 The initiative aims to help municipalities and ecosystem participants collaboratively analyze interoperability challenges and reusable approaches across smart city domains.
 
-Additional background information is available in:
-- [README.md](/README.md)
-- [docs/strategy/vision.md](/docs/strategy/vision.md)
-- [docs/strategy/ecosystem-positioning.md](/docs/strategy/ecosystem-positioning.md)
-
 ---
 
 # Why Does the Initiative Exist?
@@ -59,10 +54,10 @@ New participants are encouraged to review the following documents in order:
 1. [README.md](/README.md)  
    High-level overview of the initiative.
 
-2. [docs/strategy/vision.md](/docs/strategy/vision.md)  
+2. [foundation/vision.md](/foundation/vision.md)  
    Long-term interoperability vision and ecosystem objectives.
 
-3. [docs/strategy/ecosystem-positioning.md](/docs/strategy/ecosystem-positioning.md)  
+3. [foundation/ecosystem-positioning.md](/foundation/ecosystem-positioning.md)
    Explains how the Smart Cities SIG positions itself within the broader ecosystem.
 
 4. [governance/charter.md](/governance/charter.md)  
@@ -156,7 +151,7 @@ The repository is organized to support:
 - and supporting interoperability activities.
 
 The target repository structure is described in:
-- [docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
+- [governance/folder-structure.md](/governance/folder-structure.md)
 
 ---
 
@@ -168,4 +163,4 @@ Questions related to participation, onboarding, or collaboration activities may 
 - or designated SIG coordination contacts.
 
 Additional tooling and access information is available in:
-- [onboarding/tooling-access.md](/onboarding/tooling-access.md)
+- [community/onboarding/tooling-access.md](/community/onboarding/tooling-access.md)
