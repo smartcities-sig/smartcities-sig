@@ -25,10 +25,10 @@ Instead, the objective is to demonstrate how municipality operational realities 
 This walkthrough became one of the foundational practical examples used to shape the Smart Cities SIG methodology itself.
 
 The walkthrough follows the three-stage methodology described in:
-- [`methodology-overview.md`](./methodology-overview.md)
-- [`stage-1-operational-meaning.md`](./stage-1-operational-meaning.md)
-- [`stage-2-reusable-abstractions.md`](./stage-2-reusable-abstractions.md)
-- [`stage-3-standards-mapping.md`](./stage-3-standards-mapping.md)
+- [Methodology-overview.md](./methodology-overview.md)
+- [Stage-1-operational-meaning.md](./stage-1-operational-meaning.md)
+- [Stage-2-reusable-abstractions.md](./stage-2-reusable-abstractions.md)
+- [Stage-3-standards-mapping.md](./stage-3-standards-mapping.md)
 
 ---
 
