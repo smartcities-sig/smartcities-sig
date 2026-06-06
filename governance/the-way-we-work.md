@@ -17,10 +17,10 @@ The objective is to support:
 - and execution-focused ecosystem coordination.
 
 This document complements:
-- [charter.md](/governance/charter.md)
-- [CONTRIBUTING.md](/CONTRIBUTING.md)
-- [governance/code-of-conduct.md](/governance/code-of-conduct.md)
-- [governance/participation-agreement.md](/governance/participation-agreement.md)
+- [Governance/charter.md](/governance/charter.md)
+- [Contributing.md](/CONTRIBUTING.md)
+- [Governance/code-of-conduct.md](/governance/code-of-conduct.md)
+- [Governance/participation-agreement.md](/governance/participation-agreement.md)
 
 ## Working Model
 
@@ -57,7 +57,7 @@ Meeting minutes serve as the primary operational record for the initiative and m
 
 Meeting records are maintained under:
 
-[program/meetings/](/program/meetings)
+[Program/meetings/minutes/](/program/meetings/minutes)
 
 Discussions and collaboration activities should remain:
 - constructive,
@@ -93,7 +93,7 @@ Participants are encouraged to remain aware of the current initiative roadmap an
 
 The initiative roadmap and execution planning are maintained under:
 
-[program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
+[Program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
 
 As the initiative progresses toward validation and delivery phases, activities are expected to increasingly prioritize:
 - stabilization,
@@ -130,7 +130,7 @@ The initiative coordinators may moderate discussions or participation activities
 
 Additional collaboration behavior expectations are defined in:
 
-[governance/code-of-conduct.md](/governance/code-of-conduct.md)
+[Governance/code-of-conduct.md](/governance/code-of-conduct.md)
 
 ## Evolution of the Working Model
 

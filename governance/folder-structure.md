@@ -103,7 +103,7 @@ smartcities-sig/
 │   ├── operational-zones/
 │   └── service-outcomes/
 │
-├── domains/
+├── profiles/
 │   ├── README.md
 │   ├── lighting/
 |   │   ├── README.md
