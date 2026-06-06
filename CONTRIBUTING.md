@@ -117,7 +117,7 @@ Examples:
 
 Contributors are encouraged to follow the repository organization guidelines defined in:
 
-[docs/strategy/folder-structure.md](/docs/strategy/folder-structure.md)
+[governance/folder-structure.md](/governance/folder-structure.md)
 
 New folders and content structures should only be introduced when necessary and should align with the existing repository organization model.
 
