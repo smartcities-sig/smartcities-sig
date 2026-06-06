@@ -26,7 +26,7 @@ The following tools and platforms are currently used by the initiative.
   <tbody>
     <tr>
       <td>GitHub</td>
-      <td><a href="https://github.com/OpenMobileAlliance/smartcities-sig">smartcities-sig repository</a></td>
+      <td><a href="https://github.com/smartcities-sig/smartcities-sig">smartcities-sig repository</a></td>
       <td>Primary platform for repository content, Issues, Discussions, Pull Requests, and traceable collaboration.</td>
     </tr>
     <tr>

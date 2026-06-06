@@ -72,6 +72,9 @@ New participants are encouraged to review the following documents in order:
 7. [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)  
    Current roadmap, milestones, and execution phases.
 
+8. [governance/folder-structure.md](/governance/folder-structure.md)  
+   Repository structure and organization.
+
 ---
 
 # Participation Expectations
