@@ -1,7 +1,7 @@
 ---
 title: Participant Organizations
 description:
-layout: web
+layout: doc
 ---
 
 # {{ $doc.title }}
