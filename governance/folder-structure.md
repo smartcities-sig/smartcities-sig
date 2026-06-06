@@ -34,7 +34,8 @@ smartcities-sig/
 │   ├── charter.md
 │   ├── participation-agreement.md
 │   ├── code-of-conduct.md
-│   └── the-way-we-work.md
+│   ├── the-way-we-work.md
+│   └── folder-structure.md
 │
 ├── program/
 │   ├── README.md
