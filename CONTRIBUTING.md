@@ -18,6 +18,7 @@ Before contributing, please review the project governance documents:
 - [Participation Agreement](/governance/participation-agreement.md)
 - [Code of Conduct](/governance/code-of-conduct.md)
 - [The Way We Work](/governance/the-way-we-work.md)
+- [Repository Structure](/governance/folder-structure.md)
 
 These documents describe the purpose of the initiative, participation expectations, collaboration practices, and governance framework.
 
@@ -120,14 +121,5 @@ Contributors are encouraged to follow the repository organization guidelines def
 [governance/folder-structure.md](/governance/folder-structure.md)
 
 New folders and content structures should only be introduced when necessary and should align with the existing repository organization model.
-
-## References
-
-Additional information is available in:
-
-- [Charter](/governance/charter.md)
-- [Participation Agreement](/governance/participation-agreement.md)
-- [Code of Conduct](/governance/code-of-conduct.md)
-- [The Way We Work](/governance/the-way-we-work.md)
 
 Thank you for contributing to the Smart Cities SIG initiative.
