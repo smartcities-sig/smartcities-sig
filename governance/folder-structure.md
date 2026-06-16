@@ -32,7 +32,7 @@ smartcities-sig/
 ├── governance/
 │   ├── README.md
 │   ├── charter.md
-│   ├── participation-agreement.md
+│   ├── participation-rules.md
 │   ├── code-of-conduct.md
 │   ├── the-way-we-work.md
 │   └── folder-structure.md

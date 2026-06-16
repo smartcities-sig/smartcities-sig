@@ -92,7 +92,7 @@ Participants are expected to:
 - and contribute openly within the collaboration framework of the initiative.
 
 Organizations actively participating in the initiative are expected to review and sign:
-- [governance/participation-agreement.md](/governance/participation-agreement.md)
+- [governance/participation-rules.md](/governance/participation-rules.md)
 
 Participants are also encouraged to review:
 - [governance/code-of-conduct.md](/governance/code-of-conduct.md)
