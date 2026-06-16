@@ -98,7 +98,7 @@ The initiative aims to maintain lightweight governance and transparent collabora
 Additional participation expectations, collaboration requirements, and governance policies may be defined in supporting project documentation, including:
 
 - [CONTRIBUTING.md](/CONTRIBUTING.md)
-- [governance/participation-agreement.md](/governance/participation-agreement.md)
+- [governance/participation-rules.md](/governance/participation-rules.md)
 - [governance/code-of-conduct.md](/governance/code-of-conduct.md)
 
 ## 7. Governance and Coordination
@@ -127,7 +127,7 @@ The initiative intends to present initial findings, lessons learned, and Proof o
 
 ## 9. Intellectual Property and Contributions
 
-Participation, contribution rights, reuse rights, and related collaboration expectations are defined in the Participation Agreement.
+Participation, contribution rights, reuse rights, and related collaboration expectations are defined in the Participation Rules.
 
 ## 10. Evolution of the Initiative
 

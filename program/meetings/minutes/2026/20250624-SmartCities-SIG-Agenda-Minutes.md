@@ -32,14 +32,14 @@ layout: doc
 - [ ] Add explanatory documentation for repository branches (`main` vs `dev`)
 - [ ] Prepare onboarding guidance for participants
 - [ ] Send recurring meeting invitations
-- [ ] Coordinate participation agreement review workflow
+- [ ] Coordinate participation rules review workflow
 - [ ] Provide access instructions for GitHub, Slack, and Groups.io
 - [ ] Prepare draft announcement of launching SmartCities-SIG
 
 **All Participants**
 
 - [ ] Review & Comment:
-  - [ ] [Participation Agreement](/governance/participation-agreement.md)
+  - [ ] [Participation Rules](/governance/participation-rules.md)
   - [ ] [Charter](/governance/charter.md)
   - [ ] [The Way We Work](governance/the-way-we-work.md)
   - [ ] [CONTRIBUTING.md](/CONTRIBUTING.md)

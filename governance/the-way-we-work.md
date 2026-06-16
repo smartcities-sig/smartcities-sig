@@ -20,7 +20,7 @@ This document complements:
 - [Governance/charter.md](/governance/charter.md)
 - [Contributing.md](/CONTRIBUTING.md)
 - [Governance/code-of-conduct.md](/governance/code-of-conduct.md)
-- [Governance/participation-agreement.md](/governance/participation-agreement.md)
+- [Governance/participation-rules.md](/governance/participation-rules.md)
 
 ## Working Model
 

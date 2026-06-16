@@ -15,7 +15,7 @@ This repository is intended to support open collaboration between cities, indust
 Before contributing, please review the project governance documents:
 
 - [Charter](/governance/charter.md)
-- [Participation Agreement](/governance/participation-agreement.md)
+- [Participation Rules](/governance/participation-rules.md)
 - [Code of Conduct](/governance/code-of-conduct.md)
 - [The Way We Work](/governance/the-way-we-work.md)
 - [Repository Structure](/governance/folder-structure.md)
@@ -31,7 +31,7 @@ Public users may:
 - participate in Discussions,
 - comment on Issues and Pull Requests.
 
-Organizations and individuals actively contributing to initiative deliverables will be requested to review and sign the Participation Agreement before receiving additional repository permissions.
+Organizations and individuals actively contributing to initiative deliverables will be requested to review and sign the Participation Rules before receiving additional repository permissions.
 
 ## Contribution Paths
 

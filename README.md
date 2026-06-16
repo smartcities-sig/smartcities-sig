@@ -38,7 +38,7 @@ Municipal Requirements
 New participants should review:
 
 1. <a href="/governance/charter.md" target="blank">Charter</a>
-2. <a href="/governance/participation-agreement.md" target="blank">Participation Agreement</a>
+2. <a href="/governance/participation-rules.md" target="blank">Participation Rules</a>
 3. <a href="/governance/the-way-we-work.md" target="blank">The Way We Work</a>
 4. <a href="/methodology" target="blank">Methodology</a>
 5. <a href="/CONTRIBUTING.md" target="blank">CONTRIBUTING</a> Guide

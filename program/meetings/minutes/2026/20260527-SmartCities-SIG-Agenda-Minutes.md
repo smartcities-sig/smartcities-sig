@@ -102,7 +102,7 @@ Because the group will only meet once per month:
 ## 5. Governance and Contribution Framework
 ### Governance Documents
 - [Charter](/governance/charter.md)
-- [Participation Agreement](/governance/participation-agreement.md)
+- [Participation Rules](/governance/participation-rules.md)
 - [The Way We Work](governance/the-way-we-work.md)
 
 ### Interim Roles
@@ -199,7 +199,7 @@ Target delivery before Smart City Expo Barcelona:
 ## 10. Immediate Next Steps
 ### Review Activities
 Participants are requested to:
-- Review the [Participation Agreement](governance/participation-agreement.md)
+- Review the [Participation Rules](governance/participation-rules.md)
 - Review the [Charter](/dev/governance/charter.md)
 - Review The [Way We Work document](/governance/the-way-we-work.md)
 - Review the [methodology walkthrough](/methodology/methodology-overview.md)
@@ -273,7 +273,7 @@ The meeting focused on:
 - Presenting the proposed governance and collaboration model
 - Reviewing the repository structure and tooling
 - Explaining the proposed interoperability methodology
-- Discussing participation agreements and contribution rules
+- Discussing participation rules and contribution rules
 - Reviewing the initial use cases submitted by Madrid Digital Office
 - Establishing meeting cadence and next steps
 
@@ -343,11 +343,11 @@ Joaquin Prado confirmed that all current repository content should be considered
 
 ---
 
-## 3. Participation Agreement and IP Protection
+## 3. Participation Rules and IP Protection
 
 ### Summary
 
-A significant portion of the meeting focused on the proposed participation agreement and intellectual property protections.
+A significant portion of the meeting focused on the proposed participation rules and intellectual property protections.
 
 Joaquin Prado explained that:
 
@@ -363,12 +363,12 @@ Seth Newberry clarified that attribution would apply to the Smart Cities SIG ini
 
 The group agreed that:
 
-- The participation agreement is the highest immediate priority
-- Organizations should review the agreement internally
-- The agreement must remain lightweight and practical
+- The participation rules are the highest immediate priority
+- Organizations should review the rules internally
+- The rules must remain lightweight and practical
 - Formal onboarding and repository write access ultimately depend on signature completion
 
-Joaquin Prado stated that comments and pull requests against the participation agreement are encouraged before approval.
+Joaquin Prado stated that comments and pull requests against the participation rules are encouraged before approval.
 
 ---
 
@@ -392,7 +392,7 @@ The group discussed several operational principles:
 - GitHub pull requests will be the primary review mechanism
 - The repository structure may later evolve into a public-facing website
 
-Joaquin Prado explained that write access to collaboration tools would eventually require signed participation agreements.
+Joaquin Prado explained that write access to collaboration tools would eventually require signed participation rules.
 
 Juan Muñoz noted that onboarding external municipalities will require simple explanatory materials rather than only repository URLs.
 
@@ -501,7 +501,7 @@ The group reviewed the proposed roadmap.
 
 ### Phase 1 — May to June
 - Governance
-- Participation agreement
+- Participation Rules
 - Tooling setup
 - Repository structure
 - Initial methodology definition
@@ -572,7 +572,7 @@ Joaquin Prado confirmed that communications materials will be circulated for rev
 
 - The initiative will operate using a GitHub-based collaborative model
 - The repository structure and tooling approach will continue as the working baseline
-- The participation agreement is the highest immediate governance priority
+- The participation rules are the highest immediate governance priority
 - The methodology documents are draft materials subject to pull requests and refinement
 - The initial technical focus will remain on:
   - Public street lighting
@@ -595,14 +595,14 @@ Joaquin Prado confirmed that communications materials will be circulated for rev
 - Add explanatory documentation for repository branches (`main` vs `dev`)
 - Prepare onboarding guidance for participants
 - Send recurring meeting invitations
-- Coordinate participation agreement review workflow
+- Coordinate participation rules review workflow
 - Provide access instructions for GitHub, Slack, and Groups.io
 
 ---
 
 ## All Participants
 
-- Review the participation agreement internally
+- Review the participation rules internally
 - Review:
   - Charter
   - “The Way We Work”
@@ -632,7 +632,7 @@ Joaquin Prado confirmed that communications materials will be circulated for rev
 
 # Open Questions / Items for Further Discussion
 
-- Final approval and signature workflow for participation agreements
+- Final approval and signature workflow for participation rules
 - Exact representation format for reusable abstractions
 - Relationship between Smart Data Models and standards mappings
 - Long-term governance model after November 2026
