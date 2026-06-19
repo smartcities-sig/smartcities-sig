@@ -101,3 +101,5 @@ The initial focus areas of the Smart Cities SIG are:
 Additional profile areas may be introduced based on ecosystem interest and contributor participation.
 
 > The initiative is working toward the completion of its initial deliverables and Proof of Concept activities in time to share findings, lessons learned, and reusable outputs at Smart City Expo World Congress 2026 in Barcelona.
+
+
