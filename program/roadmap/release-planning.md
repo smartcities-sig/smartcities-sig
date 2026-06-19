@@ -47,12 +47,12 @@ gantt
     Gap analysis and lessons learned         :p3e, 2026-10-01, 2026-10-31
 
     section Phase 4 — Smart City Expo Delivery
-    Use case documentation                   :p4a, 2026-11-01, 2026-11-30
-    Mapping methodology                      :p4b, 2026-11-01, 2026-11-30
-    Findings and lessons learned             :p4c, 2026-11-01, 2026-11-30
+    Use case documentation                   :p4a, 2026-10-16, 2026-10-31
+    Mapping methodology                      :p4b, 2026-10-16, 2026-10-31
+    Findings and lessons learned             :p4c, 2026-10-16, 2026-10-31
 
     Future recommendations                   :p4d, 2026-11-01, 2026-11-30
-    Smart City Expo World Congress           :milestone, p4e, 2026-11-30, 0d
+    Smart City Expo World Congress           :milestone, p4e, 2026-11-05, 0d
 ```
 
 ### Phase Summary and Key Milestones
