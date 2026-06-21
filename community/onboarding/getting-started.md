@@ -85,56 +85,47 @@ After joining, subscribe to the Smart Cities SIG [calendar](https://groups.io/g/
 
 # Participation Expectations
 
-Participation in the Smart Cities SIG is:
-- open,
-- collaborative,
-- implementation-neutral,
-- and voluntary.
-
 Participants are expected to:
+
 - collaborate constructively,
-- support practical interoperability discussions,
-- respect roadmap priorities and execution phases,
-- and contribute openly within the collaboration framework of the initiative.
-
-Organizations actively participating in the initiative are expected to review and sign:
-- [governance/participation-rules.md](/governance/participation-rules.md)
-
-Participants are also encouraged to review:
-- [governance/code-of-conduct.md](/governance/code-of-conduct.md)
+- support evidence-based interoperability discussions,
+- respect the agreed governance and working practices,
+- and contribute openly and professionally.
 
 ---
 
 # How Collaboration Works
 
-The initiative primarily collaborates through:
-- meetings,
-- GitHub Issues,
-- Pull Requests,
-- supporting documents,
-- and related ecosystem discussions.
+The Smart Cities SIG primarily collaborates through:
+
+- Monthly SIG meetings
+- GitHub Issues
+- GitHub Pull Requests
+- Working documents
+- Community discussions
 
 Meeting records and collaboration activities are maintained under:
-- [program/meetings/](/program/meetings)
+- [Meetings](/meetings/minutes/2026/meetings.md)
 
-The operational collaboration model is described in:
-- [governance/the-way-we-work.md](/governance/the-way-we-work.md)
-
-Participants are encouraged to first observe ongoing discussions, roadmap priorities, and active Proof of Concept activities before introducing significant new proposals or scope extensions.
+> Participants are encouraged to first observe ongoing discussions, roadmap priorities, and active Proof of Concept activities before introducing significant new proposals or scope extensions.
 
 ---
 
 # How to Contribute
 
-Participants are encouraged to:
-- contribute interoperability challenges and use cases,
-- share operational pain points and lessons learned,
-- participate in Proof of Concept activities,
-- contribute supporting material and reusable approaches,
-- and collaborate openly with other ecosystem participants.
+Common contributions include:
+
+- Municipal requirements
+- Use cases
+- Interoperability challenges
+- Standards mappings
+- Semantic models
+- Profile reviews
+- Proof of Concept participation
 
 Contribution guidance is available in:
-- [CONTRIBUTING.md](/CONTRIBUTING.md)
+
+- [CONTRIBUTING](/CONTRIBUTING.md)
 
 ---
 
@@ -145,7 +136,7 @@ The initiative follows a phased execution model intended to support practical de
 Contributors are encouraged to review the current roadmap and execution phase before introducing significant new proposals or scope extensions.
 
 The roadmap is maintained in:
-- [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
+- [Roadmap](/program/roadmap/release-planning.md)
 
 ---
 
@@ -160,16 +151,17 @@ The repository is organized to support:
 - and supporting interoperability activities.
 
 The target repository structure is described in:
-- [governance/folder-structure.md](/governance/folder-structure.md)
+- [Repository Structure](/governance/folder-structure.md)
 
 ---
 
 # Questions and Coordination
 
-Questions related to participation, onboarding, or collaboration activities may be raised through:
-- GitHub Issues,
-- initiative meetings,
+Questions related to onboarding, participation, access requests, or collaboration activities may be raised through:
+- [GitHub Issues](https://github.com/smartcities-sig/smartcities-sig/issues),
+- [Groups.io Smart Cities SIG](https://groups.io/g/smartcities-sig) discussions,
+- [Initiative meetings](https://groups.io/g/smartcities-sig/calendar),
 - or designated SIG coordination contacts.
 
 Additional tooling and access information is available in:
-- [community/onboarding/tooling-access.md](/community/onboarding/tooling-access.md)
+- [Tooling and Access](/community/onboarding/tooling-access.md)
