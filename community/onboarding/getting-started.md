@@ -75,12 +75,7 @@ Participants are expected to:
 - respect the agreed governance and working practices,
 - and contribute openly and professionally.
 
-<<<<<<< HEAD
 > **Note:** Participants are encouraged to contribute in areas where they have practical experience, operational expertise, or domain knowledge.
-=======
-Organizations actively participating in the initiative are expected to review and sign:
-- [governance/participation-rules.md](/governance/participation-rules.md)
->>>>>>> origin/dev
 
 > **Note:** Organizations participating in the Smart Cities SIG are encouraged to review the [Participation Rules](/governance/participation-rules.md) document.
 
