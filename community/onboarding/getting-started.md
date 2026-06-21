@@ -216,7 +216,7 @@ The following tools and platforms are currently used by the initiative.
    </tr>    
     <tr>
       <td>Zoom</td>
-      <td>See Calendar <a href="https://groups.io/g/smartcities-sig/calendar">Smart Cities SIG Calendar</a></td>
+      <td>See Calendar <a href="https://groups.io/g/smartcities-sig/calendar"><em>Smart Cities SIG Calendar</em></a></td>
       <td>Official SIG meetings. Meetings may be recorded to support minutes and traceability.</td>
     </tr>    
   </tbody>
