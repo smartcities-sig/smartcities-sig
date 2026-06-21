@@ -205,10 +205,15 @@ The following tools and platforms are currently used by the initiative.
       <td>Informal communication channel for quick questions, coordination, and participant discussions between meetings.</td>
     </tr>  
    <tr>
-      <td>Meeting Minutes</td>
-      <td>Available through the Smart Cities SIG website, <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG</a> </br> Alternatively, via the repository <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg</a></td>
-      <td>Provides access to private meeting minutes, working documents, draft materials, and collaboration records maintained by the Smart Cities SIG. Access is restricted to approved participants.</td>
-   </tr>      
+   <td>Meeting Minutes</td>
+      <td>
+         Available via the website
+         <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG</a><br/>
+         or the repository
+         <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg</a>
+      </td>
+      <td>Access to private meeting minutes, working documents, and collaboration records. Available to approved Smart Cities SIG participants.</td>
+   </tr>    
     <tr>
       <td>Zoom</td>
       <td>See Calendar <a href="https://groups.io/g/smartcities-sig/calendar">Smart Cities SIG Calendar</a></td>
