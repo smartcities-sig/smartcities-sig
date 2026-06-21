@@ -22,24 +22,43 @@ This document complements:
 - [Governance/code-of-conduct.md](/governance/code-of-conduct.md)
 - [Governance/participation-rules.md](/governance/participation-rules.md)
 
-## Working Model
+## Working Principles
 
-The Smart Cities SIG operates as a lightweight and collaborative ecosystem initiative focused on:
+The Smart Cities SIG operates using a lightweight, transparent, and execution-focused collaboration model.
+
+The initiative emphasizes:
+
+- practical outcomes,
 - interoperability,
-- reusable profiles,
-- semantic mappings,
-- validation approaches,
-- and practical Proof of Concept activities.
-
-The initiative prioritizes:
-- practical progress,
-- ecosystem alignment,
 - reusable outputs,
-- and timely delivery of agreed objectives.
+- traceability,
+- and ecosystem collaboration.
 
-The SIG is not intended to operate as a heavyweight standards development process or a formal architecture design authority.
+## Work Lifecycle
+
+Work within the Smart Cities SIG generally follows the lifecycle below:
+
+1. Municipal Requirement Identification
+2. Interoperability Analysis
+3. Standards and Semantic Mapping
+4. Smart Data Model Development
+5. Smart City Profile Development
+6. Proof of Concept Validation
+7. Publication and Reuse
+
+## Repository-First Collaboration
+
+The Smart Cities SIG follows a repository-first collaboration model.
+
+Meetings are used to coordinate activities, review progress, and discuss issues.
+
+Repository content, Issues, Pull Requests, meeting minutes, and published outputs serve as the primary record of initiative activities.
 
 ## Meetings
+
+Meetings are intended to support coordination and discussion.
+
+Significant outcomes, action items, and decisions should be reflected in repository artifacts to maintain transparency and traceability.
 
 Meetings are intended to support:
 - collaboration,
@@ -65,6 +84,8 @@ Discussions and collaboration activities should remain:
 - and aligned with the agreed objectives of the initiative.
 
 ## Lightweight Decision-Making
+
+Consensus is generally considered achieved when concerns have been discussed, participants have had an opportunity to provide feedback, and no significant unresolved objections remain.
 
 The Smart Cities SIG primarily operates through:
 - collaborative alignment,
