@@ -172,6 +172,34 @@ Participants are encouraged to contribute practical knowledge and real-world exp
 
 ---
 
+## What Makes a Good Contribution?
+
+The most effective contributions are:
+
+- based on real-world experience,
+- clearly describe a problem or opportunity,
+- identify affected stakeholders,
+- reference existing standards or practices when known,
+- contribute to interoperability,
+- and help advance reusable Smart Cities SIG outputs.
+
+---
+
+## What Not to Contribute
+
+To support open and reusable collaboration, contributors should avoid submitting:
+
+- confidential or non-public information,
+- proprietary material that cannot be openly shared,
+- content subject to licensing restrictions incompatible with the repository license,
+- promotional or marketing material unrelated to the objectives of the Smart Cities SIG,
+- duplicate content that does not advance ongoing discussions,
+- and material unrelated to smart city interoperability challenges or Smart Cities SIG activities.
+
+Questions regarding contribution suitability may be raised through GitHub Issues or with SIG coordinators before submitting content.
+
+---
+
 ## Participation Levels
 
 Participants may engage with the Smart Cities SIG in different ways.
