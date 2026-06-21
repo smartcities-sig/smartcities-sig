@@ -203,7 +203,12 @@ The following tools and platforms are currently used by the initiative.
       <td>Slack</td>
       <td><a href="https://join.slack.com/t/smartcities-sig/shared_invite/zt-3ywehmbs5-SjZAHz7S7eoYv_JZhcY_4g">Slack Smart Cities SIG</a></td>
       <td>Informal communication channel for quick questions, coordination, and participant discussions between meetings.</td>
-    </tr>    
+    </tr>  
+   <tr>
+      <td>Collaboration Portal</td>
+      <td>Available through the Smart Cities SIG website after login</td>
+      <td>Provides access to private meeting minutes, working documents, draft materials, and collaboration records maintained by the Smart Cities SIG. Access is restricted to approved participants.</td>
+   </tr>      
     <tr>
       <td>Zoom</td>
       <td>See Calendar <a href="https://groups.io/g/smartcities-sig/calendar">Smart Cities SIG Calendar</a></td>
