@@ -34,6 +34,17 @@ The initiative emphasizes:
 - traceability,
 - and ecosystem collaboration.
 
+## Participation Model
+
+Participants may contribute in different ways, including:
+
+- Providing municipal requirements
+- Sharing implementation experience
+- Reviewing outputs
+- Contributing standards expertise
+- Supporting Proof of Concept activities
+- Participating in interoperability discussions
+
 ## Work Lifecycle
 
 Work within the Smart Cities SIG generally follows the lifecycle below:
@@ -102,40 +113,21 @@ The initiative encourages:
 - and ecosystem alignment
 rather than heavyweight approval processes.
 
-## Coordination and Execution Focus
+## Execution Focus
 
-The initiative prioritizes:
-- timely delivery of agreed Proof of Concept outputs,
-- interoperability validation,
-- practical collaboration,
-- and execution discipline.
+The Smart Cities SIG prioritizes activities that contribute to agreed objectives, active profiles, and ongoing validation efforts.
 
-Participants are encouraged to remain aware of the current initiative roadmap and execution phase when introducing new ideas or proposals.
-
-The initiative roadmap and execution planning are maintained under:
-
-[Program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
-
-As the initiative progresses toward validation and delivery phases, activities are expected to increasingly prioritize:
-- stabilization,
-- interoperability validation,
-- test activities,
-- and completion of agreed outputs.
+Participants are encouraged to consider current priorities and available resources when proposing new work.
 
 ## Traceability and Transparency
 
-The initiative emphasizes:
-- transparent collaboration,
-- reusable outputs,
-- and traceable discussions.
+Traceability is maintained through:
 
-Meeting minutes, GitHub Issues, Pull Requests, and related repository activities serve as the primary traceability mechanisms for:
-- discussions,
-- action items,
-- decisions,
-- and collaboration activities.
-
-Participants are encouraged to maintain discussions and collaboration activities within public repositories and collaboration channels whenever feasible.
+- Meeting minutes
+- GitHub Issues
+- Pull Requests
+- Published Profiles
+- Proof of Concept reports
 
 Additional contribution guidance and repository practices are defined in:
 
