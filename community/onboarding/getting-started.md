@@ -206,7 +206,7 @@ The following tools and platforms are currently used by the initiative.
     </tr>  
    <tr>
       <td>Meeting Minutes</td>
-      <td>Available through the Smart Cities SIG website, [SIG WG](https://smartcities-sig-web.vercel.app/) after login </br> Alternatively, via the repository <a href="https://github.com/smartcities-sig/sig-wg">sig-wg</a></td>
+      <td>Available through the Smart Cities SIG website, <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG</a> </br> Alternatively, via the repository <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg</a></td>
       <td>Provides access to private meeting minutes, working documents, draft materials, and collaboration records maintained by the Smart Cities SIG. Access is restricted to approved participants.</td>
    </tr>      
     <tr>
