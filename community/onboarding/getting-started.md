@@ -8,42 +8,21 @@ layout: web
 
 ## Purpose of This Document
 
-This document provides a lightweight onboarding and orientation guide for participants joining the Smart Cities SIG.
+This document provides a practical onboarding guide for new participants joining the Smart Cities SIG.
 
-The objective is to help new participants quickly understand:
-- what the initiative is,
-- why it exists,
-- where to find key information,
-- how collaboration works,
-- and how to begin contributing effectively within the Smart Cities SIG ecosystem.
-
-This document is intended to help municipalities, standards organizations, industry participants, academia, and ecosystem contributors participate constructively without requiring deep prior knowledge of the initiative structure or standards processes.
+It explains how to access the collaboration tools, where to find key information, how participation works, and how to begin contributing effectively.
 
 ---
 
-# What is the Smart Cities SIG?
+## Before You Begin
 
-The Smart Cities SIG is a collaborative and implementation-neutral ecosystem initiative focused on:
-- interoperability alignment,
-- reusable interoperability approaches,
-- semantic and standards mappings,
-- and practical Proof of Concept activities driven by real operational needs and use cases.
+If you are new to the initiative, we recommend first reviewing:
 
-The initiative aims to help municipalities and ecosystem participants collaboratively analyze interoperability challenges and reusable approaches across smart city domains.
+- [About Us](/README.md)
+- [Charter](/governance/charter.md)
+- [Methodology](/methodology/methodology-overview.md)
 
----
-
-# Why Does the Initiative Exist?
-
-The Smart Cities SIG was created to help provide a practical and collaborative environment where:
-- municipalities can bring real operational needs, business requirements, use cases, and interoperability pain points,
-- ecosystem participants can collaboratively analyze interoperability challenges,
-- and participating organizations can help refine reusable interoperability approaches and ecosystem alignment activities.
-
-The initiative is intended to complement existing standards organizations, ecosystem alliances, interoperability programs, and related industry initiatives rather than compete with them.
-
-The official scope and objectives of the initiative are described in:
-- [governance/charter.md](/governance/charter.md)
+These documents explain the purpose, scope, governance, and working approach of the Smart Cities SIG.
 
 ---
 
@@ -51,29 +30,56 @@ The official scope and objectives of the initiative are described in:
 
 New participants are encouraged to review the following documents in order:
 
-1. [README.md](/README.md)  
+1. [ABOUT US](/README.md)  
    High-level overview of the initiative.
 
-2. [foundation/vision.md](/foundation/vision.md)  
-   Long-term interoperability vision and ecosystem objectives.
-
-3. [foundation/ecosystem-positioning.md](/foundation/ecosystem-positioning.md)
-   Explains how the Smart Cities SIG positions itself within the broader ecosystem.
-
-4. [governance/charter.md](/governance/charter.md)  
+1. [Charter](/governance/charter.md)  
    Official initiative scope and objectives.
 
-5. [governance/the-way-we-work.md](/governance/the-way-we-work.md)  
+1. [Join the Community](/#join-the-community)  
+   Instructions for joining the SIG and participating in meetings.
+
+1. [Participation Expectations](/#participation-expectations)  
+   Expectations for organizational participation.
+
+1. [Methodology](/methodology/methodology-overview.md)  
+   Approach for analyzing interoperability challenges and developing reusable outputs.
+
+1. [The Way We Work](/governance/the-way-we-work.md)  
    Operational collaboration model and working practices.
 
-6. [CONTRIBUTING.md](/CONTRIBUTING.md)  
+1. [CONTRIBUTING.md](/CONTRIBUTING.md)  
    Contribution expectations and collaboration guidance.
 
-7. [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)  
+1. [Roadmap](/program/roadmap/release-planning.md)  
    Current roadmap, milestones, and execution phases.
 
-8. [governance/folder-structure.md](/governance/folder-structure.md)  
+1. [Repository Structure](/governance/folder-structure.md)  
    Repository structure and organization.
+
+1. [Vision](/foundation/vision.md)  
+   Long-term interoperability vision and ecosystem objectives.
+
+1. [Ecosystem Positioning](/foundation/ecosystem-positioning.md)  
+   Explains how the Smart Cities SIG positions itself within the broader ecosystem.
+
+---
+
+## Join the Community
+
+To participate in the Smart Cities SIG:
+
+1. Submit a [request](https://groups.io/g/smartcities-sig) to join the Smart Cities SIG community.
+2. Provide your company email address.
+3. Provide your GitHub username.
+
+Your GitHub username is required to:
+- contribute to the repository,
+- participate in issue discussions,
+- submit pull requests,
+- and access the private repository containing meeting minutes.
+
+After joining, subscribe to the Smart Cities SIG [calendar](https://groups.io/g/smartcities-sig/calendar) to receive meeting invitations and schedule updates.
 
 ---
 
