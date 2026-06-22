@@ -10,7 +10,7 @@ Thank you for your interest in contributing to the Smart Cities SIG.
 
 The Smart Cities SIG is a collaborative ecosystem initiative that brings together municipalities, industry participants, academia, standards organizations, and other stakeholders to address practical smart city interoperability challenges and develop reusable outputs.
 
-## Before Contributing
+Contributions of all sizes are welcome.
 
 ---
 
@@ -23,6 +23,80 @@ Before contributing, participants are encouraged to review the following documen
 - [Participation Rules](/governance/participation-rules.md)
 - [Code of Conduct](/governance/code-of-conduct.md)
 - [The Way We Work](/governance/the-way-we-work.md)
+- [Methodology](/methodology/methodology-overview.md)
+
+These documents explain the purpose of the initiative, participation expectations, collaboration model, and the methodology used to analyze interoperability challenges and develop Smart City Profiles.
+
+---
+
+## What Can You Contribute?
+
+The Smart Cities SIG welcomes contributions from municipalities, public agencies, utilities, technology providers, standards organizations, academic institutions, and other ecosystem stakeholders.
+
+Examples of contributions include:
+
+- Municipal requirements
+- Business and operational use cases
+- Interoperability challenges
+- Existing standards and specifications
+- Semantic models and data models
+- Gap analyses
+- Workshop outputs
+- Profile reviews
+- Proof of Concept participation
+- Implementation experience and lessons learned
+- Supporting reports and reference material
+
+Participants are encouraged to contribute practical knowledge and real-world experience that can help improve interoperability across smart city ecosystems.
+
+---
+
+## Participation Levels
+
+Participants may engage with the Smart Cities SIG in different ways.
+
+### Observer
+
+Observers may:
+
+- follow repository activities,
+- review published materials,
+- attend meetings,
+- and monitor ongoing work.
+
+### Contributor
+
+Contributors may:
+
+- create GitHub Issues,
+- participate in discussions,
+- provide feedback,
+- review outputs,
+- and contribute supporting material.
+
+### Active Contributor
+
+Active Contributors may:
+
+- develop content,
+- submit Pull Requests,
+- lead work items,
+- coordinate profile activities,
+- and participate in Proof of Concept initiatives.
+
+---
+
+## Repository-First Contribution Model
+
+The Smart Cities SIG follows a repository-first collaboration model.
+
+Contributors are encouraged to create Issues, share ideas, raise questions, and propose improvements as soon as they are identified.
+
+Contributions do not need to wait for a scheduled meeting.
+
+Monthly meetings are intended to support coordination, review progress, discuss challenges, and align participants. The repository remains the primary location for collaboration, discussion, and traceability.
+
+---
 
 ## Typical Contribution Flow
 
