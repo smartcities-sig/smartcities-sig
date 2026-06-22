@@ -69,9 +69,7 @@ smartcities-sig/
 |── community/
 │   ├── README.md
 │   └── onboarding/
-│   |   ├── getting-started.md
-│   |   └── tooling-access.md
-|   |
+│   |   └── getting-started.md
 │   └── participant-organizations/
 │
 |── methodology/

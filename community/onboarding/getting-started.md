@@ -8,162 +8,214 @@ layout: web
 
 ## Purpose of This Document
 
-This document provides a lightweight onboarding and orientation guide for participants joining the Smart Cities SIG.
+This document provides a practical onboarding guide for new participants joining the Smart Cities SIG.
 
-The objective is to help new participants quickly understand:
-- what the initiative is,
-- why it exists,
-- where to find key information,
-- how collaboration works,
-- and how to begin contributing effectively within the Smart Cities SIG ecosystem.
-
-This document is intended to help municipalities, standards organizations, industry participants, academia, and ecosystem contributors participate constructively without requiring deep prior knowledge of the initiative structure or standards processes.
+It explains how to access the collaboration tools, where to find key information, how participation works, and how to begin contributing effectively.
 
 ---
 
-# What is the Smart Cities SIG?
+## Quick Start
 
-The Smart Cities SIG is a collaborative and implementation-neutral ecosystem initiative focused on:
-- interoperability alignment,
-- reusable interoperability approaches,
-- semantic and standards mappings,
-- and practical Proof of Concept activities driven by real operational needs and use cases.
-
-The initiative aims to help municipalities and ecosystem participants collaboratively analyze interoperability challenges and reusable approaches across smart city domains.
-
----
-
-# Why Does the Initiative Exist?
-
-The Smart Cities SIG was created to help provide a practical and collaborative environment where:
-- municipalities can bring real operational needs, business requirements, use cases, and interoperability pain points,
-- ecosystem participants can collaboratively analyze interoperability challenges,
-- and participating organizations can help refine reusable interoperability approaches and ecosystem alignment activities.
-
-The initiative is intended to complement existing standards organizations, ecosystem alliances, interoperability programs, and related industry initiatives rather than compete with them.
-
-The official scope and objectives of the initiative are described in:
-- [governance/charter.md](/governance/charter.md)
+1. [Join](https://groups.io/g/smartcities-sig) the Smart Cities SIG community.
+2. Provide your GitHub username.
+3. Subscribe to the SIG [calendar](https://groups.io/g/smartcities-sig/calendar).
+4. Review the [Charter](/governance/charter.md) and [Methodology](/methodology/methodology-overview.md).
+5. Attend a monthly meeting.
+6. Contribute through GitHub [SmartCities-SIG](https://github.com/smartcities-sig/smartcities-sig) Issues and Pull Requests.
 
 ---
 
-# Recommended First Steps
+## Join the Community
+
+To participate in the Smart Cities SIG:
+
+1. Submit a [request](https://groups.io/g/smartcities-sig) to join the Smart Cities SIG community.
+2. Provide your company email address.
+3. Provide your GitHub username.
+
+Your GitHub username is required to:
+- contribute to the repository,
+- participate in issue discussions,
+- submit pull requests,
+- and access the private repository containing meeting minutes.
+
+After joining, subscribe to the Smart Cities SIG [calendar](https://groups.io/g/smartcities-sig/calendar) to receive meeting invitations and schedule updates.
+
+---
+
+## Essential Reading for New Participants
 
 New participants are encouraged to review the following documents in order:
 
-1. [README.md](/README.md)  
+1. [ABOUT US](/README.md)  
    High-level overview of the initiative.
 
-2. [foundation/vision.md](/foundation/vision.md)  
-   Long-term interoperability vision and ecosystem objectives.
-
-3. [foundation/ecosystem-positioning.md](/foundation/ecosystem-positioning.md)
-   Explains how the Smart Cities SIG positions itself within the broader ecosystem.
-
-4. [governance/charter.md](/governance/charter.md)  
+2. [Charter](/governance/charter.md)  
    Official initiative scope and objectives.
 
-5. [governance/the-way-we-work.md](/governance/the-way-we-work.md)  
+3. [Methodology](/methodology/methodology-overview.md)  
+   Approach for analyzing interoperability challenges and developing reusable outputs.   
+
+4. [The Way We Work](/governance/the-way-we-work.md)  
    Operational collaboration model and working practices.
 
-6. [CONTRIBUTING.md](/CONTRIBUTING.md)  
+5. [CONTRIBUTING.md](/CONTRIBUTING.md)  
    Contribution expectations and collaboration guidance.
 
-7. [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)  
-   Current roadmap, milestones, and execution phases.
-
-8. [governance/folder-structure.md](/governance/folder-structure.md)  
-   Repository structure and organization.
+These documents explain the purpose, scope, governance, and working approach of the Smart Cities SIG.
 
 ---
 
-# Participation Expectations
-
-Participation in the Smart Cities SIG is:
-- open,
-- collaborative,
-- implementation-neutral,
-- and voluntary.
+## Participation Expectations
 
 Participants are expected to:
+
 - collaborate constructively,
-- support practical interoperability discussions,
-- respect roadmap priorities and execution phases,
-- and contribute openly within the collaboration framework of the initiative.
+- support evidence-based interoperability discussions,
+- respect the agreed governance and working practices,
+- and contribute openly and professionally.
 
-Organizations actively participating in the initiative are expected to review and sign:
-- [governance/participation-rules.md](/governance/participation-rules.md)
+> **Note:** Participants are encouraged to contribute in areas where they have practical experience, operational expertise, or domain knowledge.
 
-Participants are also encouraged to review:
-- [governance/code-of-conduct.md](/governance/code-of-conduct.md)
+> **Note:** Organizations participating in the Smart Cities SIG are encouraged to review the [Participation Rules](/governance/participation-rules.md) document.
 
 ---
 
-# How Collaboration Works
+## Additional Reference Material   
 
-The initiative primarily collaborates through:
-- meetings,
-- GitHub Issues,
-- Pull Requests,
-- supporting documents,
-- and related ecosystem discussions.
+6. [Roadmap](/program/roadmap/release-planning.md)  
+   Current roadmap, milestones, and execution phases.
+
+7. [Repository Structure](/governance/folder-structure.md)  
+   Repository structure and organization.
+
+8. [Vision](/foundation/vision.md)  
+   Long-term interoperability vision and ecosystem objectives.
+
+9. [Ecosystem Positioning](/foundation/ecosystem-positioning.md)  
+   Explains how the Smart Cities SIG positions itself within the broader ecosystem.
+
+---
+
+## How Collaboration Works
+
+The Smart Cities SIG primarily collaborates through:
+
+- Monthly SIG meetings
+- GitHub Issues
+- GitHub Pull Requests
+- Working documents
+- Community discussions
+
+> **Note:** GitHub is the primary collaboration platform for documenting issues, reviewing proposals, providing comments, and developing Smart City Profiles and related outputs.
+
 
 Meeting records and collaboration activities are maintained under:
-- [program/meetings/](/program/meetings)
+- [Meetings](/meetings/minutes/2026/meetings.md)
 
-The operational collaboration model is described in:
-- [governance/the-way-we-work.md](/governance/the-way-we-work.md)
-
-Participants are encouraged to first observe ongoing discussions, roadmap priorities, and active Proof of Concept activities before introducing significant new proposals or scope extensions.
+> **Note:** Participants are encouraged to first observe ongoing discussions, roadmap priorities, and active Proof of Concept activities before introducing significant new proposals or scope extensions.
 
 ---
 
-# How to Contribute
+## How to Contribute
 
-Participants are encouraged to:
-- contribute interoperability challenges and use cases,
-- share operational pain points and lessons learned,
-- participate in Proof of Concept activities,
-- contribute supporting material and reusable approaches,
-- and collaborate openly with other ecosystem participants.
+Common contributions include:
+
+- Municipal requirements
+- Use cases
+- Interoperability challenges
+- Standards mappings
+- Semantic models
+- Profile reviews
+- Proof of Concept participation
 
 Contribution guidance is available in:
-- [CONTRIBUTING.md](/CONTRIBUTING.md)
+
+- [CONTRIBUTING](/CONTRIBUTING.md)
 
 ---
 
-# Roadmap and Execution Phases
+## Roadmap and Execution Phases
 
 The initiative follows a phased execution model intended to support practical delivery and interoperability validation activities aligned with the Smart City Expo Barcelona timeline.
 
 Contributors are encouraged to review the current roadmap and execution phase before introducing significant new proposals or scope extensions.
 
 The roadmap is maintained in:
-- [program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
+- [Roadmap](/program/roadmap/release-planning.md)
 
 ---
 
-# Repository Structure
+## Repository Structure
 
-The repository is organized to support:
-- governance documentation,
-- program coordination,
-- profile development,
-- meeting records,
-- ecosystem collaboration artifacts,
-- and supporting interoperability activities.
+The repository is organized to support governance, collaboration, profile development, meeting records, and related Smart Cities SIG activities.
 
 The target repository structure is described in:
-- [governance/folder-structure.md](/governance/folder-structure.md)
+
+- [Repository Structure](/governance/folder-structure.md)
 
 ---
 
-# Questions and Coordination
+## Questions and Coordination
 
-Questions related to participation, onboarding, or collaboration activities may be raised through:
-- GitHub Issues,
-- initiative meetings,
+Questions related to onboarding, participation, access requests, or collaboration activities may be raised through:
+- [GitHub Issues](https://github.com/smartcities-sig/smartcities-sig/issues),
+- [Groups.io Smart Cities SIG](https://groups.io/g/smartcities-sig) discussions,
+- [Initiative meetings](https://groups.io/g/smartcities-sig/calendar),
 - or designated SIG coordination contacts.
 
-Additional tooling and access information is available in:
-- [community/onboarding/tooling-access.md](/community/onboarding/tooling-access.md)
+## Collaboration Tools
+
+The Smart Cities SIG uses a lightweight set of collaboration and coordination platforms intended to support:
+- transparent collaboration,
+- practical interoperability discussions,
+- traceable ecosystem coordination,
+- and open participation across the initiative.
+
+The following tools and platforms are currently used by the initiative.
+
+<table>
+  <caption>Smart Cities SIG Collaboration and Coordination Platforms</caption>
+  <thead>
+    <tr>
+      <th>Tool / Platform</th>
+      <th>Link</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GitHub</td>
+      <td><a href="https://github.com/smartcities-sig/smartcities-sig">smartcities-sig repository</a></td>
+      <td>Primary platform for repository content, Issues, Discussions, Pull Requests, and traceable collaboration.</td>
+    </tr>
+    <tr>
+      <td>Groups.io</td>
+      <td><a href="https://groups.io/g/smartcities-sig">Groups.io Smart Cities SIG</a></td>
+      <td>Distribution list, announcements, and storage for larger supporting documents outside GitHub.</td>
+    </tr>
+    <tr>
+      <td>Calendar</td>
+      <td><a href="https://groups.io/g/smartcities-sig/calendar">Smart Cities SIG Calendar</a></td>
+      <td>The Smart Cities SIG typically meets once per month.</td>
+    </tr>
+    <tr>
+      <td>Slack</td>
+      <td><a href="https://join.slack.com/t/smartcities-sig/shared_invite/zt-3ywehmbs5-SjZAHz7S7eoYv_JZhcY_4g">Slack Smart Cities SIG</a></td>
+      <td>Informal communication channel for quick questions, coordination, and participant discussions between meetings.</td>
+    </tr>  
+   <tr>
+      <td>Meeting Minutes</td>
+      <td>
+         <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG Website</a><br/>
+         <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg Repository</a>
+      </td>
+      <td>Private meeting minutes and working documents for approved Smart Cities SIG participants.</td>
+   </tr>   
+    <tr>
+      <td>Zoom</td>
+      <td>See Calendar <a href="https://groups.io/g/smartcities-sig/calendar"><em>Smart Cities SIG Calendar</em></a></td>
+      <td>Official SIG meetings. Meetings may be recorded to support minutes and traceability.</td>
+    </tr>    
+  </tbody>
+</table>

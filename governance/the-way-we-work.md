@@ -11,135 +11,164 @@ layout: doc
 This document describes the operational working model used by the Smart Cities SIG.
 
 The objective is to support:
-- lightweight governance,
+
 - practical collaboration,
 - transparent participation,
-- and execution-focused ecosystem coordination.
+- lightweight coordination,
+- and effective delivery of reusable outputs.
 
 This document complements:
-- [Governance/charter.md](/governance/charter.md)
-- [Contributing.md](/CONTRIBUTING.md)
-- [Governance/code-of-conduct.md](/governance/code-of-conduct.md)
-- [Governance/participation-rules.md](/governance/participation-rules.md)
 
-## Working Model
+- [Charter](/governance/charter.md)
+- [Participation Rules](/governance/participation-rules.md)
+- [Code of Conduct](/governance/code-of-conduct.md)
+- [CONTRIBUTING](/CONTRIBUTING.md)
+- [Methodology](/methodology/methodology-overview.md)
 
-The Smart Cities SIG operates as a lightweight and collaborative ecosystem initiative focused on:
-- interoperability,
-- reusable profiles,
-- semantic mappings,
-- validation approaches,
-- and practical Proof of Concept activities.
+---
 
-The initiative prioritizes:
-- practical progress,
-- ecosystem alignment,
-- reusable outputs,
-- and timely delivery of agreed objectives.
+## How We Collaborate
 
-The SIG is not intended to operate as a heavyweight standards development process or a formal architecture design authority.
+The Smart Cities SIG operates as a collaborative ecosystem initiative that brings together municipalities, industry participants, academia, standards organizations, and other stakeholders.
+
+The initiative follows a repository-first collaboration model.
+
+Repository content, Issues, Pull Requests, meeting minutes, and published outputs serve as the primary record of initiative activities. Meetings support collaboration and coordination, but repository artifacts remain the authoritative source of information and traceability.
+
+Participants are encouraged to collaborate openly, share knowledge, and build upon the contributions of others whenever possible.
+
+---
+
+## How We Work Together
+
+The Smart Cities SIG encourages practical, respectful, and outcome-oriented collaboration.
+
+Participants are encouraged to:
+
+- focus on practical interoperability challenges,
+- contribute constructively and professionally,
+- support evidence-based discussions,
+- respect differing perspectives,
+- and work toward reusable and interoperable solutions.
+
+The initiative values collaboration across organizations and disciplines. Participants are encouraged to share operational experience, implementation lessons learned, and domain expertise that may benefit the broader ecosystem.
+
+---
+
+## Reuse Before Reinvention
+
+The Smart Cities SIG seeks to build upon existing ecosystem work whenever feasible.
+
+Participants are encouraged to identify and reuse existing standards, specifications, data models, interoperability frameworks, and industry best practices before proposing new approaches.
+
+The objective is to promote alignment, interoperability, and reuse across the ecosystem rather than duplicate existing efforts.
+
+---
+
+## How We Make Progress
+
+The Smart Cities SIG emphasizes incremental progress, practical outcomes, and execution-focused collaboration.
+
+The initiative primarily operates through:
+
+- collaborative alignment,
+- practical consensus,
+- incremental improvement,
+- and continuous contribution.
+
+Participants are encouraged to focus discussions on advancing agreed objectives and delivering useful outputs.
+
+The initiative seeks to avoid unnecessary bureaucracy and heavyweight approval processes whenever practical alternatives exist.
+
+---
+
+## Lightweight Decision-Making
+
+The Smart Cities SIG generally operates through consensus rather than formal voting procedures.
+
+Consensus is typically considered achieved when:
+
+- participants have had an opportunity to provide feedback,
+- concerns have been discussed,
+- reasonable efforts have been made to address objections,
+- and no significant unresolved objections remain.
+
+Consensus does not require unanimous agreement. Participants may continue to hold different perspectives while agreeing to move forward with a practical path that supports initiative progress.
+
+Where necessary, SIG coordinators may facilitate discussions to support alignment and maintain progress.
+
+---
 
 ## Meetings
 
 Meetings are intended to support:
+
 - collaboration,
 - coordination,
-- ecosystem alignment,
-- and review of ongoing activities.
+- review of ongoing activities,
+- and ecosystem alignment.
 
-Meeting minutes serve as the primary operational record for the initiative and may include:
-- agenda items,
-- participants,
-- action items,
-- references,
-- presentation links,
-- and related collaboration material.
+Meetings should not be considered the sole record of initiative activities.
 
-Meeting records are maintained under:
+Important discussions, action items, decisions, and outcomes should be reflected in repository artifacts to maintain transparency and traceability.
 
-[Program/meetings/minutes/](/program/meetings/minutes)
+Meeting minutes serve as the official meeting record and are maintained under:
 
-Discussions and collaboration activities should remain:
-- constructive,
-- practical,
-- and aligned with the agreed objectives of the initiative.
+[Meeting Minutes](/program/meetings/minutes)
 
-## Lightweight Decision-Making
+Participants are encouraged to review relevant materials before meetings and continue discussions through repository channels when appropriate.
 
-The Smart Cities SIG primarily operates through:
-- collaborative alignment,
-- practical consensus,
-- and execution-oriented discussions.
+---
 
-The initiative does not rely on formal voting procedures for normal operational activities unless explicitly required by the initiative leadership.
+## Transparency and Traceability
 
-Where needed, initiative coordinators may facilitate discussions to support alignment and maintain initiative progress.
+Transparency and traceability are fundamental principles of the Smart Cities SIG.
 
-The initiative encourages:
-- practical discussion,
-- incremental progress,
-- and ecosystem alignment
-rather than heavyweight approval processes.
+Traceability is maintained through:
 
-## Coordination and Execution Focus
+- meeting minutes,
+- GitHub Issues,
+- Pull Requests,
+- published profiles,
+- Proof of Concept reports,
+- and supporting documentation.
 
-The initiative prioritizes:
-- timely delivery of agreed Proof of Concept outputs,
-- interoperability validation,
-- practical collaboration,
-- and execution discipline.
+Participants are encouraged to conduct discussions and collaboration activities within approved community platforms whenever feasible to ensure transparency and preserve institutional knowledge.
 
-Participants are encouraged to remain aware of the current initiative roadmap and execution phase when introducing new ideas or proposals.
+---
 
-The initiative roadmap and execution planning are maintained under:
+## Coordination and Continuity
 
-[Program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
+The Smart Cities SIG relies on shared documentation, repository artifacts, and meeting records to maintain continuity across participants, organizations, and work activities.
 
-As the initiative progresses toward validation and delivery phases, activities are expected to increasingly prioritize:
-- stabilization,
-- interoperability validation,
-- test activities,
-- and completion of agreed outputs.
+Participants are encouraged to document significant discussions, decisions, and outcomes in a manner that enables future contributors to understand the rationale and history of initiative activities.
 
-## Traceability and Transparency
+This approach helps preserve institutional knowledge and supports long-term collaboration.
 
-The initiative emphasizes:
-- transparent collaboration,
-- reusable outputs,
-- and traceable discussions.
-
-Meeting minutes, GitHub Issues, Pull Requests, and related repository activities serve as the primary traceability mechanisms for:
-- discussions,
-- action items,
-- decisions,
-- and collaboration activities.
-
-Participants are encouraged to maintain discussions and collaboration activities within public repositories and collaboration channels whenever feasible.
-
-Additional contribution guidance and repository practices are defined in:
-
-[CONTRIBUTING.md](/CONTRIBUTING.md)
+---
 
 ## Escalation and Coordination
 
-Concerns regarding collaboration behavior or participation issues may be raised with the initiative coordinators or designated SIG leadership.
+Concerns regarding collaboration behavior, participation issues, or operational challenges may be raised with the SIG coordinators or designated initiative leadership.
 
-Concerns may be reviewed and addressed by the initiative coordinators, including the Chair and Vice-Chair(s).
-
-The initiative coordinators may moderate discussions or participation activities when necessary to maintain productive and respectful collaboration.
+SIG coordinators may facilitate discussions or moderate participation activities when necessary to maintain productive, respectful, and constructive collaboration.
 
 Additional collaboration behavior expectations are defined in:
 
-[Governance/code-of-conduct.md](/governance/code-of-conduct.md)
+[Code of Conduct](/governance/code-of-conduct.md)
+
+---
 
 ## Evolution of the Working Model
 
 The Smart Cities SIG is expected to evolve over time based on:
+
 - ecosystem participation,
 - interoperability findings,
+- implementation experience,
 - Proof of Concept outcomes,
-- implementation feedback,
-- and future collaboration opportunities.
+- and lessons learned from collaboration activities.
 
-Repository structures, collaboration practices, and operational processes may evolve incrementally as the initiative matures.
+Collaboration practices, repository structures, and operational processes may evolve incrementally as the initiative matures.
 
+Changes to the working model should be documented and communicated through the repository and community communication channels.
