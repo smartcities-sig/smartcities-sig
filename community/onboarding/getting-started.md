@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description:
-layout: web
+layout: doc
 ---
 
 # {{ $doc.title }}
@@ -39,6 +39,7 @@ Your GitHub username is required to:
 - submit pull requests,
 - and access the private repository containing meeting minutes.
 
+The Smart Cities SIG typically meets once per month.
 After joining, subscribe to the Smart Cities SIG [calendar](https://groups.io/g/smartcities-sig/calendar) to receive meeting invitations and schedule updates.
 
 ---
@@ -131,7 +132,7 @@ Common contributions include:
 
 Contribution guidance is available in:
 
-- [CONTRIBUTING](/CONTRIBUTING.md)
+- Contribution guidance is available in [CONTRIBUTING](/CONTRIBUTING.md).
 
 ---
 
@@ -192,12 +193,12 @@ The following tools and platforms are currently used by the initiative.
     <tr>
       <td>Groups.io</td>
       <td><a href="https://groups.io/g/smartcities-sig">Groups.io Smart Cities SIG</a></td>
-      <td>Distribution list, announcements, and storage for larger supporting documents outside GitHub.</td>
+      <td>Community mailing list for announcements, discussions, meeting invitations, and participant coordination.</td>
     </tr>
     <tr>
       <td>Calendar</td>
       <td><a href="https://groups.io/g/smartcities-sig/calendar">Smart Cities SIG Calendar</a></td>
-      <td>The Smart Cities SIG typically meets once per month.</td>
+      <td>Meeting schedule, invitations, and calendar subscription for Smart Cities SIG activities.</td>
     </tr>
     <tr>
       <td>Slack</td>
@@ -205,7 +206,7 @@ The following tools and platforms are currently used by the initiative.
       <td>Informal communication channel for quick questions, coordination, and participant discussions between meetings.</td>
     </tr>  
    <tr>
-      <td>Meeting Minutes</td>
+      <td>Private Workspace</td>
       <td>
          <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG Website</a><br/>
          <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg Repository</a>
@@ -215,7 +216,7 @@ The following tools and platforms are currently used by the initiative.
     <tr>
       <td>Zoom</td>
       <td>See Calendar <a href="https://groups.io/g/smartcities-sig/calendar"><em>Smart Cities SIG Calendar</em></a></td>
-      <td>Official SIG meetings. Meetings may be recorded to support minutes and traceability.</td>
+      <td>Platform used for official SIG meetings and workshops.</td>
     </tr>    
   </tbody>
 </table>
