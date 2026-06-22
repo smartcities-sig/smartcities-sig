@@ -39,7 +39,6 @@ Your GitHub username is required to:
 - submit pull requests,
 - and access the private repository containing meeting minutes.
 
-The Smart Cities SIG typically meets once per month.
 After joining, subscribe to the Smart Cities SIG [calendar](https://groups.io/g/smartcities-sig/calendar) to receive meeting invitations and schedule updates.
 
 ---
@@ -193,12 +192,12 @@ The following tools and platforms are currently used by the initiative.
     <tr>
       <td>Groups.io</td>
       <td><a href="https://groups.io/g/smartcities-sig">Groups.io Smart Cities SIG</a></td>
-      <td>Community mailing list for announcements, discussions, meeting invitations, and participant coordination.</td>
+      <td>Distribution list, announcements, and storage for larger supporting documents outside GitHub.</td>
     </tr>
     <tr>
       <td>Calendar</td>
       <td><a href="https://groups.io/g/smartcities-sig/calendar">Smart Cities SIG Calendar</a></td>
-      <td>Meeting schedule, invitations, and calendar subscription for Smart Cities SIG activities.</td>
+      <td>The Smart Cities SIG typically meets once per month.</td>
     </tr>
     <tr>
       <td>Slack</td>
