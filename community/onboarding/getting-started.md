@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description:
-layout: web
+layout: doc
 ---
 
 # {{ $doc.title }}
@@ -131,7 +131,7 @@ Common contributions include:
 
 Contribution guidance is available in:
 
-- [CONTRIBUTING](/CONTRIBUTING.md)
+- Contribution guidance is available in [CONTRIBUTING](/CONTRIBUTING.md).
 
 ---
 
@@ -205,7 +205,7 @@ The following tools and platforms are currently used by the initiative.
       <td>Informal communication channel for quick questions, coordination, and participant discussions between meetings.</td>
     </tr>  
    <tr>
-      <td>Meeting Minutes</td>
+      <td>Private Workspace</td>
       <td>
          <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG Website</a><br/>
          <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg Repository</a>
@@ -215,7 +215,7 @@ The following tools and platforms are currently used by the initiative.
     <tr>
       <td>Zoom</td>
       <td>See Calendar <a href="https://groups.io/g/smartcities-sig/calendar"><em>Smart Cities SIG Calendar</em></a></td>
-      <td>Official SIG meetings. Meetings may be recorded to support minutes and traceability.</td>
+      <td>Platform used for official SIG meetings and workshops.</td>
     </tr>    
   </tbody>
 </table>
