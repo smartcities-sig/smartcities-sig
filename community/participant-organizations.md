@@ -10,7 +10,7 @@ layout: doc
 
 ## Madrid Positioning 
 
-[Madrid](https://www.madrid.es/digitalcapital), through the [Digital Office](https://www.madrid.es/madriddigitalcapital) of the Madrid City Council, is actively deploying IoT and 5G technologies across city services to improve interoperability and cybersecurity. It works in partnership with the [Polytechnic University of Madrid](https://www.upm.es/internacional), [OMA](https://www.openmobilealliance.org/), [AIOTI](https://aioti.eu/cities-5-0/), and [EIRA/EggoVERA](https://interoperable-europe.ec.europa.eu/collection/european-interoperability-reference-architecture-eira/news/egoverac-success-data-space-council-madrid), among others.
+[Madrid](https://www.madrid.es/digitalcapital), through the [Digital Office](https://www.madrid.es/madriddigitalcapital) of the Madrid City Council, is actively deploying IoT and 5G technologies across city services to improve interoperability and cybersecurity. Participants in this activity include [Polytechnic University of Madrid](https://www.upm.es/internacional), [OMA](https://www.openmobilealliance.org/), [AIOTI](https://aioti.eu/cities-5-0/), among others. It is aligned with initiatives like [Interoperable-europe](https://interoperable-europe.ec.europa.eu/collection/rolling-plan-ict-standardisation/rolling-plan-2026) and [EIRA/EGovEra](https://interoperable-europe.ec.europa.eu/collection/european-interoperability-reference-architecture-eira/solution/egovera-business-agnostic-0).
 
 The [Madrid City Council](https://www.madrid.es/digitalcapital) participates in the [Smart Cities SIG](https://github.com/smartcities-sig/smartcities-sig) as:
 
