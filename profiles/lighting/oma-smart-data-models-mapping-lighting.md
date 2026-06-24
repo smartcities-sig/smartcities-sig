@@ -68,7 +68,7 @@ The color temperature is not currently present in the Smart Data Model
 
 
 **Tests**
-https://github.com/OpenMobileAlliance/scwg-ETS-conformance-for-Smart-City/blob/Dev/ETS/uCIFI-Test-Cases-Smart-Lighting.md
+[uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html](https://www.md2html-tool.com/docs/OpenMobileAlliance/scwg-ETS-conformance-for-Smart-City/Dev/656f03f/ETS/uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html)
 
 
 
