@@ -1,8 +1,14 @@
-# Stage 3 — Standards & Ecosystem Mapping
+---
+title: Stage 3 — Standards & Ecosystem Mapping
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 
-The purpose of Stage 3 is to coordinate how the reusable interoperability abstractions identified during Stage 2 may be realized across standards organizations, Smart Data Object ecosystems, Digital Twin platforms, and interoperability initiatives.
+The purpose of Stage 3 is to coordinate how the reusable interoperability abstractions identified during Stage 2 may be realized across standards organizations, Smart Data Model ecosystems, Digital Twin platforms, and interoperability initiatives.
 
 At this stage:
 - operational meaning has already been captured,
@@ -31,7 +37,7 @@ Stage 3 exists to answer the following questions:
 - Which ecosystem participants can contribute realization mechanisms?
 - Which standards or interoperability assets already exist?
 - What semantic gaps remain unresolved?
-- How can reusable abstractions be conveyed into Smart Data Objects and Digital Twin ecosystems?
+- How can reusable abstractions be conveyed into Smart Data Models and Digital Twin ecosystems?
 - What interoperability validation considerations emerge?
 - How can semantic consistency be preserved across ecosystem contributions?
 
@@ -73,7 +79,7 @@ Different ecosystem participants contribute different forms of expertise and rea
 |---|---|
 | Municipalities | Operational realities, pain points, service objectives |
 | OMA / LwM2M contributors | Device interoperability standards and objects |
-| Smart Data Object ecosystems | Semantic integration structures and practices |
+| Smart Data Model ecosystems | Semantic integration structures and practices |
 | FIWARE | Digital platform and Digital Twin integration capabilities |
 | Universities | Semantic analysis and research support |
 | Vendors | Operational implementation realities |
@@ -90,7 +96,7 @@ At this stage, ecosystem participants may evaluate:
 - interoperability models,
 - semantic structures,
 - device models,
-- Smart Data Objects,
+- Smart Data Models,
 - contextual integration approaches,
 - and Digital Twin realization mechanisms.
 
@@ -107,9 +113,9 @@ The methodology intentionally avoids:
 
 ---
 
-# Smart Data Objects as Semantic Integration Mechanisms
+# Smart Data Models as Semantic Integration Mechanisms
 
-Smart Data Objects act as one of the primary semantic integration mechanisms through which:
+Smart Data Models act as one of the primary semantic integration mechanisms through which:
 - operational meaning,
 - contextual metadata,
 - provenance information,
@@ -117,7 +123,7 @@ Smart Data Objects act as one of the primary semantic integration mechanisms thr
 - and semantic consistency
 may be conveyed into Digital Twin ecosystems.
 
-Smart Data Objects are not treated as isolated technical schemas.
+Smart Data Models are not treated as isolated technical schemas.
 
 Instead, they are viewed as semantically enriched interoperability structures that help preserve:
 - operational intent,
@@ -197,7 +203,7 @@ The Public Street Lighting walkthrough demonstrates several examples of Stage 3 
 
 Examples include:
 - evaluating how OMA/LwM2M objects may contribute device interoperability components,
-- evaluating how Smart Data Objects may carry contextual and semantic information,
+- evaluating how Smart Data Models may carry contextual and semantic information,
 - evaluating FIWARE and Digital Twin consumption considerations,
 - identifying provenance and contextual metadata requirements,
 - and identifying interoperability validation considerations.
@@ -226,6 +232,6 @@ Reusable Interoperability Abstractions
         ↓
 Standards & Ecosystem Mapping
         ↓
-Smart Data Objects & Ecosystem Realization
+Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption

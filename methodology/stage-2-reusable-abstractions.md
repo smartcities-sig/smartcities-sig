@@ -1,11 +1,17 @@
-# Stage 2 — Reusable Interoperability Abstractions
+---
+title: Stage 2 — Reusable Interoperability Abstractions
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 
 The purpose of Stage 2 is to progressively transform municipality-specific operational observations into reusable interoperability abstractions that may later support:
 - interoperability profiles,
 - semantic integration mechanisms,
-- Smart Data Objects,
+- Smart Data Models,
 - Digital Twin integration,
 - validation activities,
 - and ecosystem coordination.
@@ -35,7 +41,7 @@ Stage 2 exists to answer the following questions:
 - What contextual information must always remain attached to the data?
 - What semantic distinctions must be preserved?
 - What interoperability patterns are reusable?
-- What abstractions may later support Smart Data Objects and Digital Twin integration?
+- What abstractions may later support Smart Data Models and Digital Twin integration?
 
 The objective is to progressively move from:
 - municipality-specific operational observations
@@ -231,10 +237,10 @@ This enables:
 
 ---
 
-# Relationship to Smart Data Objects
+# Relationship to Smart Data Models
 
 The reusable abstractions identified during Stage 2 may later contribute to:
-- Smart Data Objects,
+- Smart Data Models,
 - semantic integration mechanisms,
 - interoperability profiles,
 - and Digital Twin consumption structures.

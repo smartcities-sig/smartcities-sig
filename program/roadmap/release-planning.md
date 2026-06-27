@@ -1,9 +1,12 @@
+---
+title: Release Planning
+description:
+layout: web
+---
 
+# {{ $doc.title }}
 
-
-# Release Planning
-
-This document defines the high-level execution roadmap, milestones, and expected deliverables for the OMA Smart Cities SIG PoC initiative between May 2026 and November 2026.
+This document defines the high-level execution roadmap, milestones, and expected deliverables for the Smart Cities SIG PoC initiative between May 2026 and November 2026.
 
 The purpose of this plan is to provide participants, contributors, and future stakeholders with a clear understanding of:
 - the planned phases of execution,
@@ -16,13 +19,13 @@ The roadmap is intentionally lightweight and iterative, reflecting the Proof of 
 
 ```mermaid
 gantt
-    title OMA Smart Cities SIG PoC Timeline and Expected Milestones
+    title Smart Cities SIG PoC Timeline and Expected Milestones
     dateFormat  YYYY-MM-DD
     axisFormat  %b %Y
 
     section Phase 1 — Foundation Setup
     SIG operational setup                    :p1a, 2026-05-01, 2026-06-30
-    Participation agreement                  :p1b, 2026-05-01, 2026-06-30
+    Participation rules                       :p1b, 2026-05-01, 2026-06-30
     Governance model                         :p1c, 2026-05-01, 2026-06-30
     Communication infrastructure             :p1d, 2026-05-01, 2026-06-30
     GitHub setup                             :p1e, 2026-05-01, 2026-06-30
@@ -44,12 +47,12 @@ gantt
     Gap analysis and lessons learned         :p3e, 2026-10-01, 2026-10-31
 
     section Phase 4 — Smart City Expo Delivery
-    Use case documentation                   :p4a, 2026-11-01, 2026-11-30
-    Mapping methodology                      :p4b, 2026-11-01, 2026-11-30
-    Findings and lessons learned             :p4c, 2026-11-01, 2026-11-30
+    Use case documentation                   :p4a, 2026-10-16, 2026-10-31
+    Mapping methodology                      :p4b, 2026-10-16, 2026-10-31
+    Findings and lessons learned             :p4c, 2026-10-16, 2026-10-31
 
     Future recommendations                   :p4d, 2026-11-01, 2026-11-30
-    Smart City Expo World Congress           :milestone, p4e, 2026-11-30, 0d
+    Smart City Expo World Congress           :milestone, p4e, 2026-11-05, 0d
 ```
 
 ### Phase Summary and Key Milestones

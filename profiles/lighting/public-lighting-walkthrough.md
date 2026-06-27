@@ -1,4 +1,10 @@
-# Public Street Lighting Walkthrough
+---
+title: Public Street Lighting Walkthrough
+description:
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## Introduction
 
@@ -19,10 +25,10 @@ Instead, the objective is to demonstrate how municipality operational realities 
 This walkthrough became one of the foundational practical examples used to shape the Smart Cities SIG methodology itself.
 
 The walkthrough follows the three-stage methodology described in:
-- [`methodology-overview.md`](./methodology-overview.md)
-- [`stage-1-operational-meaning.md`](./stage-1-operational-meaning.md)
-- [`stage-2-reusable-abstractions.md`](./stage-2-reusable-abstractions.md)
-- [`stage-3-standards-mapping.md`](./stage-3-standards-mapping.md)
+- [Methodology-overview.md](./methodology-overview.md)
+- [Stage-1-operational-meaning.md](./stage-1-operational-meaning.md)
+- [Stage-2-reusable-abstractions.md](./stage-2-reusable-abstractions.md)
+- [Stage-3-standards-mapping.md](./stage-3-standards-mapping.md)
 
 ---
 
@@ -429,9 +435,9 @@ These contributions may help preserve:
 
 ---
 
-## Smart Data Objects as Semantic Integration Mechanisms
+## Smart Data Models as Semantic Integration Mechanisms
 
-The walkthrough progressively identified that Smart Data Objects may act as semantic integration mechanisms capable of carrying:
+The walkthrough progressively identified that Smart Data Models may act as semantic integration mechanisms capable of carrying:
 - operational meaning,
 - contextual metadata,
 - provenance,
@@ -440,7 +446,7 @@ The walkthrough progressively identified that Smart Data Objects may act as sema
 
 One of the strongest conclusions from the walkthrough became:
 
-> Smart Data Objects are not merely technical schemas.
+> Smart Data Models are not merely technical schemas.
 >
 > They are semantic interoperability carriers.
 
@@ -466,6 +472,6 @@ Reusable Interoperability Abstractions
         ↓
 Semantic & Contextual Enrichment
         ↓
-Smart Data Objects & Ecosystem Realization
+Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption
