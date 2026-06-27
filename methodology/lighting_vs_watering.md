@@ -1,5 +1,10 @@
+---
+title: Comparison Public Lighting vs Irrigation in Green Areas
+description: Compares the Smart Cities SIG methodology for public lighting and irrigation in green areas.
+layout: doc
+---
 
-# A first comparison of Public Lighting and Irrigation in Green Areas
+# {{ $doc.title }}
 
 The next table compares aspects of the two use cases for the first challenge.
 
