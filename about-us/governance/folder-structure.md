@@ -24,18 +24,31 @@ This approach keeps the repository lightweight during the early stages of the in
 ```text
 smartcities-sig/
 │
-├── README.md
 ├── LICENSE
-├── CONTRIBUTING.md
 ├── site.config.yml
 │
-├── governance/
-│   ├── README.md
-│   ├── charter.md
-│   ├── participation-rules.md
-│   ├── code-of-conduct.md
-│   ├── the-way-we-work.md
-│   └── folder-structure.md
+├── about-us/
+|   ├── about-us.md
+|   ├── foundation/
+|   │   ├── README.md
+|   │   ├── vision.md
+|   │   ├── historical-context.md
+|   │   ├── ecosystem-positioning.md
+|   │   ├── stakeholder-analysis.md
+|   │   └── standards-landscape.md
+|   |
+|   └──governance/
+|       ├── README.md
+|       ├── charter.md
+|       ├── participation-rules.md
+|       ├── code-of-conduct.md
+|       ├── the-way-we-work.md
+|       └── folder-structure.md
+|
+|── community/
+│   ├── CONTRIBUTING.md
+│   ├── getting-started.md
+│   └── participant-organizations.md
 │
 ├── program/
 │   ├── README.md
@@ -57,20 +70,6 @@ smartcities-sig/
 │       ├── progress-reports/
 │       ├── retrospectives/
 │       └── lessons-learned/
-│
-├── foundation/
-│   ├── README.md
-│   ├── vision.md
-│   ├── historical-context.md
-│   ├── ecosystem-positioning.md
-│   ├── stakeholder-analysis.md
-│   └── standards-landscape.md
-│   
-|── community/
-│   ├── README.md
-│   └── onboarding/
-│   |   └── getting-started.md
-│   └── participant-organizations/
 │
 |── methodology/
 │   ├── README.md
