@@ -50,27 +50,6 @@ smartcities-sig/
 │   ├── getting-started.md
 │   └── participant-organizations.md
 │
-├── program/
-│   ├── README.md
-│   ├── roadmap/
-│   │   └──  release-planning.md
-│   │
-│   ├── meetings/
-│   │   ├── minutes/
-│   │   │   └── 2026/
-│   │   └── presentations/
-│   │
-│   ├── communications/
-│   │   ├── announcements/
-│   │   ├── outreach/
-│   │   ├── workshops/
-│   │   └── event-materials/
-│   │
-│   └── reports/
-│       ├── progress-reports/
-│       ├── retrospectives/
-│       └── lessons-learned/
-│
 |── methodology/
 │   ├── README.md
 |   ├── core-methodology/
@@ -91,14 +70,12 @@ smartcities-sig/
 |   └── examples/
 |       ├── lighting/
 |       └── water/
-│
-├── shared-models/
-│   ├── measurement/
-│   ├── context/
-│   ├── provenance/
-│   ├── temporal/
-│   ├── operational-zones/
-│   └── service-outcomes/
+|
+|── news/
+|   ├── announcements/
+|   └── outreach/
+|       ├── workshops/
+|       └── event-materials/
 │
 ├── profiles/
 │   ├── README.md
@@ -132,11 +109,34 @@ smartcities-sig/
 │   │   ├── references/
 │   │   └── releases/
 │   │
-│   └── cross-domain/
-│       ├── shared-observations/
-│       ├── reusable-patterns/
-│       ├── common-semantics/
-│       └── interoperability-gaps/
+│   ├── cross-domain/
+│   |    ├── shared-observations/
+│   |    ├── reusable-patterns/
+│   |    ├── common-semantics/
+│   |    └── interoperability-gaps/
+|   |
+|   ├── shared-models/
+|   │   ├── measurement/
+|   │   ├── context/
+|   │   ├── provenance/
+|   │   ├── temporal/
+|   │   ├── operational-zones/
+│   └── service-outcomes/
+|
+├── program/
+│   ├── README.md
+│   ├── roadmap/
+│   │   └──  release-planning.md
+│   │
+│   └── reports/
+│       ├── progress-reports/
+│       ├── retrospectives/
+│       └── lessons-learned/
+|
+├── meetings/
+│   ├── minutes/
+│   │   └── 2026/
+│   └── presentations/
 │
 ├── templates/
 │   ├── README.md
