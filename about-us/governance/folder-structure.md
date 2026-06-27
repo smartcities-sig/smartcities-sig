@@ -27,7 +27,6 @@ smartcities-sig/
 ├── LICENSE
 ├── site.config.yml
 │
-<<<<<<< HEAD
 ├── about-us/
 |   ├── about-us.md
 |   ├── foundation/
@@ -50,50 +49,6 @@ smartcities-sig/
 │   ├── CONTRIBUTING.md
 │   ├── getting-started.md
 │   └── participant-organizations.md
-=======
-├── governance/
-│   ├── README.md
-│   ├── charter.md
-│   ├── participation-rules.md
-│   ├── code-of-conduct.md
-│   ├── the-way-we-work.md
-│   └── folder-structure.md
-│
-├── program/
-│   ├── README.md
-│   ├── roadmap/
-│   │   └──  release-planning.md
-│   │
-│   ├── meetings/
-│   │   ├── minutes/
-│   │   │   └── 2026/
-│   │   └── presentations/
-│   │
-│   ├── communications/
-│   │   ├── announcements/
-│   │   ├── outreach/
-│   │   ├── workshops/
-│   │   └── event-materials/
-│   │
-│   └── reports/
-│       ├── progress-reports/
-│       ├── retrospectives/
-│       └── lessons-learned/
-│
-├── foundation/
-│   ├── README.md
-│   ├── vision.md
-│   ├── historical-context.md
-│   ├── ecosystem-positioning.md
-│   ├── stakeholder-analysis.md
-│   └── standards-landscape.md
-│   
-|── community/
-│   ├── README.md
-│   └── onboarding/
-│   |   └── getting-started.md
-│   └── participant-organizations/
->>>>>>> origin/main
 │
 |── methodology/
 │   ├── README.md
@@ -115,23 +70,12 @@ smartcities-sig/
 |   └── examples/
 |       ├── lighting/
 |       └── water/
-<<<<<<< HEAD
 |
 |── news/
 |   ├── announcements/
 |   └── outreach/
 |       ├── workshops/
 |       └── event-materials/
-=======
-│
-├── shared-models/
-│   ├── measurement/
-│   ├── context/
-│   ├── provenance/
-│   ├── temporal/
-│   ├── operational-zones/
-│   └── service-outcomes/
->>>>>>> origin/main
 │
 ├── profiles/
 │   ├── README.md
