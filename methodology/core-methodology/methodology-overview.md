@@ -81,6 +81,10 @@ The SIG acts as a collaborative coordination space where municipalities, standar
 
 *Figure — Smart Cities SIG Operational Semantic Translation Model*
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d206ae27c246c651817fa8984388f592a29cec3
 ### Stage 3 Visualization - Semantic Assembly and Interoperability for Smart City Digital Twins
 
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/bf2e0d31-2550-4abc-92ad-9cf195f6d318" />

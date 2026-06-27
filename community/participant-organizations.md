@@ -85,4 +85,7 @@ OMA views the Smart Cities SIG as a collaborative ecosystem initiative intended 
 * [OMA LwM2M Technical Specification](https://www.openmobilealliance.org/release/LightweightM2M)
 * [OMA LwM2M Registry](https://github.com/OpenMobileAlliance/lwm2m-registry)
 * [OMA Website](https://www.openmobilealliance.org/)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2d206ae27c246c651817fa8984388f592a29cec3

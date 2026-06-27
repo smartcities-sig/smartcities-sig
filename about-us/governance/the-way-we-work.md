@@ -19,19 +19,11 @@ The objective is to support:
 
 This document complements:
 
-<<<<<<< HEAD
 - [Charter](/about-us/governance/charter.md)
 - [Participation Rules](/about-us/governance/participation-rules.md)
 - [Code of Conduct](/about-us/governance/code-of-conduct.md)
-- [CONTRIBUTING](/about-us/governance/CONTRIBUTING.md)
-- [Methodology](/about-us/methodology/methodology-overview.md)
-=======
-- [Charter](/governance/charter.md)
-- [Participation Rules](/governance/participation-rules.md)
-- [Code of Conduct](/governance/code-of-conduct.md)
-- [CONTRIBUTING](/CONTRIBUTING.md)
-- [Methodology](/methodology/methodology-overview.md)
->>>>>>> origin/main
+- [CONTRIBUTING](/community/CONTRIBUTING.md)
+- [Methodology](/methodology/core-methodology/methodology-overview.md)
 
 ---
 
