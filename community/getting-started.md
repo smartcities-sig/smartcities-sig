@@ -19,7 +19,11 @@ It explains how to access the collaboration tools, where to find key information
 1. [Join](https://groups.io/g/smartcities-sig) the Smart Cities SIG community.
 2. Provide your GitHub username.
 3. Subscribe to the SIG [calendar](https://groups.io/g/smartcities-sig/calendar).
+<<<<<<< HEAD
 4. Review the [Charter](/about-us/governance/charter.md) and [Methodology](/about-us/methodology/methodology-overview.md).
+=======
+4. Review the [Charter](/governance/charter.md) and [Methodology](/methodology/methodology-overview.md).
+>>>>>>> origin/main
 5. Attend a monthly meeting.
 6. Contribute through GitHub [SmartCities-SIG](https://github.com/smartcities-sig/smartcities-sig) Issues and Pull Requests.
 
@@ -47,6 +51,7 @@ After joining, subscribe to the Smart Cities SIG [calendar](https://groups.io/g/
 
 New participants are encouraged to review the following documents in order:
 
+<<<<<<< HEAD
 1. [ABOUT US](/about-us/about-us.md)  
    High-level overview of the initiative.
 
@@ -60,6 +65,21 @@ New participants are encouraged to review the following documents in order:
    Operational collaboration model and working practices.
 
 5. [CONTRIBUTING.md](/about-us/governance/CONTRIBUTING.md)  
+=======
+1. [ABOUT US](/README.md)  
+   High-level overview of the initiative.
+
+2. [Charter](/governance/charter.md)  
+   Official initiative scope and objectives.
+
+3. [Methodology](/methodology/methodology-overview.md)  
+   Approach for analyzing interoperability challenges and developing reusable outputs.   
+
+4. [The Way We Work](/governance/the-way-we-work.md)  
+   Operational collaboration model and working practices.
+
+5. [CONTRIBUTING.md](/CONTRIBUTING.md)  
+>>>>>>> origin/main
    Contribution expectations and collaboration guidance.
 
 These documents explain the purpose, scope, governance, and working approach of the Smart Cities SIG.
@@ -77,7 +97,11 @@ Participants are expected to:
 
 > **Note:** Participants are encouraged to contribute in areas where they have practical experience, operational expertise, or domain knowledge.
 
+<<<<<<< HEAD
 > **Note:** Organizations participating in the Smart Cities SIG are encouraged to review the [Participation Rules](/about-us/governance/participation-rules.md) document.
+=======
+> **Note:** Organizations participating in the Smart Cities SIG are encouraged to review the [Participation Rules](/governance/participation-rules.md) document.
+>>>>>>> origin/main
 
 ---
 
@@ -86,6 +110,7 @@ Participants are expected to:
 6. [Roadmap](/program/roadmap/release-planning.md)  
    Current roadmap, milestones, and execution phases.
 
+<<<<<<< HEAD
 7. [Repository Structure](/about-us/governance/folder-structure.md)  
    Repository structure and organization.
 
@@ -93,6 +118,15 @@ Participants are expected to:
    Long-term interoperability vision and ecosystem objectives.
 
 9. [Ecosystem Positioning](/about-us/foundation/ecosystem-positioning.md)  
+=======
+7. [Repository Structure](/governance/folder-structure.md)  
+   Repository structure and organization.
+
+8. [Vision](/foundation/vision.md)  
+   Long-term interoperability vision and ecosystem objectives.
+
+9. [Ecosystem Positioning](/foundation/ecosystem-positioning.md)  
+>>>>>>> origin/main
    Explains how the Smart Cities SIG positions itself within the broader ecosystem.
 
 ---
@@ -111,9 +145,13 @@ The Smart Cities SIG primarily collaborates through:
 
 
 Meeting records and collaboration activities are maintained under:
+<<<<<<< HEAD
 
 - <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG Website</a> or,
 - <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg Repository</a>
+=======
+- [Meetings](/meetings/minutes/2026/meetings.md)
+>>>>>>> origin/main
 
 > **Note:** Participants are encouraged to first observe ongoing discussions, roadmap priorities, and active Proof of Concept activities before introducing significant new proposals or scope extensions.
 
@@ -133,7 +171,11 @@ Common contributions include:
 
 Contribution guidance is available in:
 
+<<<<<<< HEAD
 - Contribution guidance is available in [CONTRIBUTING](/about-us/governance/CONTRIBUTING.md).
+=======
+- Contribution guidance is available in [CONTRIBUTING](/CONTRIBUTING.md).
+>>>>>>> origin/main
 
 ---
 
@@ -154,7 +196,11 @@ The repository is organized to support governance, collaboration, profile develo
 
 The target repository structure is described in:
 
+<<<<<<< HEAD
 - [Repository Structure](/about-us/governance/folder-structure.md)
+=======
+- [Repository Structure](/governance/folder-structure.md)
+>>>>>>> origin/main
 
 ---
 
