@@ -122,12 +122,8 @@ Important discussions, action items, decisions, and outcomes should be reflected
 
 Meeting minutes serve as the official meeting record and are maintained under:
 
-<<<<<<< HEAD
 * <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG Website</a>
 * <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg Repository</a>
-=======
-[Meeting Minutes](/program/meetings/minutes)
->>>>>>> origin/main
 
 Participants are encouraged to review relevant materials before meetings and continue discussions through repository channels when appropriate.
 
@@ -168,11 +164,7 @@ SIG coordinators may facilitate discussions or moderate participation activities
 
 Additional collaboration behavior expectations are defined in:
 
-<<<<<<< HEAD
 [Code of Conduct](/about-us/governance/code-of-conduct.md)
-=======
-[Code of Conduct](/governance/code-of-conduct.md)
->>>>>>> origin/main
 
 ---
 

@@ -279,11 +279,7 @@ Examples:
 
 Contributors are encouraged to follow the repository organization guidelines defined in:
 
-<<<<<<< HEAD
 [Repository Structure](/about-us/governance/folder-structure.md)
-=======
-[Repository Structure](/governance/folder-structure.md)
->>>>>>> origin/main
 
 New folders and content structures should only be introduced when necessary and should align with the existing repository organization model.
 
