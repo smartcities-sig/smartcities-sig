@@ -141,11 +141,7 @@ Common contributions include:
 
 Contribution guidance is available in:
 
-<<<<<<< HEAD
-- Contribution guidance is available in [CONTRIBUTING](/about-us/governance/CONTRIBUTING.md).
-=======
 - Contribution guidance is available in [CONTRIBUTING](/community/CONTRIBUTING.md).
->>>>>>> 2d206ae27c246c651817fa8984388f592a29cec3
 
 ---
 
