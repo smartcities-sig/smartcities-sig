@@ -19,11 +19,7 @@ It explains how to access the collaboration tools, where to find key information
 1. [Join](https://groups.io/g/smartcities-sig) the Smart Cities SIG community.
 2. Provide your GitHub username.
 3. Subscribe to the SIG [calendar](https://groups.io/g/smartcities-sig/calendar).
-<<<<<<< HEAD
-4. Review the [Charter](/about-us/governance/charter.md) and [Methodology](/about-us/methodology/methodology-overview.md).
-=======
 4. Review the [Charter](/about-us/governance/charter.md) and [Methodology](/methodology/core-methodology/methodology-overview.md).
->>>>>>> 2d206ae27c246c651817fa8984388f592a29cec3
 5. Attend a monthly meeting.
 6. Contribute through GitHub [SmartCities-SIG](https://github.com/smartcities-sig/smartcities-sig) Issues and Pull Requests.
 
@@ -63,11 +59,7 @@ New participants are encouraged to review the following documents in order:
 4. [The Way We Work](/about-us/governance/the-way-we-work.md)  
    Operational collaboration model and working practices.
 
-<<<<<<< HEAD
-5. [CONTRIBUTING.md](/about-us/governance/CONTRIBUTING.md)  
-=======
 5. [CONTRIBUTING.md](/community/CONTRIBUTING.md)  
->>>>>>> 2d206ae27c246c651817fa8984388f592a29cec3
    Contribution expectations and collaboration guidance.
 
 These documents explain the purpose, scope, governance, and working approach of the Smart Cities SIG.
