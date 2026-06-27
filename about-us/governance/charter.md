@@ -97,15 +97,9 @@ The initiative aims to maintain lightweight governance and transparent collabora
 
 Additional participation expectations, collaboration requirements, and governance policies may be defined in supporting project documentation, including:
 
-<<<<<<< HEAD
 - [CONTRIBUTING.md](/community/CONTRIBUTING.md)
 - [Participation Rules.md](/about-us/governance/participation-rules.md)
 - [Code of Conduct.md](/about-us/governance/code-of-conduct.md)
-=======
-- [CONTRIBUTING.md](/CONTRIBUTING.md)
-- [governance/participation-rules.md](/governance/participation-rules.md)
-- [governance/code-of-conduct.md](/governance/code-of-conduct.md)
->>>>>>> main
 
 ## 7. Governance and Coordination
 
@@ -127,11 +121,7 @@ The initial execution window for the Smart Cities SIG Proof of Concept activitie
 
 The initiative roadmap, milestones, and planning activities are documented under:
 
-<<<<<<< HEAD
 [Release Planning](/program/roadmap/release-planning.md)
-=======
-[program/roadmap/release-planning.md](/program/roadmap/release-planning.md)
->>>>>>> main
 
 The initiative intends to present initial findings, lessons learned, and Proof of Concept outputs during Smart City Expo World Congress 2026.
 
