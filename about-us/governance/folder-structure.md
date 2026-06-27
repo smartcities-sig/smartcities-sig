@@ -83,7 +83,8 @@ smartcities-sig/
 |   │   ├── README.md
 │   │   ├── public-lighting-walkthrough.md
 │   │   ├── use-cases/
-│   │   ├── analysis/
+│   │   ├── mappings/
+|   |   |   └── oma-smart-data-models-mapping-lighting.md
 │   │   ├── semantic-model/
 │   │   ├── interoperability/
 |   │   ├── digital-twin/
@@ -98,7 +99,8 @@ smartcities-sig/
 |   │   ├── README.md
 │   │   ├── public-watering-walkthrough.md
 │   │   ├── use-cases/
-│   │   ├── analysis/
+│   │   ├── mappings/
+|   |   |   └── oma-smart-data-models-mapping-water.md
 │   │   ├── semantic-model/
 │   │   ├── interoperability/
 |   │   ├── digital-twin/
