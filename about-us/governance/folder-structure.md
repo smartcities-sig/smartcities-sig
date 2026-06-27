@@ -24,11 +24,33 @@ This approach keeps the repository lightweight during the early stages of the in
 ```text
 smartcities-sig/
 │
-├── README.md
 ├── LICENSE
-├── CONTRIBUTING.md
 ├── site.config.yml
 │
+<<<<<<< HEAD
+├── about-us/
+|   ├── about-us.md
+|   ├── foundation/
+|   │   ├── README.md
+|   │   ├── vision.md
+|   │   ├── historical-context.md
+|   │   ├── ecosystem-positioning.md
+|   │   ├── stakeholder-analysis.md
+|   │   └── standards-landscape.md
+|   |
+|   └──governance/
+|       ├── README.md
+|       ├── charter.md
+|       ├── participation-rules.md
+|       ├── code-of-conduct.md
+|       ├── the-way-we-work.md
+|       └── folder-structure.md
+|
+|── community/
+│   ├── CONTRIBUTING.md
+│   ├── getting-started.md
+│   └── participant-organizations.md
+=======
 ├── governance/
 │   ├── README.md
 │   ├── charter.md
@@ -71,6 +93,7 @@ smartcities-sig/
 │   └── onboarding/
 │   |   └── getting-started.md
 │   └── participant-organizations/
+>>>>>>> main
 │
 |── methodology/
 │   ├── README.md
@@ -92,6 +115,12 @@ smartcities-sig/
 |   └── examples/
 |       ├── lighting/
 |       └── water/
+|
+|── news/
+|   ├── announcements/
+|   └── outreach/
+|       ├── workshops/
+|       └── event-materials/
 │
 ├── shared-models/
 │   ├── measurement/
@@ -100,14 +129,19 @@ smartcities-sig/
 │   ├── temporal/
 │   ├── operational-zones/
 │   └── service-outcomes/
+<<<<<<< HEAD
+|
+=======
 │
+>>>>>>> main
 ├── profiles/
 │   ├── README.md
 │   ├── lighting/
 |   │   ├── README.md
 │   │   ├── public-lighting-walkthrough.md
 │   │   ├── use-cases/
-│   │   ├── analysis/
+│   │   ├── mappings/
+|   |   |   └── oma-smart-data-models-mapping-lighting.md
 │   │   ├── semantic-model/
 │   │   ├── interoperability/
 |   │   ├── digital-twin/
@@ -122,7 +156,8 @@ smartcities-sig/
 |   │   ├── README.md
 │   │   ├── public-watering-walkthrough.md
 │   │   ├── use-cases/
-│   │   ├── analysis/
+│   │   ├── mappings/
+|   |   |   └── oma-smart-data-models-mapping-water.md
 │   │   ├── semantic-model/
 │   │   ├── interoperability/
 |   │   ├── digital-twin/
@@ -133,11 +168,34 @@ smartcities-sig/
 │   │   ├── references/
 │   │   └── releases/
 │   │
-│   └── cross-domain/
-│       ├── shared-observations/
-│       ├── reusable-patterns/
-│       ├── common-semantics/
-│       └── interoperability-gaps/
+│   ├── cross-domain/
+│   |    ├── shared-observations/
+│   |    ├── reusable-patterns/
+│   |    ├── common-semantics/
+│   |    └── interoperability-gaps/
+|   |
+|   ├── shared-models/
+|   │   ├── measurement/
+|   │   ├── context/
+|   │   ├── provenance/
+|   │   ├── temporal/
+|   │   ├── operational-zones/
+│   └── service-outcomes/
+|
+├── program/
+│   ├── README.md
+│   ├── roadmap/
+│   │   └──  release-planning.md
+│   │
+│   └── reports/
+│       ├── progress-reports/
+│       ├── retrospectives/
+│       └── lessons-learned/
+|
+├── meetings/
+│   ├── minutes/
+│   │   └── 2026/
+│   └── presentations/
 │
 ├── templates/
 │   ├── README.md
@@ -153,7 +211,11 @@ smartcities-sig/
 │   └── early-concepts/
 │
 └── archive/
+<<<<<<< HEAD
+    ├── README.md
+=======
 │   ├── README.md
+>>>>>>> main
     ├── deprecated-content/
     ├── obsolete-proposals/
     └── historical-records/

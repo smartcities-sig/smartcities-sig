@@ -68,6 +68,7 @@ Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption
 ```
+
 ## Operational Semantic Translation Model
 
 The Smart Cities SIG methodology is based on a progressive operational semantic translation model.
