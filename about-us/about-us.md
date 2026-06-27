@@ -1,7 +1,7 @@
 ---
 title: ABOUT US 
 description: Learn more about the Smart Cities Special Interest Group (SIG), its mission, objectives, and how to get involved.
-layout: web
+layout: doc
 ---
 
 # {{ $doc.title }}
