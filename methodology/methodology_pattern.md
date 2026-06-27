@@ -1,4 +1,10 @@
-# Methodology: aspects to take into account
+---
+title: Smart Cities SIG Methodology Pattern
+description: Provides a structured approach for analyzing and documenting smart city services.
+layout: doc
+---
+
+# {{ $doc.title }}
 
 ## 1. Service outcome (what we really care about)
 Define the ideal end state for people or assets, not for devices. Think through what the digital twin should show.

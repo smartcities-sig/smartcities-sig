@@ -1,6 +1,6 @@
 ---
 title: Ecosystem Positioning
-description:
+description: Explains how the Smart Cities SIG positions itself within the broader ecosystem.
 layout: web
 ---
 

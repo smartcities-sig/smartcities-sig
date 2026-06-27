@@ -1,10 +1,14 @@
-## Smart Lighting: mapping between OMA LwM2M Objects and FIWARE Smart Data Models
+---
+title: OMA Smart Data Models Mapping for Lighting
+description: Mapping between OMA LwM2M Objects and FIWARE Smart Data Models for smart lighting.
+layout: doc
+---
 
-**Reference Document**
-[https://groups.io/g/smartcities-sig/files/Discussion/2026/20260513-especificacion%20de%20caso%20de%20uso%20lighting%20v0.1.docx](https://groups.io/g/smartcities-sig/files/Discussion/2026/20260513-especificacion de caso de uso lighting v0.1.docx)
+# {{ $doc.title }}
 
+- [**Reference Document**](https://groups.io/g/smartcities-sig/files/Discussion/2026/20260513-especificacion%20de%20caso%20de%20uso%20lighting%20v0.1.docx)  
 
-**Quantities to be measured**
+## Quantities to be measured
 
 - [ ] Light on the surface of the streets. (would require a separate illuminance sensor)
 - [ ] Lumens emitted by the luminaire (can be done by extending OMA data model)
@@ -20,7 +24,7 @@
 
 
 
-**Measurement conditions**
+## Measurement conditions
 
 - In each luminaire with Zagha connector
 - At the head of the line (show how many luminaires are on it)
@@ -28,21 +32,18 @@
 
 
 
-**Data Models**
+## Data Models
 
 
-Outdoor Lamp Controller (OMA)
-https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3416.xml
+- Outdoor Lamp Controller (OMA) Object [#3416](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3416.xml)
 
-Electrical Monitor (OMA)
-https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3418.xml
+- Electrical Monitor (OMA) Object [#3418](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3418.xml)
 
-Street Light (Smart Data Models)
-https://github.com/smart-data-models/dataModel.Streetlighting/blob/master/Streetlight/doc/spec.md
+- Street Light (Smart Data Models) Object [#Streetlight](https://github.com/smart-data-models/dataModel.Streetlighting/blob/master/Streetlight/doc/spec.md)
 
 
 
-**Mappable information**
+## Mappable information
 
 | OMA                                                | FIWARE                   |
 | -------------------------------------------------- | ------------------------ |
@@ -67,31 +68,26 @@ The color temperature is not currently present in the Smart Data Model
 
 
 
-**Tests**
-[uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html](https://www.md2html-tool.com/docs/OpenMobileAlliance/scwg-ETS-conformance-for-Smart-City/Dev/656f03f/ETS/uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html)
+## Tests
+
+- [uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html](https://www.md2html-tool.com/docs/OpenMobileAlliance/scwg-ETS-conformance-for-Smart-City/Dev/656f03f/ETS/uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html)
 
 
 
-**Data Models**
+## Data Models
 
-Single-phase electrical mete (OMA)
-https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3421.xml
+Single-phase electrical mete (OMA) Object [#3421](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3421.xml)
 
-Three-phase electrical meter complement (OMA)
-https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3422.xml
+Three-phase electrical meter complement (OMA) Object [#3422](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3422.xml)
 
-Cabinet Controller Status (OMA)
-https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/600.xml
+Cabinet Controller Status (OMA) Object [#600](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/600.xml)
 
-Cabinet Controller Manager (OMA)
-https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/601.xml
+Cabinet Controller Manager (OMA) Object [#601](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/601.xml)
 
-StreetlightControlCabinet (Smart Data Models)
-https://github.com/smart-data-models/dataModel.Streetlighting/blob/master/StreetlightControlCabinet/doc/spec.md
+StreetlightControlCabinet (Smart Data Models) Object [#StreetlightControlCabinet](https://github.com/smart-data-models/dataModel.Streetlighting/blob/master/StreetlightControlCabinet/doc/spec.md)
 
 
-
-**Mappable information**
+## Mappable information
 
 | OMA                                                  | FIWARE                                                 |
 | ---------------------------------------------------- | ------------------------------------------------------ |
