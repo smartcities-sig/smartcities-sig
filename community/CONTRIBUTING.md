@@ -14,12 +14,12 @@ The Smart Cities SIG is a collaborative ecosystem initiative that brings togethe
 
 Before contributing, participants are encouraged to review the following documents:
 
-- [ABOUT US](/README.md)
-- [Charter](/governance/charter.md)
-- [Participation Rules](/governance/participation-rules.md)
-- [Code of Conduct](/governance/code-of-conduct.md)
-- [The Way We Work](/governance/the-way-we-work.md)
-- [Methodology](/methodology/methodology-overview.md)
+- [ABOUT US](/about-us/about-us.md)
+- [Charter](/about-us/governance/charter.md)
+- [Participation Rules](/about-us/governance/participation-rules.md)
+- [Code of Conduct](/about-us/governance/code-of-conduct.md)
+- [The Way We Work](/about-us/governance/the-way-we-work.md)
+- [Methodology](/methodology/core-methodology/methodology-overview.md)
 
 These documents explain the purpose of the initiative, participation expectations, collaboration model, and the methodology used to analyze interoperability challenges and develop Smart City Profiles.
 
@@ -270,7 +270,7 @@ Examples:
 
 Contributors are encouraged to follow the repository organization guidelines defined in:
 
-[Repository Structure](/governance/folder-structure.md)
+[Repository Structure](/about-us/governance/folder-structure.md)
 
 New folders and content structures should only be introduced when necessary and should align with the existing repository organization model.
 

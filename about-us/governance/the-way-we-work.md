@@ -19,11 +19,11 @@ The objective is to support:
 
 This document complements:
 
-- [Charter](/governance/charter.md)
-- [Participation Rules](/governance/participation-rules.md)
-- [Code of Conduct](/governance/code-of-conduct.md)
-- [CONTRIBUTING](/CONTRIBUTING.md)
-- [Methodology](/methodology/methodology-overview.md)
+- [Charter](/about-us/governance/charter.md)
+- [Participation Rules](/about-us/governance/participation-rules.md)
+- [Code of Conduct](/about-us/governance/code-of-conduct.md)
+- [CONTRIBUTING](/community/CONTRIBUTING.md)
+- [Methodology](/methodology/core-methodology/methodology-overview.md)
 
 ---
 
@@ -114,7 +114,8 @@ Important discussions, action items, decisions, and outcomes should be reflected
 
 Meeting minutes serve as the official meeting record and are maintained under:
 
-[Meeting Minutes](/program/meetings/minutes)
+* <a href="https://smartcities-sig-web.vercel.app/" target="_blank">SIG WG Website</a>
+* <a href="https://github.com/smartcities-sig/sig-wg" target="_blank">sig-wg Repository</a>
 
 Participants are encouraged to review relevant materials before meetings and continue discussions through repository channels when appropriate.
 
@@ -155,7 +156,7 @@ SIG coordinators may facilitate discussions or moderate participation activities
 
 Additional collaboration behavior expectations are defined in:
 
-[Code of Conduct](/governance/code-of-conduct.md)
+[Code of Conduct](/about-us/governance/code-of-conduct.md)
 
 ---
 

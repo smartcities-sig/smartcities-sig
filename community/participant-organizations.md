@@ -79,3 +79,10 @@ OMA also supports the initiative by providing lightweight program coordination i
 - and practical ecosystem collaboration.
 
 OMA views the Smart Cities SIG as a collaborative ecosystem initiative intended to complement existing standards organizations, ecosystem alliances, interoperability programs, and industry initiatives rather than compete with them.
+
+### OMA Reference Materials
+
+* [OMA LwM2M Technical Specification](https://www.openmobilealliance.org/release/LightweightM2M)
+* [OMA LwM2M Registry](https://github.com/OpenMobileAlliance/lwm2m-registry)
+* [OMA Website](https://www.openmobilealliance.org/)
+
