@@ -1,7 +1,7 @@
 ---
 title: Ecosystem Positioning
 description: Explains how the Smart Cities SIG positions itself within the broader ecosystem.
-layout: doc
+layout: web
 ---
 
 # {{ $doc.title }}

@@ -1,7 +1,7 @@
 ---
 title: Vision
-description: Outlines the vision and objectives of the Smart Cities SIG.
-layout: doc
+description:
+layout: web
 ---
 
 # {{ $doc.title }}
