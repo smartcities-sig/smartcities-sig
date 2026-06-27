@@ -76,7 +76,7 @@ The color temperature is not currently present in the Smart Data Model
 
 ## Data Models
 
-Single-phase electrical mete (OMA) Object [#3421](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3421.xml)
+Single-phase electrical meter (OMA) Object [#3421](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3421.xml)
 
 Three-phase electrical meter complement (OMA) Object [#3422](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3422.xml)
 
