@@ -1071,20 +1071,24 @@ Digital Twins require knowledge of fallback behaviour to correctly simulate infr
 
 # Capability Assessment Matrix
 
-This matrix summarizes the semantic capabilities defined by this framework and
-provides a common assessment worksheet for ecosystem participants.
+> **Editorial Note**
+>
+> This matrix is included in this document to illustrate how the Semantic Capability Assessment Framework is intended to be applied.
+>
+> As the Smart Cities SIG develops domain-specific profiles (for example, Public Lighting, Water Management & Irrigation, Waste Management, and Transportation), this matrix is expected to be moved into separate profile-specific assessment documents.
+>
+> Each profile will use this common framework to assess the extent to which existing standards, Smart Data Models, and Digital Twin ecosystems support the semantic capabilities identified in this document.
+>
+> Keeping the assessment separate from the framework will allow each profile to evolve independently while preserving a single, authoritative definition of the semantic capabilities.
 
-The matrix is intentionally left unpopulated.
+The following matrix provides a common assessment worksheet for ecosystem participants.
 
-Each participating ecosystem should evaluate its existing specifications
-against the semantic capabilities described in this document.
+Each participating ecosystem should evaluate its existing specifications against the semantic capabilities described in this document.
 
-The resulting assessments may be discussed collaboratively within the Smart
-Cities SIG and used to identify opportunities for improving interoperability
-across standards, semantic models, and Digital Twin platforms.
+The resulting assessments may be discussed collaboratively within the Smart Cities SIG and used to identify opportunities for improving interoperability across standards, semantic models, and Digital Twin platforms.
 
-| Semantic Capability | OMA Assessment | Smart Data Models Assessment | Digital Twin Assessment | Recommended Actions |
-|---------------------|----------------|------------------------------|-------------------------|---------------------|
+| Semantic Capability | OMA Assessment | Smart Data Models Assessment | Digital Twin Assessment | Recommendations |
+|---------------------|----------------|------------------------------|-------------------------|-----------------|
 | Service Outcome | | | | |
 | Infrastructure Output | | | | |
 | Resource Consumption | | | | |
@@ -1099,6 +1103,20 @@ across standards, semantic models, and Digital Twin platforms.
 | Asset Management Context | | | | |
 | Network Operability | | | | |
 | Fallback Behaviour | | | | |
+
+---
+
+# Expected Outcome
+
+The completion of this assessment framework should enable ecosystem participants to:
+
+- Identify which semantic capabilities are already supported by existing specifications.
+- Identify semantic capabilities requiring additional discussion or future enhancements.
+- Improve interoperability between device standards, Smart Data Models, and Digital Twin ecosystems.
+- Preserve municipality operational meaning across standards and semantic models.
+- Support the development of semantically consistent Digital Twins capable of monitoring, analysing, simulating, and operating municipality services.
+
+This framework is intended to be reusable across multiple municipality domains, including Public Lighting, Water Management & Irrigation, Waste Management, Transportation, Environmental Monitoring, Parking, and future Smart Cities SIG profiles.
 
 ---
 
