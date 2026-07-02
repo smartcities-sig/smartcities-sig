@@ -1,0 +1,1136 @@
+---
+title: Semantic Capability Assessment Framework for Digital Twin Interoperability
+description: >
+  A technology-neutral assessment framework for evaluating whether
+  interoperability standards, Smart Data Models, and Digital Twin
+  ecosystems preserve the semantic capabilities required to support
+  municipality operational objectives.
+layout: doc
+---
+
+# {{ $doc.title }}
+
+## Introduction
+
+The Smart Cities SIG methodology identifies municipality operational needs before considering standards, semantic models, or implementation technologies.
+
+During Stage 1, municipality operational material is analyzed to understand the operational objectives, constraints, and information required to successfully operate a municipal service.
+
+During Stage 2, these operational observations are progressively generalized into reusable semantic capabilities that can be applied across multiple municipal domains.
+
+This document builds directly upon those semantic capabilities.
+
+Its purpose is **not** to define new interoperability standards, Smart Data Models, Digital Twin architectures, or implementation approaches.
+
+Instead, it provides a common engineering framework that allows standards organizations, Smart Data Model communities, Digital Twin initiatives, and other ecosystem participants to evaluate whether their existing specifications preserve the semantic capabilities required to support municipality operational objectives.
+
+The framework intentionally remains technology-neutral.
+
+Each participating ecosystem remains responsible for deciding how these capabilities should be represented within its own architecture and specifications.
+
+---
+
+# Purpose
+
+Municipalities operate services.
+
+Standards represent devices.
+
+Smart Data Models organize semantic information.
+
+Digital Twins consume information to support monitoring, analytics, simulation, and operational decision-making.
+
+These communities often work independently, despite ultimately supporting the same municipality services.
+
+The purpose of this framework is to establish a common semantic reference that enables these communities to evaluate interoperability from the municipality perspective rather than from the perspective of individual technologies.
+
+Instead of asking:
+
+> *How should this information be represented?*
+
+this framework first asks:
+
+> *What semantic capability is required for a Digital Twin to answer municipality operational questions?*
+
+Only after those capabilities have been identified should implementation approaches be evaluated.
+
+---
+
+# Scope
+
+This framework may be applied to any municipality service, including:
+
+- Public Lighting
+- Water Distribution
+- Irrigation
+- Waste Management
+- Environmental Monitoring
+- Transportation
+- Parking
+- Public Safety
+- Future Smart Cities SIG profiles
+
+The semantic capabilities defined in this document are intentionally reusable across domains.
+
+Only the municipality operational questions change from one service to another.
+
+---
+
+# Relationship to the Smart Cities SIG Methodology
+
+This framework builds directly upon the Smart Cities SIG methodology.
+
+```text
+Municipality Operational Reality
+                │
+                ▼
+Stage 1
+Operational Meaning
+                │
+                ▼
+Stage 2
+Reusable Semantic Capabilities
+                │
+                ▼
+Semantic Capability Assessment Framework
+                │
+                ▼
+Standards & Ecosystem Assessment
+                │
+        ┌───────┴────────┐
+        ▼                ▼
+     OMA LwM2M     Smart Data Models
+        │                │
+        └───────┬────────┘
+                ▼
+      Digital Twin Interoperability
+```
+
+The framework therefore acts as the bridge between semantic analysis and ecosystem realization.
+
+---
+
+# How to Use this Framework
+
+Each semantic capability is evaluated from four complementary perspectives.
+
+## 1. Municipality Operational Questions
+
+Identify the operational questions municipalities expect Digital Twins to answer.
+
+These questions provide the operational justification for the semantic capability.
+
+## 2. Questions for OMA
+
+Evaluate whether existing OMA LwM2M Objects and Resources can represent the required semantic capability.
+
+The objective is not to redesign existing Objects, but to understand whether the capability is already supported or whether additional discussion may be required.
+
+## 3. Questions for Smart Data Models
+
+Evaluate whether existing Smart Data Models can preserve the semantic capability while remaining interoperable across municipalities and Digital Twin platforms.
+
+## 4. Digital Twin Questions
+
+Evaluate whether a Digital Twin consuming the available information can successfully answer the municipality operational questions.
+
+If not, identify which semantic information is missing and which ecosystem may be best positioned to provide it.
+
+---
+
+# Semantic Capability Assessment Framework
+
+The semantic capabilities are organized into four categories.
+
+- Domain Semantics
+- Observation Semantics
+- Interpretation Semantics
+- Operational Semantics
+
+Each semantic capability follows the same structure to facilitate consistent evaluation across ecosystems.
+
+---
+
+# Domain Semantics
+
+Domain semantics describe **what municipalities ultimately care about**.
+
+They distinguish the operational service being delivered from the behaviour of the infrastructure providing that service.
+
+---
+
+## 1. Service Outcome
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Is this street adequately illuminated for pedestrians and vehicles?
+- Are lighting levels compliant with the applicable municipality policies or lighting standards?
+- Which streets or public spaces are currently under-illuminated or over-illuminated?
+- Has the municipality's public lighting service objective been achieved?
+
+#### Water Management & Irrigation
+
+- Is the required amount of water reaching the intended location?
+- Are plants, trees, or landscaped areas receiving sufficient irrigation?
+- Are consumers receiving the required water pressure and level of service?
+- Which areas are currently under-watered, over-watered, or experiencing inadequate service?
+- Has the municipality's water service objective been achieved?
+
+### Description
+
+Represents the actual outcome experienced by people, infrastructure, or the environment.
+
+The Service Outcome represents **what the municipality is trying to achieve**, independently of how the underlying infrastructure operates.
+
+Examples include:
+
+- Street illuminance measured at road surface level.
+- Soil moisture available at root level.
+- Water pressure delivered to consumers.
+
+### Why It Is Required
+
+Digital Twins must determine whether municipality objectives are being achieved.
+
+Infrastructure telemetry alone cannot determine service success.
+
+The distinction between infrastructure behaviour and service outcome is therefore fundamental for trustworthy interoperability.
+
+### Questions for OMA
+
+- Which existing LwM2M Objects and Resources represent the service outcome?
+- How is the distinction maintained between service outcome and infrastructure output?
+- How are measured, estimated, inferred, predicted, or aggregated service outcomes represented?
+- How is the observation location represented?
+- Which additional capabilities, if any, would improve representation of municipality service outcomes?
+
+### Questions for Smart Data Models
+
+- Which existing entities and properties represent the service outcome?
+- How is the distinction maintained between service outcome and infrastructure behaviour?
+- How are provenance and quality information associated with the service outcome?
+- How can Digital Twins discover service outcomes consistently across municipalities?
+- Which extensions, if any, would improve semantic interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin determine whether the municipality service objective has been achieved?
+- Can the Digital Twin distinguish poor service outcomes from normal infrastructure operation?
+- Can service outcomes from different municipalities be meaningfully compared?
+- Which semantic information is required to support reliable simulations and operational decision-making?
+
+---
+
+## 2. Infrastructure Output
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- How much light is each luminaire producing?
+- Is each luminaire operating according to its configured settings?
+- Has the light output degraded over time?
+- Is poor street illumination caused by reduced luminaire output or by environmental conditions?
+
+#### Water Management & Irrigation
+
+- How much water is being delivered by each pump or valve?
+- Are pumps, valves, and irrigation controllers operating as expected?
+- Is reduced water delivery caused by infrastructure behaviour or by downstream conditions?
+- Are assets performing within their expected operating ranges?
+
+### Description
+
+Represents the physical output produced by infrastructure assets while delivering a municipality service.
+
+Infrastructure Output describes **how the infrastructure behaves**, not whether the municipality objective has been achieved.
+
+Examples include:
+
+- Lumens emitted by a luminaire.
+- Pump flow rate.
+- Valve opening percentage.
+- Motor speed.
+
+### Why It Is Required
+
+Municipality service outcomes and infrastructure behaviour represent different operational concepts.
+
+Maintaining this distinction enables Digital Twins to diagnose operational issues, optimize infrastructure performance, and avoid incorrectly interpreting infrastructure telemetry as evidence of successful service delivery.
+
+### Questions for OMA
+
+- Which existing LwM2M Objects and Resources represent infrastructure output?
+- How are operating states represented?
+- How are output measurements associated with the corresponding assets?
+- Which additional capabilities, if any, would improve representation of infrastructure behaviour?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent infrastructure output?
+- How is infrastructure behaviour kept separate from service outcomes?
+- Can multiple infrastructure outputs be represented consistently for complex assets?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin distinguish infrastructure behaviour from municipality service outcomes?
+- Can infrastructure degradation be identified before service quality is affected?
+- Can infrastructure performance be analysed independently from environmental influences?
+
+---
+
+## 3. Resource Consumption
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- How much energy is required to provide the public lighting service?
+- Which luminaires, cabinets, streets, or zones consume the most energy?
+- Can energy consumption be reduced without reducing lighting quality?
+- Are energy savings actually preserving the required service outcome?
+
+#### Water Management & Irrigation
+
+- How much water, energy, or other resources are consumed to deliver the service?
+- Which pumps, valves, zones, or irrigation areas consume the most resources?
+- Can water or energy consumption be reduced without degrading the service outcome?
+- Are efficiency improvements causing under-watering, pressure loss, or reduced service quality?
+
+### Description
+
+Represents the resources consumed while delivering the municipality service.
+
+Examples include:
+
+- Energy
+- Water
+- Fuel
+- Battery usage
+- Active power
+- Reactive power
+- Voltage
+- Frequency
+
+### Why It Is Required
+
+Operational efficiency requires separating service quality from resource consumption.
+
+A municipality needs to understand not only whether the service outcome was achieved, but also the resources required to achieve it.
+
+### Questions for OMA
+
+- Which existing LwM2M Objects and Resources represent resource consumption?
+- Can energy, water, fuel, or battery usage be represented consistently?
+- Are electrical measurements sufficiently complete for operational efficiency analysis?
+- Can resource consumption be associated with the asset, group, cabinet, zone, or service outcome it supports?
+- Which additional capabilities would improve resource consumption representation?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent resource consumption?
+- Can resource consumption remain independent from service outcome and infrastructure output?
+- Can consumption be aggregated consistently across assets, zones, and time periods?
+- Can resource consumption be associated with the service outcome it supports?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin determine how much resource consumption was required to achieve the service outcome?
+- Can the Digital Twin compare service quality against resource consumption?
+- Can the Digital Twin identify inefficient assets, zones, or operating conditions?
+- Can the Digital Twin optimize resource consumption while preserving service quality?
+
+---
+
+# Observation Semantics
+
+Observation semantics describe **how observations are obtained, interpreted, and compared**.
+
+Municipality services rarely depend on isolated measurements.
+
+Instead, operational decisions require understanding:
+
+- where an observation was made,
+- what portion of the system it represents,
+- how it was obtained,
+- and over what period it applies.
+
+Without these semantic capabilities, observations that appear identical may represent fundamentally different operational realities.
+
+---
+
+## 4. Observation Point
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Where was this measurement taken?
+- Was the observation made at the luminaire, cabinet, line head, or street surface?
+- Can measurements taken at different observation points be safely compared?
+- Does this observation represent what citizens experience or what the infrastructure reports?
+
+#### Water Management & Irrigation
+
+- Where was this measurement taken?
+- Was the observation collected at the pump, valve, pipeline, irrigation controller, or root zone?
+- Does the observation represent the infrastructure or the delivered service?
+- Can measurements collected at different points in the network be compared?
+
+### Description
+
+Represents the physical or logical location where an observation originates.
+
+The Observation Point identifies **where the information was obtained**, independently of the asset being monitored.
+
+Examples include:
+
+- Luminaire
+- Cabinet
+- Line head
+- Street surface
+- Pump
+- Valve
+- Pipeline
+- Root zone
+- Weather station
+
+### Why It Is Required
+
+Measurements originating from different observation points often represent different operational meanings.
+
+A Digital Twin must understand where an observation was collected before comparing it with other observations or using it for simulation.
+
+### Questions for OMA
+
+- Which existing Objects identify the observation point?
+- Can observation points be represented independently from asset identity?
+- Can multiple observation points be associated with the same infrastructure asset?
+- Which additional capabilities would improve observation point representation?
+
+### Questions for Smart Data Models
+
+- Which entities or properties identify the observation point?
+- Can observation points remain explicit throughout information exchange?
+- Can observation points be associated with Digital Twin entities?
+- Which semantic improvements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin determine where every observation originated?
+- Can observations from different points be interpreted correctly?
+- Can simulation models distinguish infrastructure measurements from service measurements?
+
+---
+
+## 5. Observation Scope
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Does this observation represent one luminaire or an entire street?
+- How many luminaires are represented by this value?
+- Does this measurement represent an operational zone or the entire municipality?
+- Can observations with different coverage be compared?
+
+#### Water Management & Irrigation
+
+- Does this observation represent one irrigation valve or an entire irrigation zone?
+- Does this measurement represent one pressure sensor or the entire distribution network?
+- What geographical or operational area does this observation represent?
+- Can aggregated observations be compared with local measurements?
+
+### Description
+
+Represents the operational area or population represented by an observation.
+
+Observation Scope identifies **what the observation applies to**, rather than where it was collected.
+
+Examples include:
+
+- Single asset
+- Group of assets
+- Cabinet
+- Street
+- Irrigation zone
+- District
+- Entire municipality
+
+### Why It Is Required
+
+Measurements representing different operational scopes should not be compared without understanding their coverage.
+
+Digital Twins require explicit scope information to perform meaningful analytics and simulation.
+
+### Questions for OMA
+
+- Can Objects indicate the operational scope represented by a measurement?
+- Can aggregated observations identify the represented assets?
+- How is aggregation represented?
+- Which additional capabilities would improve scope representation?
+
+### Questions for Smart Data Models
+
+- Can operational scope be represented independently?
+- Can aggregation boundaries remain explicit?
+- Can Digital Twins discover the represented operational area?
+- Which semantic improvements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin determine what portion of the municipality is represented by each observation?
+- Can aggregated observations be compared with individual asset measurements?
+- Can operational KPIs be calculated consistently across different observation scopes?
+
+---
+
+## 6. Observation Method
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Was this value directly measured or estimated?
+- Was this lighting level calculated from luminaire characteristics?
+- Is this observation based on a sensor, a model, or historical data?
+- Can this information be trusted for operational decisions?
+
+#### Water Management & Irrigation
+
+- Was soil moisture measured or estimated?
+- Was water demand predicted using weather forecasts?
+- Is this irrigation recommendation model-generated?
+- How was this observation produced?
+
+### Description
+
+Represents the method used to obtain an observation.
+
+Examples include:
+
+- Measured
+- Estimated
+- Inferred
+- Predicted
+- Aggregated
+- Simulated
+- Model-derived
+- Proxy measurement
+
+### Why It Is Required
+
+Operational trust depends upon understanding how information was produced.
+
+Different observation methods imply different levels of confidence and different operational uses.
+
+### Questions for OMA
+
+- How are different observation methods represented?
+- Can measured values be distinguished from inferred values?
+- Can prediction or simulation results be represented?
+- Which additional capabilities would improve observation method representation?
+
+### Questions for Smart Data Models
+
+- Can observation methods accompany every observation?
+- Can Digital Twins distinguish measured information from model-derived information?
+- Can provenance remain associated with observation methods?
+- Which semantic improvements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin distinguish measured observations from estimated or predicted values?
+- Can simulations account for different observation methods?
+- Can confidence in operational decisions be adjusted according to observation method?
+
+---
+
+## 7. Temporal Semantics
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Does this observation represent the current situation or an historical average?
+- What period of time does this observation cover?
+- Were these measurements aggregated?
+- Can observations collected at different times be compared?
+
+#### Water Management & Irrigation
+
+- Does this soil moisture value represent current conditions or a daily average?
+- Does this irrigation recommendation apply now or tomorrow?
+- What observation interval was used?
+- Can historical observations be compared with forecast information?
+
+### Description
+
+Represents the temporal characteristics of an observation.
+
+Examples include:
+
+- Instantaneous
+- Observation interval
+- Sampling period
+- Aggregation window
+- Historical observation
+- Forecast
+- Prediction horizon
+
+### Why It Is Required
+
+Operational interpretation depends heavily upon time semantics.
+
+Observations representing different temporal characteristics should not be compared without understanding their time basis.
+
+### Questions for OMA
+
+- Which temporal characteristics are currently represented?
+- Can observation intervals remain explicit?
+- Can aggregation periods be represented?
+- Which additional capabilities would improve temporal semantics?
+
+### Questions for Smart Data Models
+
+- Can temporal semantics remain explicit?
+- Can forecast and historical observations be represented consistently?
+- Can aggregation windows be preserved?
+- Which semantic improvements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin correctly interpret the time basis of every observation?
+- Can historical, current, and predicted observations coexist?
+- Can simulations correctly use observations with different temporal characteristics?
+
+---
+
+# Interpretation Semantics
+
+Interpretation semantics describe the additional information required to correctly understand, compare, and trust observations.
+
+Measurements alone rarely provide sufficient information for operational decision-making.
+
+To become operationally meaningful, observations must be accompanied by information describing:
+
+- where the information originated,
+- how trustworthy it is,
+- under which operating conditions it was obtained,
+- and which physical conditions influenced the observed result.
+
+These semantic capabilities enable Digital Twins to interpret observations consistently across municipalities, infrastructure vendors, and interoperability ecosystems.
+
+---
+
+## 8. Provenance
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Where did this information originate?
+- Was this observation generated by the luminaire, the control cabinet, an external platform, or manually entered?
+- Can the source of this information be trusted?
+- Can different information sources be distinguished?
+
+#### Water Management & Irrigation
+
+- Was this observation generated by a sensor, a supervisory system, a weather service, or an irrigation controller?
+- Can the origin of irrigation recommendations be identified?
+- Can externally supplied information be distinguished from locally measured observations?
+- Which organization or system is responsible for this information?
+
+### Description
+
+Represents the origin of an observation or piece of operational information.
+
+Examples include:
+
+- Device sensor
+- Control cabinet
+- Weather service
+- GIS platform
+- Installation records
+- Asset management system
+- Human operator
+- Digital Twin
+- Predictive model
+
+### Why It Is Required
+
+Operational decisions depend upon understanding where information originated.
+
+Observations with different provenance may have different levels of trust, authority, and operational applicability.
+
+### Questions for OMA
+
+- Which existing Objects and Resources identify the origin of observations?
+- Can device-generated information be distinguished from externally supplied information?
+- Can provenance remain associated with observations throughout their lifecycle?
+- Which additional capabilities would improve provenance representation?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent provenance?
+- Can provenance remain associated with observations during information exchange?
+- Can Digital Twins discover provenance consistently?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin determine where every observation originated?
+- Can observations be filtered according to their provenance?
+- Can operational decisions consider the trustworthiness of different information sources?
+
+---
+
+## 9. Measurement Quality
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- How reliable is this observation?
+- Can this value be trusted for operational decisions?
+- Is the data complete and sufficiently accurate?
+- Can observations with different quality levels be compared?
+
+#### Water Management & Irrigation
+
+- Is this soil moisture observation sufficiently accurate?
+- Is the irrigation recommendation based on reliable information?
+- Are there missing or incomplete observations?
+- Can operational decisions account for varying levels of confidence?
+
+### Description
+
+Represents the quality characteristics associated with an observation.
+
+Examples include:
+
+- Accuracy
+- Precision
+- Confidence
+- Completeness
+- Consistency
+- Availability
+- Resolution
+- Uncertainty
+
+### Why It Is Required
+
+Digital Twins require information about observation quality to support reliable monitoring, analytics, simulation, and operational decision-making.
+
+### Questions for OMA
+
+- Which quality characteristics can accompany observations?
+- Can confidence or uncertainty be represented?
+- Can incomplete observations be identified?
+- Which additional capabilities would improve quality representation?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent measurement quality?
+- Can quality information remain associated with observations?
+- Can Digital Twins evaluate observation quality consistently?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin evaluate the quality of every observation?
+- Can operational decisions consider different confidence levels?
+- Can simulations account for observation uncertainty?
+
+---
+
+## 10. Operational Context
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Are weather conditions affecting the lighting service?
+- Is poor illumination caused by fog, rain, humidity, or other operational conditions?
+- Should lighting behaviour change because operating conditions have changed?
+- Are current operating conditions significantly different from normal conditions?
+
+#### Water Management & Irrigation
+
+- Has recent rainfall reduced irrigation requirements?
+- Should irrigation schedules change because of weather forecasts?
+- Are current environmental conditions affecting water demand?
+- Are operational conditions influencing service performance?
+
+### Description
+
+Represents operational conditions that influence the interpretation of observations.
+
+Examples include:
+
+- Weather
+- Rainfall
+- Humidity
+- Temperature
+- Wind
+- Traffic
+- Occupancy
+- Seasonal conditions
+
+### Why It Is Required
+
+The same infrastructure behaviour may produce different service outcomes under different operating conditions.
+
+Operational context enables Digital Twins to correctly interpret those differences.
+
+### Questions for OMA
+
+- Which operational context can be directly observed?
+- Can external operational context be associated with observations?
+- Which additional capabilities would improve operational context representation?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent operational context?
+- Can operational context remain independent from device telemetry?
+- Can contextual information remain associated with observations?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin interpret observations according to current operating conditions?
+- Can simulations incorporate operational context?
+- Can operational decisions automatically adapt to changing conditions?
+
+---
+
+## 11. Physical Context
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Are trees, buildings, or other obstructions reducing street illumination?
+- Is the physical environment affecting the lighting service?
+- Would the same luminaire produce different results in another location?
+- Are shadows or terrain affecting the observed lighting levels?
+
+#### Water Management & Irrigation
+
+- Are soil characteristics affecting irrigation effectiveness?
+- Is terrain influencing water distribution?
+- Are vegetation, slopes, or physical obstacles affecting water delivery?
+- Would identical infrastructure produce different results in another location?
+
+### Description
+
+Represents physical characteristics of the environment that influence service outcomes.
+
+Examples include:
+
+- Buildings
+- Trees
+- Vegetation
+- Terrain
+- Slopes
+- Orientation
+- Inclination
+- Shadows
+- Surface materials
+
+### Why It Is Required
+
+Physical context explains why identical infrastructure behaviour may produce different operational outcomes.
+
+Without physical context, observations may be interpreted incorrectly.
+
+### Questions for OMA
+
+- Which physical context can be directly represented?
+- Should physical context be supplied by external systems?
+- Which additional capabilities would improve physical context representation?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent physical context?
+- Can physical context remain associated with observations?
+- Can Digital Twins consistently discover environmental influences?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin understand how the physical environment influences service outcomes?
+- Can simulations include physical environmental effects?
+- Can operational decisions distinguish infrastructure problems from environmental influences?
+
+---
+
+# Operational Semantics
+
+Operational semantics describe the operational information required to safely, reliably, and efficiently manage municipal infrastructure throughout its lifecycle.
+
+While Domain, Observation, and Interpretation Semantics explain **what is being observed** and **how observations should be interpreted**, Operational Semantics provide the information required to operate, maintain, and control infrastructure assets.
+
+These semantic capabilities enable Digital Twins to support operational planning, maintenance, resilience, remote operation, and lifecycle management.
+
+---
+
+## 12. Asset Management Context
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Who owns this lighting asset?
+- Which organization is responsible for maintaining it?
+- Which operational zone manages this asset?
+- Is the luminaire still under warranty?
+- Which maintenance contract applies?
+- What is the expected remaining useful life?
+- When was this asset last maintained or replaced?
+
+#### Water Management & Irrigation
+
+- Who owns this pump, valve, or irrigation controller?
+- Which organization is responsible for maintaining it?
+- Which irrigation zone or water district manages this asset?
+- Is the equipment still under warranty?
+- Which maintenance contract applies?
+- What is the expected remaining useful life?
+- When was this asset last inspected or serviced?
+
+### Description
+
+Represents operational management information associated with infrastructure assets throughout their lifecycle.
+
+Examples include:
+
+- Ownership
+- Responsible organization
+- Operational zone
+- Maintenance responsibility
+- Contracts
+- Warranty
+- Lifecycle stage
+- Installation date
+- Maintenance history
+- Remaining useful life
+
+### Why It Is Required
+
+Municipal infrastructure is managed throughout its operational lifecycle.
+
+Digital Twins require operational management information to support maintenance planning, asset optimization, lifecycle analysis, and accountability.
+
+### Questions for OMA
+
+- Which existing Objects and Resources represent asset management information?
+- Which management information belongs within LwM2M Objects?
+- Which information should remain external to device models?
+- Can external asset management information remain associated with device observations?
+- Which additional capabilities would improve asset management representation?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent asset management information?
+- Can lifecycle information remain associated with assets?
+- Can maintenance and ownership information be represented consistently?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin determine who is responsible for every asset?
+- Can maintenance history and lifecycle information be incorporated into operational decisions?
+- Can asset replacement, maintenance, and investment planning be supported?
+
+---
+
+## 13. Network Operability
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- Can this lighting asset currently be remotely controlled?
+- Is network performance affecting teleoperation?
+- Are communication failures preventing reliable operation?
+- Can communication problems be distinguished from equipment failures?
+
+#### Water Management & Irrigation
+
+- Can pumps, valves, or irrigation controllers currently be remotely operated?
+- Is communication reliability affecting operational control?
+- Can communication failures delay irrigation or water management operations?
+- Can network issues be distinguished from infrastructure failures?
+
+### Description
+
+Represents the communication characteristics that influence remote monitoring and control.
+
+Examples include:
+
+- Network availability
+- Connectivity status
+- Latency
+- Packet loss
+- Signal quality
+- Communication reliability
+- Communication technology
+
+### Why It Is Required
+
+Operational decisions increasingly depend upon reliable communication.
+
+Digital Twins require awareness of communication conditions to correctly interpret observations and determine whether remote operation is feasible.
+
+### Questions for OMA
+
+- Which existing Objects and Resources represent communication characteristics?
+- Can communication quality be monitored?
+- Can communication failures be distinguished from device failures?
+- Which additional capabilities would improve representation of network operability?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent communication characteristics?
+- Can communication information remain associated with infrastructure assets?
+- Can Digital Twins evaluate operational readiness using communication information?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin determine whether assets are currently reachable?
+- Can communication failures be distinguished from infrastructure failures?
+- Can operational decisions account for communication limitations?
+
+---
+
+## 14. Fallback Behaviour
+
+### Municipality Operational Questions
+
+#### Public Lighting
+
+- What happens if communication with the lighting infrastructure is lost?
+- Will the lighting continue operating safely?
+- Does the infrastructure automatically switch to a predefined operating schedule?
+- Can emergency operating modes be identified?
+
+#### Water Management & Irrigation
+
+- What happens if communication with irrigation controllers or pumps is lost?
+- Will irrigation continue safely?
+- Does the infrastructure automatically switch to local control?
+- Can emergency or safe operating modes be identified?
+
+### Description
+
+Represents the autonomous behaviour of infrastructure when normal communications or supervisory control become unavailable.
+
+Examples include:
+
+- Local schedules
+- Autonomous control
+- Safe operating mode
+- Emergency operating mode
+- Manual override
+- Local decision making
+
+### Why It Is Required
+
+Municipal infrastructure must continue operating safely during communication failures or unexpected operational conditions.
+
+Digital Twins require knowledge of fallback behaviour to correctly simulate infrastructure resilience and predict operational outcomes.
+
+### Questions for OMA
+
+- Which existing Objects and Resources represent fallback behaviour?
+- Can autonomous operating modes be represented?
+- Can transitions between normal and fallback operation be identified?
+- Which additional capabilities would improve fallback behaviour representation?
+
+### Questions for Smart Data Models
+
+- Which entities and properties represent fallback behaviour?
+- Can autonomous operating strategies remain associated with assets?
+- Can Digital Twins discover fallback operating modes consistently?
+- Which semantic enhancements would improve interoperability?
+
+### Digital Twin Questions
+
+- Can the Digital Twin predict how infrastructure will behave during communication failures?
+- Can simulations incorporate autonomous operating modes?
+- Can operational resilience be evaluated before failures occur?
+- Can emergency operating scenarios be realistically simulated?
+
+---
+
+# Capability Assessment Matrix
+
+> **Editorial Note**
+>
+> This matrix is included in this document to illustrate how the Semantic Capability Assessment Framework is intended to be applied.
+>
+> As the Smart Cities SIG develops domain-specific profiles (for example, Public Lighting, Water Management & Irrigation, Waste Management, and Transportation), this matrix is expected to be moved into separate profile-specific assessment documents.
+>
+> Each profile will use this common framework to assess the extent to which existing standards, Smart Data Models, and Digital Twin ecosystems support the semantic capabilities identified in this document.
+>
+> Keeping the assessment separate from the framework will allow each profile to evolve independently while preserving a single, authoritative definition of the semantic capabilities.
+
+The following matrix provides a common assessment worksheet for ecosystem participants.
+
+Each participating ecosystem should evaluate its existing specifications against the semantic capabilities described in this document.
+
+The resulting assessments may be discussed collaboratively within the Smart Cities SIG and used to identify opportunities for improving interoperability across standards, semantic models, and Digital Twin platforms.
+
+| Semantic Capability | OMA Assessment | Smart Data Models Assessment | Digital Twin Assessment | Recommendations |
+|---------------------|----------------|------------------------------|-------------------------|-----------------|
+| Service Outcome | | | | |
+| Infrastructure Output | | | | |
+| Resource Consumption | | | | |
+| Observation Point | | | | |
+| Observation Scope | | | | |
+| Observation Method | | | | |
+| Temporal Semantics | | | | |
+| Provenance | | | | |
+| Measurement Quality | | | | |
+| Operational Context | | | | |
+| Physical Context | | | | |
+| Asset Management Context | | | | |
+| Network Operability | | | | |
+| Fallback Behaviour | | | | |
+
+---
+
+# Expected Outcome
+
+The completion of this assessment framework should enable ecosystem participants to:
+
+- Identify which semantic capabilities are already supported by existing specifications.
+- Identify semantic capabilities requiring additional discussion or future enhancements.
+- Improve interoperability between device standards, Smart Data Models, and Digital Twin ecosystems.
+- Preserve municipality operational meaning across standards and semantic models.
+- Support the development of semantically consistent Digital Twins capable of monitoring, analysing, simulating, and operating municipality services.
+
+This framework is intended to be reusable across multiple municipality domains, including Public Lighting, Water Management & Irrigation, Waste Management, Transportation, Environmental Monitoring, Parking, and future Smart Cities SIG profiles.
+
+---
+
+# Expected Outcome
+
+The completion of this assessment framework should enable ecosystem participants to:
+
+- Identify which semantic capabilities are already supported by existing specifications.
+- Identify semantic capabilities that require additional discussion or future enhancements.
+- Improve interoperability between device standards, Smart Data Models, and Digital Twin ecosystems.
+- Preserve municipality operational meaning across standards and semantic models.
+- Support the development of semantically consistent Digital Twins capable of monitoring, analysing, simulating, and operating municipality services.
+
+This framework is intended to be reusable across multiple municipality domains,
+including public lighting, water management, irrigation, waste management,
+transportation, environmental monitoring, parking, and future Smart Cities SIG
+profiles.
