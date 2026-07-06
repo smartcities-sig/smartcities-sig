@@ -126,36 +126,15 @@ Rather than asking municipalities to understand the technical structure of multi
 
 The resulting collaboration can be summarized as follows:
 
-```mermaid
-flowchart TD
+<figure class="figure">
+    <img
+        src="/images/news/building-missing-context-diagram.png"
+        alt="Smart Cities SIG collaborative model connecting municipalities, operational semantics, standards organizations, Smart Data Models, and Digital Twins.">
 
-subgraph M["Municipality"]
-    A["🏛️ Express Operational Needs"]
-end
-
-subgraph SIG["Smart Cities SIG"]
-    B["Develop Common<br/>Operational Semantics"]
-    C["Capability Assessment<br/>Framework"]
-    D["Standards Capability<br/>Gap Analysis"]
-end
-
-subgraph SO["Standards Organizations"]
-    E["Evaluate Existing<br/>Standards"]
-    F["Identify Capability<br/>Gaps"]
-    G["Each Standard Evolves<br/>Independently"]
-end
-
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-F --> G
-
-style M fill:#1B5E20,stroke:#6EDC5F,stroke-width:2px,color:#ffffff
-style SIG fill:#0D2B45,stroke:#45C7F5,stroke-width:2px,color:#ffffff
-style SO fill:#1A1630,stroke:#45C7F5,stroke-width:2px,color:#ffffff
-```
+    <figcaption class="figure-caption">
+        <strong>Figure 1.</strong> The Smart Cities SIG collaborative model. Municipalities express their operational needs using their own operational language. The Smart Cities SIG develops a common operational semantic abstraction and a capability assessment framework that enables standards organizations to independently evaluate and evolve their specifications while Smart Data Models translate the shared operational semantics into interoperable information models for Digital Twins. Together, these complementary activities provide the operational context needed to build more interoperable, resilient, and sustainable municipal Digital Twins.
+    </figcaption>
+</figure>
 
 This approach allows every participating standards organization to evaluate the same operational capability through the lens of its own architecture and governance while maintaining complete independence over how its specifications evolve.
 
