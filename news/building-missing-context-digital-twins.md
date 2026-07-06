@@ -6,7 +6,7 @@ title: "Building the Missing Context for Municipal Digital Twins"
 subtitle: "How the Smart Cities SIG is creating a new collaborative model for municipalities, Digital Twins, and standards organizations."
 leftLabel: 2026-July-6
 rightLabel: Smart Cities SIG
-cardID: 236
+cardID: 001
 tags:
     - news
     - blogs
@@ -28,15 +28,15 @@ The objective was never to create another standards group. Instead, it was to ex
 
 ## Digital Twins Need More Than Data
 
-The rapid evolution of Digital Twins has transformed expectations for smart city platforms.
+The rapid evolution of Digital Twins has transformed expectations for smart city platforms:
 
-Collecting data is no longer enough.
+* Collecting data is no longer enough.
 
-Modern Digital Twins require context.
+* Modern Digital Twins require context.
 
-Municipalities need to understand not only *what* is happening across their infrastructure, but also *why* it is happening, *how* operational decisions are made, and *which* information is required to support those decisions.
+* Municipalities need to understand not only *what* is happening across their infrastructure, but also *why* it is happening, *how* operational decisions are made, and *which* information is required to support those decisions.
 
-Existing standards already provide significant pieces of this puzzle. They define devices, data models, communication protocols, APIs, and semantic representations.
+* Existing standards already provide significant pieces of this puzzle. They define devices, data models, communication protocols, APIs, and semantic representations.
 
 However, municipalities rarely think in terms of standards.
 
@@ -64,29 +64,29 @@ Following the Smart City Expo World Congress in Barcelona in late 2025, represen
 
 Participants included organizations such as:
 
-- Madrid Digital
+- Madrid City Counsil, Digital Office
 - Polytechnic University of Madrid
 - Smart Data Models
 - Open Mobile Alliance (OMA)
 - Private industry participants with expertise in interoperability and Digital Twins
 
-These discussions quickly revealed an important observation.
+These discussions quickly revealed important observations:
 
-Everyone shared the same objective.
+* Everyone shared the same objective.
 
-Everyone wanted better interoperability.
+* Everyone wanted better interoperability.
 
-Everyone wanted Digital Twins capable of supporting municipal operations.
+* Everyone wanted Digital Twins capable of supporting municipal operations.
 
-Yet each community approached the problem from a different perspective.
+Yet each community approached the problem from a different perspective:
 
-Municipalities described operational needs.
+* Municipalities described operational needs.
 
-Digital Twin initiatives described information requirements.
+* Digital Twin initiatives described information requirements.
 
-Standards organizations described technical specifications.
+* Standards organizations described technical specifications.
 
-Technology providers described implementations.
+* Technology providers described implementations.
 
 Although everyone was discussing the same city, they were often speaking different languages.
 
@@ -104,11 +104,11 @@ That realization led to the formation of the Smart Cities SIG.
 
 The Smart Cities SIG does **not** seek to define new standards.
 
-Instead, it seeks to create the common operational language that allows municipalities, Digital Twins, academia, industry, and multiple standards organizations to collaborate more effectively while allowing each standards organization to evolve independently within its own governance and technical architecture.
+Instead, *it seeks to create the common operational language that allows municipalities, Digital Twins, academia, industry, and multiple standards organizations to collaborate more effectively while allowing each standards organization to evolve independently within its own governance and technical architecture.*
 
 This seemingly simple shift changes the entire conversation.
 
-Instead of asking municipalities to understand multiple technical specifications, the Smart Cities SIG starts by understanding how municipalities actually operate.
+Instead of asking municipalities to understand multiple technical specifications, the Smart Cities SIG starts by understanding **how municipalities actually operate.**
 
 ## Giving Municipalities a Voice
 
@@ -126,21 +126,35 @@ Rather than asking municipalities to understand the technical structure of multi
 
 The resulting collaboration can be summarized as follows:
 
-```text
-Municipality
-      ↓
-Expresses Operational Needs
-      ↓
-Smart Cities SIG
-Develops Common Operational Semantics
-      ↓
-Capability Assessment Framework
-      ↓
-Standards Capability Gap Analysis
-      ↓
-Standards Organizations
-      ↓
-Each Standard Evolves Independently
+```mermaid
+flowchart TD
+
+subgraph M["Municipality"]
+    A["🏛️ Express Operational Needs"]
+end
+
+subgraph SIG["Smart Cities SIG"]
+    B["Develop Common<br/>Operational Semantics"]
+    C["Capability Assessment<br/>Framework"]
+    D["Standards Capability<br/>Gap Analysis"]
+end
+
+subgraph SO["Standards Organizations"]
+    E["Evaluate Existing<br/>Standards"]
+    F["Identify Capability<br/>Gaps"]
+    G["Each Standard Evolves<br/>Independently"]
+end
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
+
+style M fill:#1B5E20,stroke:#6EDC5F,stroke-width:2px,color:#ffffff
+style SIG fill:#0D2B45,stroke:#45C7F5,stroke-width:2px,color:#ffffff
+style SO fill:#1A1630,stroke:#45C7F5,stroke-width:2px,color:#ffffff
 ```
 
 This approach allows every participating standards organization to evaluate the same operational capability through the lens of its own architecture and governance while maintaining complete independence over how its specifications evolve.
@@ -169,11 +183,11 @@ They are the first practical use cases used to validate and refine the methodolo
 
 ## From Operational Semantics to Capability Assessment
 
-One of the most significant outcomes of the Smart Cities SIG has been the development of an Operational Semantics methodology.
+One of the most significant outcomes of the Smart Cities SIG has been the development of an **Operational Semantics methodology.**
 
 Rather than describing individual data elements or interfaces, Operational Semantics focus on the operational capabilities required by municipalities and the information needed by Digital Twins to support those capabilities.
 
-This provides the foundation for a Capability Assessment Framework.
+This provides the foundation for a **Capability Assessment Framework.**
 
 The intention is not to compare standards against one another.
 
@@ -185,7 +199,7 @@ Instead, the framework provides a structured way to identify:
 - where capability gaps still exist;
 - and where future collaboration between standards organizations could provide the greatest value.
 
-The resulting Standards Capability Gap Analysis enables each participating standards organization to independently assess its own specifications while maintaining complete ownership of its technical roadmap.
+The resulting **Standards Capability Gap Analysis** enables each participating standards organization to independently assess its own specifications while maintaining complete ownership of its technical roadmap.
 
 ## Looking Toward Barcelona
 
@@ -193,7 +207,7 @@ The work of the Smart Cities SIG is still evolving.
 
 The methodology continues to mature through real municipal scenarios, collaborative workshops, and technical discussions.
 
-The community's immediate objective is to present the first results of this work during the Smart City Expo World Congress in Barcelona this November.
+The community's immediate objective is to present the first results of this work during the **Smart City Expo World Congress** in **Barcelona this November.**
 
 Rather than presenting another technical specification, the goal is to demonstrate a collaborative model that enables municipalities to express operational needs in a form that can be understood, assessed, and ultimately implemented through multiple standards organizations.
 
@@ -221,10 +235,10 @@ The Smart Cities SIG invites this broader community to help shape a collaborativ
 
 ### Learn More
 
-- Smart Cities SIG: **[Placeholder Link]**
-- Open Mobile Alliance (OMA): **[Placeholder Link]**
-- Smart Data Models: **[Placeholder Link]**
-- Madrid Digital: **[Placeholder Link]**
-- Polytechnic University of Madrid: **[Placeholder Link]**
-- Smart Cities SIG GitHub Repository: **[Placeholder Link]**
-- Smart Cities SIG Groups.io Community: **[Placeholder Link]**
+- [Smart Cities SIG](https://smartcities-sig-web.vercel.app/) website
+- [Open Mobile Alliance (OMA)](https://www.openmobilealliance.org/home)
+- [Smart Data Models]() PENDING
+- [Madrid Digital]() PENDING
+- [Polytechnic University of Madrid]() PENDING
+- [Smart Cities SIG GitHub Repository](https://github.com/smartcities-sig/smartcities-sig)
+- [Smart Cities SIG Groups.io Community](https://groups.io/g/smartcities-sig) *request access*
