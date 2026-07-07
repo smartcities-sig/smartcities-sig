@@ -1089,20 +1089,22 @@ The resulting assessments may be discussed collaboratively within the Smart Citi
 
 | Semantic Capability | OMA Assessment | Smart Data Models Assessment | Digital Twin Assessment | Recommendations |
 |---------------------|----------------|------------------------------|-------------------------|-----------------|
-| Service Outcome | | | | |
-| Infrastructure Output | | | | |
-| Resource Consumption | | | | |
-| Observation Point | | | | |
-| Observation Scope | | | | |
-| Observation Method | | | | |
-| Temporal Semantics | | | | |
-| Provenance | | | | |
-| Measurement Quality | | | | |
-| Operational Context | | | | |
-| Physical Context | | | | |
-| Asset Management Context | | | | |
-| Network Operability | | | | |
-| Fallback Behaviour | | | | |
+| Service Outcome | **Public Lighting**<br />The measurements would need to be complemented with Illuminance value from external sensor<br />3301 - Illuminance | | | |
+| Infrastructure Output | **Public Lighting**<br />Dimming Level is the main output value that would be monitored (also color temperature may be provided). Alarms would allow to promptly identify problems<br />3416 - Outdoor Lamp Controller<br />3418 - Electrical Monitor | | | |
+| Resource Consumption | **Public Lighting**<br />Electrical Monitor provides a good amount of resources for single lamp consumption, whilst Single Phase and Three Phase Electrical Meters would be used to map Cabinet Controllers<br />3418 - Electrical Monitor<br />3421 - Single-Pahse Electrical Meter<br />3422 - Three-Phase Electrical Meter Complement | | | |
+| Observation Point | **Public Lighting**<br />Location object can be used to identify specific observation point<br />6 - Location | | | |
+| Observation Scope | **Public Lighting**<br />Intrinsic in the object type (Electrical Monitor vs Single Phase and Three Phase Electrical Meters)<br />3418 - Electrical Monitor<br />3421 - Single-Pahse Electrical Meter<br />3422 - Three-Phase Electrical Meter Complement | | | |
+| Observation Method | **Public Lighting**<br />Current Data Model is only limited to measured values, when not explicitly stated | | | |
+| Temporal Semantics | **Public Lighting**<br />Each measurement is associated with a timestamp, representing a specific time instant, even when dispatched at a later time Data can be normally provided either periodically or upon meaningful change of any value being monitored<br />5518 - Timestamp | | | |
+| Provenance | **Public Lighting**<br />OMA Data Model being implemented by devices only refers to raw infrastructure output.  Externally supplied information may be complemented at higher levels | | | |
+| Measurement Quality | **Public Lighting**<br />Measurements include a Quality Indicator (6042) and a  Measurement Quality Level (6049). The device may report only the subset of information that is available <br />6042 - Quality Indicator<br />6049 - Quality Level | | | |
+| Operational Context | **Public Lighting**<br />Normally limited to electrical line quality (Voltage, Frequency) OMA Data Model also provides coverage for a bunch of environmental measurements  Rain Gauge, Anemometer, Humidity, Temperature, Traffic, Heat Stroke<br />3418 - Electrical Monitor<br />3303 - Temperature<br />3304 - Humidity<br />3432 - Traffic Counter<br />3446 - Rain Gauge<br />3449 - Anemometer<br />3450 - Wet Bulb Globe Temperature | | | |
+| Physical Context | **Public Lighting**<br />This is indeed not well covered by existing Data Model and may be possibly managed at higher levels | | | |
+| Asset Management Context | **Public Lighting**<br />Devices may expose certain number of asset context in various objects (Device, Device Extension, Luminaire Asset), but may be complemented with further information being managed at higher levels<br />3 - Device<br />3410 - Device Extensions<br />3417 - Luminaire Asset | | | |
+| Network Operability | **Public Lighting**<br />Various objects may provide statistic information and connection status, alongside device failures and alarm reporting<br />4 - Connectivity Monitoring<br />7 - Connectivity Statistics<br />3447 - LPWAN Mesh Connectivity<br />3448 - LPWAN Mesh Statistics | | | |
+| Fallback Behaviour | **Public Lighting**<br />Schedule Framework is designed to allow for device autonomous operation, where manual operations can take precedence for a limited amount of time<br />3452 - Program Scheduler<br />3453 - Calendar Rule<br />3454 - Program Function<br />3457 - Program Manager | | | |
+
+
 
 ---
 
