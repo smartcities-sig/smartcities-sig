@@ -127,7 +127,7 @@ Rather than asking municipalities to understand the technical structure of multi
 The resulting collaboration can be summarized as follows:
 
 <figure>
-    <img src="/images/smartcities-sig-gap.png" alt="Smart Cities SIG collaborative model.">
+    <img src="https://github.com/smartcities-sig/smartcities-sig/blob/article-missing-context/news/images/smartcities-sig-gap.png?raw=true" alt="Smart Cities SIG collaborative model.">
     <figcaption> <strong>Figure 1.</strong> The Smart Cities SIG collaborative model.</figcaption>
 </figure>
 
