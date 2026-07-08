@@ -126,14 +126,9 @@ Rather than asking municipalities to understand the technical structure of multi
 
 The resulting collaboration can be summarized as follows:
 
-<figure class="figure">
-    <img
-        src="/images/news/building-missing-context-diagram.png"
-        alt="Smart Cities SIG collaborative model connecting municipalities, operational semantics, standards organizations, Smart Data Models, and Digital Twins.">
-
-    <figcaption class="figure-caption">
-        <strong>Figure 1.</strong> The Smart Cities SIG collaborative model. Municipalities express their operational needs using their own operational language. The Smart Cities SIG develops a common operational semantic abstraction and a capability assessment framework that enables standards organizations to independently evaluate and evolve their specifications while Smart Data Models translate the shared operational semantics into interoperable information models for Digital Twins. Together, these complementary activities provide the operational context needed to build more interoperable, resilient, and sustainable municipal Digital Twins.
-    </figcaption>
+<figure>
+    <img src="/images/news/building-missing-context-diagram.png" alt="Smart Cities SIG collaborative model.">
+    <figcaption> <strong>Figure 1.</strong> The Smart Cities SIG collaborative model.</figcaption>
 </figure>
 
 This approach allows every participating standards organization to evaluate the same operational capability through the lens of its own architecture and governance while maintaining complete independence over how its specifications evolve.
