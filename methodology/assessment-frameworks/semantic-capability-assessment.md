@@ -146,7 +146,7 @@ If not, identify which semantic information is missing and which ecosystem may b
 
 The semantic capabilities are organized into four categories.
 
-**Domain Semantics**
+**1. Domain Semantics**
 
 Describes **what the municipality ultimately cares about** by defining the service being delivered, the infrastructure providing it, and the resources consumed to achieve the desired outcome.
 
@@ -154,7 +154,7 @@ Describes **what the municipality ultimately cares about** by defining the servi
 - **Infrastructure Output** — Describes the physical behavior and outputs produced by infrastructure assets.
 - **Resource Consumption** — Represents the resources consumed to deliver the municipal service.
 
-**Observation Semantics**
+**2. Observation Semantics**
 
 Describes **how operational information is observed** by defining where observations originate, what they represent, how they are obtained, and their temporal characteristics.
 
@@ -163,7 +163,7 @@ Describes **how operational information is observed** by defining where observat
 - **Observation Method** — Specifies how an observation was produced.
 - **Temporal Semantics** — Describes the time basis associated with an observation.
 
-**Interpretation Semantics**
+**3. Interpretation Semantics**
 
 Describes **how observations should be understood and trusted** by providing the context, provenance, and quality required for meaningful operational interpretation.
 
@@ -172,7 +172,7 @@ Describes **how observations should be understood and trusted** by providing the
 - **Operational Context** — Represents operating conditions that influence service behavior.
 - **Physical Context** — Describes environmental characteristics that affect service outcomes.
 
-**Operational Semantics**
+**4. Operational Semantics**
 
 Describes **how municipal infrastructure is operated and managed** throughout its lifecycle, including operational responsibility, communications, and resilience.
 
