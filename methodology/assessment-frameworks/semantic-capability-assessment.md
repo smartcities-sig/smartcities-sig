@@ -146,10 +146,39 @@ If not, identify which semantic information is missing and which ecosystem may b
 
 The semantic capabilities are organized into four categories.
 
-- Domain Semantics
-- Observation Semantics
-- Interpretation Semantics
-- Operational Semantics
+**Domain Semantics**
+
+Describes **what the municipality ultimately cares about** by defining the service being delivered, the infrastructure providing it, and the resources consumed to achieve the desired outcome.
+
+- **Service Outcome** — Defines the real-world outcome the municipality intends to achieve.
+- **Infrastructure Output** — Describes the physical behavior and outputs produced by infrastructure assets.
+- **Resource Consumption** — Represents the resources consumed to deliver the municipal service.
+
+**Observation Semantics**
+
+Describes **how operational information is observed** by defining where observations originate, what they represent, how they are obtained, and their temporal characteristics.
+
+- **Observation Point** — Identifies where an observation originates.
+- **Observation Scope** — Defines the assets or area represented by an observation.
+- **Observation Method** — Specifies how an observation was produced.
+- **Temporal Semantics** — Describes the time basis associated with an observation.
+
+**Interpretation Semantics**
+
+Describes **how observations should be understood and trusted** by providing the context, provenance, and quality required for meaningful operational interpretation.
+
+- **Provenance** — Identifies the origin of operational information.
+- **Measurement Quality** — Describes the reliability and uncertainty of observations.
+- **Operational Context** — Represents operating conditions that influence service behavior.
+- **Physical Context** — Describes environmental characteristics that affect service outcomes.
+
+**Operational Semantics**
+
+Describes **how municipal infrastructure is operated and managed** throughout its lifecycle, including operational responsibility, communications, and resilience.
+
+- **Asset Management Context** — Represents lifecycle and operational management information for assets.
+- **Network Operability** — Describes communication conditions affecting remote operation.
+- **Fallback Behaviour** — Defines how infrastructure behaves when normal communications or supervisory control are unavailable.
 
 Each semantic capability follows the same structure to facilitate consistent evaluation across ecosystems.
 
