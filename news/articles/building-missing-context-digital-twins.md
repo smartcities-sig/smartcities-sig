@@ -205,9 +205,19 @@ The methodology continues to evolve as new municipalities, Digital Twin initiati
 
 The Smart Cities SIG invites this broader community to help shape a collaborative model that gives municipalities a stronger voice in the evolution of interoperable Digital Twins—one that can be repeated across future smart city domains and help build more connected, resilient, and sustainable cities.
 
+### Join the Conversation
+
+Building interoperable Digital Twins requires collaboration across municipalities, Digital Twin initiatives, academia, industry, and standards organizations. If your organization is interested in helping shape a common operational language that connects municipal needs with interoperable standards, we invite you to participate in the Smart Cities SIG.
+
+To join the community, request access by subscribing to our Groups.io community at the [bottom of this page](https://groups.io/g/smartcities-sig). Once your request has been approved, you will gain access to the community resources, discussions, meeting information, and collaboration materials.
+
+If you would like to contribute directly through GitHub, please include your GitHub username when requesting access so that appropriate permissions can be granted to the Smart Cities SIG repositories.
+
+The methodology is still evolving, and its success depends on the participation of the broader smart city community. We welcome your expertise and invite you to help shape the next generation of interoperable municipal Digital Twins.
+
 ---
 
-### Learn More
+## Learn More
 
 - [Smart Cities SIG](https://smartcities-sig-web.vercel.app/) website
 - [Open Mobile Alliance (OMA)](https://www.openmobilealliance.org/home)
