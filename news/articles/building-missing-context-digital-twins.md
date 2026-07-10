@@ -226,3 +226,4 @@ The methodology is still evolving, and its success depends on the participation 
 - [Polytechnic University of Madrid]() PENDING
 - [Smart Cities SIG GitHub Repository](https://github.com/smartcities-sig/smartcities-sig)
 - [Smart Cities SIG Groups.io Community](https://groups.io/g/smartcities-sig) *request access*
+  
