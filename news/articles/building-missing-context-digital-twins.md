@@ -65,7 +65,7 @@ Following the Smart City Expo World Congress in Barcelona in late 2025, represen
 
 Participants included organizations such as:
 
-- Madrid City Counsil, Digital Office
+- Madrid City Council, Digital Office
 - Polytechnic University of Madrid
 - Smart Data Models
 - Open Mobile Alliance (OMA)
