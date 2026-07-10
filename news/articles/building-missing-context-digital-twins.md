@@ -20,6 +20,7 @@ Municipalities should not have to understand standards. Standards should underst
 
 For decades, standards have been developed by technical communities to solve interoperability challenges between systems, devices, and applications. They have been remarkably successful in enabling technology vendors to build interoperable solutions. Yet, one fundamental challenge remains largely unresolved: how can municipalities express their operational needs in a way that multiple standards organizations can understand and use to evolve their specifications?
 
+
 This question became the starting point of a journey that ultimately led to the creation of the Smart Cities Special Interest Group (Smart Cities SIG).
 
 The objective was never to create another standards group. Instead, it was to explore a new collaborative model capable of connecting municipalities, Digital Twin initiatives, academia, standards organizations, and industry around a common understanding of operational capabilities.
