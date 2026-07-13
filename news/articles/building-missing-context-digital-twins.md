@@ -1,6 +1,6 @@
 ---
 layout: articles
-urlImage: https://github.com/smartcities-sig/smartcities-sig/blob/article-missing-context/news/images/smartcities-fragmentation-to-digital-interoperability.png?raw=true
+urlImage: public/images/smartcities-fragmentation-to-digital-interoperability.png
 imageBackground: ""
 title: "Building the Missing Context for Municipal Digital Twins"
 subtitle: "How the Smart Cities SIG is creating a new collaborative model for municipalities, Digital Twins, and standards organizations."
@@ -127,7 +127,7 @@ Rather than asking municipalities to understand the technical structure of multi
 The resulting collaboration can be summarized as follows:
 
 <figure>
-    <img src="https://github.com/smartcities-sig/smartcities-sig/blob/article-missing-context/news/images/smartcities-sig-gap.png?raw=true" alt="Smart Cities SIG collaborative model.">
+    <img src="/images/smartcities-sig-gap.png">
     <figcaption> <strong>Figure 1.</strong> The Smart Cities SIG collaborative model.</figcaption>
 </figure>
 
