@@ -1,6 +1,6 @@
 ---
 layout: articles
-urlImage: https://github.com/smartcities-sig/smartcities-sig/blob/article-missing-context/news/images/smartcities-fragmentation-to-digital-interoperability.png?raw=true
+urlImage: /images/smartcities-fragmentation-to-digital-interoperability.png
 imageBackground: ""
 title: "Building the Missing Context for Municipal Digital Twins"
 subtitle: "How the Smart Cities SIG is creating a new collaborative model for municipalities, Digital Twins, and standards organizations."
@@ -75,7 +75,7 @@ Each community described the same city in different terms. Municipalities spoke 
 Rather than defining new standards, the SIG builds a common operational semantic abstraction that municipalities, Digital Twin initiatives, and standards organizations can all interpret through their own frameworks. In practice, municipalities describe operational challenges in their own terms. Digital Twin initiatives translate these into information requirements. The SIG then converts both into a semantic abstraction that any standards organization can evaluate on its own, without giving up control over its specifications.
 
 <figure>
-    <img src="https://github.com/smartcities-sig/smartcities-sig/blob/article-missing-context/news/images/smartcities-sig-gap.png?raw=true" alt="Smart Cities SIG collaborative model.">
+    <img src="/images/smartcities-sig-gap.png" alt="Smart Cities SIG collaborative model.">
     <figcaption> <strong>Figure 1.</strong> The Smart Cities SIG collaborative model.</figcaption>
 </figure>
 
