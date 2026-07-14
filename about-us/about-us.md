@@ -62,7 +62,7 @@ The Smart Cities SIG develops practical and reusable artifacts that can be adopt
 
 The Smart Cities SIG follows a structured process:
 
-<img width="1774" height="887" alt="Image" src="https://github.com/user-attachments/assets/99a0de5e-e8e8-4384-803c-a983f68da56a" />
+<img alt="Smart Cities SIG Approach: From Municipal Requirements to Proof of Concept Validation" src="https://github.com/user-attachments/assets/99a0de5e-e8e8-4384-803c-a983f68da56a"/>
 
 *Figure — Smart Cities SIG Approach: From Municipal Requirements to Proof of Concept Validation*
 
