@@ -104,39 +104,75 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Floating sticky rounded header — mirrors components/app/header.vue */
-  header{
+  /* Construction-tape banner — playful stand-in for a normal header */
+  .tape-banner{
     position: sticky;
-    top: 12px;
+    top: 0;
     z-index: 50;
-    margin: 12px 20px 0;
-    background: var(--header-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 8px 18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    height: 58px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
   }
-  .brand{
+  .tape-stripes{
+    position:absolute;
+    inset: -24px -60px;
+    transform: rotate(-2deg);
+    background: repeating-linear-gradient(45deg, #f5c518 0 26px, #14171f 26px 52px);
+  }
+  .tape-marquee{
+    position:absolute;
+    inset:0;
     display:flex;
     align-items:center;
-    gap:12px;
+    overflow:hidden;
+  }
+  .tape-marquee-track{
+    display:flex;
+    width:max-content;
+    animation: tape-scroll 9s linear infinite;
+  }
+  .tape-marquee-track span{
+    flex: 0 0 auto;
+    display:flex;
+    align-items:center;
+    margin-right: 14px;
+    background: rgba(17,24,39,0.85);
+    color: #f5c518;
     font-family: "Exo 2", sans-serif;
     font-weight:700;
-    font-size: 1.35rem;
-    letter-spacing: 0.01em;
-    color: var(--ink);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    padding: 7px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
   }
-  .brand img{ width:52px; height:52px; }
-  nav a{
-    color: var(--muted);
-    text-decoration:none;
-    margin-left: 28px;
-    font-size: 0.9rem;
-    transition: color .2s ease;
+  @keyframes tape-scroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
   }
-  nav a:hover{ color: var(--green); }
+  .tape-mascot{
+    position:absolute;
+    left: 20px;
+    top:50%;
+    z-index:2;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    animation: mascot-bounce 1.3s ease-in-out infinite;
+  }
+  .tape-mascot img{ width:32px; height:32px; }
+  @keyframes mascot-bounce{
+    0%, 100%{ transform: translateY(-50%) translateY(0) rotate(-8deg); }
+    50%{ transform: translateY(-50%) translateY(-7px) rotate(8deg); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .tape-marquee-track, .tape-mascot{ animation: none; }
+  }
 
   /* Hero — deep smart-city blue gradient (the skyline colours) */
   .hero{
@@ -327,20 +363,22 @@
   }
 
   @media (max-width: 640px){
-    nav{ display:none; }
-    header{ margin: 10px; }
+    .tape-banner{ height: 48px; }
+    .tape-mascot{ width:36px; height:36px; left:12px; }
+    .tape-mascot img{ width:24px; height:24px; }
+    .tape-marquee-track span{ font-size: 0.72rem; padding: 5px 12px; }
     .hero{ margin: 12px 10px 0; padding: 74px 6% 66px; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="brand">
+<div class="tape-banner" role="banner" aria-label="Smart Cities SIG — page under construction">
+  <div class="tape-stripes"></div>
+  <div class="tape-mascot">
     <img src="logo.png" alt="Smart Cities SIG logo">
-    Smart Cities SIG
   </div>
-</header>
+</div>
 
 <section class="hero">
   <div class="badge"><span class="dot"></span> Page under construction</div>
