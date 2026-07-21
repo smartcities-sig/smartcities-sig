@@ -1,0 +1,475 @@
+/* General styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  -ms-text-size-adjust:     100%;
+  -webkit-text-size-adjust: 100%;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size:       1rem;
+  font-weight:      300;
+  line-height:      1.5;
+  width:          960px;
+  margin:        0 auto;
+  word-wrap: break-word;
+}
+
+p {
+  margin-top:       0;
+  margin-bottom: 1rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top:       0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left:       0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0 1rem;
+  color: #6a737d;
+}
+
+blockquote>:first-child {
+  margin-top: 0;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+dfn {
+  font-style: italic;
+}
+
+code,
+kbd,
+pre {
+  font-family: 'Roboto', monospace;
+  font-size:         0.85em;
+  background-color: #f2f2f2;
+  overflow:          hidden;
+  width:               100%;
+}
+
+.any-file {
+  font-family: 'Roboto', monospace;
+  font-size:         0.60rem;
+  line-height:       0.75rem;
+  width:               100%;
+}
+.file-content {
+  padding: 0;
+}
+.file-line {
+  border: hidden;
+}
+.file-line-number {
+  word-wrap: normal;
+  white-space: normal;
+  text-align: right;
+  width: 5%;
+  color: #d1d5da;
+  border: hidden;
+  padding: 2px 5px;
+}
+
+.file-line-blob {
+  border: hidden;
+  word-wrap: break-word;
+  white-space: pre;
+  padding: 2px 5px;
+}
+
+figure {
+  text-align: center;
+  margin:   2rem 0;
+  overflow:   auto;
+}
+
+figcaption {
+  font-weight:     bold;
+  font-size:    0.80rem;
+  margin-top:   0.85rem;
+  margin-top:   0.85rem;
+  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  vertical-align: middle;
+  max-width:        100%;
+  height:           auto;
+  border-style:     none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  margin-top:    1rem;
+  margin-bottom: 1rem;
+  border:           0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+strong {
+  font-weight: 900;
+}
+/* End of General styling */
+
+/* Element Heading styling */
+h1 {
+  page-break-before: always;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+h2 {
+  page-break-before: always;
+  padding-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1.1rem;
+  font-style: oblique;
+}
+/* Element Heading styling */
+
+/* Element width styling */
+.width-5   { width:   5% !important; }
+.width-10  { width:  10% !important; }
+.width-15  { width:  15% !important; }
+.width-20  { width:  20% !important; }
+.width-25  { width:  25% !important; }
+.width-30  { width:  30% !important; }
+.width-35  { width:  35% !important; }
+.width-40  { width:  40% !important; }
+.width-45  { width:  45% !important; }
+.width-50  { width:  50% !important; }
+.width-55  { width:  55% !important; }
+.width-60  { width:  60% !important; }
+.width-65  { width:  65% !important; }
+.width-70  { width:  70% !important; }
+.width-75  { width:  75% !important; }
+.width-80  { width:  80% !important; }
+.width-85  { width:  85% !important; }
+.width-90  { width:  90% !important; }
+.width-95  { width:  95% !important; }
+.width-100 { width: 100% !important; }
+
+.max-width-25  { max-width:  25% !important; }
+.max-width-50  { max-width:  50% !important; }
+.max-width-75  { max-width:  75% !important; }
+.max-width-100 { max-width: 100% !important; }
+/* End Element width styling */
+
+/* Element height styling */
+.height-5   { height:   5% !important; }
+.height-10  { height:  10% !important; }
+.height-15  { height:  15% !important; }
+.height-20  { height:  20% !important; }
+.height-25  { height:  25% !important; }
+.height-30  { height:  30% !important; }
+.height-35  { height:  35% !important; }
+.height-40  { height:  40% !important; }
+.height-45  { height:  45% !important; }
+.height-50  { height:  50% !important; }
+.height-55  { height:  55% !important; }
+.height-60  { height:  60% !important; }
+.height-65  { height:  65% !important; }
+.height-70  { height:  70% !important; }
+.height-75  { height:  75% !important; }
+.height-80  { height:  80% !important; }
+.height-85  { height:  85% !important; }
+.height-90  { height:  90% !important; }
+.height-95  { height:  95% !important; }
+.height-100 { height: 100% !important; }
+
+.max-height-25  { max-height:  25% !important; }
+.max-height-50  { max-height:  50% !important; }
+.max-height-75  { max-height:  75% !important; }
+.max-height-100 { max-height: 100% !important; }
+
+/* End Element width styling */
+
+/* Table styling */
+table {
+  margin-top:          2rem;
+  margin-bottom:       2rem;
+  margin-left:         auto;
+  margin-right:        auto;
+  width:               100%;
+  max-width:           100%;
+  border-spacing:         0;
+  border-collapse: collapse;
+  caption-side:      bottom;
+  overflow:            auto;
+  font-size:        0.80rem;
+}
+
+caption {
+  margin-top:     0.85rem;
+  margin-bottom:   1.5rem;
+  color:             #000;
+  text-align:      center;
+  caption-side:    bottom;
+  font-weight:       bold;
+  font-size:      0.80rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  text-align:        center;
+  background-color: #f2f2f2;
+}
+
+th, td {
+  padding: 0.5rem;
+  overflow:          hidden;
+}
+
+thead { display: table-row-group; }
+tfoot { display: table-row-group; }
+
+tr, td, th, thead, tfoot {
+  page-break-inside: avoid !important;
+  break-inside:      avoid;
+  -webkit-column-break-inside: avoid;
+}
+/* End of Table styling */
+
+/* Styling utils */
+/* Always insert a page break before the element */
+.pb_before {
+  page-break-before: always !important;
+}
+
+/* Always insert a page break after the element */
+.pb_after {
+  page-break-after: always !important;
+}
+
+/* Avoid page break before the element (if possible) */
+.pb_before_avoid {
+  page-break-before: avoid !important;
+}
+
+/* Avoid page break after the element (if possible) */
+.pb_after_avoid {
+  page-break-after: avoid !important;
+}
+
+/* Avoid page break inside the element (if possible) */
+.pbi_avoid {
+  page-break-inside: avoid !important;
+}
+
+.word_break {
+  word-break: break-word;
+}
+
+.clearfix::after {
+  display: block;
+  clear:    both;
+  content:    "";
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-truncate {
+  overflow:        hidden;
+  text-overflow: ellipsis;
+  white-space:     nowrap;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-medium {
+  font-size: medium;
+}
+.text-xx-small {
+  font-size: xx-small;
+}
+.text-x-small {
+  font-size: x-small;
+}
+.text-small {
+  font-size: small;
+}
+.text-large {
+  font-size: large;
+}
+.text-x-large {
+  font-size: x-large;
+}
+.text-xx-large {
+  font-size: xx-large;
+}
+.text-smaller {
+  font-size: smaller;
+}
+.text-larger {
+  font-size: larger;
+}
+
+.align-baseline {
+  vertical-align: baseline !important;
+}
+
+.align-top {
+  vertical-align: top !important;
+}
+
+.align-middle {
+  vertical-align: middle !important;
+}
+
+.align-bottom {
+  vertical-align: bottom !important;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.align-text-top {
+  vertical-align: text-top !important;
+}
+
+.no-border, .no-border tr, .no-border th, .no-border td {
+    border: none;
+}
+.border {
+  border: 1px solid #000 !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.border-top-0 {
+  border-top: 0 !important;
+}
+
+.border-right-0 {
+  border-right: 0 !important;
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.border-left-0 {
+  border-left: 0 !important;
+}
+
+/* End of Styling utils */
+
+/* Custom styling */
+.document-title {
+  text-align: right;
+}
+.document-cover {
+  width: 90%;
+  text-align: left;
+  margin: 5rem 0;
+}
+.document-logo img {
+  height: 80px;
+}
+.documentTOC {
+  margin: 2rem 0;
+}
+.documentTOC li, .documentTOC ul , .documentTOC ul li {
+  list-style: outside none none !important;
+}
+
+.row-header {
+  text-align: center;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+
+/* End of Custom styling */
