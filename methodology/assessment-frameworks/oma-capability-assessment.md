@@ -124,7 +124,7 @@ information. Each entry identifies:
 - Resource ID and Resource name
 - Source and Owner
 - Mandatory or optional status
-- Whether the Resource is defined in `Common.xml`
+- Whether the Resource is defined in [`Common.xml`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/Common.xml)
 - The part of the semantic requirement it supports
 
 Inclusion as evidence does not automatically mean that the complete semantic
@@ -192,8 +192,8 @@ The following abbreviations are used in evidence tables:
 
 - **M** — Mandatory Resource in the consuming Object.
 - **O** — Optional Resource in the consuming Object; coverage is conditional.
-- **Reusable** — The Resource is defined in `Common.xml`.
-- **Object-specific** — The Resource is not defined in `Common.xml`.
+- **Reusable** — The Resource is defined in [`Common.xml`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/Common.xml).
+- **Object-specific** — The Resource is not defined in [`Common.xml`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/Common.xml).
 
 A Resource may be mandatory without being reusable, or reusable without being
 mandatory. Mandatory status is determined by the consuming Object definition.
@@ -276,16 +276,16 @@ required for local control.
 
 | Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
 |---|---|---|---|---|---|
-| `3301` Illuminance | `3301/5700` Sensor Value | 1 / IPSO Alliance | M | Reusable | Direct illuminance measurement. It does not identify the observation point or represented public space. |
+| [`3301`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3301.xml) Illuminance | `3301/5700` Sensor Value | 1 / IPSO Alliance | M | Reusable | Direct illuminance measurement. It does not identify the observation point or represented public space. |
 | `3301` Illuminance | `3301/5701` Sensor Units | 1 / IPSO Alliance | O | Reusable | Conditional unit metadata. |
 | `3301` Illuminance | `3301/5518` Timestamp | 1 / IPSO Alliance | O | Reusable | Conditional measurement time. |
 | `3301` Illuminance | `3301/6042` Measurement Quality Indicator; `3301/6049` Measurement Quality Level | 1 / IPSO Alliance | O | Reusable | Conditional measurement quality. |
 | `3301` Illuminance | `3301/5750` Application Type | 1 / IPSO Alliance | O | Reusable | Free text can describe a use case, but cannot reliably establish road-surface or pedestrian-area semantics. |
-| `3392` oA Logical Illuminance Sensor | `3392/404` Sensor Value | 1 / OpenAIS | M | Object-specific | Direct illuminance reading in lux. |
+| [`3392`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3392.xml) oA Logical Illuminance Sensor | `3392/404` Sensor Value | 1 / OpenAIS | M | Object-specific | Direct illuminance reading in lux. |
 | `3392` oA Logical Illuminance Sensor | `3392/909` Executing Object | 1 / OpenAIS | M | Object-specific | Core Link to an executing Object Instance. Provides an explicit relationship, but not a general observed-feature model. |
-| `3398` oA Physical Illuminance Sensor | `3398/908` Mounting Location | 1 / OpenAIS | M | Object-specific | Site-specific free-text mounting location. The definition is building-oriented and lacks a controlled vocabulary. |
-| `3300` Generic Sensor | `3300/5700` Sensor Value; `3300/5750` Application Type | 1 / IPSO Alliance | M value; O application type | Reusable | Generic fallback. Semantically weaker than Object 3301 because the observed property depends on free text and optional units. |
-| `509` Measurement Metadata | `509/0` Linked Sensor | 0 / OMA | M | Object-specific | Source 0 foundation for linking metadata to a sensor Object Instance. It does not identify observation point, observed feature, or method. |
+| [`3398`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3398.xml) oA Physical Illuminance Sensor | `3398/908` Mounting Location | 1 / OpenAIS | M | Object-specific | Site-specific free-text mounting location. The definition is building-oriented and lacks a controlled vocabulary. |
+| [`3300`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3300.xml) Generic Sensor | `3300/5700` Sensor Value; `3300/5750` Application Type | 1 / IPSO Alliance | M value; O application type | Reusable | Generic fallback. Semantically weaker than Object 3301 because the observed property depends on free text and optional units. |
+| [`509`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/509.xml) Measurement Metadata | `509/0` Linked Sensor | 0 / OMA | M | Object-specific | Source 0 foundation for linking metadata to a sensor Object Instance. It does not identify observation point, observed feature, or method. |
 
 ### Coverage Assessment
 
