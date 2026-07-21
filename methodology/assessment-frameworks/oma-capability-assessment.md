@@ -66,9 +66,9 @@ The assessment is currently limited to:
 - Public Lighting
 - Water Management and Irrigation
 
-Only current Object definitions in the root of the LwM2M Registry are
+Only current Object definitions in the root of the [LwM2M Registry](https://github.com/OpenMobileAlliance/lwm2m-registry) are
 assessed. Definitions in `version_history` are excluded. A Resource is treated
-as reusable only when it is present in `Common.xml`.
+as reusable only when it is present in [`Common.xml`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/Common.xml).
 
 The following Object Source classifications are used:
 
