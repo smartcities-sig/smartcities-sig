@@ -156,6 +156,8 @@ Describes **what the municipality ultimately cares about** by defining the servi
 
 **2. Observation Semantics**
 
+Observation Semantics aligns mainly with the Foundational IoT and Functional viewpoints, since ISO/IEC 30141 treats sensing, connectivity, data handling, and the abstract functions of IoT systems as core architectural concerns.
+
 Describes **how operational information is observed** by defining where observations originate, what they represent, how they are obtained, and their temporal characteristics.
 
 - **Observation Point** — Identifies where an observation originates.
