@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Cities SIG</title>
+<style>
+  :root{
+    --bg: #f7f9fc;
+    --navy: #0b1f3a;
+    --navy-dark: #081729;
+    --blue: #2f6fed;
+    --blue-light: #eaf1ff;
+    --text-muted: #5b6b82;
+    --border: #e3e8f0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--navy);
+  }
+  header{
+    background: var(--navy);
+    color: #fff;
+    padding: 18px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+    font-size: 1.1rem;
+  }
+  .brand-mark{
+    width:32px; height:32px;
+    border-radius:8px;
+    background: var(--blue);
+    display:flex; align-items:center; justify-content:center;
+    font-size:16px;
+  }
+  nav a{
+    color: rgba(255,255,255,0.75);
+    text-decoration:none;
+    margin-left: 28px;
+    font-size: 0.9rem;
+  }
+  nav a:hover{ color:#fff; }
+
+  .hero{
+    text-align:center;
+    padding: 90px 6% 70px;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: #fff;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #cfe0ff;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 24px;
+  }
+  .badge .dot{
+    width:8px; height:8px;
+    border-radius:50%;
+    background:#ffb020;
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow: 0 0 0 0 rgba(255,176,32,0.5); }
+    70%{ box-shadow: 0 0 0 8px rgba(255,176,32,0); }
+    100%{ box-shadow: 0 0 0 0 rgba(255,176,32,0); }
+  }
+  .hero h1{
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    margin: 0 0 18px;
+    font-weight: 700;
+  }
+  .hero p{
+    max-width: 640px;
+    margin: 0 auto;
+    color: #b8c6de;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .progress-wrap{
+    max-width: 460px;
+    margin: 40px auto 0;
+  }
+  .progress-track{
+    background: rgba(255,255,255,0.1);
+    border-radius: 999px;
+    height: 8px;
+    overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;
+    width: 62%;
+    background: linear-gradient(90deg, var(--blue), #6fa1ff);
+    border-radius: 999px;
+  }
+  .progress-label{
+    display:flex;
+    justify-content:space-between;
+    font-size: 0.8rem;
+    color: #9fb3d1;
+    margin-top: 8px;
+  }
+
+  main{
+    max-width: 1000px;
+    margin: -40px auto 0;
+    padding: 0 6% 80px;
+  }
+
+  .card-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 40px;
+  }
+  .card{
+    background:#fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px 24px;
+    box-shadow: 0 2px 6px rgba(11,31,58,0.04);
+  }
+  .card .icon{
+    width: 40px; height:40px;
+    border-radius: 10px;
+    background: var(--blue-light);
+    color: var(--blue);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .card h3{
+    margin: 0 0 6px;
+    font-size: 1.02rem;
+  }
+  .card .tag{
+    font-size: 0.75rem;
+    color: var(--blue);
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display:block;
+    margin-bottom: 10px;
+  }
+  .card p{
+    margin:0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .notice{
+    margin-top: 60px;
+    background: #fff;
+    border: 1px dashed #c7d4ea;
+    border-radius: 16px;
+    padding: 34px;
+    text-align:center;
+  }
+  .notice h2{
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+  }
+  .notice p{
+    color: var(--text-muted);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .notice .eta{
+    display:inline-block;
+    margin-top: 18px;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-weight:600;
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border-radius: 999px;
+  }
+
+  footer{
+    text-align:center;
+    padding: 30px 6%;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px){
+    nav{ display:none; }
+    .hero{ padding: 70px 6% 60px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="logo.png" alt="Smart Cities SIG logo" style="width:32px; height:32px; border-radius:8px;">
+    Smart Cities SIG
+  </div>
+</header>
+
+<section class="hero">
+  <div class="badge"><span class="dot"></span> Page under construction</div>
+  <h1>This page is a work in progress</h1>
+  <p>We're building out this part of the Smart Cities SIG site. Some sections below are placeholders while content and design are finalized.</p>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <div class="progress-label">
+      <span>In progress</span>
+      <span>50%</span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon">⚙</div>
+      <span class="tag">Coming soon</span>
+      <h3>Content Draft</h3>
+      <p>Copy and structure for this section are still being reviewed by the working group.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🗺</div>
+      <span class="tag">In review</span>
+      <h3>Layout Pass</h3>
+      <p>Visual design is being finalized to match the rest of the site's styling.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔗</div>
+      <span class="tag">Pending</span>
+      <h3>Integrations</h3>
+      <p>Links to related resources and documentation will be added once available.</p>
+    </div>
+  </div>
+
+  <div class="notice">
+    <h2>🚧 Under Active Development</h2>
+    <p>This page isn't finished yet — check back soon for the complete version. In the meantime, feel free to explore the rest of the site.</p>
+    <span class="eta">Estimated update: soon</span>
+  </div>
+</main>
+
+<footer>
+  Copyright © 2026 · Smart Cities SIG
+</footer>
+
+</body>
+</html>
