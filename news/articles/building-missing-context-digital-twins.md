@@ -72,7 +72,7 @@ Each community described the same city in different terms. Municipalities spoke 
 
 ### The Collaborative Model
 
-Rather than defining new standards, the SIG builds a common operational semantic abstraction that municipalities, Digital Twin initiatives, and standards organizations can all interpret through their own frameworks. In practice, municipalities describe operational challenges in their own terms. Digital Twin initiatives translate these into information requirements. The SIG then converts both into a semantic abstraction that any standards organization can evaluate on its own, without giving up control over its specifications.
+Rather than defining new standards, the SIG builds a common operational semantic abstraction that municipalities, Digital Twin initiatives, open source initiatives, and standards organizations can all interpret through their own frameworks. In practice, municipalities describe operational challenges in their own terms. Digital Twin initiatives translate these into information requirements. The SIG then converts both into a semantic abstraction that any standards organization can evaluate and any open source initiative implement on its own, without giving up control over its work.
 
 <figure>
     <img src="/public/images/smartcities-sig-gap.png" alt="Smart Cities SIG collaborative model.">
