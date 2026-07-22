@@ -54,7 +54,7 @@ Following the Smart City Expo World Congress in Barcelona in late 2025, represen
 
 - Madrid City Council, Digital Office (the municipal body overseeing Madrid's digital transformation initiatives)
 - Polytechnic University of Madrid
-- Smart Data Models
+- Smart Data Models (open source initiative led by the FIWARE Community)
 - Open Mobile Alliance (OMA)
 - Private industry participants specializing in interoperability and Digital Twins
 
