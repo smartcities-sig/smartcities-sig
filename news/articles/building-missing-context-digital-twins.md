@@ -50,7 +50,7 @@ These questions describe outcomes, not standards. That distinction became the fo
 
 ### How the SIG Formed
 
-Following the Smart City Expo World Congress in Barcelona in late 2025, representatives from municipalities, academia, standards bodies, and industry began holding monthly discussions on municipal Digital Twin challenges. Key participating organizations included:
+Following the Smart City Expo World Congress in Barcelona in late 2025, representatives from municipalities, academia, open source initiatives, standards bodies, and industry began holding monthly discussions on municipal Digital Twin challenges. Key participating organizations included:
 
 - Madrid City Council, Digital Office (the municipal body overseeing Madrid's digital transformation initiatives)
 - Polytechnic University of Madrid
