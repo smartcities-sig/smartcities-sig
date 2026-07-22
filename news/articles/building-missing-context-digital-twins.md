@@ -46,7 +46,7 @@ These questions describe outcomes, not standards. That distinction became the fo
 | Operational Semantics | A methodology describing the operational capabilities municipalities require, independent of any specific standard. |
 | Capability Assessment Framework | A structured approach for mapping municipal operational needs to Digital Twin information requirements and existing standards. |
 | Standards Capability Gap Analysis | An output of the framework that identifies where current standards fall short of municipal operational needs, without ranking standards against each other. |
-| Digital Twin | A digital representation of city infrastructure that requires operational context, not just data. It needs to capture why events happen and what decisions they inform. |
+| Digital Twin | A digital representation of city infrastructure and processes that requires operational context, not just data. It needs to capture why events happen and what decisions they inform. |
 
 ### How the SIG Formed
 
