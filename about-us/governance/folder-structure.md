@@ -151,6 +151,11 @@ smartcities-sig/
 │       ├── retrospectives/
 │       └── lessons-learned/
 |
+├── public/
+│   └── images/
+│       └──  image.png
+│
+|
 ├── meetings/
 │   ├── minutes/
 │   │   └── 2026/
