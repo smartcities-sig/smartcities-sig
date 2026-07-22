@@ -14,6 +14,10 @@ layout: doc
 
 The Smart Cities SIG methodology identifies municipality operational needs before considering standards, semantic models, or implementation technologies.
 
+This document adopts a reference-architecture approach consistent with the viewpoint-and-view structure defined in Clause 6 of ISO/IEC 30141:2024.
+
+
+
 During Stage 1, municipality operational material is analyzed to understand the operational objectives, constraints, and information required to successfully operate a municipal service.
 
 During Stage 2, these operational observations are progressively generalized into reusable semantic capabilities that can be applied across multiple municipal domains.
@@ -142,10 +146,47 @@ If not, identify which semantic information is missing and which ecosystem may b
 
 The semantic capabilities are organized into four categories.
 
-- Domain Semantics
-- Observation Semantics
-- Interpretation Semantics
-- Operational Semantics
+**1. Domain Semantics**
+
+Domain Semantics aligns primarily with the Business and Usage viewpoints of ISO/IEC 30141, as these viewpoints describe the intended service outcomes, stakeholder needs, and the interaction between IoT systems and the physical entities supporting municipal services.
+
+Describes **what the municipality ultimately cares about** by defining the service being delivered, the infrastructure providing it, and the resources consumed to achieve the desired outcome.
+
+- **Service Outcome** — Defines the real-world outcome the municipality intends to achieve.
+- **Infrastructure Output** — Describes the physical behavior and outputs produced by infrastructure assets.
+- **Resource Consumption** — Represents the resources consumed to deliver the municipal service.
+
+**2. Observation Semantics**
+
+Observation Semantics aligns mainly with the Foundational IoT and Functional viewpoints, since ISO/IEC 30141 treats sensing, connectivity, data handling, and the abstract functions of IoT systems as core architectural concerns.
+
+Describes **how operational information is observed** by defining where observations originate, what they represent, how they are obtained, and their temporal characteristics.
+
+- **Observation Point** — Identifies where an observation originates.
+- **Observation Scope** — Defines the assets or area represented by an observation.
+- **Observation Method** — Specifies how an observation was produced.
+- **Temporal Semantics** — Describes the time basis associated with an observation.
+
+**3. Interpretation Semantics**
+
+Interpretation Semantics aligns primarily with the Trustworthiness viewpoint of ISO/IEC 30141, as it provides the context, provenance, quality, and descriptive information required for the consistent interpretation of observations across heterogeneous IoT systems.
+
+Describes **how observations should be understood and trusted** by providing the context, provenance, and quality required for meaningful operational interpretation.
+
+- **Provenance** — Identifies the origin of operational information.
+- **Measurement Quality** — Describes the reliability and uncertainty of observations.
+- **Operational Context** — Represents operating conditions that influence service behavior.
+- **Physical Context** — Describes environmental characteristics that affect service outcomes.
+
+**4. Operational Semantics**
+
+Operational Semantics aligns primarily with the Functional and Construction viewpoints of ISO/IEC 30141, as these viewpoints describe how IoT capabilities are organized, implemented, and operated to support real-world municipal services.
+
+Describes **how municipal infrastructure is operated and managed** throughout its lifecycle, including operational responsibility, communications, and resilience.
+
+- **Asset Management Context** — Represents lifecycle and operational management information for assets.
+- **Network Operability** — Describes communication conditions affecting remote operation.
+- **Fallback Behaviour** — Defines how infrastructure behaves when normal communications or supervisory control are unavailable.
 
 Each semantic capability follows the same structure to facilitate consistent evaluation across ecosystems.
 
@@ -160,6 +201,14 @@ They distinguish the operational service being delivered from the behaviour of t
 ---
 
 ## 1. Service Outcome
+
+
+Governed by: Foundational IoT viewpoint (6.2), Business viewpoint (6.3), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+Model kind: Municipality service semantics – domain outcome model.
+
+Purpose: Describe what service the municipality intends to deliver (lighting, water, irrigation, etc.), independently of how the underlying IoT infrastructure behaves, and how this outcome is evaluated, represented and trusted in an IoT-based architecture.
+
 
 ### Municipality Operational Questions
 
@@ -225,6 +274,14 @@ The distinction between infrastructure behaviour and service outcome is therefor
 
 ## 2. Infrastructure Output
 
+Governed by: Foundational IoT viewpoint (6.2), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
+
+View purpose and model kind
+Model kind: Municipality service semantics – infrastructure behaviour model.
+
+Purpose: Describe how the IoT infrastructure behaves (physical outputs) when providing a municipal service, distinguishing it from the service outcome and relating it to components and construction patterns.
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -283,6 +340,13 @@ Maintaining this distinction enables Digital Twins to diagnose operational issue
 ---
 
 ## 3. Resource Consumption
+
+Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
+
+View purpose and model kind
+Model kind: Municipality service semantics – resource efficiency model.
+
+Purpose: Describe the resources consumed by the IoT system to achieve a service outcome (energy, water, etc.) and how this relates to efficiency, cost, and solution design.
 
 ### Municipality Operational Questions
 
@@ -365,6 +429,15 @@ Without these semantic capabilities, observations that appear identical may repr
 
 ## 4. Observation Point
 
+Governed by: Foundational IoT viewpoint (6.2), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+View purpose and model kind
+Model kind: Observation semantics – location-of-observation model.
+
+Purpose: Describe where the observations originate within the IoT system and the municipal environment (sensor, street surface, root, etc.) and how this affects their use and interpretation.
+
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -429,6 +502,14 @@ A Digital Twin must understand where an observation was collected before compari
 
 ## 5. Observation Scope
 
+
+Governed by: Foundational IoT viewpoint (6.2), Business viewpoint (6.3), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+Model kind: Observation semantics – coverage-of-observation model.
+
+Purpose: Describe which part of the system or municipality each observation covers (asset, group, street, zone, district, entire municipality).
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -491,6 +572,13 @@ Digital Twins require explicit scope information to perform meaningful analytics
 
 ## 6. Observation Method
 
+Governed by: Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+Model kind: Observation semantics – method-of-production model.
+
+Purpose: Describe how each observation (measured, estimated, predicted, simulated, aggregated, proxy) is obtained and its impact on functionality and trustworthiness.
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -551,6 +639,13 @@ Different observation methods imply different levels of confidence and different
 ---
 
 ## 7. Temporal Semantics
+
+Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+Model kind: Observation semantics – time-basis model.
+
+Purpose: Describe the temporal characteristics of observations (point in time, interval, aggregation window, historical data, forecast) and their use in KPIs and simulation.
+
 
 ### Municipality Operational Questions
 
@@ -629,6 +724,14 @@ These semantic capabilities enable Digital Twins to interpret observations consi
 
 ## 8. Provenance
 
+Governed by: Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+Model kind: Interpretation semantics – source-of-information model.
+
+Purpose: Describe the source of observations and operational information (device, control room, external service, human operator, twin, predictive model).
+
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -691,6 +794,13 @@ Observations with different provenance may have different levels of trust, autho
 
 ## 9. Measurement Quality
 
+Governed by: Trustworthiness viewpoint (6.6), Functional viewpoint (6.5).
+
+Model kind: Interpretation semantics – quality-of-observation model.
+
+Purpose: represent accuracy, precision, reliability, completeness, uncertainty, etc., by linking them to functions and reliability.
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -749,6 +859,15 @@ Digital Twins require information about observation quality to support reliable 
 ---
 
 ## 10. Operational Context
+
+Governed by: Business viewpoint (6.3), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+Model kind: Interpretation semantics – operational-conditions model.
+
+Purpose: Describe operating conditions (weather, traffic, occupancy, seasonality) that affect service and observations.
+
+
+
 
 ### Municipality Operational Questions
 
@@ -809,6 +928,14 @@ Operational context enables Digital Twins to correctly interpret those differenc
 ---
 
 ## 11. Physical Context
+
+Governed by: Foundational IoT viewpoint (6.2), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
+
+Model kind: Interpretation semantics – physical-environment model.
+
+Purpose:  Describe the physical environment (buildings, trees, terrain, orientation, shadows) and its impact on service outcomes.
+
+
 
 ### Municipality Operational Questions
 
@@ -881,6 +1008,14 @@ These semantic capabilities enable Digital Twins to support operational planning
 
 ## 12. Asset Management Context
 
+Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
+
+Model kind: Operational semantics – asset-lifecycle model.
+
+Purpose: represent ownership, responsible management, contracts, warranties, maintenance history, useful life, life cycle, etc.
+
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -951,6 +1086,13 @@ Digital Twins require operational management information to support maintenance 
 
 ## 13. Network Operability
 
+Governed by: Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
+
+Model kind: Operational semantics – communication-conditions model.
+
+Purpose: Describe network availability, connectivity, latency, packet loss, signal quality, and communication reliability, as outlined in Annex C (network connectivity, network management, and operation).
+
+
 ### Municipality Operational Questions
 
 #### Public Lighting
@@ -1010,6 +1152,13 @@ Digital Twins require awareness of communication conditions to correctly interpr
 ---
 
 ## 14. Fallback Behaviour
+
+Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
+
+Model kind: Operational semantics – resilience and autonomous behaviour model.
+
+Purpose: Describe autonomous behavior in the event of a loss of communication or unexpected conditions (local schedules, autonomous control, safe modes, emergency, manual override).
+
 
 ### Municipality Operational Questions
 
