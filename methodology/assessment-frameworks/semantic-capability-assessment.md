@@ -148,6 +148,8 @@ The semantic capabilities are organized into four categories.
 
 **1. Domain Semantics**
 
+Domain Semantics aligns primarily with the Business and Usage viewpoints of ISO/IEC 30141, as these viewpoints describe the intended service outcomes, stakeholder needs, and the interaction between IoT systems and the physical entities supporting municipal services.
+
 Describes **what the municipality ultimately cares about** by defining the service being delivered, the infrastructure providing it, and the resources consumed to achieve the desired outcome.
 
 - **Service Outcome** — Defines the real-world outcome the municipality intends to achieve.
@@ -167,6 +169,8 @@ Describes **how operational information is observed** by defining where observat
 
 **3. Interpretation Semantics**
 
+Interpretation Semantics aligns primarily with the Trustworthiness viewpoint of ISO/IEC 30141, as it provides the context, provenance, quality, and descriptive information required for the consistent interpretation of observations across heterogeneous IoT systems.
+
 Describes **how observations should be understood and trusted** by providing the context, provenance, and quality required for meaningful operational interpretation.
 
 - **Provenance** — Identifies the origin of operational information.
@@ -175,6 +179,8 @@ Describes **how observations should be understood and trusted** by providing the
 - **Physical Context** — Describes environmental characteristics that affect service outcomes.
 
 **4. Operational Semantics**
+
+Operational Semantics aligns primarily with the Functional and Construction viewpoints of ISO/IEC 30141, as these viewpoints describe how IoT capabilities are organized, implemented, and operated to support real-world municipal services.
 
 Describes **how municipal infrastructure is operated and managed** throughout its lifecycle, including operational responsibility, communications, and resilience.
 
