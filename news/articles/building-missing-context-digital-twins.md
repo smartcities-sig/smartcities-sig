@@ -18,7 +18,7 @@ tags:
 
 ## Rethinking Interoperability: The Smart Cities SIG
 
-**Summary:** Municipalities shouldn't need to understand technical standards. Standards should understand municipalities. The Smart Cities Special Interest Group (Smart Cities SIG), formed in early 2026, creates a common operational language that lets cities describe their needs in plain terms, which Digital Twin initiatives and multiple standards organizations can then interpret and support on their own terms.
+**Summary:** Municipalities shouldn't need to understand technical standards. Standards should understand municipalities. The Smart Cities Special Interest Group (Smart Cities SIG), formed in early 2026, creates a common operational language that lets cities describe their needs in plain terms, which Digital Twin initiatives as well as multiple standards organizations and open source initiatives can then interpret and support on their own terms.
 
 ### The Core Problem
 
