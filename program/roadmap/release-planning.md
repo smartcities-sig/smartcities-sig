@@ -19,40 +19,40 @@ The roadmap is intentionally lightweight and iterative, reflecting the Proof of 
 
 ```mermaid
 gantt
-    title Smart Cities SIG PoC Timeline and Expected Milestones
+    title Smart Cities SIG Timeline and Expected Milestones
     dateFormat  YYYY-MM-DD
     axisFormat  %b %Y
 
-    section Phase 1 — Foundation Setup
-    SIG operational setup                    :p1a, 2026-05-01, 2026-06-30
+    section Phase 1 — Initiative Foundation
+    SIG operational setup                     :p1a, 2026-05-01, 2026-06-30
     Participation rules                       :p1b, 2026-05-01, 2026-06-30
-    Governance model                         :p1c, 2026-05-01, 2026-06-30
-    Communication infrastructure             :p1d, 2026-05-01, 2026-06-30
-    GitHub setup                             :p1e, 2026-05-01, 2026-06-30
-    Recruitment kickoff                      :p1f, 2026-05-15, 2026-06-30
-    Confirm Smart Lighting scope             :p1g, 2026-06-01, 2026-06-30
+    Governance model                          :p1c, 2026-05-01, 2026-06-30
+    Communication infrastructure              :p1d, 2026-05-01, 2026-06-30
+    GitHub setup                              :p1e, 2026-05-01, 2026-06-30
+    Community engagement                      :p1f, 2026-05-15, 2026-06-30
+    Confirm initial assessment domains        :p1g, 2026-06-01, 2026-06-30
 
-    section Phase 2 — Use Case and Mapping Development
-    Smart Lighting use case definition       :p2a, 2026-06-01, 2026-08-31
-    Device profile draft                     :p2b, 2026-06-15, 2026-08-31
-    LwM2M mapping                            :p2c, 2026-06-15, 2026-08-31
-    Smart Data Model mapping                 :p2d, 2026-06-15, 2026-08-31
-    Optional Water Metering scope decision   :milestone, p2e, 2026-08-31, 0d
+    section Phase 2 — Operational Semantics & Semantic Capability Development
+    Public Lighting operational semantics     :p2a, 2026-06-01, 2026-08-31
+    Semantic capability definition            :p2b, 2026-06-15, 2026-08-31
+    LwM2M capability assessment               :p2c, 2026-06-15, 2026-08-31
+    Smart Data Models capability assessment   :p2d, 2026-06-15, 2026-08-31
+    Water & Irrigation assessment kickoff     :milestone, p2e, 2026-08-31, 0d
 
-    section Phase 3 — Validation and Refinement
-    Partial implementations                  :p3a, 2026-08-01, 2026-10-31
-    Conceptual validation                    :p3b, 2026-08-01, 2026-10-31
-    Initial technical validation             :p3c, 2026-08-15, 2026-10-31
-    Basic test cases                         :p3d, 2026-08-15, 2026-10-31
-    Gap analysis and lessons learned         :p3e, 2026-10-01, 2026-10-31
+    section Phase 3 — Capability Assessment & Validation
+    Assessment framework validation           :p3a, 2026-08-01, 2026-10-31
+    Public Lighting assessment validation     :p3b, 2026-08-01, 2026-10-31
+    Water & Irrigation assessment             :p3c, 2026-08-15, 2026-10-31
+    Interoperability capability gap analysis  :p3d, 2026-08-15, 2026-10-31
+    Lessons learned and recommendations       :p3e, 2026-10-01, 2026-10-31
 
-    section Phase 4 — Smart City Expo Delivery
-    Use case documentation                   :p4a, 2026-10-16, 2026-10-31
-    Mapping methodology                      :p4b, 2026-10-16, 2026-10-31
-    Findings and lessons learned             :p4c, 2026-10-16, 2026-10-31
+    section Phase 4 — Knowledge Sharing & Community Adoption
+    Operational Semantics library             :p4a, 2026-10-16, 2026-10-31
+    Semantic Capability Assessment framework  :p4b, 2026-10-16, 2026-10-31
+    Assessment findings and roadmap           :p4c, 2026-10-16, 2026-10-31
 
-    Future recommendations                   :p4d, 2026-11-01, 2026-11-30
-    Smart City Expo World Congress           :milestone, p4e, 2026-11-05, 0d
+    Community growth recommendations          :p4d, 2026-11-01, 2026-11-30
+    Smart City Expo World Congress            :milestone, p4e, 2026-11-05, 0d
 ```
 
 ### Phase Summary and Key Milestones
@@ -68,24 +68,24 @@ gantt
   </thead>
   <tbody>
     <tr>
-      <td>Phase 1 — Foundation Setup</td>
+      <td>Phase 1 — Initiative Foundation</td>
       <td>May–June 2026</td>
-      <td>Establish governance, tooling, participation model, and initial scope</td>
+      <td>Establish governance, collaboration infrastructure, participation model, and the initial assessment domains.</td>
     </tr>
     <tr>
-      <td>Phase 2 — Use Case and Mapping Development</td>
+      <td>Phase 2 — Operational Semantics & Semantic Capability Development</td>
       <td>June–August 2026</td>
-      <td>Develop Smart Lighting use cases, mappings, and device profile structure</td>
+      <td>Capture municipal operational semantics, define reusable semantic capabilities, and assess existing standards.</td>
     </tr>
     <tr>
-      <td>Phase 3 — Validation and Refinement</td>
+      <td>Phase 3 — Capability Assessment & Validation</td>
       <td>August–October 2026</td>
-      <td>Validate mappings and refine outputs through lightweight implementations and testing</td>
+      <td>Validate the assessment methodology through Public Lighting and Water & Irrigation while identifying interoperability gaps and lessons learned.</td>
     </tr>
     <tr>
-      <td>Phase 4 — Smart City Expo Delivery</td>
-      <td>November 2026</td>
-      <td>Present findings, outputs, and recommendations at Smart City Expo World Congress</td>
+      <td>Phase 4 — Knowledge Sharing & Community Adoption</td>
+      <td>October–November 2026</td>
+      <td>Publish the methodology, present assessment results, and promote community adoption at Smart City Expo World Congress.</td>
     </tr>
   </tbody>
 </table>
