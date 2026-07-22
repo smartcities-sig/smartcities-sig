@@ -3,7 +3,7 @@ layout: articles
 urlImage: /images/smartcities-fragmentation-to-digital-interoperability.png
 imageBackground: ""
 title: "Building the Missing Context for Municipal Digital Twins"
-subtitle: "How the Smart Cities SIG is creating a new collaborative model for municipalities, Digital Twins, and standards organizations."
+subtitle: "How the Smart Cities SIG is creating a new collaborative model for municipalities, open source iniciatives, and standards organizations on how to build Digital Twins."
 leftLabel: 2026-July-6
 rightLabel: Smart Cities SIG
 cardID: 001
