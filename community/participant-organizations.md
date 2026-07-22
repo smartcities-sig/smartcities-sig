@@ -86,3 +86,15 @@ OMA views the Smart Cities SIG as a collaborative ecosystem initiative intended 
 * [OMA LwM2M Registry](https://github.com/OpenMobileAlliance/lwm2m-registry)
 * [OMA Website](https://www.openmobilealliance.org/)
 
+
+## Paradox Engineering SA Positioning
+
+**Headquartered in Switzerland, [Paradox Engineering](https://www.pdxeng.ch/)** designs and develops open-standard IoT network technologies, with smart lighting as main focus. Since the beginning, the company portfolio has been having interoperability at its core, under the clear vision that truly future-proof urban digital infrastructures can only be enabled by open, interoperable, standards-based solutions.
+
+Paradox Engineering will contribute to the Smart Cities SIG through:
+
+- **Data Model Validation:** Applying Paradox Engineering's extensive R&D expertise to refine and validate the initiative's data model.
+- **Lighting & IoT Domain Expertise:** Leveraging Paradox Engineering's long-standing, global experience in designing, developing and deploying standards-based smart lighting and IoT solutions.
+- **Device Interoperability Testing:** Utilizing Paradox Engineering's lighting controllers to rigorously test system performance and data model adherence.
+
+The primary objective in this initiative is to demonstrate the tangible, real-world value that interoperability delivers to municipalities and utilities — enabling them to build resilient, future-proof, and highly adaptive smart city ecosystems, built to last throughout innovations in technology and evolutions of needs. Paradox Engineering is fully committed to serving as a trusted, experienced voice, helping cities build simple, reliable and secure IoT infrastructures.
