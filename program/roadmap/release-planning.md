@@ -42,7 +42,9 @@ gantt
     Public Lighting domain assessment             :p3a, 2026-08-01, 2026-10-31
     Assessment methodology validation             :p3b, 2026-08-01, 2026-10-31
     Water and Irrigation domain assessment        :p3c, 2026-08-15, 2026-10-31
-    Cross-standard capability assessment          :p3d, 2026-08-15, 2026-10-31
+    OMA semantic capability assessment            :p3d, 2026-08-15, 2026-10-31
+    Smart Data Models assessment                  :p3d, 2026-08-15, 2026-10-31
+    Cross-organization capability assessment      :p3d, 2026-08-15, 2026-10-31
     Gap analysis and standards recommendations    :p3e, 2026-10-01, 2026-10-31
 
     section Phase 4 — Knowledge Sharing and Community Adoption
