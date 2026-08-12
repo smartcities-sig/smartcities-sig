@@ -57,7 +57,7 @@ Related operational questions are grouped into **semantic domains**. These domai
 - Maintenance and lifecycle management
 - Location and environmental context
 
-For each question, participants identify the information, meaning, relationships, and context required to provide a useful answer. The group can then assess how those elements are represented across existing standards and data models.
+For each question, participants identify the information, meaning, relationships, and context required to provide a useful answer. Representatives from participating standards organizations and open initiatives can then evaluate how the question and its semantic requirements translate into their respective standards, models, and technical domains.
 
 <!--more-->
 
