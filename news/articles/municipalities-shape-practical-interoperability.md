@@ -1,6 +1,6 @@
 ---
 layout: articles
-urlImage: /images/municipalities-shape-practical-interoperability.png
+urlImage: /images/semantic-sketch-to-living-city.png
 imageBackground: ""
 title: "Municipalities Invited to Shape Practical Interoperability for Smart Cities"
 subtitle: "The Smart Cities SIG invites municipalities to contribute the operational questions needed to evaluate how existing standards and data models support real city services."
