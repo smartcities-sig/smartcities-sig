@@ -19,7 +19,7 @@ tags:
 
 ## Municipalities Invited to Shape Practical Interoperability for Smart Cities
 
-**Summary:** The Smart Cities Special Interest Group (Smart Cities SIG) invites municipalities to help assess whether existing standards and data models represent the information, meaning, and context required to manage city services. The initiative begins with the operational questions municipalities need their systems and data to answer, groups related questions into semantic domains, and evaluates how existing technical ecosystems support them.
+**Summary:** Municipalities face the challenge of selecting long-term technology, usually relying on standards and data models. However, these frameworks often fail to capture the real-world context needed to manage city services. To bridge this gap, the Smart Cities Special Interest Group (SIG) starts with the practical questions municipalities must answer, organizes them into semantic domains, and evaluates how well existing technical ecosystems support those operational needs.
 
 ### The Municipal Interoperability Challenge
 
