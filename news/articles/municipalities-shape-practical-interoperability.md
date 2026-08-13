@@ -25,7 +25,7 @@ tags:
 
 Municipalities increasingly depend on connected infrastructure, digital platforms, and information systems supplied by different vendors. These systems may implement established standards and data models, yet still describe the same municipal service in different ways.
 
-The challenge is therefore not simply a lack of standards.
+The challenge is therefore not a lack of standards.
 
 A municipality may receive data from streetlights, water meters, environmental sensors, maintenance systems, and Digital Twin platforms. However, the availability of data does not necessarily mean that municipal systems can answer the operational questions required to manage those services.
 
