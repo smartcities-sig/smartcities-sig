@@ -129,7 +129,7 @@ Participation gives municipalities an opportunity to:
 - Influence how existing standards and data models are assessed
 - Identify where important meaning or context may be missing
 - Reduce ambiguity when discussing requirements with suppliers and integrators
-- Contribute to a reusable approach for analyzing interoperability across municipal services
+- Benefit from a replicable approach for analyzing interoperability across municipal services
 
 The initiative does not promise immediate compatibility between every platform or vendor. It provides a structured way to identify what must be understood consistently before practical interoperability can be achieved.
 
