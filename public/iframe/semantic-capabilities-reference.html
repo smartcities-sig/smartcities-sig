@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semantic Capabilities Reference — Smart Cities SIG</title>
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('smartcities-sig-methodology-theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Palette and tokens mirror the Smart Cities SIG site: Nuxt UI primary="green",
+     app background #fff / #121212 dark, header background #f6f6f6 / #262626 dark
+     (assets/css/main.css in smartcities-sig-web), Exo 2 brand font, DM Sans headings,
+     and the light-mode primary-900 / dark-mode primary-400 text pattern used
+     throughout the site's own components (e.g. ui.config/eh-hero.ts). */
+  /* Dark is the default appearance, matching the site's own colorMode.preference:
+     'dark'. The toggle button switches to :root.light and remembers the choice. */
+  :root {
+    --bg: #121212;
+    --surface: #262626;
+    --fg: #e7eaed;
+    --muted: #9aa4af;
+    --border: #333638;
+
+    --primary-900: #14532d;
+    --primary-700: #15803d;
+    --primary-600: #16a34a;
+    --primary-500: #22c55e;
+    --primary-400: #4ade80;
+    --primary-100: #dcfce7;
+    --primary-50: #f0fdf4;
+
+    --blue: #1B6ECA;
+    --cyan: #22b8cf;
+
+    --accent: var(--primary-400);
+    --accent-bg: #16261f;
+    --code-bg: #1e2226;
+
+    --gradient: linear-gradient(90deg, var(--primary-400), var(--cyan) 55%, #4ea8e0);
+  }
+  :root.light {
+    --bg: #ffffff;
+    --surface: #f6f6f6;
+    --fg: #1a1d21;
+    --muted: #5b6470;
+    --border: #e2e5e8;
+
+    --accent: var(--primary-900);
+    --accent-bg: var(--primary-50);
+    --code-bg: #eef1f3;
+
+    --gradient: linear-gradient(90deg, var(--primary-600), var(--cyan) 55%, var(--blue));
+  }
+  body {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 1.5rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  header.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.1rem;
+    padding: 2.25rem 0 1.5rem;
+  }
+  header.brand .brand-left {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .theme-toggle {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--fg);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .theme-toggle:hover {
+    border-color: var(--accent);
+  }
+  .theme-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+  .theme-toggle .icon-sun {
+    display: none;
+  }
+  :root.light .theme-toggle .icon-moon {
+    display: none;
+  }
+  :root.light .theme-toggle .icon-sun {
+    display: block;
+  }
+  header.brand img {
+    width: 56px;
+    height: 56px;
+    flex: none;
+  }
+  .brand-name {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .brand-tagline {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 0.15rem;
+  }
+  .gradient-rule {
+    height: 3px;
+    border-radius: 999px;
+    background: var(--gradient);
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    color: var(--muted);
+    max-width: 68ch;
+    margin: 0 0 2.5rem;
+  }
+  .intro code {
+    background: var(--code-bg);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 0 0.35rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    color: var(--fg);
+  }
+  h2 .count {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+  }
+  .category-desc {
+    color: var(--muted);
+    max-width: 72ch;
+    margin: 0 0 1rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 760px;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--surface);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  tbody tr:hover {
+    background: var(--accent-bg);
+  }
+  td.capability {
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  td.examples {
+    color: var(--muted);
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer code {
+    background: var(--code-bg);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header class="brand">
+  <div class="brand-left">
+    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <div>
+      <div class="brand-name">Smart Cities SIG</div>
+      <div class="brand-tagline">Semantic Capabilities Reference</div>
+    </div>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  </button>
+</header>
+<div class="gradient-rule"></div>
+
+<p class="intro">
+  All 14 semantic capabilities from <code>semantic-capability-assessment.md</code>, grouped by their 4 categories, with practical classification guidance from
+  <code>stage-1-to-stage-2-classification.md</code>. Purpose and Examples are sourced from the framework document; How to Use It reflects the Step&nbsp;2
+  discriminators and tie-breakers in the classification procedure.
+</p>
+
+<section>
+  <h2>Domain Semantics <span class="count">3 capabilities</span></h2>
+  <p class="category-desc">Describes what the municipality ultimately cares about by defining the service being delivered, the infrastructure providing it, and the resources consumed to achieve the desired outcome.</p>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Capability</th><th>Purpose</th><th>How to use it</th><th>Examples</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="capability">Service Outcome</td>
+        <td>The real-world outcome the municipality intends to achieve, independent of how the underlying infrastructure behaves.</td>
+        <td>Use when the sub-observation describes an effect experienced by people, infrastructure, or the environment — the "so what," not the infrastructure's own behavior or what it cost to produce.</td>
+        <td class="examples">Street illuminance at road surface level; soil moisture at root level; water pressure delivered to consumers.</td>
+      </tr>
+      <tr>
+        <td class="capability">Infrastructure Output</td>
+        <td>The physical behavior or output produced by infrastructure assets while delivering a service, distinguished from whether the service objective was actually achieved.</td>
+        <td>Use when the sub-observation is about what the infrastructure itself is doing or producing — not whether that produced the intended real-world effect.</td>
+        <td class="examples">Lumens emitted by a luminaire; pump flow rate; valve opening percentage; motor speed.</td>
+      </tr>
+      <tr>
+        <td class="capability">Resource Consumption</td>
+        <td>The resources consumed by the infrastructure to deliver the service.</td>
+        <td>Use when the sub-observation is about cost or resources spent (energy, water, fuel, battery) rather than the outcome achieved or the infrastructure's output behavior.</td>
+        <td class="examples">Energy; water; fuel; battery usage; active/reactive power; voltage; frequency.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Observation Semantics <span class="count">4 capabilities</span></h2>
+  <p class="category-desc">Describes how operational information is observed by defining where observations originate, what they represent, how they are obtained, and their temporal characteristics.</p>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Capability</th><th>Purpose</th><th>How to use it</th><th>Examples</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="capability">Observation Point</td>
+        <td>Where observations originate within the IoT system and the municipal environment, and how this affects their use and interpretation.</td>
+        <td>Use when the sub-observation is about where the observation's referent physically or logically sits — a position, not an actor. When the same device name could also answer "who reported it," default here as primary with Provenance as a companion, unless the sub-observation specifically contrasts sources.</td>
+        <td class="examples">Luminaire; cabinet; line head; street surface; pump; valve; pipeline; root zone; weather station.</td>
+      </tr>
+      <tr>
+        <td class="capability">Observation Scope</td>
+        <td>Which part of the system or municipality each observation covers.</td>
+        <td>Use when the sub-observation is about what portion or coverage a value represents — including a value combining multiple assets or locations into one number (space/asset aggregation, not time aggregation, which belongs to Temporal Semantics).</td>
+        <td class="examples">Single asset; group of assets; cabinet; street; irrigation zone; district; entire municipality.</td>
+      </tr>
+      <tr>
+        <td class="capability">Observation Method</td>
+        <td>How each observation (measured, estimated, predicted, simulated, aggregated across assets, proxy) is obtained.</td>
+        <td>Use when the sub-observation is about the technique that produced the value — sensing vs. a computed or derived process. Never primary for an aggregation-over-time question (that's Temporal Semantics); applies as a companion when the computation itself is worth recording.</td>
+        <td class="examples">Measured; estimated; inferred; predicted; aggregated (across assets/locations); simulated; model-derived; proxy measurement.</td>
+      </tr>
+      <tr>
+        <td class="capability">Temporal Semantics</td>
+        <td>The temporal characteristics of observations and their use in KPIs and simulation.</td>
+        <td>Use when the sub-observation is about what time span a value represents — including a value combining multiple readings over time into one number (e.g. a rolling average), even though it was also computed rather than directly sensed.</td>
+        <td class="examples">Instantaneous; observation interval; sampling period; aggregation window; historical observation; forecast; prediction horizon.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Interpretation Semantics <span class="count">4 capabilities</span></h2>
+  <p class="category-desc">Describes how observations should be understood and trusted by providing the context, provenance, and quality required for meaningful operational interpretation.</p>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Capability</th><th>Purpose</th><th>How to use it</th><th>Examples</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="capability">Provenance</td>
+        <td>The source of observations and operational information.</td>
+        <td>Use when the sub-observation is about which system or actor reported or supplied the information — a source identity, not a location. Primary (not Observation Point) when specifically contrasting sources — device-reported vs. manually entered vs. externally supplied.</td>
+        <td class="examples">Device sensor; control cabinet; weather service; GIS platform; installation records; asset management system; human operator; Digital Twin; predictive model.</td>
+      </tr>
+      <tr>
+        <td class="capability">Measurement Quality</td>
+        <td>Accuracy, precision, reliability, completeness, and uncertainty of an observation.</td>
+        <td>Use when the sub-observation is about how reliable or accurate a value is — trust conditioned on reliability/accuracy, as distinct from Observation Method's trust conditioned on production technique.</td>
+        <td class="examples">Accuracy; precision; confidence; completeness; consistency; availability; resolution; uncertainty.</td>
+      </tr>
+      <tr>
+        <td class="capability">Operational Context</td>
+        <td>Operating conditions (weather, traffic, occupancy, seasonality) that affect service and observations.</td>
+        <td>Use when the sub-observation is about a dynamic, situational condition that modulates behavior in the moment. Boundary with Physical Context is dynamic vs. static — weather changes moment to moment.</td>
+        <td class="examples">Weather; rainfall; humidity; temperature; wind; traffic; occupancy; seasonal conditions.</td>
+      </tr>
+      <tr>
+        <td class="capability">Physical Context</td>
+        <td>The physical environment (buildings, trees, terrain, orientation, shadows) and its impact on service outcomes.</td>
+        <td>Use when the sub-observation is about a static, structural environmental feature of the place. Boundary with Operational Context is dynamic vs. static — the tree casting a shadow is a fixed property of the location.</td>
+        <td class="examples">Buildings; trees; vegetation; terrain; slopes; orientation; inclination; shadows; surface materials.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Operational Semantics <span class="count">3 capabilities</span></h2>
+  <p class="category-desc">Describes how municipal infrastructure is operated and managed throughout its lifecycle, including operational responsibility, communications, and resilience.</p>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Capability</th><th>Purpose</th><th>How to use it</th><th>Examples</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="capability">Asset Management Context</td>
+        <td>Ownership, responsible management, contracts, warranties, maintenance history, useful life, lifecycle.</td>
+        <td>Use when the sub-observation is about ownership, lifecycle, or maintenance administration — not about a specific measurement at all.</td>
+        <td class="examples">Ownership; responsible organization; operational zone; maintenance responsibility; contracts; warranty; lifecycle stage; installation date; maintenance history; remaining useful life.</td>
+      </tr>
+      <tr>
+        <td class="capability">Network Operability</td>
+        <td>Network availability, connectivity, latency, packet loss, signal quality, and communication reliability.</td>
+        <td>Use when the sub-observation is about the current communication or connectivity state — is the asset reachable right now.</td>
+        <td class="examples">Network availability; connectivity status; latency; packet loss; signal quality; communication reliability; communication technology.</td>
+      </tr>
+      <tr>
+        <td class="capability">Fallback Behaviour</td>
+        <td>Autonomous behavior when communication or supervisory control is lost.</td>
+        <td>Use when the sub-observation is about what the infrastructure does autonomously when supervisory control is lost.</td>
+        <td class="examples">Local schedules; autonomous control; safe operating mode; emergency operating mode; manual override; local decision making.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<footer>
+  Sources: <code>methodology/assessment-frameworks/semantic-capability-assessment.md</code> (Purpose, Examples) and
+  <code>methodology/core-methodology/stage-1-to-stage-2-classification.md</code> (How to Use It, tie-breakers) in this repository.
+</footer>
+
+</main>
+<script>
+  function syncToggleLabel(isLight) {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+  }
+  function toggleTheme() {
+    var isLight = document.documentElement.classList.toggle('light');
+    try {
+      localStorage.setItem('smartcities-sig-methodology-theme', isLight ? 'light' : 'dark');
+    } catch (e) {}
+    syncToggleLabel(isLight);
+  }
+  syncToggleLabel(document.documentElement.classList.contains('light'));
+</script>
+</body>
+</html>

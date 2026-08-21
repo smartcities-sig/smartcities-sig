@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the Smart Cities SIG — For Municipalities</title>
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('smartcities-sig-outreach-theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Same brand tokens as methodology/semantic-capabilities-reference.html:
+     Nuxt UI primary="green", app background #121212/#fff, header background
+     #262626/#f6f6f6, Exo 2 brand font, DM Sans headings, dark by default with
+     a light-mode toggle. */
+  :root {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --card: #1f1f1f;
+    --fg: #e7eaed;
+    --muted: #9aa4af;
+    --border: #333638;
+
+    --primary-900: #14532d;
+    --primary-700: #15803d;
+    --primary-600: #16a34a;
+    --primary-500: #22c55e;
+    --primary-400: #4ade80;
+    --primary-100: #dcfce7;
+    --primary-50: #f0fdf4;
+
+    --blue: #1B6ECA;
+    --cyan: #22b8cf;
+
+    --accent: var(--primary-400);
+    --accent-bg: #16261f;
+    --code-bg: #1e2226;
+
+    --gradient: linear-gradient(90deg, var(--primary-400), var(--cyan) 55%, #4ea8e0);
+    --rail-blue: var(--cyan);
+  }
+  :root.light {
+    --bg: #ffffff;
+    --surface: #f6f6f6;
+    --card: #ffffff;
+    --fg: #1a1d21;
+    --muted: #5b6470;
+    --border: #e2e5e8;
+
+    --accent: var(--primary-900);
+    --accent-bg: var(--primary-50);
+    --code-bg: #eef1f3;
+
+    --gradient: linear-gradient(90deg, var(--primary-600), var(--cyan) 55%, var(--blue));
+    --rail-blue: var(--blue);
+  }
+  * { box-sizing: border-box; }
+  body {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0 1.5rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.55;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  /* page-frame holds the rails and the text column together as one
+     centered unit (150 + 32 + 800 + 32 + 150 = 1164px), so the rails
+     sit close to the text instead of stranded at the viewport edge. */
+  .page-frame {
+    max-width: 1164px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px minmax(0, 800px) 150px;
+    gap: 32px;
+  }
+  main {
+    max-width: none;
+    margin: 0;
+  }
+  a { color: var(--accent); }
+
+  /* decorative side rails — echo the logo's own leaf (left) and
+     circuit-city (right) motifs as a repeating vector pattern. Grid
+     stretches them to match the text column's height automatically.
+     Desktop only; hidden below 1260px so they never crowd the text. */
+  .side-rail {
+    opacity: 0.16;
+    pointer-events: none;
+  }
+  .side-rail.left { color: var(--accent); }
+  .side-rail.right { color: var(--rail-blue); }
+  .side-rail svg { width: 100%; height: 100%; display: block; }
+  @media (max-width: 1260px) {
+    .page-frame { grid-template-columns: minmax(0, 800px); max-width: 800px; }
+    .side-rail { display: none; }
+  }
+
+  /* hero glow, matching the pattern the real site's own hero component
+     uses (ui.config/eh-hero.ts has a dedicated glow layer) */
+  .hero { position: relative; isolation: isolate; }
+  .hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 620px;
+    max-width: 90vw;
+    height: 380px;
+    background: var(--gradient);
+    filter: blur(90px);
+    opacity: 0.28;
+    pointer-events: none;
+  }
+
+  /* header + toggle, matching the reference page */
+  header.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.1rem;
+    padding: 2.25rem 0 1.5rem;
+  }
+  header.brand .brand-left {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  header.brand img {
+    width: 48px;
+    height: 48px;
+    flex: none;
+  }
+  .brand-name {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .brand-tagline {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.1rem;
+  }
+  .theme-toggle {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--fg);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .icon-sun { display: none; }
+  :root.light .theme-toggle .icon-moon { display: none; }
+  :root.light .theme-toggle .icon-sun { display: block; }
+  .gradient-rule {
+    height: 3px;
+    border-radius: 999px;
+    background: var(--gradient);
+    margin-bottom: 0.5rem;
+  }
+
+  section { margin: 3.5rem 0; }
+
+  /* hero */
+  .hero { margin-top: 2.5rem; }
+  .hero-title {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2.1rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.1rem;
+  }
+  .hero-title .grad-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero-lead {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0 0 1.75rem;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-600);
+    color: #ffffff;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  .cta-button:hover {
+    background: var(--primary-700);
+    transform: translateY(-1px);
+  }
+  .cta-button.large {
+    font-size: 1.1rem;
+    padding: 1rem 1.9rem;
+  }
+  .cta-sub {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-top: 0.75rem;
+  }
+
+  h2 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0 0 1.25rem;
+    color: var(--fg);
+  }
+
+  /* problem cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.3rem;
+  }
+  .card .card-title {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+    font-size: 1.02rem;
+  }
+  .card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+  .card p a { color: var(--muted); text-decoration: underline; }
+
+  /* process steps */
+  .steps { display: flex; flex-direction: column; gap: 1.25rem; }
+  .step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+  .step-title {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    font-size: 1.02rem;
+  }
+  .step p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+  .step p a { color: var(--muted); text-decoration: underline; }
+  .section-link {
+    display: inline-block;
+    margin-top: 1.1rem;
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .section-link:hover { text-decoration: underline; }
+
+  /* why now / proof list */
+  ul.proof-list, ul.checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  ul.proof-list li, ul.checklist li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    color: var(--fg);
+    font-size: 0.97rem;
+  }
+  ul.proof-list li::before, ul.checklist li::before {
+    content: "";
+    flex: none;
+    width: 8px;
+    height: 8px;
+    margin-top: 0.45rem;
+    border-radius: 999px;
+    background: var(--gradient);
+  }
+  ul.proof-list li a, ul.checklist li a { color: var(--accent); text-decoration: underline; }
+
+  /* rigor callout */
+  .rigor-box {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 1.25rem 1.4rem;
+  }
+  .rigor-box p {
+    margin: 0 0 0.6rem;
+    font-style: italic;
+    color: var(--fg);
+  }
+  .rigor-box a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+  .rigor-box a:hover { text-decoration: underline; }
+  .rigor-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+  /* final CTA */
+  .cta-final {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .cta-final h2 { margin-bottom: 0.5rem; }
+  .cta-final p { color: var(--muted); margin: 0 0 1.5rem; }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 640px) {
+    .card-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-frame">
+<div class="side-rail left" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="leafPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60,200 C74,164 46,146 60,110 C70,82 50,64 60,26" />
+          <path d="M60,158 C74,153 79,139 74,125 C64,130 57,144 60,158 Z" />
+          <path d="M60,102 C46,97 41,83 46,69 C56,74 63,88 60,102 Z" />
+          <path d="M60,54 C71,50 75,39 70,28 C62,32 57,43 60,54 Z" />
+          <circle cx="60" cy="24" r="3" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#leafPattern)" />
+  </svg>
+</div>
+
+<main>
+
+<header class="brand">
+  <a class="brand-left" href="https://smartcities-sig-web.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <div>
+      <div class="brand-name">Smart Cities SIG</div>
+      <div class="brand-tagline">An invitation to municipalities</div>
+    </div>
+  </a>
+  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  </button>
+</header>
+<div class="gradient-rule"></div>
+
+<section class="hero">
+  <h1 class="hero-title">Every city is solving the same smart city problems — alone. <span class="grad-text">Let's solve them together.</span></h1>
+  <p class="hero-lead">The Smart Cities SIG is a free, city-led group where municipalities, technology companies, and standards experts work together to make sure smart city data — from street lighting to water meters — actually means something you can act on. No cost. No sales pitch. Just a seat at the table.</p>
+  <a class="cta-button" href="https://groups.io/g/smartcities-sig" target="_blank" rel="noopener noreferrer">Join the Smart Cities SIG →</a>
+</section>
+
+<section class="problem">
+  <h2>The problem</h2>
+  <div class="card-grid">
+    <div class="card">
+      <p class="card-title">Your data doesn't tell the whole story.</p>
+      <p>A sensor can report a number, but not whether that number means your streets are safely lit or your water pressure meets what residents actually need. Without that context, even connected systems can mislead you.</p>
+    </div>
+    <div class="card">
+      <p class="card-title">There's no process to turn your city's experience into something standards bodies can act on.</p>
+      <p>You know exactly what your streets or water system need — but until now, there's been no way to turn that knowledge into something a standards organization can use to find and close the real gaps.</p>
+    </div>
+    <div class="card">
+      <p class="card-title">Cities usually aren't in the room when standards get written.</p>
+      <p>We're changing who's invited.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <p class="step-title">We start with your problem, not a technical spec.</p>
+        <p>Before anyone talks about standards, we sit down and document what your city is actually trying to accomplish — in plain language, based on your real experience running the system.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <p class="step-title">What you share helps every other city too.</p>
+        <p>We turn what your city has learned into something reusable, so no city starts from zero, and the work you put in now saves the next city time later.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <p class="step-title">We connect it to the standards that make products work together.</p>
+        <p>Once we understand the real problem, we work with standards experts (like the <a href="https://www.openmobilealliance.org/" target="_blank" rel="noopener noreferrer">Open Mobile Alliance</a>) so future products are actually built to solve it — making your next purchase more likely to just work with what you already have.</p>
+      </div>
+    </div>
+  </div>
+  <a class="section-link" href="https://smartcities-sig-web.vercel.app/methodology/core-methodology/methodology-overview" target="_blank" rel="noopener noreferrer">See the full 3-stage methodology →</a>
+</section>
+
+<section class="why-now">
+  <h2>Why now</h2>
+  <ul class="proof-list">
+    <li>Started by <a href="https://smartcities-sig-web.vercel.app/community/participant-organizations#madrid-positioning" target="_blank" rel="noopener noreferrer">Madrid Digital Office</a>, a city government — not a company selling something.</li>
+    <li>Guided by the <a href="https://www.openmobilealliance.org/" target="_blank" rel="noopener noreferrer">Open Mobile Alliance</a>, an established, respected standards organization.</li>
+    <li>Already working on two real problems: <a href="https://smartcities-sig-web.vercel.app/profiles/lighting/public-lighting-walkthrough" target="_blank" rel="noopener noreferrer">street lighting</a> and <a href="https://smartcities-sig-web.vercel.app/profiles/water/public-watering-walkthrough" target="_blank" rel="noopener noreferrer">water meters</a>.</li>
+    <li>Results get shared at the <a href="https://www.smartcityexpo.com/" target="_blank" rel="noopener noreferrer">Smart City Expo World Congress 2026 in Barcelona</a> — cities that join now help shape what's shown there.</li>
+  </ul>
+</section>
+
+<section class="benefits">
+  <h2>What your city gets</h2>
+  <ul class="checklist">
+    <li>Practical guidance you can put directly into your next purchase request.</li>
+    <li>A clear picture of what's missing in today's standards, and what's already being fixed.</li>
+    <li>Real-world testing results, not just theories.</li>
+    <li>No cost. No obligation to buy anything. No pressure to pick a side.</li>
+  </ul>
+</section>
+
+<section class="rigor">
+  <div class="rigor-box">
+    <p>"This isn't just a talking point — every idea here is backed by a documented, carefully checked process."</p>
+    <div class="rigor-links">
+      <a href="../methodology/core-methodology/stage-1-to-stage-2-classification.md" target="_blank" rel="noopener noreferrer">See the classification methodology →</a>
+      <a href="../methodology/semantic-capabilities-reference.html" target="_blank" rel="noopener noreferrer">Semantic capabilities reference →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <h2>Join the Smart Cities SIG</h2>
+  <p>Free. Takes 5 minutes. No commitment beyond showing up.</p>
+  <a class="cta-button large" href="https://groups.io/g/smartcities-sig" target="_blank" rel="noopener noreferrer">Submit your request →</a>
+</section>
+
+<footer>
+  Learn more: <a href="https://smartcities-sig-web.vercel.app/about-us/about-us" target="_blank" rel="noopener noreferrer">About the SIG</a> ·
+  <a href="https://smartcities-sig-web.vercel.app/community/getting-started" target="_blank" rel="noopener noreferrer">Getting Started guide</a> ·
+  <a href="https://smartcities-sig-web.vercel.app/community/participant-organizations" target="_blank" rel="noopener noreferrer">Who's already participating</a> ·
+  <a href="https://github.com/smartcities-sig/smartcities-sig" target="_blank" rel="noopener noreferrer">Public repository</a>
+</footer>
+
+</main>
+<div class="side-rail right" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="circuitPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40,0 L40,55 L85,55 L85,95" />
+          <path d="M85,95 L85,140 L55,140 L55,200" />
+          <path d="M40,55 L15,55 L15,130" />
+          <circle cx="40" cy="55" r="3" />
+          <circle cx="85" cy="55" r="3" />
+          <circle cx="85" cy="95" r="3" />
+          <circle cx="55" cy="140" r="3" />
+          <circle cx="15" cy="130" r="3" />
+          <rect x="95" y="150" width="12" height="35" />
+          <rect x="110" y="128" width="12" height="57" />
+          <rect x="125" y="158" width="12" height="27" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+  </svg>
+</div>
+</div>
+<script>
+  function syncToggleLabel(isLight) {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+  }
+  function toggleTheme() {
+    var isLight = document.documentElement.classList.toggle('light');
+    try {
+      localStorage.setItem('smartcities-sig-outreach-theme', isLight ? 'light' : 'dark');
+    } catch (e) {}
+    syncToggleLabel(isLight);
+  }
+  syncToggleLabel(document.documentElement.classList.contains('light'));
+</script>
+</body>
+</html>
