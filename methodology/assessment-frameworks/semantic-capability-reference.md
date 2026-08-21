@@ -1,7 +1,6 @@
 ---
 title: Semantic Capability Reference
-description: >
-  A.
+description: null
 layout: doc
 ---
 
@@ -12,11 +11,104 @@ layout: doc
 
 ## Semantic Capability Reference
 
-REMOVE THIS NOTE: Embedded below the iframe to /github/eh/engineering/smartcities-sig/methodology/semantic-capabilities-reference.html
+::EhEmbed
+---
+download: true
+dataUrl: "https://github.com/elastic-hub/engineering/blob/main/smartcities-sig/methodology/semantic-capabilities-reference.html"
+---
+::
 
 ## Objects Semantic Capability
 
-REMOVE THIS NOTE: Add dynaic table connected to /github/eh/engineering/smartcities-sig/methodology/assessment-frameworks/lwm2m-registry-capability-mapping.json
+::EhDynamicTable
+---
+dataUrl: "https://github.com/elastic-hub/engineering/blob/main/smartcities-sig/methodology/assessment-frameworks/lwm2m-registry-capability-mapping.json"
+transformRawData: lwm2m_registry_capability_mapping
+header: "**LwM2M Registry Capability Mapping**"
+perPage: 10
+columns:
+  - name: "object_id"
+    title: "Object ID"
+    query: true
+    sortable: true
+    type: text
+  - name: "object_name"
+    title: "Object"
+    filter: true
+    filterOrder: 2
+    query: true
+    sortable: true
+    type: text
+  - name: "object_owner"
+    title: "Owner"
+    filter: true
+    filterOrder: 1
+    query: true
+    sortable: true
+    type: text
+  - name: "resource_id"
+    title: "Res. ID"
+    query: true
+    sortable: true
+    type: text
+  - name: "resource_name"
+    title: "Resource"
+    query: true
+    sortable: true
+    type: text
+  - name: "resource_description"
+    title: "Description"
+    query: true
+    sortable: false
+    wrap: true
+    type: text
+  - name: "resource_source"
+    title: "Source"
+    filter: true
+    filterOrder: 3
+    sortable: true
+    pill: true
+    type: text
+  - name: "semantic_domain"
+    title: "Semantic Domain"
+    filter: true
+    filterOrder: 4
+    query: true
+    sortable: true
+    pill: true
+    type: text
+  - name: "semantic_capability"
+    title: "Semantic Capability"
+    filter: true
+    filterOrder: 5
+    query: true
+    sortable: true
+    pill: true
+    type: text
+  - name: "companion_capabilities"
+    title: "Companion Capabilities"
+    filter: true
+    filterOrder: 6
+    query: true
+    sortable: false
+    wrap: true
+    type: list
+  - name: "confidence"
+    title: "Confidence"
+    filter: true
+    filterOrder: 7
+    sortable: true
+    pill: true
+    type: text
+  - name: "note"
+    title: "Note"
+    query: true
+    sortable: false
+    wrap: true
+    type: text
+---
+::
+
 
 
 ## Common Resources Capability Reference
@@ -26,7 +118,7 @@ REMOVE THIS NOTE: Add dynaic table connected to /github/eh/engineering/smartciti
 dataUrl: https://github.com/elastic-hub/engineering/blob/main/smartcities-sig/methodology/assessment-frameworks/common-resources-capability-reference.json
 transformRawData: common_resources
 perPage: 10
-header: OMA LwM2M Common Resources
+header: "**OMA LwM2M Common Resources**"
 columns:
   - name: resource_id
     title: ID
@@ -106,4 +198,9 @@ columns:
 
 ## Municipality Invitation
 
-REMOVE THIS NOTE: Embedded below the iframe to /engineering/smartcities-sig/outreach/municipal-invitation.html
+::EhEmbed
+---
+download: true
+dataUrl: "https://github.com/elastic-hub/engineering/blob/main/smartcities-sig/outreach/municipal-invitation.html"
+---
+::
