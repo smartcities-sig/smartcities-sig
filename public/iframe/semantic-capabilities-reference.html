@@ -263,11 +263,22 @@
 </header>
 <div class="gradient-rule"></div>
 
-<p class="intro">
-  All 14 semantic capabilities from <code>semantic-capability-assessment.md</code>, grouped by their 4 categories, with practical classification guidance from
-  <code>stage-1-to-stage-2-classification.md</code>. Purpose and Examples are sourced from the framework document; How to Use It reflects the Step&nbsp;2
-  discriminators and tie-breakers in the classification procedure.
-</p>
+<div class="intro">
+  <p>
+    Municipal infrastructure produces a constant stream of operational data — temperatures, flow rates, status codes, alarms — but a raw value says
+    little on its own. A <strong>semantic capability</strong> captures one dimension of meaning needed to interpret that data correctly: what it
+    represents, where it comes from, how much it can be trusted, or how it should be acted on. This framework groups 14 such capabilities into
+    4 <strong>semantic domains</strong>, defined in alignment with the ISO/IEC&nbsp;30141 IoT reference architecture, each covering a different kind
+    of question about a municipal service and the infrastructure that delivers it. The table for each domain below lists its capabilities together
+    with their purpose, how to apply them, and worked examples.
+  </p>
+  <ul class="intro-list">
+    <li><span class="category">Domain Semantics</span> — what the municipality ultimately cares about: the service delivered, the infrastructure providing it, and the resources it consumes.</li>
+    <li><span class="category">Observation Semantics</span> — how operational information is observed: where it originates, what it represents, how it's obtained, and its temporal characteristics.</li>
+    <li><span class="category">Interpretation Semantics</span> — how observations should be understood and trusted: their provenance, quality, and context.</li>
+    <li><span class="category">Operational Semantics</span> — how infrastructure is operated and managed throughout its lifecycle: responsibility, communications, and resilience.</li>
+  </ul>
+</div>
 
 <section>
   <h2>Domain Semantics <span class="count">3 capabilities</span></h2>
