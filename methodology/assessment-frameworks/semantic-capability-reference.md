@@ -66,7 +66,7 @@ columns:
     type: text
   - name: "resource_source"
     title: "Source"
-    filter: true
+    filter: false
     filterOrder: 3
     sortable: true
     pill: true
