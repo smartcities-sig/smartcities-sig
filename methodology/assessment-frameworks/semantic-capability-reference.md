@@ -29,6 +29,8 @@ perPage: 10
 columns:
   - name: "object_id"
     title: "Object ID"
+    filter: true
+    filterOrder: 1    
     query: true
     sortable: true
     type: text
@@ -41,8 +43,8 @@ columns:
     type: text
   - name: "object_owner"
     title: "Owner"
-    filter: true
-    filterOrder: 1
+    filter: false
+    filterOrder: 3
     query: true
     sortable: true
     type: text
