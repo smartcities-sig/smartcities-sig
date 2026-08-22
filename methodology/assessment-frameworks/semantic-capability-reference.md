@@ -14,7 +14,7 @@ layout: doc
 ::EhEmbed
 ---
 download: true
-dataUrl: "https://github.com/elastic-hub/engineering/blob/main/smartcities-sig/methodology/semantic-capabilities-reference.html"
+dataUrl: iframe/semantic-capabilities-reference.html
 ---
 ::
 
@@ -201,6 +201,6 @@ columns:
 ::EhEmbed
 ---
 download: true
-dataUrl: "https://github.com/elastic-hub/engineering/blob/main/smartcities-sig/outreach/municipal-invitation.html"
+dataUrl: iframe/municipal-invitation.html
 ---
 ::
