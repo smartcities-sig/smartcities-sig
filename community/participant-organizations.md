@@ -6,7 +6,7 @@ layout: doc
 
 # {{ $doc.title }}
 
-[LOGOS]
+
 
 ## Madrid Positioning 
 
