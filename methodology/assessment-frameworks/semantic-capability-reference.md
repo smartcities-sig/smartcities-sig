@@ -1,7 +1,7 @@
 ---
 title: Semantic Capability Reference
 description: null
-layout: doc
+layout: web
 ---
 
 # {{ $doc.title }}
