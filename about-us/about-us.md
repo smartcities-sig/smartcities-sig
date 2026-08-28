@@ -6,13 +6,13 @@ layout: doc
 
 # {{ $doc.title }}
 
-The Smart Cities Special Interest Group (SIG) was initiated by Madrid Digital @ City Council, and is facilitated by the Open Mobile Alliance (OMA).
+The Smart Cities Special Interest Group (SIG) was initiated by Madrid Digital Capital @ Madrid City Council, and is facilitated by the [Open Mobile Alliance (OMA)](https://www.openmobilealliance.org/media/articles/2026-05-25-oma-smartcities-sig-kickoff-news/) and [AIOTI](https://aioti.eu/cities-5-0/).
 
 The initiative was created to help municipalities, industry, academia, and standards organizations collaborate on practical smart city interoperability challenges using reusable and standards-based approaches.
 
 ## Why This Initiative
 
-Smart city deployments often involve multiple vendors, platforms, standards, and operational domains.
+Smart city deployments often involve multiple vendors, platforms, standards, and operational domains. To address the complexity of these integrations, this SIG separates the data relevant to city operations from the technologies that collect it. 
 
 The Smart Cities SIG seeks to improve interoperability by helping stakeholders identify common requirements, reuse existing standards where appropriate, and validate interoperability approaches through collaborative Proof of Concept activities.
 
@@ -20,12 +20,12 @@ The Smart Cities SIG seeks to improve interoperability by helping stakeholders i
 
 The Smart Cities SIG brings together stakeholders involved in the planning, deployment, operation, and standardization of smart city solutions, including:
 
-- Municipalities and local governments
-- Public agencies and utilities
-- Technology providers and system integrators
-- Standards development organizations
-- Academic and research institutions
-- Industry associations
+- Municipalities and local governments: For business experts (in public services) who are new to new technologies, the proliferation of public and proprietary protocols and standards creates uncertainty and delays decision-making.
+- Public agencies and utilities: The wide range of potential differences in service delivery makes it difficult to take advantage of economies of scale.
+- Technology providers and system integrators: Technologies evolve rapidly, but the quantities that everyone understands —and that we all want to compare with what happened years ago— are reasonably stable once a consensus has been reached: temperature is measured the same way whether a mercury thermometer was used or whether the current flowing through a resistor that varies with heat is measured.
+- Standards development organizations: It encourages a selection process, since simply accumulating elements results in specifications that are more likely not to be used optimally.
+- Academic and research institutions: Standardization complements innovation. Digital twins must represent both directly measured data and data inferred indirectly. The relationship between these two realities opens up possibilities that go beyond simply replacing one set of techniques with improved ones.
+- Industry associations: Data is key to management. Technology and operations... are a means to that end. The provision of reliable data can be achieved using more automated and comprehensive tools, but understanding what the end customer expects and what is actually being used will make it easier to focus efforts on new products with a somewhat more certain market. 
 
 By collaborating across these communities, the SIG seeks to accelerate the adoption of interoperable and reusable smart city solutions.
 
