@@ -22,18 +22,13 @@ layout: doc
 - [ ] Additional features: existence of additional elements connected to that branch.
 - [x] Location (not always provided by the device itself, but captured during installation)
 
-
-
 ## Measurement conditions
 
 - In each luminaire with Zagha connector
 - At the head of the line (show how many luminaires are on it)
 - Type of lighting fixtures (pedestrian zone or vehicles)
 
-
-
 ## Data Models
-
 
 - Outdoor Lamp Controller (OMA) Object [#3416](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3416.xml)
 
@@ -41,38 +36,32 @@ layout: doc
 
 - Street Light (Smart Data Models) Object [#Streetlight](https://github.com/smart-data-models/dataModel.Streetlighting/blob/master/Streetlight/doc/spec.md)
 
-
-
 ## Mappable information
 
-| OMA                                                | FIWARE                   |
-| -------------------------------------------------- | ------------------------ |
-| Latitude (6/1) Longitude (6/2)                     | location                 |
-| Command in action (3416/2) Dimming level (3418/35) | powerState               |
-| Timestamp (3418/5518)                              | observationDateTime      |
-| Active power (3418/4)                              | powerConsumtpion         |
-| Cumulated active energy (3418/6)                   | lifetimePowerConsumption |
-| Power factor (3418/5)                              | powerFactor              |
-| Supply current (3418/2)                            | current                  |
-| Supply voltage (3418/1)                            | voltage                  |
-| Lamp ON timestamp                                  | dateLastSwitchingOn      |
-| Actual light color temperature (3416/40)           | *TODO*                   |
-| *TODO*                                             | dateLastSwitchingOff     |
-| Sensor Value (3301/5700)                           | illuminanceLevel         |
+| OMA                                                | FIWARE                   | Comments                        |     
+| -------------------------------------------------- | ------------------------ |---------------------------------|
+| Latitude (6/1) Longitude (6/2)                     | location                 | could have different attributes |
+| Command in action (3416/2) Dimming level (3418/35) | powerState               |                                 |
+| Timestamp (3418/5518)                              | observationDateTime      |                                 |
+| Active power (3418/4)                              | powerConsumtpion         |                                 |
+| Cumulated active energy (3418/6)                   | lifetimePowerConsumption |                                 |
+| Power factor (3418/5)                              | powerFactor              |                                 |
+| Supply current (3418/2)                            | current                  |                                 |
+| Supply voltage (3418/1)                            | voltage                  |                                 |
+| Lamp ON timestamp                                  | dateLastSwitchingOn      |                                 |
+| Actual light color temperature (3416/40)           | *TODO*                   | Model needs extension           |
+| *TODO*                                             | dateLastSwitchingOff     |                                 |
+| Sensor Value (3301/5700)                           | illuminanceLevel         |                                 |
 
-
+Another check is that the data type is fully compatible
 
 It seems there is no possibility of control over dimming, but that could be absolutely acceptable. This also explains why the vast majority of the resources are related to the Electrical Monitor (3418) and not to the Outdoor Lamp Controller (3416)
 The nominal lamp output in lumen at 100% dimming should be added to the OMA Data Model
-The color temperature is not currently present in the Smart Data Model
-
-
+The color temperature is not currently present in the Smart Data Model. It can be extended if there are examples 
 
 ## Tests
 
 - [uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html](https://www.md2html-tool.com/docs/OpenMobileAlliance/scwg-ETS-conformance-for-Smart-City/Dev/656f03f/ETS/uCIFI-OMA-ETS-Conformance-Smart-City-V1_0-20250416-D_full.html)
-
-
 
 ## Data Models
 

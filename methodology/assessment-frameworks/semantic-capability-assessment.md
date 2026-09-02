@@ -134,6 +134,9 @@ The objective is not to redesign existing Objects, but to understand whether the
 
 Evaluate whether existing Smart Data Models can preserve the semantic capability while remaining interoperable across municipalities and Digital Twin platforms.
 
+Answer: Initially yes, because it can be created data models to any level of abstraction and link one data model to others via relationships.
+The relationship is not exclusive, only point to another object (class) not to a specific type of objects. it is up to the user to link the right type for the purpose.   
+
 ## 4. Digital Twin Questions
 
 Evaluate whether a Digital Twin consuming the available information can successfully answer the municipality operational questions.
