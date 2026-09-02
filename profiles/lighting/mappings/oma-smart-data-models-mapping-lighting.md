@@ -58,7 +58,7 @@ layout: doc
 | Lamp ON timestamp                                  | dateLastSwitchingOn      |
 | Actual light color temperature (3416/40)           | *TODO*                   |
 | *TODO*                                             | dateLastSwitchingOff     |
-| *TODO*                                             | illuminanceLevel         |
+| Sensor Value (3301/5700)                           | illuminanceLevel         |
 
 
 
