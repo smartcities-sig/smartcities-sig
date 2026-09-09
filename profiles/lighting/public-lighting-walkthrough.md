@@ -122,9 +122,9 @@ This became one of the central conceptual foundations of the methodology.
 ## Lux vs Lumens vs Watts
 
 One of the earliest discoveries was that:
-- lux,
-- lumens,
-- and watts
+- [lux](https://en.wikipedia.org/wiki/Lux), what efectively reaches
+- [lumens](https://en.wikipedia.org/wiki/Lumen_(unit)), what is emitted
+- and [watts](https://en.wikipedia.org/wiki/Watt), the power comsumed
 represent fundamentally different operational meanings.
 
 | Measurement | Operational Meaning |
@@ -273,9 +273,8 @@ This later influenced:
 ## Teleoperation and Operational Reliability
 
 The municipality material also described concerns related to:
-- teleoperation,
-- latency,
-- packet loss,
+- monitoring and teleoperation,
+- communications: latency, packet loss,
 - and fallback operational behavior.
 
 This demonstrated that interoperability concerns extend beyond:
@@ -286,8 +285,8 @@ Operational reliability itself became an important interoperability concern.
 
 The walkthrough therefore identified:
 - operational responsiveness,
-- fallback operation,
-- and network reliability
+- network reliability
+- and fallback operation
 as important parts of interoperability thinking.
 
 ---
