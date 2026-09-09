@@ -15,7 +15,403 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Same brand tokens as municipal-invitation.html / semantic-capabilities-reference.html:
+     Nuxt UI primary="green", app background #121212/#fff, header background
+     #262626/#f6f6f6, Exo 2 brand font, DM Sans headings, dark by default with
+     a light-mode toggle. Inlined per-page (rather than a shared assets/style.css)
+     so each lesson renders correctly as a standalone, downloadable file. */
+  :root {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --card: #1f1f1f;
+    --fg: #e7eaed;
+    --muted: #9aa4af;
+    --border: #333638;
+
+    --primary-900: #14532d;
+    --primary-700: #15803d;
+    --primary-600: #16a34a;
+    --primary-500: #22c55e;
+    --primary-400: #4ade80;
+    --primary-100: #dcfce7;
+    --primary-50: #f0fdf4;
+
+    --blue: #1B6ECA;
+    --cyan: #22b8cf;
+
+    --accent: var(--primary-400);
+    --accent-bg: #16261f;
+    --code-bg: #1e2226;
+
+    --gradient: linear-gradient(90deg, var(--primary-400), var(--cyan) 55%, #4ea8e0);
+    --rail-blue: var(--cyan);
+  }
+  :root.light {
+    --bg: #ffffff;
+    --surface: #f6f6f6;
+    --card: #ffffff;
+    --fg: #1a1d21;
+    --muted: #5b6470;
+    --border: #e2e5e8;
+
+    --accent: var(--primary-900);
+    --accent-bg: var(--primary-50);
+    --code-bg: #eef1f3;
+
+    --gradient: linear-gradient(90deg, var(--primary-600), var(--cyan) 55%, var(--blue));
+    --rail-blue: var(--blue);
+  }
+  * { box-sizing: border-box; }
+  body {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0 1.5rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.55;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  main { max-width: none; margin: 0; }
+  a { color: var(--accent); }
+  p { margin: 0 0 1rem; }
+  code {
+    background: var(--code-bg);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  blockquote {
+    margin: 0 0 1.25rem;
+    padding: 0.9rem 1.25rem;
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    border-radius: 0 10px 10px 0;
+    color: var(--fg);
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+
+  /* page-frame + decorative side rails, from municipal-invitation.html:
+     echo the logo's own leaf (left) and circuit-city (right) motifs as a
+     repeating vector pattern. Desktop only; hidden below 1260px. */
+  .page-frame {
+    max-width: 1164px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px minmax(0, 800px) 150px;
+    gap: 32px;
+  }
+  .side-rail { opacity: 0.16; pointer-events: none; }
+  .side-rail.left { color: var(--accent); }
+  .side-rail.right { color: var(--rail-blue); }
+  .side-rail svg { width: 100%; height: 100%; display: block; }
+  @media (max-width: 1260px) {
+    .page-frame { grid-template-columns: minmax(0, 800px); max-width: 800px; }
+    .side-rail { display: none; }
+  }
+
+  /* header + toggle, matching municipal-invitation.html / semantic-capabilities-reference.html */
+  header.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.1rem;
+    padding: 2.25rem 0 1.5rem;
+  }
+  header.brand .brand-left {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  header.brand img { width: 48px; height: 48px; flex: none; }
+  .brand-name {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .brand-tagline {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.1rem;
+  }
+  .theme-toggle {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--fg);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .icon-sun { display: none; }
+  :root.light .theme-toggle .icon-moon { display: none; }
+  :root.light .theme-toggle .icon-sun { display: block; }
+  .gradient-rule {
+    height: 3px;
+    border-radius: 999px;
+    background: var(--gradient);
+    margin-bottom: 2rem;
+  }
+
+  /* headings + lesson intro furniture */
+  h1 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0.2rem 0 0.6rem;
+    color: var(--fg);
+  }
+  .count {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .subtitle {
+    color: var(--muted);
+    max-width: 70ch;
+    font-size: 1.02rem;
+    margin: 0 0 1.75rem;
+  }
+  .domain-answers {
+    color: var(--fg);
+    background: var(--accent-bg);
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 0 0 2rem;
+  }
+  h2 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 2.2rem 0 1rem;
+    color: var(--fg);
+  }
+  h3 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 1.8rem 0 0.75rem;
+    color: var(--fg);
+  }
+
+  /* boxed components */
+  .mission-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    margin: 0 0 2rem;
+  }
+  .callout {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.4rem;
+    margin: 0 0 1.5rem;
+  }
+  .callout > strong:first-child {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--accent);
+  }
+  .callout p { margin: 0 0 0.5rem; color: var(--fg); }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout ul { margin: 0.5rem 0 0; padding-left: 1.3rem; }
+  .callout li { margin: 0.3rem 0; }
+  .source-box {
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin: 0 0 2rem;
+    background: var(--accent-bg);
+  }
+  .source-box h4 {
+    margin: 0 0 0.5rem;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .source-box ul { margin: 0; padding-left: 1.2rem; }
+  .source-box li { margin: 0.3rem 0; }
+  .source-box p { margin: 0; color: var(--fg); font-size: 0.95rem; }
+  .ask-teacher {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-bg);
+    padding: 1rem 1.25rem;
+    border-radius: 0 10px 10px 0;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    color: var(--fg);
+  }
+
+  /* tables, from semantic-capabilities-reference.html, generalized to .datatable */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 0 0 1.5rem;
+  }
+  table.datatable { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 0.92rem; }
+  table.datatable th, table.datatable td {
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.datatable th {
+    background: var(--surface);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  table.datatable tr:last-child td { border-bottom: none; }
+  table.datatable tbody tr:hover { background: var(--accent-bg); }
+
+  .domain-block { margin-bottom: 2rem; }
+  .domain-block h2 { margin-top: 1.6rem; }
+  .tie-breakers { margin: 1rem 0 2rem; }
+
+  /* self-check quiz */
+  .quiz {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.6rem;
+    margin: 2rem 0;
+    background: var(--surface);
+  }
+  .quiz-q {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: var(--fg);
+  }
+  .quiz-opt {
+    display: block;
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+    color: var(--fg);
+    cursor: pointer;
+  }
+  .quiz-opt input { margin-right: 0.5rem; }
+  .quiz-feedback { font-size: 0.9rem; margin-top: 0.5rem; min-height: 1.2em; }
+  .quiz-feedback.show.correct { color: var(--primary-500); }
+  .quiz-feedback.show.incorrect { color: #e2554f; }
+  .check-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-600);
+    color: #ffffff;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem 1.3rem;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  .check-btn:hover { background: var(--primary-700); transform: translateY(-1px); }
+
+  /* answer-key disclosures (Lesson 5) */
+  details.answer {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1.5rem;
+    background: var(--surface);
+  }
+  details.answer summary {
+    cursor: pointer;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  details.answer[open] summary { margin-bottom: 1rem; }
+  details.answer p { color: var(--fg); }
+  details.answer p:last-child { margin-bottom: 0; }
+
+  /* lesson navigation + CTA, matching municipal-invitation.html's cta-button */
+  .lesson-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2.5rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .lesson-nav > span { color: var(--muted); font-size: 0.95rem; }
+  .lesson-nav > span a { color: var(--accent); text-decoration: none; }
+  .lesson-nav > span a:hover { text-decoration: underline; }
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-600);
+    color: #ffffff;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  .cta-button:hover { background: var(--primary-700); transform: translateY(-1px); }
+
+  .doc-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .doc-footer a { color: var(--muted); }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 1.6rem; }
+    .lesson-nav { flex-direction: column; align-items: flex-start; }
+  }
+</style>
 <style>
 .page-frame { grid-template-columns: 150px minmax(0, 62em) 150px; max-width: 1400px; }
 @media (max-width: 1260px) { .page-frame { grid-template-columns: minmax(0, 62em); max-width: 62em; } }
@@ -58,7 +454,7 @@ table.datatable td, table.datatable th { font-size: 0.82em; }
 
 <header class="brand">
   <div class="brand-left">
-    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <img src="../images/logo.png" alt="Smart Cities SIG logo">
     <div>
       <div class="brand-name">Smart Cities SIG</div>
       <div class="brand-tagline">Capability Cheat Sheet</div>
@@ -105,20 +501,20 @@ see the companion-pairings table below for the fuller picture.</p>
 <div class="table-wrap">
 <table class="datatable">
 <tr><th>Capability</th><th>Question</th><th>Companion</th></tr>
-<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Asset Management Context</a></strong></td><td>Pure administration — ownership, contract, warranty, lifecycle, not a measurement at all?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Network Operability</a></strong></td><td>About the current communication/connectivity state itself — reachable right now, latency, signal quality?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Fallback Behaviour</a></strong></td><td>About what the asset does autonomously because supervisory control or comms was lost?</td><td>Network Operability, if the cause is stated</td></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Provenance</a></strong></td><td>Specifically contrasts who/what supplied the information — device-reported vs. manually entered vs. externally supplied?</td><td>Observation Point, if a location is also stated</td></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Point</a></strong></td><td>About where the referent physically or logically sits — a position, not an actor?</td><td>Provenance, if the source is worth noting</td></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Measurement Quality</a></strong></td><td>About how reliable, accurate, or complete the value is?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Operational Context</a></strong></td><td>About a dynamic, situational condition that changes moment to moment?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Physical Context</a></strong></td><td>About a static, structural, fixed feature of the place?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Infrastructure Output</a></strong></td><td>Would the statement still be true even if the intended service completely failed?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Service Outcome</a></strong></td><td>Otherwise: is this the real-world effect itself, the "so what"?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Resource Consumption</a></strong></td><td>About cost or resources spent — energy, water, fuel, battery?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Scope</a></strong></td><td>About what portion or coverage of the system the value represents, including one number combining multiple assets or locations?</td><td>Observation Method, if the aggregation technique matters</td></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Temporal Semantics</a></strong></td><td>About what time span the value covers, including one number combining multiple readings over time (e.g. a rolling average)?</td><td>—</td></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Method</a></strong></td><td>Otherwise: about the technique that produced the value (measured / estimated / predicted / simulated / proxy)?</td><td>—</td></tr>
+<tr><td><strong><a href="0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Asset Management Context</a></strong></td><td>Pure administration — ownership, contract, warranty, lifecycle, not a measurement at all?</td><td>—</td></tr>
+<tr><td><strong><a href="0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Network Operability</a></strong></td><td>About the current communication/connectivity state itself — reachable right now, latency, signal quality?</td><td>—</td></tr>
+<tr><td><strong><a href="0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Fallback Behaviour</a></strong></td><td>About what the asset does autonomously because supervisory control or comms was lost?</td><td>Network Operability, if the cause is stated</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Provenance</a></strong></td><td>Specifically contrasts who/what supplied the information — device-reported vs. manually entered vs. externally supplied?</td><td>Observation Point, if a location is also stated</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Point</a></strong></td><td>About where the referent physically or logically sits — a position, not an actor?</td><td>Provenance, if the source is worth noting</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Measurement Quality</a></strong></td><td>About how reliable, accurate, or complete the value is?</td><td>—</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Operational Context</a></strong></td><td>About a dynamic, situational condition that changes moment to moment?</td><td>—</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Physical Context</a></strong></td><td>About a static, structural, fixed feature of the place?</td><td>—</td></tr>
+<tr><td><strong><a href="0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Infrastructure Output</a></strong></td><td>Would the statement still be true even if the intended service completely failed?</td><td>—</td></tr>
+<tr><td><strong><a href="0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Service Outcome</a></strong></td><td>Otherwise: is this the real-world effect itself, the "so what"?</td><td>—</td></tr>
+<tr><td><strong><a href="0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Resource Consumption</a></strong></td><td>About cost or resources spent — energy, water, fuel, battery?</td><td>—</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Scope</a></strong></td><td>About what portion or coverage of the system the value represents, including one number combining multiple assets or locations?</td><td>Observation Method, if the aggregation technique matters</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Temporal Semantics</a></strong></td><td>About what time span the value covers, including one number combining multiple readings over time (e.g. a rolling average)?</td><td>—</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Method</a></strong></td><td>Otherwise: about the technique that produced the value (measured / estimated / predicted / simulated / proxy)?</td><td>—</td></tr>
 </table>
 </div>
 
@@ -141,9 +537,9 @@ see the companion-pairings table below for the fuller picture.</p>
 <div class="table-wrap">
 <table class="datatable">
 <tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
-<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Service Outcome</a></strong></td><td>Did the real-world effect happen?</td><td>Street illuminance at road level; soil moisture at root level; delivered water pressure</td></tr>
-<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Infrastructure Output</a></strong></td><td>What did the asset itself produce?</td><td>Lumens emitted; pump flow rate; valve opening %; motor speed</td></tr>
-<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Resource Consumption</a></strong></td><td>What did it cost to produce that?</td><td>Energy; water; fuel; battery; active/reactive power; voltage; frequency</td></tr>
+<tr><td><strong><a href="0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Service Outcome</a></strong></td><td>Did the real-world effect happen?</td><td>Street illuminance at road level; soil moisture at root level; delivered water pressure</td></tr>
+<tr><td><strong><a href="0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Infrastructure Output</a></strong></td><td>What did the asset itself produce?</td><td>Lumens emitted; pump flow rate; valve opening %; motor speed</td></tr>
+<tr><td><strong><a href="0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Resource Consumption</a></strong></td><td>What did it cost to produce that?</td><td>Energy; water; fuel; battery; active/reactive power; voltage; frequency</td></tr>
 </table>
 </div>
 </div>
@@ -153,10 +549,10 @@ see the companion-pairings table below for the fuller picture.</p>
 <div class="table-wrap">
 <table class="datatable">
 <tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Point</a></strong></td><td>Where does the referent physically/logically sit?</td><td>Luminaire; cabinet; pump; valve; pipeline; root zone; weather station</td></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Scope</a></strong></td><td>What portion of the system does this cover?</td><td>Single asset; group; street; irrigation zone; district; municipality</td></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Method</a></strong></td><td>What technique produced this value?</td><td>Measured; estimated; inferred; predicted; aggregated; simulated; model-derived; proxy</td></tr>
-<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Temporal Semantics</a></strong></td><td>What time span does this represent?</td><td>Instantaneous; interval; sampling period; aggregation window; historical; forecast; horizon</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Point</a></strong></td><td>Where does the referent physically/logically sit?</td><td>Luminaire; cabinet; pump; valve; pipeline; root zone; weather station</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Scope</a></strong></td><td>What portion of the system does this cover?</td><td>Single asset; group; street; irrigation zone; district; municipality</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Method</a></strong></td><td>What technique produced this value?</td><td>Measured; estimated; inferred; predicted; aggregated; simulated; model-derived; proxy</td></tr>
+<tr><td><strong><a href="0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Temporal Semantics</a></strong></td><td>What time span does this represent?</td><td>Instantaneous; interval; sampling period; aggregation window; historical; forecast; horizon</td></tr>
 </table>
 </div>
 </div>
@@ -166,10 +562,10 @@ see the companion-pairings table below for the fuller picture.</p>
 <div class="table-wrap">
 <table class="datatable">
 <tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Provenance</a></strong></td><td>Which system/actor supplied this?</td><td>Device sensor; control cabinet; weather service; GIS; human operator; Digital Twin; predictive model</td></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Measurement Quality</a></strong></td><td>How reliable/accurate is it?</td><td>Accuracy; precision; confidence; completeness; consistency; availability; resolution; uncertainty</td></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Operational Context</a></strong></td><td>What dynamic condition modulates it now?</td><td>Weather; rainfall; humidity; temperature; wind; traffic; occupancy; season</td></tr>
-<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Physical Context</a></strong></td><td>What static feature of the place affects it?</td><td>Buildings; trees; vegetation; terrain; slopes; orientation; shadows; surface materials</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Provenance</a></strong></td><td>Which system/actor supplied this?</td><td>Device sensor; control cabinet; weather service; GIS; human operator; Digital Twin; predictive model</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Measurement Quality</a></strong></td><td>How reliable/accurate is it?</td><td>Accuracy; precision; confidence; completeness; consistency; availability; resolution; uncertainty</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Operational Context</a></strong></td><td>What dynamic condition modulates it now?</td><td>Weather; rainfall; humidity; temperature; wind; traffic; occupancy; season</td></tr>
+<tr><td><strong><a href="0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Physical Context</a></strong></td><td>What static feature of the place affects it?</td><td>Buildings; trees; vegetation; terrain; slopes; orientation; shadows; surface materials</td></tr>
 </table>
 </div>
 </div>
@@ -179,9 +575,9 @@ see the companion-pairings table below for the fuller picture.</p>
 <div class="table-wrap">
 <table class="datatable">
 <tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
-<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Asset Management Context</a></strong></td><td>Who owns/maintains it, what lifecycle stage?</td><td>Ownership; org; contracts; warranty; lifecycle stage; install date; remaining useful life</td></tr>
-<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Network Operability</a></strong></td><td>Is it reachable right now, how well?</td><td>Availability; connectivity status; latency; packet loss; signal quality; comms technology</td></tr>
-<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Fallback Behaviour</a></strong></td><td>What does it do autonomously if control is lost?</td><td>Local schedules; autonomous control; safe/emergency mode; manual override</td></tr>
+<tr><td><strong><a href="0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Asset Management Context</a></strong></td><td>Who owns/maintains it, what lifecycle stage?</td><td>Ownership; org; contracts; warranty; lifecycle stage; install date; remaining useful life</td></tr>
+<tr><td><strong><a href="0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Network Operability</a></strong></td><td>Is it reachable right now, how well?</td><td>Availability; connectivity status; latency; packet loss; signal quality; comms technology</td></tr>
+<tr><td><strong><a href="0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Fallback Behaviour</a></strong></td><td>What does it do autonomously if control is lost?</td><td>Local schedules; autonomous control; safe/emergency mode; manual override</td></tr>
 </table>
 </div>
 </div>
@@ -251,10 +647,15 @@ see the companion-pairings table below for the fuller picture.</p>
 </div>
 
 <footer class="doc-footer">
-  Full walkthroughs and quizzes: <a href="../lessons/0000-foundations.html">Lesson 0</a> through
-  <a href="../lessons/0005-teach-it-back.html">Lesson 5</a>. Want a plain-text, portable copy of this same
-  procedure — to paste elsewhere or diff over time? See <a href="cheatsheet.md">cheatsheet.md</a>.
+  Full walkthroughs and quizzes: <a href="0000-foundations.html">Lesson 0</a> through
+  <a href="0005-teach-it-back.html">Lesson 5</a>. Want a plain-text, portable copy of this same
+  procedure — to paste elsewhere or diff over time? See <a href="capability-cheat-sheet.html">cheatsheet.md</a>.
 </footer>
+
+<div class="lesson-nav">
+  <span>&larr; <a href="0004-operational-semantics.html">Lesson 4 — Operational Semantics</a></span>
+  <a class="cta-button" href="0000-foundations.html">Lesson 0 — Foundations →</a>
+</div>
 
 
 </main>
