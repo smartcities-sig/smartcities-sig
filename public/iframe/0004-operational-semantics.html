@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 4 — Operational Semantics</title>
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('smartcities-sig-semantic-capabilities-theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page-frame">
+<div class="side-rail left" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="leafPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60,200 C74,164 46,146 60,110 C70,82 50,64 60,26" />
+          <path d="M60,158 C74,153 79,139 74,125 C64,130 57,144 60,158 Z" />
+          <path d="M60,102 C46,97 41,83 46,69 C56,74 63,88 60,102 Z" />
+          <path d="M60,54 C71,50 75,39 70,28 C62,32 57,43 60,54 Z" />
+          <circle cx="60" cy="24" r="3" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#leafPattern)" />
+  </svg>
+</div>
+
+<main>
+
+<header class="brand">
+  <div class="brand-left">
+    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <div>
+      <div class="brand-name">Smart Cities SIG</div>
+      <div class="brand-tagline">Lesson 4 — Operational Semantics</div>
+    </div>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  </button>
+</header>
+<div class="gradient-rule"></div>
+<div class="mission-note">Mission: explain the SIG's semantic capabilities framework clearly enough to onboard a newcomer. See <code>../MISSION.md</code>.</div>
+
+<h1>Operational Semantics <span class="count">3 capabilities</span></h1>
+<p class="subtitle">Lesson 4 of 4 domains — 3 capabilities: how the infrastructure is managed and kept running.</p>
+<p class="domain-answers"><strong>This domain answers:</strong> How is the infrastructure managed and kept running — ownership, connectivity, resilience?</p>
+
+<div class="source-box">
+  <h4>Source for this lesson</h4>
+  <ul>
+    <li><code>semantic-capabilities-reference.md</code>, section "Operational Semantics (3 capabilities)"</li>
+  </ul>
+</div>
+
+<h2>1. The question this domain answers</h2>
+<p>
+  The first three domains are all about a piece of data — what it's about, how it was obtained, how much to
+  trust it. This one is different: it's about the asset's ongoing lifecycle and its ability to keep functioning
+  when things go wrong. Some sub-observations here aren't even a measurement — they're administrative facts,
+  like who owns the thing.
+</p>
+
+<h2>2. The three capabilities</h2>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question it answers</th><th>Reference doc's examples</th></tr>
+<tr>
+  <td><strong>Asset Management Context</strong></td>
+  <td>Who owns and maintains this, and where is it in its lifecycle?</td>
+  <td>Ownership; responsible organization; operational zone; maintenance responsibility; contracts; warranty; lifecycle stage; installation date; remaining useful life</td>
+</tr>
+<tr>
+  <td><strong>Network Operability</strong></td>
+  <td>Is the asset reachable right now, and how good is that connection?</td>
+  <td>Network availability; connectivity status; latency; packet loss; signal quality; communication reliability; communication technology</td>
+</tr>
+<tr>
+  <td><strong>Fallback Behaviour</strong></td>
+  <td>What does the asset do autonomously when supervisory control is lost?</td>
+  <td>Local schedules; autonomous control; safe operating mode; emergency operating mode; manual override; local decision making</td>
+</tr>
+</table>
+</div>
+
+<h2>3. How these three relate</h2>
+<p>
+  Network Operability and Fallback Behaviour are closely linked but answer different questions: Network
+  Operability describes the connection state itself (is it up, how good is it); Fallback Behaviour describes
+  what the asset actually <em>does</em> as a consequence of that state. A degraded connection is Network
+  Operability; the asset switching to a local emergency schedule because of that degraded connection is
+  Fallback Behaviour, with Network Operability as a natural companion explaining why.
+</p>
+<p>
+  Asset Management Context is the odd one out — it's rarely about live telemetry at all. Recognize it by asking:
+  is this sub-observation about a measurement, or about paperwork (ownership, contracts, warranty, lifecycle)?
+  If it's paperwork, it's Asset Management Context, full stop — there's no live-data tie-breaker to weigh here.
+</p>
+
+<h2>4. Fresh example — a valve losing contact</h2>
+<div class="callout">
+  <strong>Observation:</strong> "Valve V12, owned by the Parks Department under a 5-year maintenance contract,
+  had its signal quality degrade over the last 10 minutes, lost connection to the SCADA server, and is now
+  running its local emergency schedule."
+</div>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Sub-observation</th><th>Primary Capability</th><th>Companion Capability</th><th>Why</th></tr>
+<tr><td>Owned by Parks Dept, 5-year maintenance contract</td><td>Asset Management Context</td><td>—</td><td>Pure administrative fact — ownership and contract terms, not a measurement.</td></tr>
+<tr><td>Signal quality degraded, then connection lost</td><td>Network Operability</td><td>—</td><td>Describes the connectivity state itself, over the last 10 minutes.</td></tr>
+<tr><td>Now running local emergency schedule</td><td>Fallback Behaviour</td><td>Network Operability</td><td>This is what the valve is <em>doing</em> as a result — the connectivity loss is why, so it rides along as context.</td></tr>
+</table>
+</div>
+
+<div class="quiz" id="quiz">
+  <div class="quiz-q">1. "Warranty on this pump expires in 8 months" is which capability?</div>
+  <label class="quiz-opt"><input type="radio" name="q1" value="right"> Asset Management Context</label>
+  <label class="quiz-opt"><input type="radio" name="q1" value="wrong"> Network Operability</label>
+  <label class="quiz-opt"><input type="radio" name="q1" value="wrong"> Fallback Behaviour</label>
+  <div class="quiz-feedback" data-for="q1"></div>
+
+  <div class="quiz-q" style="margin-top:1.2em;">2. "Packet loss on the cabinet's cellular link has risen to 12%" is which capability?</div>
+  <label class="quiz-opt"><input type="radio" name="q2" value="wrong"> Fallback Behaviour</label>
+  <label class="quiz-opt"><input type="radio" name="q2" value="right"> Network Operability</label>
+  <label class="quiz-opt"><input type="radio" name="q2" value="wrong"> Asset Management Context</label>
+  <div class="quiz-feedback" data-for="q2"></div>
+
+  <div class="quiz-q" style="margin-top:1.2em;">3. What's the quick test for spotting Asset Management Context?</div>
+  <label class="quiz-opt"><input type="radio" name="q3" value="wrong"> It always mentions a dollar amount</label>
+  <label class="quiz-opt"><input type="radio" name="q3" value="right"> It's about administration (ownership, contracts, lifecycle) rather than any live measurement</label>
+  <label class="quiz-opt"><input type="radio" name="q3" value="wrong"> It's whichever capability has the longest example list</label>
+  <div class="quiz-feedback" data-for="q3"></div>
+
+  <button class="check-btn" onclick="checkQuiz()">Check answers</button>
+</div>
+
+<script>
+function checkQuiz() {
+  ['q1','q2','q3'].forEach(function(name){
+    var checked = document.querySelector('input[name="' + name + '"]:checked');
+    var fb = document.querySelector('.quiz-feedback[data-for="' + name + '"]');
+    if (!checked) {
+      fb.textContent = "Pick an answer first.";
+      fb.className = "quiz-feedback show incorrect";
+      return;
+    }
+    if (checked.value === "right") {
+      fb.textContent = "Correct.";
+      fb.className = "quiz-feedback show correct";
+    } else {
+      fb.textContent = "Not quite — re-read the section above, then try again.";
+      fb.className = "quiz-feedback show incorrect";
+    }
+  });
+}
+</script>
+
+<div class="ask-teacher">
+  All 14 capabilities are now covered. Lesson 5 is a capstone — no new capabilities, just practice explaining
+  full compound observations end to end, the way you'd actually walk a newcomer through one.
+</div>
+
+<div class="lesson-nav">
+  <span>&larr; <a href="0003-interpretation-semantics.html">Lesson 3 — Interpretation Semantics</a></span>
+  <a class="cta-button" href="0005-teach-it-back.html">Lesson 5 — Teach It Back →</a>
+</div>
+
+
+</main>
+<div class="side-rail right" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="circuitPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40,0 L40,55 L85,55 L85,95" />
+          <path d="M85,95 L85,140 L55,140 L55,200" />
+          <path d="M40,55 L15,55 L15,130" />
+          <circle cx="40" cy="55" r="3" />
+          <circle cx="85" cy="55" r="3" />
+          <circle cx="85" cy="95" r="3" />
+          <circle cx="55" cy="140" r="3" />
+          <circle cx="15" cy="130" r="3" />
+          <rect x="95" y="150" width="12" height="35" />
+          <rect x="110" y="128" width="12" height="57" />
+          <rect x="125" y="158" width="12" height="27" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+  </svg>
+</div>
+</div>
+<script>
+  function syncToggleLabel(isLight) {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+  }
+  function toggleTheme() {
+    var isLight = document.documentElement.classList.toggle('light');
+    try {
+      localStorage.setItem('smartcities-sig-semantic-capabilities-theme', isLight ? 'light' : 'dark');
+    } catch (e) {}
+    syncToggleLabel(isLight);
+  }
+  syncToggleLabel(document.documentElement.classList.contains('light'));
+</script>
+</body>
+</html>

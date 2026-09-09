@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 3 — Interpretation Semantics</title>
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('smartcities-sig-semantic-capabilities-theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page-frame">
+<div class="side-rail left" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="leafPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60,200 C74,164 46,146 60,110 C70,82 50,64 60,26" />
+          <path d="M60,158 C74,153 79,139 74,125 C64,130 57,144 60,158 Z" />
+          <path d="M60,102 C46,97 41,83 46,69 C56,74 63,88 60,102 Z" />
+          <path d="M60,54 C71,50 75,39 70,28 C62,32 57,43 60,54 Z" />
+          <circle cx="60" cy="24" r="3" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#leafPattern)" />
+  </svg>
+</div>
+
+<main>
+
+<header class="brand">
+  <div class="brand-left">
+    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <div>
+      <div class="brand-name">Smart Cities SIG</div>
+      <div class="brand-tagline">Lesson 3 — Interpretation Semantics</div>
+    </div>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  </button>
+</header>
+<div class="gradient-rule"></div>
+<div class="mission-note">Mission: explain the SIG's semantic capabilities framework clearly enough to onboard a newcomer. See <code>../MISSION.md</code>.</div>
+
+<h1>Interpretation Semantics <span class="count">4 capabilities</span></h1>
+<p class="subtitle">Lesson 3 of 4 domains — 4 capabilities: how much to trust it, and what conditions shaped it.</p>
+<p class="domain-answers"><strong>This domain answers:</strong> How should this be understood and trusted — source, quality, context?</p>
+
+<div class="source-box">
+  <h4>Source for this lesson</h4>
+  <ul>
+    <li><code>semantic-capabilities-reference.md</code>, section "Interpretation Semantics (4 capabilities)"</li>
+  </ul>
+</div>
+
+<h2>1. The question this domain answers</h2>
+<p>
+  A value can be exactly where you expect (Lesson 2) and still mislead you if you don't know who supplied it,
+  how reliable it is, or what conditions — moving or fixed — were shaping it at the time. This domain carries
+  two of the framework's sharper tie-breakers: source vs. location, and dynamic vs. static context.
+</p>
+
+<h2>2. The four capabilities</h2>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question it answers</th><th>Reference doc's examples</th></tr>
+<tr>
+  <td><strong>Provenance</strong></td>
+  <td>Which system or actor reported or supplied this information?</td>
+  <td>Device sensor; control cabinet; weather service; GIS platform; installation records; human operator; Digital Twin; predictive model</td>
+</tr>
+<tr>
+  <td><strong>Measurement Quality</strong></td>
+  <td>How reliable or accurate is this value?</td>
+  <td>Accuracy; precision; confidence; completeness; consistency; availability; resolution; uncertainty</td>
+</tr>
+<tr>
+  <td><strong>Operational Context</strong></td>
+  <td>What dynamic, situational condition is modulating behavior right now?</td>
+  <td>Weather; rainfall; humidity; temperature; wind; traffic; occupancy; seasonal conditions</td>
+</tr>
+<tr>
+  <td><strong>Physical Context</strong></td>
+  <td>What static, structural feature of the place affects service outcomes?</td>
+  <td>Buildings; trees; vegetation; terrain; slopes; orientation; shadows; surface materials</td>
+</tr>
+</table>
+</div>
+
+<h2>3. Tie-breaker one: Observation Point vs Provenance</h2>
+<p>
+  Both can point at "the same device." The difference is what question you're actually asking:
+</p>
+<ul>
+  <li><strong>Observation Point</strong> = a position. Where does the thing being observed sit?</li>
+  <li><strong>Provenance</strong> = a source identity. Who or what supplied this information?</li>
+</ul>
+<p>
+  Reference doc's rule: default to Observation Point when a device name could answer either question, <em>unless</em>
+  the sub-observation specifically contrasts sources — device-reported vs. manually entered vs. externally
+  supplied. That contrast is the signal that flips Provenance to Primary.
+</p>
+
+<h2>4. Tie-breaker two: Operational Context vs Physical Context</h2>
+<p>
+  Both describe "the environment," but on different timescales:
+</p>
+<ul>
+  <li><strong>Operational Context</strong> — dynamic, changes moment to moment (weather, traffic, occupancy)</li>
+  <li><strong>Physical Context</strong> — static, a fixed property of the location (a building, a tree, terrain)</li>
+</ul>
+<p>
+  A tree casting a shadow is Physical Context — the tree doesn't move. Today's rainfall reducing sensor
+  accuracy is Operational Context — tomorrow it could be dry. The test is simple: would this still be true a
+  year from now regardless of the weather? If yes, Physical Context. If it depends on today's conditions,
+  Operational Context.
+</p>
+
+<h2>5. Fresh example — a flagged pump reading</h2>
+<div class="callout">
+  <strong>Observation:</strong> "A technician manually logged that Pump P3's flow sensor is reading low
+  confidence today because of heavy rain, and separately noted that a retaining wall built last year now
+  permanently blocks direct sun on the site's solar panel."
+</div>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Sub-observation</th><th>Primary Capability</th><th>Why</th></tr>
+<tr><td>Logged by a technician, not the sensor itself</td><td>Provenance</td><td>This sub-observation specifically contrasts <em>who supplied it</em> — a human operator, not the automated sensor pipeline. That contrast is what flips Provenance to Primary over Observation Point.</td></tr>
+<tr><td>Flow sensor reading is low confidence</td><td>Measurement Quality</td><td>Directly about how reliable the value is.</td></tr>
+<tr><td>Low confidence caused by heavy rain today</td><td>Operational Context</td><td>Rain is a moving, situational condition — it modulates trust today, not permanently.</td></tr>
+<tr><td>Retaining wall blocks sun on the solar panel</td><td>Physical Context</td><td>The wall isn't going anywhere. It's a fixed structural fact about the site, true regardless of today's weather.</td></tr>
+</table>
+</div>
+
+<div class="quiz" id="quiz">
+  <div class="quiz-q">1. "Wind speed: 24 km/h, reducing turbine output" is which capability?</div>
+  <label class="quiz-opt"><input type="radio" name="q1" value="right"> Operational Context</label>
+  <label class="quiz-opt"><input type="radio" name="q1" value="wrong"> Physical Context</label>
+  <label class="quiz-opt"><input type="radio" name="q1" value="wrong"> Provenance</label>
+  <div class="quiz-feedback" data-for="q1"></div>
+
+  <div class="quiz-q" style="margin-top:1.2em;">2. "This water pressure reading came from the GIS platform's asset record, not a live sensor" is which capability?</div>
+  <label class="quiz-opt"><input type="radio" name="q2" value="wrong"> Observation Point</label>
+  <label class="quiz-opt"><input type="radio" name="q2" value="right"> Provenance</label>
+  <label class="quiz-opt"><input type="radio" name="q2" value="wrong"> Measurement Quality</label>
+  <div class="quiz-feedback" data-for="q2"></div>
+
+  <div class="quiz-q" style="margin-top:1.2em;">3. What's the test for Operational vs Physical Context?</div>
+  <label class="quiz-opt"><input type="radio" name="q3" value="wrong"> Whichever one is measured more precisely</label>
+  <label class="quiz-opt"><input type="radio" name="q3" value="right"> Would it still be true a year from now regardless of today's conditions? If yes, Physical; if it depends on today, Operational.</label>
+  <label class="quiz-opt"><input type="radio" name="q3" value="wrong"> Physical Context only applies indoors</label>
+  <div class="quiz-feedback" data-for="q3"></div>
+
+  <button class="check-btn" onclick="checkQuiz()">Check answers</button>
+</div>
+
+<script>
+function checkQuiz() {
+  ['q1','q2','q3'].forEach(function(name){
+    var checked = document.querySelector('input[name="' + name + '"]:checked');
+    var fb = document.querySelector('.quiz-feedback[data-for="' + name + '"]');
+    if (!checked) {
+      fb.textContent = "Pick an answer first.";
+      fb.className = "quiz-feedback show incorrect";
+      return;
+    }
+    if (checked.value === "right") {
+      fb.textContent = "Correct.";
+      fb.className = "quiz-feedback show correct";
+    } else {
+      fb.textContent = "Not quite — re-read the section above, then try again.";
+      fb.className = "quiz-feedback show incorrect";
+    }
+  });
+}
+</script>
+
+<div class="ask-teacher">
+  These two tie-breakers (Observation Point/Provenance, Operational/Physical Context) are the ones a newcomer
+  will ask about most. Ask your teacher to quiz you with three more contrasting pairs until you can answer
+  without hesitating.
+</div>
+
+<div class="lesson-nav">
+  <span>&larr; <a href="0002-observation-semantics.html">Lesson 2 — Observation Semantics</a></span>
+  <a class="cta-button" href="0004-operational-semantics.html">Lesson 4 — Operational Semantics →</a>
+</div>
+
+
+</main>
+<div class="side-rail right" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="circuitPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40,0 L40,55 L85,55 L85,95" />
+          <path d="M85,95 L85,140 L55,140 L55,200" />
+          <path d="M40,55 L15,55 L15,130" />
+          <circle cx="40" cy="55" r="3" />
+          <circle cx="85" cy="55" r="3" />
+          <circle cx="85" cy="95" r="3" />
+          <circle cx="55" cy="140" r="3" />
+          <circle cx="15" cy="130" r="3" />
+          <rect x="95" y="150" width="12" height="35" />
+          <rect x="110" y="128" width="12" height="57" />
+          <rect x="125" y="158" width="12" height="27" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+  </svg>
+</div>
+</div>
+<script>
+  function syncToggleLabel(isLight) {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+  }
+  function toggleTheme() {
+    var isLight = document.documentElement.classList.toggle('light');
+    try {
+      localStorage.setItem('smartcities-sig-semantic-capabilities-theme', isLight ? 'light' : 'dark');
+    } catch (e) {}
+    syncToggleLabel(isLight);
+  }
+  syncToggleLabel(document.documentElement.classList.contains('light'));
+</script>
+</body>
+</html>

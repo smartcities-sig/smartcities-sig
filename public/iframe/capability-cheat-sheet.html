@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Semantic Capabilities Cheat Sheet</title>
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('smartcities-sig-semantic-capabilities-theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.page-frame { grid-template-columns: 150px minmax(0, 62em) 150px; max-width: 1400px; }
+@media (max-width: 1260px) { .page-frame { grid-template-columns: minmax(0, 62em); max-width: 62em; } }
+.domain-block { margin-bottom: 2em; }
+.domain-block h2 { margin-top: 1.6em; }
+table.datatable td, table.datatable th { font-size: 0.82em; }
+.tie-breakers .callout { margin: 0.8em 0; }
+.tie-breakers .callout > strong:first-child { display: block; margin-bottom: 0.5em; }
+.tie-breakers .callout p { margin: 0.25em 0; }
+.tie-breakers .callout p.tb-q { color: var(--muted); }
+.tie-breakers .callout ul { margin: 0.3em 0 0; padding-left: 1.3em; }
+.tie-breakers .callout li { margin: 0.3em 0; }
+@media print {
+  .theme-toggle, .lesson-nav, .side-rail { display: none; }
+  .page-frame { grid-template-columns: minmax(0, 62em); }
+  body { font-size: 14px; }
+}
+</style>
+</head>
+<body>
+<div class="page-frame">
+<div class="side-rail left" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="leafPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60,200 C74,164 46,146 60,110 C70,82 50,64 60,26" />
+          <path d="M60,158 C74,153 79,139 74,125 C64,130 57,144 60,158 Z" />
+          <path d="M60,102 C46,97 41,83 46,69 C56,74 63,88 60,102 Z" />
+          <path d="M60,54 C71,50 75,39 70,28 C62,32 57,43 60,54 Z" />
+          <circle cx="60" cy="24" r="3" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#leafPattern)" />
+  </svg>
+</div>
+
+<main>
+
+<header class="brand">
+  <div class="brand-left">
+    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <div>
+      <div class="brand-name">Smart Cities SIG</div>
+      <div class="brand-tagline">Capability Cheat Sheet</div>
+    </div>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  </button>
+</header>
+<div class="gradient-rule"></div>
+<div class="mission-note">Quick reference for the SIG's semantic capabilities framework. Full explanations and worked examples: <code>../lessons/</code>. Source: <code>semantic-capabilities-reference.md</code>.</div>
+
+<h1>Semantic Capabilities Cheat Sheet</h1>
+<p class="subtitle">14 capabilities in 4 domains, plus a step-by-step classification procedure and the tie-breaker rules.</p>
+
+<h2>Classification procedure</h2>
+
+<div class="callout">
+  <strong>Step 1 — Split the observation</strong>
+  <p>A raw observation is often a compound statement. Before classifying anything, split it so each piece has
+  exactly one thing it's fundamentally about. Don't force multiple facts under one label just because they
+  came from the same sentence.</p>
+</div>
+
+<div class="callout">
+  <strong>Step 2 — Classify each sub-observation</strong>
+  <p>Run it through this checklist in order and stop at the first match — the order exists specifically to
+  resolve the tie-breakers below, so don't skip ahead.</p>
+</div>
+
+<p>Work down this table from top to bottom and stop at the first row whose question matches — don't skip ahead,
+and don't keep looking once you have a match. The order isn't arbitrary: it's sequenced specifically so the
+framework's documented tie-breakers resolve themselves without backtracking, for example:</p>
+<ul>
+  <li>Row 4 (Provenance) checks for a contrasted information source before row 5 (Observation Point) defaults
+  to Observation Point.</li>
+  <li>Row 9 (Infrastructure Output) checks whether the statement survives a service failure before row 10
+  (Service Outcome) defaults to Service Outcome.</li>
+</ul>
+<p>The <strong>Companion</strong> column flags a capability worth attaching alongside the Primary at that step —
+see the companion-pairings table below for the fuller picture.</p>
+
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question</th><th>Companion</th></tr>
+<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Asset Management Context</a></strong></td><td>Pure administration — ownership, contract, warranty, lifecycle, not a measurement at all?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Network Operability</a></strong></td><td>About the current communication/connectivity state itself — reachable right now, latency, signal quality?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Fallback Behaviour</a></strong></td><td>About what the asset does autonomously because supervisory control or comms was lost?</td><td>Network Operability, if the cause is stated</td></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Provenance</a></strong></td><td>Specifically contrasts who/what supplied the information — device-reported vs. manually entered vs. externally supplied?</td><td>Observation Point, if a location is also stated</td></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Point</a></strong></td><td>About where the referent physically or logically sits — a position, not an actor?</td><td>Provenance, if the source is worth noting</td></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Measurement Quality</a></strong></td><td>About how reliable, accurate, or complete the value is?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Operational Context</a></strong></td><td>About a dynamic, situational condition that changes moment to moment?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Physical Context</a></strong></td><td>About a static, structural, fixed feature of the place?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Infrastructure Output</a></strong></td><td>Would the statement still be true even if the intended service completely failed?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Service Outcome</a></strong></td><td>Otherwise: is this the real-world effect itself, the "so what"?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Resource Consumption</a></strong></td><td>About cost or resources spent — energy, water, fuel, battery?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Scope</a></strong></td><td>About what portion or coverage of the system the value represents, including one number combining multiple assets or locations?</td><td>Observation Method, if the aggregation technique matters</td></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Temporal Semantics</a></strong></td><td>About what time span the value covers, including one number combining multiple readings over time (e.g. a rolling average)?</td><td>—</td></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Method</a></strong></td><td>Otherwise: about the technique that produced the value (measured / estimated / predicted / simulated / proxy)?</td><td>—</td></tr>
+</table>
+</div>
+
+<h3>Common companion pairings</h3>
+<p>Primary is always exactly one capability. These pairings come up often enough to check for by habit:</p>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Primary</th><th>Common companion</th><th>Why</th></tr>
+<tr><td><strong>Fallback Behaviour</strong></td><td>Network Operability</td><td>The connectivity loss is usually why the fallback triggered.</td></tr>
+<tr><td><strong>Provenance</strong></td><td>Observation Point</td><td>A device name can answer both "who" and "where" at once.</td></tr>
+<tr><td><strong>Observation Point</strong></td><td>Provenance</td><td>Same pairing, reversed — when position is the main point but the source is still worth noting.</td></tr>
+<tr><td><strong>Observation Scope</strong></td><td>Observation Method</td><td>Recording how a multi-asset aggregate was computed, not just that it covers many assets.</td></tr>
+<tr><td><strong>Provenance</strong></td><td>Observation Method</td><td>A model-derived or predicted value usually needs both — who/what produced it, and how.</td></tr>
+<tr><td><strong>Service Outcome / Resource Consumption</strong></td><td>Temporal Semantics</td><td>A cost or outcome figure often carries an implicit window ("today," "this cycle").</td></tr>
+</table>
+</div>
+
+<div class="domain-block">
+<h2>Domain Semantics — what the municipality ultimately cares about</h2>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
+<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Service Outcome</a></strong></td><td>Did the real-world effect happen?</td><td>Street illuminance at road level; soil moisture at root level; delivered water pressure</td></tr>
+<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Infrastructure Output</a></strong></td><td>What did the asset itself produce?</td><td>Lumens emitted; pump flow rate; valve opening %; motor speed</td></tr>
+<tr><td><strong><a href="../lessons/0001-domain-semantics.html" title="Lesson 1 — Domain Semantics" target="_blank" rel="noopener noreferrer">Resource Consumption</a></strong></td><td>What did it cost to produce that?</td><td>Energy; water; fuel; battery; active/reactive power; voltage; frequency</td></tr>
+</table>
+</div>
+</div>
+
+<div class="domain-block">
+<h2>Observation Semantics — how it was observed</h2>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Point</a></strong></td><td>Where does the referent physically/logically sit?</td><td>Luminaire; cabinet; pump; valve; pipeline; root zone; weather station</td></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Scope</a></strong></td><td>What portion of the system does this cover?</td><td>Single asset; group; street; irrigation zone; district; municipality</td></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Observation Method</a></strong></td><td>What technique produced this value?</td><td>Measured; estimated; inferred; predicted; aggregated; simulated; model-derived; proxy</td></tr>
+<tr><td><strong><a href="../lessons/0002-observation-semantics.html" title="Lesson 2 — Observation Semantics" target="_blank" rel="noopener noreferrer">Temporal Semantics</a></strong></td><td>What time span does this represent?</td><td>Instantaneous; interval; sampling period; aggregation window; historical; forecast; horizon</td></tr>
+</table>
+</div>
+</div>
+
+<div class="domain-block">
+<h2>Interpretation Semantics — how to understand and trust it</h2>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Provenance</a></strong></td><td>Which system/actor supplied this?</td><td>Device sensor; control cabinet; weather service; GIS; human operator; Digital Twin; predictive model</td></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Measurement Quality</a></strong></td><td>How reliable/accurate is it?</td><td>Accuracy; precision; confidence; completeness; consistency; availability; resolution; uncertainty</td></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Operational Context</a></strong></td><td>What dynamic condition modulates it now?</td><td>Weather; rainfall; humidity; temperature; wind; traffic; occupancy; season</td></tr>
+<tr><td><strong><a href="../lessons/0003-interpretation-semantics.html" title="Lesson 3 — Interpretation Semantics" target="_blank" rel="noopener noreferrer">Physical Context</a></strong></td><td>What static feature of the place affects it?</td><td>Buildings; trees; vegetation; terrain; slopes; orientation; shadows; surface materials</td></tr>
+</table>
+</div>
+</div>
+
+<div class="domain-block">
+<h2>Operational Semantics — how it's managed and kept running</h2>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question</th><th>Examples</th></tr>
+<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Asset Management Context</a></strong></td><td>Who owns/maintains it, what lifecycle stage?</td><td>Ownership; org; contracts; warranty; lifecycle stage; install date; remaining useful life</td></tr>
+<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Network Operability</a></strong></td><td>Is it reachable right now, how well?</td><td>Availability; connectivity status; latency; packet loss; signal quality; comms technology</td></tr>
+<tr><td><strong><a href="../lessons/0004-operational-semantics.html" title="Lesson 4 — Operational Semantics" target="_blank" rel="noopener noreferrer">Fallback Behaviour</a></strong></td><td>What does it do autonomously if control is lost?</td><td>Local schedules; autonomous control; safe/emergency mode; manual override</td></tr>
+</table>
+</div>
+</div>
+
+<div class="tie-breakers">
+<h2>Tie-breakers — the calls that feel like they could go two ways</h2>
+
+<div class="callout">
+  <strong>Service Outcome vs Infrastructure Output</strong>
+  <p class="tb-q">Would the sub-observation still be true even if the service completely failed?</p>
+  <ul>
+    <li><strong>Yes</strong> → Infrastructure Output</li>
+    <li><strong>No</strong>, it's the effect itself → Service Outcome</li>
+  </ul>
+</div>
+
+<div class="callout">
+  <strong>Observation Scope vs Temporal Semantics (aggregation)</strong>
+  <p class="tb-q">What got combined?</p>
+  <ul>
+    <li>Multiple <em>places</em> → Observation Scope (Observation Method as companion)</li>
+    <li>Multiple <em>readings over time</em> → Temporal Semantics</li>
+  </ul>
+</div>
+
+<div class="callout">
+  <strong>Observation Point vs Provenance</strong>
+  <ul>
+    <li><strong>Default</strong> → Observation Point (a position), when a device name could answer either</li>
+    <li><strong>Flip to Provenance</strong> only when the sub-observation specifically contrasts <em>sources</em>
+    — device-reported vs. manually entered vs. externally supplied</li>
+  </ul>
+</div>
+
+<div class="callout">
+  <strong>Operational Context vs Physical Context</strong>
+  <p class="tb-q">Would this still be true a year from now regardless of today's conditions?</p>
+  <ul>
+    <li><strong>Yes</strong>, fixed → Physical Context</li>
+    <li><strong>Depends on today</strong> → Operational Context</li>
+  </ul>
+</div>
+
+<div class="callout">
+  <strong>Network Operability vs Fallback Behaviour</strong>
+  <ul>
+    <li><strong>Network Operability</strong> is the connection state itself</li>
+    <li><strong>Fallback Behaviour</strong> is what the asset autonomously <em>does</em> because of that state
+    (usually carries Network Operability as a companion explaining why)</li>
+  </ul>
+</div>
+</div>
+
+<h2>Worked example</h2>
+<div class="callout">
+  "Valve V12, owned by the Parks Department under a 5-year maintenance contract, had its signal quality
+  degrade over the last 10 minutes, lost connection to the SCADA server, and is now running its local
+  emergency schedule."
+</div>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Sub-observation</th><th>Step matched</th><th>Primary</th><th>Companion</th></tr>
+<tr><td>Owned by Parks Dept, 5-year contract</td><td>1</td><td><strong>Asset Management Context</strong></td><td>—</td></tr>
+<tr><td>Signal quality degraded, connection lost</td><td>2</td><td><strong>Network Operability</strong></td><td>—</td></tr>
+<tr><td>Now running local emergency schedule</td><td>3</td><td><strong>Fallback Behaviour</strong></td><td>Network Operability</td></tr>
+</table>
+</div>
+
+<footer class="doc-footer">
+  Full walkthroughs and quizzes: <a href="../lessons/0000-foundations.html">Lesson 0</a> through
+  <a href="../lessons/0005-teach-it-back.html">Lesson 5</a>. Want a plain-text, portable copy of this same
+  procedure — to paste elsewhere or diff over time? See <a href="cheatsheet.md">cheatsheet.md</a>.
+</footer>
+
+
+</main>
+<div class="side-rail right" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="circuitPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40,0 L40,55 L85,55 L85,95" />
+          <path d="M85,95 L85,140 L55,140 L55,200" />
+          <path d="M40,55 L15,55 L15,130" />
+          <circle cx="40" cy="55" r="3" />
+          <circle cx="85" cy="55" r="3" />
+          <circle cx="85" cy="95" r="3" />
+          <circle cx="55" cy="140" r="3" />
+          <circle cx="15" cy="130" r="3" />
+          <rect x="95" y="150" width="12" height="35" />
+          <rect x="110" y="128" width="12" height="57" />
+          <rect x="125" y="158" width="12" height="27" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+  </svg>
+</div>
+</div>
+<script>
+  function syncToggleLabel(isLight) {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+  }
+  function toggleTheme() {
+    var isLight = document.documentElement.classList.toggle('light');
+    try {
+      localStorage.setItem('smartcities-sig-semantic-capabilities-theme', isLight ? 'light' : 'dark');
+    } catch (e) {}
+    syncToggleLabel(isLight);
+  }
+  syncToggleLabel(document.documentElement.classList.contains('light'));
+</script>
+</body>
+</html>

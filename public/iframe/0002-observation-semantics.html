@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 2 — Observation Semantics</title>
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('smartcities-sig-semantic-capabilities-theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page-frame">
+<div class="side-rail left" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="leafPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60,200 C74,164 46,146 60,110 C70,82 50,64 60,26" />
+          <path d="M60,158 C74,153 79,139 74,125 C64,130 57,144 60,158 Z" />
+          <path d="M60,102 C46,97 41,83 46,69 C56,74 63,88 60,102 Z" />
+          <path d="M60,54 C71,50 75,39 70,28 C62,32 57,43 60,54 Z" />
+          <circle cx="60" cy="24" r="3" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#leafPattern)" />
+  </svg>
+</div>
+
+<main>
+
+<header class="brand">
+  <div class="brand-left">
+    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <div>
+      <div class="brand-name">Smart Cities SIG</div>
+      <div class="brand-tagline">Lesson 2 — Observation Semantics</div>
+    </div>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  </button>
+</header>
+<div class="gradient-rule"></div>
+<div class="mission-note">Mission: explain the SIG's semantic capabilities framework clearly enough to onboard a newcomer. See <code>../MISSION.md</code>.</div>
+
+<h1>Observation Semantics <span class="count">4 capabilities</span></h1>
+<p class="subtitle">Lesson 2 of 4 domains — 4 capabilities: how the information was observed.</p>
+<p class="domain-answers"><strong>This domain answers:</strong> How was this information observed — where, what scope, what method, what time span?</p>
+
+<div class="source-box">
+  <h4>Source for this lesson</h4>
+  <ul>
+    <li><code>semantic-capabilities-reference.md</code>, section "Observation Semantics (4 capabilities)"</li>
+  </ul>
+</div>
+
+<h2>1. The question this domain answers</h2>
+<p>
+  Once you know <em>what</em> a value is about (Lesson 1), this domain asks how it was actually obtained:
+  where does it come from, how much of the system does it cover, what technique produced it, and over what
+  span of time. Two readings of "soil moisture: 22%" can mean very different things depending on the answers
+  to those four questions — one sensor vs. a district-wide average, sensed vs. modeled, right now vs. a
+  rolling weekly average. This is the domain with the most internal tie-breakers, because these four
+  capabilities interact with each other constantly.
+</p>
+
+<h2>2. The four capabilities</h2>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Capability</th><th>Question it answers</th><th>Reference doc's examples</th></tr>
+<tr>
+  <td><strong>Observation Point</strong></td>
+  <td>Where does the observation's referent physically or logically sit?</td>
+  <td>Luminaire; cabinet; line head; street surface; pump; valve; pipeline; root zone; weather station</td>
+</tr>
+<tr>
+  <td><strong>Observation Scope</strong></td>
+  <td>What portion of the system does this one value cover — one asset, or many combined?</td>
+  <td>Single asset; group of assets; cabinet; street; irrigation zone; district; entire municipality</td>
+</tr>
+<tr>
+  <td><strong>Observation Method</strong></td>
+  <td>What technique produced this value — sensed, or computed/derived?</td>
+  <td>Measured; estimated; inferred; predicted; aggregated; simulated; model-derived; proxy measurement</td>
+</tr>
+<tr>
+  <td><strong>Temporal Semantics</strong></td>
+  <td>What time span does this value represent?</td>
+  <td>Instantaneous; observation interval; sampling period; aggregation window; historical; forecast; prediction horizon</td>
+</tr>
+</table>
+</div>
+
+<h2>3. The tie-breaker: two ways to "aggregate"</h2>
+<p>
+  "Aggregated" is the single most overloaded word in this domain, because you can aggregate across
+  <em>space</em> or across <em>time</em>, and they land on different capabilities:
+</p>
+<ul>
+  <li><strong>Aggregating across assets/locations</strong> (e.g. one number combining 40 luminaires into a
+  district average) is primarily an <strong>Observation Scope</strong> question — what portion of the system
+  does the number cover — with Observation Method as a companion, since the aggregation technique itself is
+  still worth recording.</li>
+  <li><strong>Aggregating across time</strong> (e.g. a rolling 24-hour average from one sensor) is a
+  <strong>Temporal Semantics</strong> question, even though it was also computed rather than directly sensed.</li>
+</ul>
+<p>
+  Rule of thumb: ask what got combined. Multiple <em>places</em> → Observation Scope. Multiple <em>readings
+  over time</em> → Temporal Semantics. Observation Method is never Primary for a pure aggregation-over-time
+  question — it only rides along as a companion when the computation itself matters.
+</p>
+
+<h2>4. Fresh example — a district lighting average</h2>
+<div class="callout">
+  <strong>Observation:</strong> "District 5's average street-lit lux over the last hour was 18, computed by
+  aggregating readings from its 40 luminaires."
+</div>
+<div class="table-wrap">
+<table class="datatable">
+<tr><th>Sub-observation</th><th>Primary Capability</th><th>Companion Capability</th><th>Why</th></tr>
+<tr><td>Covers all 40 luminaires in District 5</td><td>Observation Scope</td><td>Observation Method (aggregation technique)</td><td>The number is a space-combination across assets — the defining fact is how much of the system it covers.</td></tr>
+<tr><td>Over the last hour</td><td>Temporal Semantics</td><td>—</td><td>A separate question: what time window does the value represent, independent of how many assets fed into it.</td></tr>
+</table>
+</div>
+<p>
+  Notice this one observation splits into sub-observations along <em>two different axes at once</em> (space
+  and time) rather than one obvious split. That's normal for this domain — always check both axes before
+  deciding you're done.
+</p>
+
+<h2>5. Observation Point — a preview of Lesson 3's tie-breaker</h2>
+<p>
+  The reference doc's guidance for Observation Point: "when the same device name could also answer 'who
+  reported it,' default here as primary with Provenance as a companion, unless the sub-observation specifically
+  contrasts sources." In other words, a device name usually tells you <em>where</em> something is (Observation
+  Point) more than it tells you <em>who</em> supplied it (Provenance) — Lesson 3 covers exactly when that
+  flips.
+</p>
+
+<div class="quiz" id="quiz">
+  <div class="quiz-q">1. A rolling 7-day average soil moisture reading from one sensor is primarily which capability?</div>
+  <label class="quiz-opt"><input type="radio" name="q1" value="wrong"> Observation Scope</label>
+  <label class="quiz-opt"><input type="radio" name="q1" value="right"> Temporal Semantics</label>
+  <label class="quiz-opt"><input type="radio" name="q1" value="wrong"> Observation Method</label>
+  <div class="quiz-feedback" data-for="q1"></div>
+
+  <div class="quiz-q" style="margin-top:1.2em;">2. A single number combining readings from every pump in a pressure zone is primarily which capability?</div>
+  <label class="quiz-opt"><input type="radio" name="q2" value="right"> Observation Scope</label>
+  <label class="quiz-opt"><input type="radio" name="q2" value="wrong"> Temporal Semantics</label>
+  <label class="quiz-opt"><input type="radio" name="q2" value="wrong"> Observation Point</label>
+  <div class="quiz-feedback" data-for="q2"></div>
+
+  <div class="quiz-q" style="margin-top:1.2em;">3. What question decides Observation Scope vs Temporal Semantics for an aggregated value?</div>
+  <label class="quiz-opt"><input type="radio" name="q3" value="wrong"> Which one was computed rather than sensed</label>
+  <label class="quiz-opt"><input type="radio" name="q3" value="right"> What got combined — multiple places, or multiple readings over time</label>
+  <label class="quiz-opt"><input type="radio" name="q3" value="wrong"> Which capability appears first in the reference doc</label>
+  <div class="quiz-feedback" data-for="q3"></div>
+
+  <button class="check-btn" onclick="checkQuiz()">Check answers</button>
+</div>
+
+<script>
+function checkQuiz() {
+  ['q1','q2','q3'].forEach(function(name){
+    var checked = document.querySelector('input[name="' + name + '"]:checked');
+    var fb = document.querySelector('.quiz-feedback[data-for="' + name + '"]');
+    if (!checked) {
+      fb.textContent = "Pick an answer first.";
+      fb.className = "quiz-feedback show incorrect";
+      return;
+    }
+    if (checked.value === "right") {
+      fb.textContent = "Correct.";
+      fb.className = "quiz-feedback show correct";
+    } else {
+      fb.textContent = "Not quite — re-read the section above, then try again.";
+      fb.className = "quiz-feedback show incorrect";
+    }
+  });
+}
+</script>
+
+<div class="ask-teacher">
+  The space-vs-time aggregation split trips people up the most in this domain. If question 1 or 2 above didn't
+  feel obvious immediately, ask your teacher for two more contrasting examples before moving on.
+</div>
+
+<div class="lesson-nav">
+  <span>&larr; <a href="0001-domain-semantics.html">Lesson 1 — Domain Semantics</a></span>
+  <a class="cta-button" href="0003-interpretation-semantics.html">Lesson 3 — Interpretation Semantics →</a>
+</div>
+
+
+</main>
+<div class="side-rail right" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="circuitPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40,0 L40,55 L85,55 L85,95" />
+          <path d="M85,95 L85,140 L55,140 L55,200" />
+          <path d="M40,55 L15,55 L15,130" />
+          <circle cx="40" cy="55" r="3" />
+          <circle cx="85" cy="55" r="3" />
+          <circle cx="85" cy="95" r="3" />
+          <circle cx="55" cy="140" r="3" />
+          <circle cx="15" cy="130" r="3" />
+          <rect x="95" y="150" width="12" height="35" />
+          <rect x="110" y="128" width="12" height="57" />
+          <rect x="125" y="158" width="12" height="27" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+  </svg>
+</div>
+</div>
+<script>
+  function syncToggleLabel(isLight) {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+  }
+  function toggleTheme() {
+    var isLight = document.documentElement.classList.toggle('light');
+    try {
+      localStorage.setItem('smartcities-sig-semantic-capabilities-theme', isLight ? 'light' : 'dark');
+    } catch (e) {}
+    syncToggleLabel(isLight);
+  }
+  syncToggleLabel(document.documentElement.classList.contains('light'));
+</script>
+</body>
+</html>
