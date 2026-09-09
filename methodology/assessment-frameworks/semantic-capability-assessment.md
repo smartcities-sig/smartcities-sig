@@ -195,7 +195,7 @@ Each semantic capability follows the same structure to facilitate consistent eva
 
 ---
 
-# Domain Semantics
+# 1. Domain Semantics
 
 Domain semantics describe **what municipalities ultimately care about**.
 
@@ -203,7 +203,7 @@ They distinguish the operational service being delivered from the behaviour of t
 
 ---
 
-## 1. Service Outcome
+## 1.1 Service Outcome
 
 
 Governed by: Foundational IoT viewpoint (6.2), Business viewpoint (6.3), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
@@ -275,7 +275,7 @@ The distinction between infrastructure behaviour and service outcome is therefor
 
 ---
 
-## 2. Infrastructure Output
+## 1.2. Infrastructure Output
 
 Governed by: Foundational IoT viewpoint (6.2), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
 
@@ -342,7 +342,7 @@ Maintaining this distinction enables Digital Twins to diagnose operational issue
 
 ---
 
-## 3. Resource Consumption
+## 1.3. Resource Consumption
 
 Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
 
@@ -413,7 +413,7 @@ A municipality needs to understand not only whether the service outcome was achi
 
 ---
 
-# Observation Semantics
+# 2. Observation Semantics
 
 Observation semantics describe **how observations are obtained, interpreted, and compared**.
 
@@ -430,7 +430,7 @@ Without these semantic capabilities, observations that appear identical may repr
 
 ---
 
-## 4. Observation Point
+## 2.1. Observation Point
 
 Governed by: Foundational IoT viewpoint (6.2), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
 
@@ -503,7 +503,7 @@ A Digital Twin must understand where an observation was collected before compari
 
 ---
 
-## 5. Observation Scope
+## 2.2. Observation Scope
 
 
 Governed by: Foundational IoT viewpoint (6.2), Business viewpoint (6.3), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
@@ -573,7 +573,7 @@ Digital Twins require explicit scope information to perform meaningful analytics
 
 ---
 
-## 6. Observation Method
+## 2.3. Observation Method
 
 Governed by: Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
 
@@ -641,7 +641,7 @@ Different observation methods imply different levels of confidence and different
 
 ---
 
-## 7. Temporal Semantics
+## 2.4. Temporal Semantics
 
 Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
 
@@ -708,7 +708,7 @@ Observations representing different temporal characteristics should not be compa
 
 ---
 
-# Interpretation Semantics
+# 3. Interpretation Semantics
 
 Interpretation semantics describe the additional information required to correctly understand, compare, and trust observations.
 
@@ -725,7 +725,7 @@ These semantic capabilities enable Digital Twins to interpret observations consi
 
 ---
 
-## 8. Provenance
+## 3.1. Provenance
 
 Governed by: Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
 
@@ -795,7 +795,7 @@ Observations with different provenance may have different levels of trust, autho
 
 ---
 
-## 9. Measurement Quality
+## 3.2. Measurement Quality
 
 Governed by: Trustworthiness viewpoint (6.6), Functional viewpoint (6.5).
 
@@ -861,7 +861,7 @@ Digital Twins require information about observation quality to support reliable 
 
 ---
 
-## 10. Operational Context
+## 3.3. Operational Context
 
 Governed by: Business viewpoint (6.3), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
 
@@ -930,7 +930,7 @@ Operational context enables Digital Twins to correctly interpret those differenc
 
 ---
 
-## 11. Physical Context
+## 3.4. Physical Context
 
 Governed by: Foundational IoT viewpoint (6.2), Usage viewpoint (6.4), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
 
@@ -999,7 +999,7 @@ Without physical context, observations may be interpreted incorrectly.
 
 ---
 
-# Operational Semantics
+# 4. Operational Semantics
 
 Operational semantics describe the operational information required to safely, reliably, and efficiently manage municipal infrastructure throughout its lifecycle.
 
@@ -1009,7 +1009,7 @@ These semantic capabilities enable Digital Twins to support operational planning
 
 ---
 
-## 12. Asset Management Context
+## 4.1. Asset Management Context
 
 Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
 
@@ -1087,7 +1087,7 @@ Digital Twins require operational management information to support maintenance 
 
 ---
 
-## 13. Network Operability
+## 4.2. Network Operability
 
 Governed by: Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
 
@@ -1154,7 +1154,7 @@ Digital Twins require awareness of communication conditions to correctly interpr
 
 ---
 
-## 14. Fallback Behaviour
+## 4.3. Fallback Behaviour
 
 Governed by: Business viewpoint (6.3), Functional viewpoint (6.5), Trustworthiness viewpoint (6.6), Construction viewpoint (6.7).
 
