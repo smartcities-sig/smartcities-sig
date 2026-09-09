@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 5 — Teach It Back</title>
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('smartcities-sig-semantic-capabilities-theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="page-frame">
+<div class="side-rail left" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="leafPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60,200 C74,164 46,146 60,110 C70,82 50,64 60,26" />
+          <path d="M60,158 C74,153 79,139 74,125 C64,130 57,144 60,158 Z" />
+          <path d="M60,102 C46,97 41,83 46,69 C56,74 63,88 60,102 Z" />
+          <path d="M60,54 C71,50 75,39 70,28 C62,32 57,43 60,54 Z" />
+          <circle cx="60" cy="24" r="3" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#leafPattern)" />
+  </svg>
+</div>
+
+<main>
+
+<header class="brand">
+  <div class="brand-left">
+    <img src="../assets/logo.png" alt="Smart Cities SIG logo">
+    <div>
+      <div class="brand-name">Smart Cities SIG</div>
+      <div class="brand-tagline">Lesson 5 — Teach It Back</div>
+    </div>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  </button>
+</header>
+<div class="gradient-rule"></div>
+<div class="mission-note">Mission: explain the SIG's semantic capabilities framework clearly enough to onboard a newcomer. See <code>../MISSION.md</code>.</div>
+
+<h1>Teach It Back</h1>
+<p class="subtitle">Capstone — no new capabilities. The goal here is explaining, not just classifying: for each observation, write out loud (or in text) what you'd say to a newcomer, then check yourself against the answer key.</p>
+
+<div class="callout">
+  <strong>How to use this lesson:</strong> for each scenario, (1) split it into sub-observations, (2) assign
+  each one's Primary Capability and any Companion Capabilities, (3) write one plain sentence per sub-observation
+  explaining <em>why</em> — as if a newcomer just asked "wait, why is that one and not the other?" Then open the
+  answer key and compare. Where you disagree with the key, that's exactly what to bring to your teacher.
+</div>
+
+<h2>Scenario A — a streetlight cluster</h2>
+<div class="callout">
+  "Cabinet C12's control unit reported that its cluster of 6 luminaires averaged 85% of rated lumen output over
+  the last night, drawing 2.4 kWh total, while the street below stayed under-lit because three overgrown trees
+  block the light — a known, permanent condition at this site. The cabinet's cellular signal has been weak all
+  week, so the luminaires are currently running their stored nightly schedule instead of waiting for commands."
+</div>
+<details class="answer">
+  <summary>Reveal answer key</summary>
+  <div class="table-wrap">
+  <table class="datatable">
+  <tr><th>Sub-observation</th><th>Primary</th><th>Companion(s)</th></tr>
+  <tr><td>Cluster averaged 85% of rated lumen output</td><td>Infrastructure Output</td><td>Observation Scope (cluster of 6, not one luminaire), Temporal Semantics (over the last night)</td></tr>
+  <tr><td>Reported by Cabinet C12's control unit</td><td>Provenance</td><td>Observation Point (the cabinet is also where this sits physically) — Provenance is primary here only if you want to stress <em>which system</em> reported it over a person; otherwise Observation Point is the safer default per the Lesson 3 rule.</td></tr>
+  <tr><td>Drew 2.4 kWh total</td><td>Resource Consumption</td><td>Observation Scope (total across the cluster)</td></tr>
+  <tr><td>Street stayed under-lit</td><td>Service Outcome</td><td>—</td></tr>
+  <tr><td>Trees blocking light, permanent at this site</td><td>Physical Context</td><td>—</td></tr>
+  <tr><td>Cellular signal weak all week</td><td>Network Operability</td><td>—</td></tr>
+  <tr><td>Running stored nightly schedule instead of waiting for commands</td><td>Fallback Behaviour</td><td>Network Operability (the weak signal is why)</td></tr>
+  </table>
+  </div>
+  <p>
+    Note the Provenance row is a genuinely close call — flagging that out loud to a newcomer, instead of
+    pretending it's obvious, is itself good teaching.
+  </p>
+</details>
+
+<h2>Scenario B — a water pressure zone</h2>
+<div class="callout">
+  "The Digital Twin predicts water pressure in Zone 9 will drop below the 40 psi minimum within the next 3
+  hours, based on a model rather than a live reading, because a heat wave is driving unusually high consumer
+  demand today. Zone 9's booster pump, owned and maintained under contract by AquaCo since 2019, is already at
+  95% of its rated flow rate."
+</div>
+<details class="answer">
+  <summary>Reveal answer key</summary>
+  <div class="table-wrap">
+  <table class="datatable">
+  <tr><th>Sub-observation</th><th>Primary</th><th>Companion(s)</th></tr>
+  <tr><td>Pressure predicted to drop below 40 psi minimum</td><td>Service Outcome</td><td>Temporal Semantics (a forecast, within the next 3 hours)</td></tr>
+  <tr><td>Prediction comes from the Digital Twin, model-based not a live reading</td><td>Provenance</td><td>Observation Method (model-derived/predicted)</td></tr>
+  <tr><td>Heat wave driving high consumer demand today</td><td>Operational Context</td><td>—</td></tr>
+  <tr><td>Booster pump at 95% of rated flow rate</td><td>Infrastructure Output</td><td>—</td></tr>
+  <tr><td>Owned/maintained under contract by AquaCo since 2019</td><td>Asset Management Context</td><td>—</td></tr>
+  </table>
+  </div>
+  <p>
+    Worth calling out to a newcomer: the same sub-observation ("prediction from the Digital Twin") carries both
+    Provenance (who/what supplied it) and Observation Method (how it was produced) as tightly linked
+    companions — a model-derived value almost always needs both to be interpreted safely.
+  </p>
+</details>
+
+<h2>Now try one yourself</h2>
+<p>
+  Write your own 2–3 sentence compound observation from a domain you know — traffic signals, waste collection,
+  EV charging, whatever's familiar — and classify it the same way. Then bring it to your teacher and ask them
+  to check your split, your Primary/Companion calls, and whether your one-line "why" for each would actually
+  land with a newcomer.
+</p>
+
+<div class="ask-teacher">
+  This is the lesson to repeat with real cases from your own work, not just once. Onboarding fluency comes from
+  doing this with observations you didn't write yourself — ask your teacher to pull a real example from
+  <code>[[smartcities-sig-lwm2m-mapping]]</code> and quiz you cold.
+</div>
+
+<div class="lesson-nav">
+  <span>&larr; <a href="0004-operational-semantics.html">Lesson 4 — Operational Semantics</a></span>
+  <a class="cta-button" href="../reference/capability-cheat-sheet.html">Cheat sheet →</a>
+</div>
+
+
+</main>
+<div class="side-rail right" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="circuitPattern" width="150" height="200" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40,0 L40,55 L85,55 L85,95" />
+          <path d="M85,95 L85,140 L55,140 L55,200" />
+          <path d="M40,55 L15,55 L15,130" />
+          <circle cx="40" cy="55" r="3" />
+          <circle cx="85" cy="55" r="3" />
+          <circle cx="85" cy="95" r="3" />
+          <circle cx="55" cy="140" r="3" />
+          <circle cx="15" cy="130" r="3" />
+          <rect x="95" y="150" width="12" height="35" />
+          <rect x="110" y="128" width="12" height="57" />
+          <rect x="125" y="158" width="12" height="27" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+  </svg>
+</div>
+</div>
+<script>
+  function syncToggleLabel(isLight) {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var label = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+  }
+  function toggleTheme() {
+    var isLight = document.documentElement.classList.toggle('light');
+    try {
+      localStorage.setItem('smartcities-sig-semantic-capabilities-theme', isLight ? 'light' : 'dark');
+    } catch (e) {}
+    syncToggleLabel(isLight);
+  }
+  syncToggleLabel(document.documentElement.classList.contains('light'));
+</script>
+</body>
+</html>

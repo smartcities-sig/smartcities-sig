@@ -1,0 +1,13 @@
+---
+title: SOCIAL MEDIA
+description: Place to gather all social media posts from the organization
+layout: web
+---
+
+# {{ $doc.title }}
+
+::EhSocialGrid
+---
+src: "7500496447503622144, 7497563695615643648, 7496470349115527168, 7495053072365293568, 7492912846629158912, 7490738412371660800, 7488500857857019904, 7488239795505246208"
+---
+::

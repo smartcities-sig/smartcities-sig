@@ -67,6 +67,14 @@ smartcities-sig/
 |   ├── digital-twin-integration/
 |   │   ├── digital-twin-consumption-model.md
 |   │   └── smart-data-models-as-context-carriers.md
+|   │
+|   ├── assessment-frameworks/ 
+|   │   ├── README.md
+|   │   ├── semantic-capability-assessment.md
+|   │   ├── oma-capability-assessment.md          
+|   │   ├── smart-data-model-capability-assessment.md 
+|   │   └── interoperability-assessment-template.md 
+|   │
 |   └── examples/
 |       ├── lighting/
 |       └── water/
@@ -142,6 +150,11 @@ smartcities-sig/
 │       ├── progress-reports/
 │       ├── retrospectives/
 │       └── lessons-learned/
+|
+├── public/
+│   └── images/
+│       └──  image.png
+│
 |
 ├── meetings/
 │   ├── minutes/
