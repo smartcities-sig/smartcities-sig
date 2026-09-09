@@ -1288,3 +1288,33 @@ This framework is intended to be reusable across multiple municipality domains,
 including public lighting, water management, irrigation, waste management,
 transportation, environmental monitoring, parking, and future Smart Cities SIG
 profiles.
+
+
+```mermaid
+flowchart TD
+        ROOT["Semantic Capability<br/>Assessment Framework"]
+
+    ROOT --> C1["1 Domain Semantics"]
+    ROOT --> C2["2 Observation Semantics"]
+    ROOT --> C3["3 Interpretation Semantics"]
+    ROOT --> C4["4 Operational Semantics"]
+
+    C1 --> C1_1["1.1 Service Outcome"]
+    C1_1 --> C1_2["1.2 Infrastructure Output"]
+    C1_2 --> C1_3["1.3 Resource Consumption"]
+
+    C2 --> C2_1["2.1 Observation Point"]
+    C2_1 --> C2_2["2.2 Observation Scope"]
+    C2_2 --> C2_3["2.3 Observation Method"]
+    C2_3 --> C2_4["2.4 Temporal Semantics"]
+
+    C3 --> C3_1["3.1 Provenance"]
+    C3_1 --> C3_2["3.2 Measurement Quality"]
+    C3_2 --> C3_3["3.3 Operational Context"]
+    C3_3 --> C3_4["3.4 Physical Context"]
+
+    C4 --> C4_1["4.1 Asset Management Context"]
+    C4_1 --> C4_2["4.2 Network Operability"]
+    C4_2 --> C4_3["4.3 Fallback Behaviour"]
+
+```
