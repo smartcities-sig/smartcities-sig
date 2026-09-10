@@ -8,7 +8,7 @@ layout: doc
 
 ## Introduction
 
-This walkthrough shows how the Smart Cities [SIG methodology](../core-methodology/methodology-overview.md) was used to analyze city operations around public park irrigation and water metering.
+This walkthrough shows how the Smart Cities [SIG methodology](/methodology/core-methodology/methodology-overview.md) was used to analyze city operations around public park irrigation and water metering.
 
 The objective is to decide how water use should be represented in a city digital twin. Ultimately, the people who look after the plants want the model to reflect what really matters to them: the water around the roots under the right conditions, and the meaning behind what the twin is showing.
 
