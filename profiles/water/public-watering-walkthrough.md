@@ -6,9 +6,9 @@ layout: doc
 
 # {{ $doc.title }}
 
-## Overview
+## Introduction
 
-This walkthrough shows how the Smart Cities SIG methodology was used to analyze city operations around public park irrigation and water metering.
+This walkthrough shows how the Smart Cities [SIG methodology](/methodology/core-methodology/methodology-overview.md) was used to analyze city operations around public park irrigation and water metering.
 
 The objective is to decide how water use should be represented in a city digital twin. Ultimately, the people who look after the plants want the model to reflect what really matters to them: the water around the roots under the right conditions, and the meaning behind what the twin is showing.
 
@@ -16,13 +16,13 @@ In this use case, we need to clearly distinguish between values that are directl
 
 Once the information is exposed as a Smart Data Model, every single data point should be fully described so that it stays interpretable from the device layer all the way up to the city digital twin. Each selected data object from the OMA IPSO catalogue will have a corresponding Smart Data Model entity, where the relevant context information is either captured explicitly or can be reliably derived.
 
-## Purpose of the use case
+## Municipality Operational Reality
 
 In public-space irrigation, the operational objective is not merely to know that a valve opened, but to characterize watering in a way that supports service efficiency, sustainability, and meaningful comparison between deployments. The key point is the physical reality of water delivery to vegetation and its representation in the digital twin, while acknowledging that many systems only observe proxies such as consumed water, valve-open time, or inferred flow, which are just tools to approximate that reality
 
 From a modelling perspective, this means the data model must distinguish between what is directly measured, what is inferred from operation, and what is contextual information that explains why a watering event happened or whether it was appropriate. This is especially important for municipal reuse across departments, operators, and data spaces.
 
-A KPI is not raw data; it is an aggregated value calculated from multiple data sources over a period of time.    
+A KPI is not raw data; it is an aggregated value calculated from multiple data sources over a period of time. The objective is not simply to know that a valve opened, but rather to characterize irrigation for efficiency, sustainability, and comparability across deployments. Of course, detail management must be able to be carried out in real time, but perhaps in a different way.
 
 What really matters is how valid and meaningful that KPI is, given how it was computed and which data went into it, so that we can reliably answer “how should I interpret what the Digital Twin is showing?”.
 
@@ -35,7 +35,7 @@ In practice, the goal for this SIG is to define a data set that is rich enough t
 
 # Stage 1 - Operational Meaning Discovery
 
-## Main quantities to capture
+## Initial Operational Observations
 
 The objective is to identify the following core quantities and dimensions for the irrigation use case:
 
@@ -48,46 +48,56 @@ The objective is to identify the following core quantities and dimensions for th
 
 The specification also makes clear that precision and temporal resolution must be standardized enough to preserve comparability. In practice, the minimum and maximum measurable values, the acceptable increment or precision, and the minimum temporal granularity should be explicitly stated for each deployment profile.
 
-## Dynamic range and resolution
+## Operational Pain Points
 
-The irrigation specification stresses that stating a nominal unit is not sufficient; the model should also define the valid measurement range and minimum meaningful precision. It gives the example that saying “1 litre per minute” is not enough if the error margin is larger than the intended operational value.
+The irrigation specification stresses that stating a nominal unit is not sufficient; the model should also define the valid measurement range and minimum meaningful precision. It gives the example that saying “1 litre per minute” is not enough if the error margin is larger than the intended operational value. Dynamic range and resolution is key: Relying on historical aggregation with insufficient resolution makes it difficult to verify the true state of the pipeline, specifically the critical difference between evidence (an open valve) and a true indication (actual flow).
 
 Likewise, temporal resolution should be explicit, because a system designed for minute-level reporting cannot later support second-level comparison in the digital twin. The document also notes that city platforms may aggregate older historical data into coarser intervals, but the real-time reference value still needs to be defined with awareness of energy use and battery-life implications in field devices.
 
-## Operational parameters
+
+## Semantic Distinction Analysis
+
+### Service Outcome vs Infrastructure Output (results vs cost)
+
+- Root-Zone Water vs Delivered Flow vs Volume Consumed
+
+ 
+### Environmental and Contextual Dependencies
 
 Beyond primary flow or volume, a set of operational parameters help explain irrigation behavior and interpret measurements correctly. These include soil temperature, soil pH, other soil environmental parameters, weather conditions at the time of irrigation, forecast weather, water pressure, and attributes of the water itself.
 
 The irrigation method matters, for example drip irrigation versus sprinkler irrigation. That distinction affects both the interpretation of efficiency and the relation between measured consumption and the agronomic objective of delivering water to roots.
 
-## Measurement conditions
+### Measurement conditions
 
 A key modelling issue is the difference between evidence and indication. In many installations, the directly known fact is that a valve opened for a given time, while the actual delivered flow may only be inferred from pipe section, nominal flow, and opening duration.
 
 It is important to explicitly encode the measurement conditions or provenance of each value so downstream users can see whether the flow was directly metered or indirectly inferred. This distinction is key for trustworthy benchmarking, auditing, and digital‑twin interpretation across heterogeneous municipal systems.
 
-## Actuators and controllability
+
+### Teleoperation and Operational Reliability 
 
 The valves that start or stop irrigation are relevant operational components even if they are not themselves direct value sources for water-flow measurement. Their role is to provide control context and, in some cases, support inference of delivered water when combined with known hydraulic characteristics and elapsed opening time.
 
 Network-operation characteristics that may be relevant to the use case includes response latency, packet loss, and the device’s capacity to continue operating according to a programmed schedule even when advanced intelligent control is unavailable. This is important for exceptional situations such as drought conditions, breakdowns, or restricted-access operations requiring elevated permissions.
 
-## Context metadata
+### Provenance and Metadata Consideration
 
 Special weight to context metadata should be given because location and installation conditions are not always generated by the device itself. Important contextual fields include installation location, management zone, responsible parties, associated contracts, incident-resolution channels, warranty and service-life information, vegetation type covered by the irrigation asset, orientation, slope, and shading from trees or buildings, as well as ambient air humidity and temperature.
 
 This context is necessary to interpret whether a measured or inferred watering value is adequate for the vegetation served and the surrounding environment. Without it, the same flow value may mean very different things in different parts of a city.
 
-## Data-quality KPIs
+
+### Data-quality KPIs
 
 For this SIG, in every use case and, of course, in the irrigation and water mettering case, a KPI-oriented section is mandatory, focused on data quality. 
 This must include completeness, consistency, relevance, precision, timeliness and availability, and reliability, including lack of uncertainty or stated statistical confidence.
 
 These criteria can be treated as cross-cutting acceptance conditions for any Smart Data Model mapping in this use case. They help distinguish a merely available signal from a signal that is fit for operational comparison, automation, and inter-city exchange.
 
-## Suggested entity view
+### Measured vs Inferred Values 
 
-A practical decomposition is the following:
+A practical decomposition, taking into account scope and aggregation, could be the following:
 
 - Irrigation zone, representing the managed public-space area or vegetation area being watered.
 - Water meter or flow-observation point, representing direct metering of consumed or delivered water where available.
@@ -108,9 +118,30 @@ Several modelling rules shoul de madee explicit, so that implementers can build 
 - Include minimum resolution and dynamic range assumptions in the profile or implementation guidance.
 - Preserve context on vegetation type, shading, slope, and environmental conditions so the data remains meaningful in a digital twin.
 
-## References
+
+# Stage 2 — Reusable Abstractions Emergence
+
+## Candidate Profile Concepts
+
+- Irrigation Zone
+- Water Meter/Flow Point
+- Valve/Controller
+- Environmental Observation,
+- Soil Observation,
+- Watering Event
+
+## Interoperability Validation Scenarios
+
+# Stage 3 — Ecosystem and Interoperability Thinking
+
+## OMA and Device Interoperability
 
 - RFC 2119 terminology for requirement language is cited in the source document as a reference for MUST, SHOULD, and MAY style wording. [https://www.rfc-es.org/rfc/rfc2119-es.txt](https://www.rfc-es.org/rfc/rfc2119-es.txt)
 - ODRL is cited in the source document for data-sharing and usage-policy considerations. [https://www.w3.org/TR/odrl-model/](https://www.w3.org/TR/odrl-model/)
 - The OMA data-model tooling [https://devtoolkit.openmobilealliance.org/OEditor/](https://devtoolkit.openmobilealliance.org/OEditor/), and the Smart Data Models development branch. [https://github.com/smart-data-models/incubated/tree/master/SMARTSENSORING/OMA-UCIFI](https://github.com/smart-data-models/incubated/tree/master/SMARTSENSORING/OMA-UCIFI), are cited in the source document as implementation references. 
 - The IoT laboratory of the City of Madrid is also referenced in the source material. https://iotmadlab.es
+
+## Smart Data Models as Semantic Integration Mechanisms 
+
+## Digital Twin Consumption Perspective 
+
