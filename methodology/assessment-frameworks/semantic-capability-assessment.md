@@ -1218,6 +1218,46 @@ Digital Twins require knowledge of fallback behaviour to correctly simulate infr
 
 ---
 
+# Normative Foundation and Scope of This Framework
+
+### Normative Foundation
+
+This framework is built on the viewpoint/view structure defined in **ISO/IEC 30141:2024, "Internet of Things (IoT) — Reference architecture."** The capability list above follows the stakeholder/concern model established in Clause 5.2 ("Stakeholders and concerns," Table 1), and each capability is explicitly governed by one or more of the six architecture viewpoints defined in Clause 6: Foundational (6.2), Business (6.3), Usage (6.4), Functional (6.5), Trustworthiness (6.6), and Construction (6.7).
+
+The Construction viewpoint (6.7) is of particular relevance here: it defines the **IoT component pattern** (6.7.3, Table 9) and the **IoT system pattern** (Table 12), and Annex A (normative) extends these with additional construction patterns (RAMI 4.0, dynamic IoT system, IoT enterprise system, enterprise networking, and enterprise usage patterns). ISO/IEC 30141:2024 identifies "implementation pattern support" as one of the three significant technical changes introduced in this second edition relative to the 2018 edition, alongside conformance with ISO/IEC/IEEE 42010:2022 and improved usability.
+
+### Our Contribution
+
+ISO/IEC 30141 defines these construction patterns at a generic, technology-agnostic level: it specifies *what kinds* of structural and functional building blocks an IoT/Digital Twin architecture should expose, but it does not itself select or bind concrete technologies to those building blocks.
+
+The contribution of this document is to instantiate that generic construction pattern for the municipal Digital Twin domain by binding it to two concrete, independently governed standards:
+
+- **OMA LwM2M Objects and Resources**, as the device-facing semantic layer, and
+- **FIWARE Smart Data Models**, as the platform-facing, NGSI-LD-oriented semantic layer.
+
+Each semantic capability identified in this document (Service Outcome, Infrastructure Output, Network Operability, Fallback Behaviour, etc.) is deliberately phrased so that it can be assessed independently against OMA, against Smart Data Models, and against a Digital Twin ecosystem, and then cross-checked for consistency. This is the concrete mechanism by which this document exercises the "implementation pattern support" introduced in the 2024 edition of ISO/IEC 30141: rather than proposing a new abstract pattern, it applies the existing IoT component/system pattern to a real, dual-standard municipal deployment and records where the two standards align, diverge, or leave gaps.
+
+### On the Technology-Agnostic Nature of ISO/IEC 30141
+
+It should be made explicit that ISO/IEC 30141 is intentionally technology-agnostic and does not reference OMA, LwM2M, FIWARE, Smart Data Models, NGSI-LD, or any specific context broker implementation. The mapping presented in this document is therefore not a normative extension of ISO/IEC 30141 itself, but a **practical, domain-specific application** of its construction viewpoint — consistent with the standard's own stated intent to serve as "a generic normative part of IoT domain-specific reference architectures (DSRAs)."
+
+> **Note on NGSI-LD.** NGSI-LD, the FIWARE context broker model, and the Smart Data Models programme are **not part of ISO/IEC 30141**. They are the specific technology binding chosen by the Smart Cities SIG to realize the Construction viewpoint's patterns for this municipal Digital Twin use case. Any statement in this document that references NGSI-LD entities, relationships, or context brokers should be read as an implementation choice made by the SIG, not as content drawn from the ISO/IEC 30141 text.
+
+### Traceability Table
+
+| ISO/IEC 30141:2024 Clause / Table | Corresponding Element in This Document |
+|---|---|
+| 5.2, Table 1 – List of viewpoints, stakeholders, and concerns | Municipality Operational Questions per capability (per-stakeholder concern framing) |
+| 6.3 – Business viewpoint | "Why It Is Required" subsections |
+| 6.4 – Usage viewpoint | Digital Twin Questions subsections |
+| 6.5 – Functional viewpoint | Capability descriptions (e.g., Communication Characteristics, Fallback Behaviour) |
+| 6.6 – Trustworthiness viewpoint | Measurement Quality / Provenance capabilities |
+| 6.7.3, Table 9 – IoT component pattern | OMA Questions columns (device/component-level semantic mapping) |
+| Table 12 – IoT system pattern | Smart Data Models Assessment column (system/platform-level semantic mapping) |
+| Annex A – Additional IoT construction patterns | Capability Assessment Matrix as a whole (domain-specific instantiation per profile: Public Lighting, Water Management & Irrigation, etc.) |
+| Foreword – "implementation pattern support" | This entire framework and its per-domain profiles |
+
+
 # Capability Assessment Matrix
 
 > **Editorial Note**
@@ -1270,18 +1310,3 @@ The completion of this assessment framework should enable ecosystem participants
 This framework is intended to be reusable across multiple municipality domains, including Public Lighting, Water Management & Irrigation, Waste Management, Transportation, Environmental Monitoring, Parking, and future Smart Cities SIG profiles.
 
 ---
-
-# Expected Outcome
-
-The completion of this assessment framework should enable ecosystem participants to:
-
-- Identify which semantic capabilities are already supported by existing specifications.
-- Identify semantic capabilities that require additional discussion or future enhancements.
-- Improve interoperability between device standards, Smart Data Models, and Digital Twin ecosystems.
-- Preserve municipality operational meaning across standards and semantic models.
-- Support the development of semantically consistent Digital Twins capable of monitoring, analysing, simulating, and operating municipality services.
-
-This framework is intended to be reusable across multiple municipality domains,
-including public lighting, water management, irrigation, waste management,
-transportation, environmental monitoring, parking, and future Smart Cities SIG
-profiles.
