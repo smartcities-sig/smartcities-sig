@@ -37,6 +37,8 @@ For example:
 - What information is needed to prioritize maintenance?
 - Can the same operational condition be interpreted consistently across systems from different vendors?
 
+<!--more-->
+
 Answering these questions requires more than individual measurements. Municipalities also need the meaning and context necessary to interpret the information correctly.
 
 ### Starting with Operational Questions
