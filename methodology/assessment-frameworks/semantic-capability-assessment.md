@@ -83,31 +83,17 @@ Only the municipality operational questions change from one service to another.
 # Relationship to the Smart Cities SIG Methodology
 
 This framework builds directly upon the Smart Cities SIG methodology.
-
-```text
-Municipality Operational Reality
-                │
-                ▼
-Stage 1
-Operational Meaning
-                │
-                ▼
-Stage 2
-Reusable Semantic Capabilities
-                │
-                ▼
-Semantic Capability Assessment Framework
-                │
-                ▼
-Standards & Ecosystem Assessment
-                │
-        ┌───────┴────────┐
-        ▼                ▼
-     OMA LwM2M     Smart Data Models
-        │                │
-        └───────┬────────┘
-                ▼
-      Digital Twin Interoperability
+``` mermaid
+%%{init: {'flowchart': {'curve': 'linear', 'htmlLabels': true, 'wrappingWidth': 220}}}%%
+flowchart TD
+    A["Municipality<br/>Operational Reality"] --> B["Stage 1<br/>Operational Meaning"]
+    B --> C["Stage 2<br/>Reusable Semantic Capabilities"]
+    C --> D["Semantic Capability<br/>Assessment Framework"]
+    D --> E["Standards & Ecosystem<br/>Assessment"]
+    E --> F["OMA LwM2M"]
+    E --> G["Smart Data Models"]
+    F --> H["Digital Twin<br/>Interoperability"]
+    G --> H
 ```
 
 The framework therefore acts as the bridge between semantic analysis and ecosystem realization.
