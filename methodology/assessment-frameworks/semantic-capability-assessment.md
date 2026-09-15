@@ -1274,22 +1274,6 @@ This framework is intended to be reusable across multiple municipality domains, 
 
 ---
 
-# Expected Outcome
-
-The completion of this assessment framework should enable ecosystem participants to:
-
-- Identify which semantic capabilities are already supported by existing specifications.
-- Identify semantic capabilities that require additional discussion or future enhancements.
-- Improve interoperability between device standards, Smart Data Models, and Digital Twin ecosystems.
-- Preserve municipality operational meaning across standards and semantic models.
-- Support the development of semantically consistent Digital Twins capable of monitoring, analysing, simulating, and operating municipality services.
-
-This framework is intended to be reusable across multiple municipality domains,
-including public lighting, water management, irrigation, waste management,
-transportation, environmental monitoring, parking, and future Smart Cities SIG
-profiles.
-
-
 ```mermaid
 flowchart TD
         ROOT["Semantic Capability<br/>Assessment Framework"]
