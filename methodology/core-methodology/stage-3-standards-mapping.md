@@ -235,3 +235,22 @@ Standards & Ecosystem Mapping
 Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption
+```
+
+---
+
+# Relationship to Stage 4
+
+Stage 3 focuses on ecosystem coordination and standards assessment.
+
+The next stage evaluates:
+- how independent ecosystem assessment results are reconciled,
+- where each semantic capability is realized,
+- which semantic gaps remain unaddressed,
+- how converged meaning is expressed as Smart Data Models,
+- and how traceability to municipality operational meaning is preserved.
+
+The outputs of Stage 3 become the inputs to:
+- `stage-4-smart-data-models-realization.md`
+
+The objective is to preserve coordinated ecosystem understanding before convergence and Smart Data Model realization begin.
