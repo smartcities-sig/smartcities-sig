@@ -66,6 +66,7 @@ smartcities-sig/
 |   |   ├── stage-1-operational-meaning.md
 |   │   ├── stage-2-semantic-capabilities.md
 |   │   ├── stage-3-standards-mapping.md
+|   │   ├── stage-4-smart-data-models-realization.md
 |   │   └── methodology-worksheet.md
 |   │
 |   └── assessment-frameworks/

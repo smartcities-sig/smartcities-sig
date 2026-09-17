@@ -78,7 +78,7 @@ If analysis begins too early with standards, schemas, APIs, or implementation mo
 
 # Core Methodology
 
-The Smart Cities SIG methodology is based on three progressive stages.
+The Smart Cities SIG methodology is based on four progressive stages.
 
 ```text
 Municipality Operational Reality
