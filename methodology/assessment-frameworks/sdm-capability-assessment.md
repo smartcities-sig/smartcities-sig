@@ -10,7 +10,7 @@ layout: doc
 
 ## Purpose
 
-This report assesses how the Smart Data Models (SDM) framework represents the semantic capabilities identified by the Smart Cities SIG's
+This report assesses how the [Smart Data Models](https://smartdatamodels.org) (SDM) framework represents the semantic capabilities identified by the Smart Cities SIG's
 [Semantic Capability Assessment Framework](./semantic-capability-assessment.md).
 It is the Smart Data Models counterpart to the [OMA Semantic Capability Assessment](./oma-capability-assessment.md): where that report evaluates what OMA LwM2M devices and edge controllers can contribute, this report evaluates whether the Smart Data Models entities and attributes that receive that contribution can preserve its meaning.
 
@@ -41,11 +41,11 @@ or entity.
 
 ### Infrastructure Output
 
-Units and other descriptors of infrastructure output belong in the attribute definitions. Smart Data Models provide a specific `units` clause for attributes so that the unit of measurement can be declared explicitly.
+Units and other descriptors of infrastructure output belong in the attribute definitions. Smart Data Models provide a specific `units` [clause](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.g280421d2344_1_1759) for attributes so that the unit of measurement can be declared explicitly.
 
 ### Resource Consumption
 
-Multiple data models exist for assessing consumption. There is a general `Consumption` subject/data model, and domain-specific models such as `WaterConsumptionObserved` in the Water domain.
+Multiple data models exist for assessing consumption. There is a general [`Consumption`](https://github.com/smart-data-models/dataModel.Consumption) subject/data model, and domain-specific models such as [`WaterConsumptionObserved`](https://github.com/smart-data-models/dataModel.WaterConsumption/tree/master/WaterConsumptionObserved) in the Water domain.
 
 ---
 
@@ -54,21 +54,21 @@ Multiple data models exist for assessing consumption. There is a general `Consum
 ### Observation Point
 
 Two complementary approaches are available: the physical location — most Smart Data Models expose a location using one of six ways of describing geographic scope (point, line, polygon, and their multi-instance variants) —
-and a reference to the originating device or sensor. Some models, such as `DeviceMeasurement`, include an explicit relationship to the device the measurement comes from.
+and a reference to the originating device or sensor. Some models, such as [`DeviceMeasurement`](https://github.com/smart-data-models/dataModel.Device/tree/master/DeviceMeasurement), include an explicit relationship to the device the measurement comes from.
 
 ### Observation Scope
 
 The most common case is that a measurement is an instantaneous value.
-However, some models — such as `CrowdFlowObserved` and `ElectricVehicleMobility` — represent an average over a period, and several attributes ending in `TSA` (instant, maximum, minimum, and average) exist to
+However, some models — such as [`CrowdFlowObserved`](https://github.com/smart-data-models/dataModel.Transportation/tree/master/CrowdFlowObserved) and [`ElectricVehicleMobility`](https://github.com/smart-data-models/dataModel.Transportation/tree/master/ElectricVehicleMobility) — represent an average over a period, and several attributes ending in [`TSA`](https://smartdatamodels.org/dataModel.Environment/airTemperatureTSA) (instant, maximum, minimum, and average) exist to
 capture that scope explicitly.
 
 ### Observation Method
 
-Support for observation method depends entirely on the specific data model — for example, `WeatherObserved` and `WeatherForecast` — rather than being a capability provided consistently across the catalogue.
+Support for observation method depends entirely on the specific data model — for example, [`WeatherObserved`](https://github.com/smart-data-models/dataModel.Weather/tree/master/WeatherObserved) and [`WeatherForecast`](https://github.com/smart-data-models/dataModel.Weather/tree/master/WeatherForecast) — rather than being a capability provided consistently across the catalogue.
 
 ### Temporal Semantics
 
-Some data models include explicit start and end periods for a measurement, for example `KeyPerformanceIndicator`.
+Some data models include explicit start and end periods for a measurement, for example [`KeyPerformanceIndicator`](https://github.com/smart-data-models/dataModel.KeyPerformanceIndicator/tree/master/KeyPerformanceIndicator).
 
 ---
 
@@ -81,16 +81,15 @@ attribute.
 
 ### Measurement Quality
 
-`accuracy` is an attribute used across several data models, including `SimulationScenario`, `StateMessage`, `DataQualityAssessment`, `AreaEnvironmentForecast`, `DeviceForecast`, `Geolocation`, `KeyVessel`, and
-`MeasurementValue`.
+[`accuracy`](https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/accuracy) is an attribute used across several data models, including [`SimulationScenario`](https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/SimulationScenario/schema.json), [`StateMessage`](https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/StateMessage/schema.json), [`DataQualityAssessment`](https://raw.githubusercontent.com/smart-data-models/dataModel.DataQuality/master/DataQualityAssessment/schema.json), [`AreaEnvironmentForecast`](https://raw.githubusercontent.com/smart-data-models/dataModel.ZEB/master/AreaEnvironmentForecast/schema.json), [`DeviceForecast`](https://raw.githubusercontent.com/smart-data-models/dataModel.ZEB/master/DeviceForecast/schema.json), [`Geolocation`](https://raw.githubusercontent.com/smart-data-models/dataModel.OCF/master/Geolocation/schema.json), [`KeyVessel`](https://raw.githubusercontent.com/smart-data-models/dataModel.MarineTransport/master/KeyVessel/schema.json) and [`MeasurementValue`](https://raw.githubusercontent.com/smart-data-models/dataModel.EnergyCIM/master/MeasurementValue/schema.json)
 
 ### Operational Context
 
-Operational context needs to be implemented through specific attributes and is usually represented via a relationship to an observation — for example, in `WeatherObserved`.
+Operational context needs to be implemented through specific attributes and is usually represented via a relationship to an observation — for example, in [`WeatherObserved`](https://github.com/smart-data-models/dataModel.Weather/tree/master/WeatherObserved).
 
 ### Physical Context
 
-Physical context is generally implemented through the geolocation attributes present in most data models, which support point, line, and polygon geometries, as well as multiple instances of each.
+Physical context is generally implemented through the [geolocation attributes](https://github.com/smart-data-models/data-models/blob/master/common-schema.json) present in most data models, which support point, line, and polygon geometries, as well as multiple instances of each.
 
 ---
 
@@ -103,7 +102,7 @@ of data models.
 
 ### Network Operability
 
-Network operability is only present in some data models under the IT subject. Where present, it can be included via a relationship attribute pointing to the observation.
+Network operability is only present in some data models under the [IT subject](https://github.com/smart-data-models/dataModel.IT/). Where present, it can be included via a relationship attribute pointing to the observation.
 
 ### Fallback Behaviour
 
