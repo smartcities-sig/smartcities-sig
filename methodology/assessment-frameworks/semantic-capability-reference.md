@@ -225,13 +225,3 @@ columns:
     type: text
 ---
 ::
-
-
-## Municipality Invitation
-
-::EhEmbed
----
-download: true
-dataUrl: /iframe/municipal-invitation.html
----
-::
