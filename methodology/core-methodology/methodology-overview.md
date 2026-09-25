@@ -53,7 +53,7 @@ Instead, the methodology prioritizes:
 
 # Core Methodology
 
-The Smart Cities SIG methodology is based on three progressive stages.
+The Smart Cities SIG methodology is based on four progressive stages.
 
 ```text
 Municipality Operational Reality
@@ -68,6 +68,14 @@ Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption
 ```
+
+Each stage owns one step of this progression:
+- Stage 1 — Operational Meaning,
+- Stage 2 — Reusable Interoperability Abstractions,
+- Stage 3 — Standards & Ecosystem Mapping,
+- and Stage 4 — Smart Data Models Realization.
+
+Digital Twin consumption is the outcome the four stages exist to support, rather than a stage of its own.
 
 ## Operational Semantic Translation Model
 
