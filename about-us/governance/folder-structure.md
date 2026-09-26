@@ -10,7 +10,7 @@ This document describes the target repository structure for the Smart Cities SIG
 
 The structure is intended to support:
 - governance and program coordination,
-- Service Profile development,
+- service Profile development,
 - ecosystem collaboration,
 - reusable documentation,
 - and future website generation using a GitHub-native content model.
