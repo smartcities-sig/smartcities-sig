@@ -13,6 +13,8 @@ layout: doc
 
 This report assesses the minimum semantic information that OMA LwM2M devices and edge controllers need to provide so that their information can be integrated into Smart Data Models without losing operational meaning.
 
+It answers the OMA questions of the [Semantic Capability Assessment Framework](./semantic-capability-assessment.md) for each semantic capability; resource-by-resource evidence is in the [OMA LwM2M Registry Capability Classification](./oma-registry-capability-classification.md).
+
 The final municipality operational questions are answered by a Digital Twin, not by an individual LwM2M Object. The intended information chain is:
 
 ```text
@@ -69,7 +71,7 @@ New Objects based on IPSO or uCIFI work are expected to use Source 0. Final norm
 
 # How to Read This Assessment
 
-Each Question for OMA is assessed using the same structure. Public Lighting and Water Management/Irrigation are evaluated separately, followed by findings shared across both domains.
+Each Question for OMA is assessed using the same structure. The questions themselves are listed in the [Semantic Capability Assessment Framework](./semantic-capability-assessment.md), and the municipality operational questions they serve are in the [Public Lighting](/profiles/lighting/municipality-questions.md) and [Water Management & Irrigation](/profiles/water/municipality-questions.md) Service Profiles. Public Lighting and Water Management/Irrigation are evaluated separately, followed by findings shared across both domains.
 
 ## Municipality Operational Need
 
@@ -154,7 +156,7 @@ Free-text Resources do not provide sufficient cross-vendor semantics unless a co
 
 ## Capability Purpose
 
-Service Outcome represents the real-world result that a municipality intends to deliver, independently of how the underlying infrastructure behaves.
+*Definition: [Stage 2 — Service Outcome](/methodology/core-methodology/stage-2-semantic-capabilities.md#service-outcome).*
 
 For Public Lighting, the outcome includes the illumination experienced on a road, pavement, pedestrian area, or other public space. For Water Management and Irrigation, the outcome includes water delivered at the required flow, pressure, level, quality, or soil/root-zone condition.
 
@@ -772,6 +774,8 @@ Municipality objectives, policies, service-area definitions, topology, and final
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Infrastructure Output](/methodology/core-methodology/stage-2-semantic-capabilities.md#infrastructure-output).*
+
 Infrastructure Output represents how the lighting infrastructure itself is behaving, independently of whether the resulting public-space illumination is adequate. It covers the light actually produced or commanded by a luminaire, the operating state of its control gear, and the anomalies that the infrastructure can detect about itself.
 
 ## Overall Capability Conclusion
@@ -963,6 +967,8 @@ Prioritize a Public Lighting Interoperability Profile over new Object definition
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Resource Consumption](/methodology/core-methodology/stage-2-semantic-capabilities.md#resource-consumption).*
+
 Resource Consumption represents the energy consumed to deliver the public lighting service, independently of the light output achieved or the service outcome experienced. It supports efficiency analysis, energy budgeting, and the evaluation of dimming or maintenance strategies against their energy impact.
 
 ## Overall Capability Conclusion
@@ -1136,6 +1142,8 @@ Generalize the linked-meter-instance pattern demonstrated by Object 3422 so it c
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Observation Point](/methodology/core-methodology/stage-2-semantic-capabilities.md#observation-point).*
+
 Observation Point identifies where a measurement physically or logically originates, for example at the luminaire's control gear, at a cabinet feeder, or at the LwM2M Client itself, independently of the asset being described.
 
 ## Overall Capability Conclusion
@@ -1293,6 +1301,8 @@ Do not attempt to standardize human-readable addressing within OMA; instead, ens
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Observation Scope](/methodology/core-methodology/stage-2-semantic-capabilities.md#observation-scope).*
+
 Observation Scope describes whether a measurement represents a single luminaire, a cabinet feeder, or a larger group of assets.
 
 ## Overall Capability Conclusion
@@ -1435,6 +1445,8 @@ Generalize the patterns already present in Objects 3422 and 7 (linked Instances;
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Observation Method](/methodology/core-methodology/stage-2-semantic-capabilities.md#observation-method).*
+
 Observation Method describes whether a lighting-related value was measured, estimated, inferred, or configured, so that Digital Twins can weigh its authority appropriately.
 
 ## Overall Capability Conclusion
@@ -1558,6 +1570,8 @@ Generalize the Command / Command-in-action / measured-value pattern from Object 
 # Semantic Capability 7: Temporal Semantics
 
 ## Capability Purpose
+
+*Definition: [Stage 2 — Temporal Semantics](/methodology/core-methodology/stage-2-semantic-capabilities.md#temporal-semantics).*
 
 Temporal Semantics describe the time basis of a lighting observation: whether it is instantaneous, cumulative since a reset, or collected over a defined window.
 
@@ -1691,6 +1705,8 @@ Add a Measurement period Resource to Object 3418 and consider a shared aggregati
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Provenance](/methodology/core-methodology/stage-2-semantic-capabilities.md#provenance).*
+
 Provenance identifies where a lighting observation or command originated: the luminaire's own sensor, the control cabinet, an external control-room override, or an asset-management system.
 
 ## Overall Capability Conclusion
@@ -1816,6 +1832,8 @@ Add a discrete command-source Resource to Object 3416, complementing Manual over
 # Semantic Capability 9: Measurement Quality
 
 ## Capability Purpose
+
+*Definition: [Stage 2 — Measurement Quality](/methodology/core-methodology/stage-2-semantic-capabilities.md#measurement-quality).*
 
 Measurement Quality describes how reliable a lighting-related observation is, supporting confidence-weighted operational decisions.
 
@@ -1946,6 +1964,8 @@ Consider a Public Lighting Interoperability Profile requirement making quality i
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Operational Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#operational-context).*
+
 Operational Context describes conditions such as electrical line quality or weather that influence lighting service behaviour without being part of the lighting infrastructure itself.
 
 ## Overall Capability Conclusion
@@ -2049,6 +2069,8 @@ Extend the linked-asset relationship (recommended for Observation Point and Serv
 
 ## Capability Purpose
 
+*Definition: [Stage 2 — Physical Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#physical-context).*
+
 Physical Context describes environmental features (trees, buildings, terrain) that affect why identical luminaires may produce different illumination results in different locations.
 
 ## Overall Capability Conclusion
@@ -2137,6 +2159,8 @@ None; no device-side capability is needed. Ensure location and asset identifiers
 # Semantic Capability 12: Asset Management Context
 
 ## Capability Purpose
+
+*Definition: [Stage 2 — Asset Management Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#asset-management-context).*
 
 Asset Management Context represents ownership, maintenance responsibility, warranty, and lifecycle information associated with lighting infrastructure.
 
@@ -2256,6 +2280,8 @@ Clarify, in a Public Lighting Interoperability Profile, that Asset GTIN and Asse
 # Semantic Capability 13: Network Operability
 
 ## Capability Purpose
+
+*Definition: [Stage 2 — Network Operability](/methodology/core-methodology/stage-2-semantic-capabilities.md#network-operability).*
 
 Network Operability describes the communication conditions that determine whether a luminaire can currently be remotely monitored or controlled.
 
@@ -2382,6 +2408,8 @@ Define a minimum mandatory connectivity-monitoring subset per transport technolo
 # Semantic Capability 14: Fallback Behaviour
 
 ## Capability Purpose
+
+*Definition: [Stage 2 — Fallback Behaviour](/methodology/core-methodology/stage-2-semantic-capabilities.md#fallback-behaviour).*
 
 Fallback Behaviour describes how a luminaire behaves autonomously when normal supervisory communication is unavailable, including local schedules and manual overrides.
 
@@ -2511,7 +2539,7 @@ No new Objects are required. Document, in a Public Lighting Interoperability Pro
 
 # Public Lighting Semantic Capability Assessment Summary
 
-The table below consolidates the disposition of all fourteen semantic capabilities defined in the [Semantic Capability Assessment Framework](./semantic-capability-assessment.md), evaluated from the OMA point of view for the Public Lighting domain.
+The table below consolidates the disposition of all fourteen [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md), assessed with the [Semantic Capability Assessment Framework](./semantic-capability-assessment.md), evaluated from the OMA point of view for the Public Lighting domain.
 
 | # | Semantic Capability | Disposition |
 |---|---|---|

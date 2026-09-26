@@ -108,7 +108,7 @@ Each ecosystem records its answers to the questions below in its own report. Res
 
 | Ecosystem | Assessment report | Service Domains covered |
 |---|---|---|
-| OMA LwM2M | [OMA Semantic Capability Assessment](./oma-capability-assessment.md), with the resource-by-resource [OMA LwM2M Registry classification](./semantic-capability-reference.md) | Public Lighting; Water Management & Irrigation |
+| OMA LwM2M | [OMA Semantic Capability Assessment](./oma-capability-assessment.md), with the resource-by-resource [OMA LwM2M Registry Capability Classification](./oma-registry-capability-classification.md) | Public Lighting; Water Management & Irrigation |
 | Smart Data Models | [Smart Data Models Semantic Capability Assessment](./sdm-capability-assessment.md) | Catalogue-wide |
 | Digital Twin | Not yet assessed | — |
 
