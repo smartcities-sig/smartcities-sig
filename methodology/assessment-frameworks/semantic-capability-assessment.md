@@ -72,7 +72,7 @@ This framework may be applied to any municipality service, including:
 - Transportation
 - Parking
 - Public Safety
-- Future Smart Cities SIG profiles
+- Future Smart Cities SIG Service Profiles
 
 The semantic capabilities defined in this document are intentionally reusable across domains.
 
@@ -1256,7 +1256,7 @@ The completion of this assessment framework should enable ecosystem participants
 - Preserve municipality operational meaning across standards and semantic models.
 - Support the development of semantically consistent Digital Twins capable of monitoring, analysing, simulating, and operating municipality services.
 
-This framework is intended to be reusable across multiple municipality domains, including Public Lighting, Water Management & Irrigation, Waste Management, Transportation, Environmental Monitoring, Parking, and future Smart Cities SIG profiles.
+This framework is intended to be reusable across multiple municipality domains, including Public Lighting, Water Management & Irrigation, Waste Management, Transportation, Environmental Monitoring, Parking, and future Smart Cities SIG Service Profiles.
 
 ---
 

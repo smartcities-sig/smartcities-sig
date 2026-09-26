@@ -265,7 +265,7 @@ The walkthrough identified that:
 
 This later influenced:
 - interoperability abstraction thinking,
-- Smart Data Object considerations,
+- Smart Data Models considerations,
 - and Digital Twin trustworthiness analysis.
 
 ---
@@ -360,16 +360,16 @@ This reinforced the importance of:
 
 ---
 
-# Candidate Profile Concepts
+# Candidate Interoperability Profile Concepts
 
-As reusable abstractions emerged, several candidate profile concepts also became visible.
+As reusable abstractions emerged, several candidate Interoperability Profile concepts also became visible.
 
-These were not treated as finalized standards profiles, but as:
+These were not treated as finalized Interoperability Profiles, but as:
 - emerging interoperability realization ideas.
 
 Examples included:
 
-| Candidate Profile Concept | Focus Area |
+| Candidate Interoperability Profile Concept | Focus Area |
 |---|---|
 | Public Lighting Service Outcome Profile | Lux, street-surface context, obstruction, environmental conditions |
 | Public Lighting Energy Efficiency Profile | Watts, voltage, frequency, cabinet aggregation |

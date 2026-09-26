@@ -113,7 +113,7 @@ Optional Resources are treated as conditional coverage. Co-location of Objects o
 
 ## Missing Semantics
 
-Identifies information that cannot be represented explicitly and interoperably using the current Objects and Resources. This may include missing controlled terminology, relationships, observation context, provenance, method classification, scope, aggregation information, or mandatory profile requirements.
+Identifies information that cannot be represented explicitly and interoperably using the current Objects and Resources. This may include missing controlled terminology, relationships, observation context, provenance, method classification, scope, aggregation information, or mandatory Interoperability Profile requirements.
 
 ## Smart Data Model Responsibility
 
@@ -126,7 +126,7 @@ This section also identifies which OMA identifiers and relationships must be pre
 Translates the assessment into an actionable semantic requirement or plausible implementation option. Recommendations may include:
 
 - Clarifying an existing Object or Resource
-- Making an optional Resource required by a Smart Cities profile
+- Making an optional Resource required by a Smart Cities Interoperability Profile
 - Defining a controlled vocabulary
 - Adding reusable Resources
 - Extending an existing Object
@@ -146,7 +146,7 @@ The following abbreviations are used in evidence tables:
 
 A Resource may be mandatory without being reusable, or reusable without being mandatory. Mandatory status is determined by the consuming Object definition.
 
-Free-text Resources do not provide sufficient cross-vendor semantics unless a controlled vocabulary or profile governs their values.
+Free-text Resources do not provide sufficient cross-vendor semantics unless a controlled vocabulary or Interoperability Profile governs their values.
 
 ---
 
@@ -229,7 +229,7 @@ Illuminance values are directly represented. Supporting units, timestamp, and qu
 - Controlled Public Lighting observation-point terminology
 - Explicit observed-feature relationship
 - Explicit relationship between logical observation and the public-space entity represented
-- Profile requirement for timestamp, units, and quality metadata
+- Interoperability Profile requirement for timestamp, units, and quality metadata
 
 ### Smart Data Model Responsibility
 
@@ -244,7 +244,7 @@ The mapping must preserve sensor identity, observation point, value, unit, times
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Retain Object 3301 as the primary illuminance measurement Object. Define a standardized observation-point and observed-feature relationship, potentially by extending Source 0 Object 509 or by defining reusable metadata Resources. Define a Public Lighting profile that makes required contextual Resources mandatory when they are needed for interoperable service-outcome assessment.
+Retain Object 3301 as the primary illuminance measurement Object. Define a standardized observation-point and observed-feature relationship, potentially by extending Source 0 Object 509 or by defining reusable metadata Resources. Define a Public Lighting Interoperability Profile that makes required contextual Resources mandatory when they are needed for interoperable service-outcome assessment.
 
 ## Water Management and Irrigation
 
@@ -305,7 +305,7 @@ Most physical quantities are available through IPSO and uCIFI Objects now mainta
 - Explicit observed-medium and observed-feature relationships
 - Link from a measurement to a consumer delivery point, irrigation zone, soil layer, or root zone
 - General aggregation function for interval values
-- Mandatory contextual metadata profile
+- Mandatory contextual-metadata Interoperability Profile
 
 ### Smart Data Model Responsibility
 
@@ -357,8 +357,8 @@ A municipality must distinguish inadequate road or pedestrian-area illumination 
 | Service-outcome candidate | `3301/5700` Illuminance Sensor Value | 1 / IPSO Alliance | Measures illuminance but does not state whether it represents a road surface or the luminaire environment. |
 | Service-outcome candidate | `3392/404` Illuminance Sensor Value | 1 / OpenAIS | Logical illuminance observation. |
 | Logical/physical link | `3392/909` Executing Object | 1 / OpenAIS | Explicit Core Link, but limited to the OpenAIS Object model. |
-| Infrastructure behaviour | `3311/5850` On/Off — M; `3311/5851` Dimmer — O | 1 / IPSO Alliance | Describes control state rather than achieved illumination. |
-| Infrastructure behaviour | `3416/3` Dimming Level — M; `3416/2` Command in Action — O | 1 / uCIFI | Describes lamp-controller behaviour. |
+| Infrastructure output | `3311/5850` On/Off — M; `3311/5851` Dimmer — O | 1 / IPSO Alliance | Describes control state rather than achieved illumination. |
+| Infrastructure output | `3416/3` Dimming Level — M; `3416/2` Command in Action — O | 1 / uCIFI | Describes lamp-controller behaviour. |
 | Infrastructure capability | `3417/4` Nominal Light Output — O | 1 / uCIFI | Describes nominal luminaire output in lumens, not observed public-space illuminance. |
 
 ### Coverage Assessment
@@ -406,7 +406,7 @@ A municipality must distinguish water delivered to a consumer or root zone from 
 | Service-outcome candidate | `3427/1` Pressure | 1 / uCIFI | Water-specific pressure, but network location is absent. |
 | Service-outcome candidate | `3320/5700` Percentage | 1 / IPSO Alliance | Could represent soil moisture, but the property and root-zone location are not standardized. |
 | Service-outcome candidate | `3424/1` Cumulated Water Volume | 1 / uCIFI | Could represent delivered volume if the meter is at the service endpoint. |
-| Infrastructure behaviour | `3425/2` Irrigation Valve Status; `3425/4` Command in Action | 1 / uCIFI | Describes valve behaviour; both Resources are optional. |
+| Infrastructure output | `3425/2` Irrigation Valve Status; `3425/4` Command in Action | 1 / uCIFI | Describes valve behaviour; both Resources are optional. |
 | Infrastructure configuration | `10498/0` Discharge Level; `10498/2` Discharge Volume | 2 / South East Water Corporation | Private configured discharge intent, not proof of delivered outcome. |
 
 ### Coverage Assessment
@@ -424,7 +424,7 @@ The same Pressure Object can describe consumer pressure, pump outlet pressure, p
 
 ### Smart Data Model Responsibility
 
-The Smart Data Model should classify observations as consumer service, irrigation outcome, or infrastructure behaviour using network topology, service-area relationships, and municipality objectives.
+The Smart Data Model should classify observations as consumer service, irrigation outcome, or infrastructure output using network topology, service-area relationships, and municipality objectives.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
@@ -684,7 +684,7 @@ Objects 3301, 3392, 3398, 3416, and 3417 collectively demonstrate the value, sen
 - Road-surface, pavement, pedestrian-area, pole, cabinet, and luminaire observation-point vocabulary
 - Observed-feature and relevant-asset links
 - Observation method and aggregation metadata
-- Public Lighting profile requirements for optional measurement context
+- Public Lighting Interoperability Profile requirements for optional measurement context
 
 ### Smart Data Model Responsibility
 
@@ -694,7 +694,7 @@ The Smart Data Model owns municipality geography, policy, required illumination,
 
 1. Retain Object 3301 for illuminance.
 2. Extend Object 509 or define reusable metadata Resources for observation point, observed feature, method, and aggregation.
-3. Define a Public Lighting profile that constrains observation-point terms and requires appropriate timestamp, unit, and quality information.
+3. Define a Public Lighting Interoperability Profile that constrains observation-point terms and requires appropriate timestamp, unit, and quality information.
 4. Ensure measurements can be linked to Objects 3416 and 3417 when that relationship is locally known.
 
 ## Water Management and Irrigation
@@ -725,7 +725,7 @@ IPSO and uCIFI Objects provide most physical quantities. Source 2 South East Wat
 - Consumer endpoint, network position, soil layer, and irrigation-zone observation-point vocabulary
 - Observed-feature and local-asset relationships
 - Generalized aggregation function and observation method
-- Water/Irrigation profile requirements for optional context
+- Water/Irrigation Interoperability Profile requirements for optional context
 
 ### Smart Data Model Responsibility
 
@@ -737,7 +737,7 @@ The Smart Data Model owns network topology, consumer and service-area relationsh
 2. Standardize soil-moisture/root-zone semantics.
 3. Extend Object 509 or define reusable Source 0 metadata for observation point, observed feature, method, and aggregation.
 4. Generalize the useful interval-data pattern demonstrated by Source 2 Objects into Source 0 if adopted by OMA.
-5. Define a Water/Irrigation profile that makes necessary context mandatory.
+5. Define a Water/Irrigation Interoperability Profile that makes necessary context mandatory.
 
 ## Shared Cross-Domain Recommendation
 
@@ -751,7 +751,7 @@ The OMA Smart Cities Working Group should consider a reusable Source 0 measureme
 - Aggregation function and interval
 - Source observations when locally available
 - Prediction horizon for locally generated predictions
-- Timestamp, units, and measurement quality profile requirements
+- Timestamp, units, and measurement quality Interoperability Profile requirements
 
 Municipality objectives, policies, service-area definitions, topology, and final service-outcome evaluation should remain outside OMA unless required for local device operation. OMA must provide stable identifiers and relationships that allow Smart Data Models to add that context without ambiguity.
 
@@ -830,7 +830,7 @@ The Smart Data Model should keep infrastructure output entities (luminaire, lamp
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Retain Object 3416 as the primary infrastructure-output Object for street lighting. Document explicitly, in a Public Lighting profile, that Resources in 3416 represent infrastructure behaviour and must not be interpreted as service outcome.
+Retain Object 3416 as the primary infrastructure-output Object for street lighting. Document explicitly, in a Public Lighting Interoperability Profile, that Resources in 3416 represent infrastructure behaviour and must not be interpreted as service outcome.
 
 ---
 
@@ -867,7 +867,7 @@ Municipalities need to know whether a luminaire is operating normally, degraded,
 
 ### Missing Semantics
 
-- All operating-state Resources are optional; a Public Lighting profile does not yet mandate a minimum subset for interoperable fault reporting.
+- All operating-state Resources are optional; a Public Lighting Interoperability Profile does not yet mandate a minimum subset for interoperable fault reporting.
 - No controlled severity or urgency classification distinguishes a minor derating event from a lamp failure requiring dispatch.
 
 ### Smart Data Model Responsibility
@@ -876,7 +876,7 @@ The Smart Data Model should convert raw operating-state flags into work-order-re
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Define a Public Lighting profile that makes a minimum operating-state subset (lamp failure, control gear failure, relay failure) mandatory for interoperable fault detection across vendors.
+Define a Public Lighting Interoperability Profile that makes a minimum operating-state subset (lamp failure, control gear failure, relay failure) mandatory for interoperable fault detection across vendors.
 
 ---
 
@@ -931,7 +931,7 @@ Generalize the Core Link output-reference pattern into a reusable "linked asset"
 ### Required OMA Contribution
 
 - A reusable linked-asset relationship (see Question 3)
-- A profile-level minimum mandatory operating-state subset (see Question 2)
+- An Interoperability Profile-level minimum mandatory operating-state subset (see Question 2)
 - A controlled severity/urgency classification for operating-state anomalies
 
 ### Coverage Assessment
@@ -944,7 +944,7 @@ Severity triage, maintenance prioritization, and cross-asset comparison belong i
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Prioritize a Public Lighting profile over new Object definitions: the Registry's infrastructure-output vocabulary is already rich, but it is under- constrained by mandatory status and relationship generalization.
+Prioritize a Public Lighting Interoperability Profile over new Object definitions: the Registry's infrastructure-output vocabulary is already rich, but it is under- constrained by mandatory status and relationship generalization.
 
 ---
 
@@ -953,7 +953,7 @@ Prioritize a Public Lighting profile over new Object definitions: the Registry's
 | Classification | Finding |
 |---|---|
 | Existing OMA coverage | Object 3416 dimming level, color temperature, and a rich operating-state/alarm model; Object 3418 electrical output at the light source. |
-| Existing coverage requiring clarification or extension | Asset-linking between controller, meter, and luminaire asset Instances; mandatory profile subset for fault reporting. |
+| Existing coverage requiring clarification or extension | Asset-linking between controller, meter, and luminaire asset Instances; mandatory Interoperability Profile subset for fault reporting. |
 | New OMA capability required | None identified; a reusable linked-asset relationship and profiling are sufficient. |
 | Outside OMA responsibility but must remain linkable | Maintenance prioritization, work-order generation, and comparison against service outcome. |
 
@@ -1015,7 +1015,7 @@ The Smart Data Model should aggregate consumption across luminaires, cabinets, a
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-No new Objects are required. Reuse 3418, 3421, and 3422 as the standard consumption Objects for Public Lighting profiles.
+No new Objects are required. Reuse 3418, 3421, and 3422 as the standard consumption Objects for Public Lighting Interoperability Profiles.
 
 ---
 
@@ -1339,7 +1339,7 @@ The Smart Data Model should record how many and which luminaires are served by e
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Document, in a Public Lighting profile, that Object identity determines scope (3418 = single luminaire, 3421/3422 = cabinet feeder), and consider generalizing the 3422 linked-instance pattern for other scope compositions.
+Document, in a Public Lighting Interoperability Profile, that Object identity determines scope (3418 = single luminaire, 3421/3422 = cabinet feeder), and consider generalizing the 3422 linked-instance pattern for other scope compositions.
 
 ---
 
@@ -1766,7 +1766,7 @@ Add a discrete "command source" enumeration Resource to Object 3416, distinguish
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Clarify, in a Public Lighting profile, which Resources are expected to be locally measured versus retrieved from an external bus (DALI/Zhaga D4i), since this affects trust and latency assumptions.
+Clarify, in a Public Lighting Interoperability Profile, which Resources are expected to be locally measured versus retrieved from an external bus (DALI/Zhaga D4i), since this affects trust and latency assumptions.
 
 ---
 
@@ -1798,7 +1798,7 @@ None beyond the Question 1 recommendation; historical provenance is better addre
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Add a discrete command-source Resource to Object 3416, complementing Manual override active, and clarify in a Public Lighting profile which Resources are locally measured versus bus-relayed.
+Add a discrete command-source Resource to Object 3416, complementing Manual override active, and clarify in a Public Lighting Interoperability Profile which Resources are locally measured versus bus-relayed.
 
 ---
 
@@ -1859,7 +1859,7 @@ Municipalities need to know whether an energy, dimming, or connectivity measurem
 
 ### Missing Semantics
 
-- All quality Resources are optional; devices may omit them entirely, and no Public Lighting profile currently mandates their presence.
+- All quality Resources are optional; devices may omit them entirely, and no Public Lighting Interoperability Profile currently mandates their presence.
 
 ### Smart Data Model Responsibility
 
@@ -1867,7 +1867,7 @@ Translating a numeric quality level into a municipality-facing confidence catego
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Consider making Measurement Quality Indicator mandatory within a Public Lighting profile for energy Resources used in billing or compliance reporting.
+Consider making Measurement Quality Indicator mandatory within a Public Lighting Interoperability Profile for energy Resources used in billing or compliance reporting.
 
 ---
 
@@ -1893,7 +1893,7 @@ No numerical uncertainty/error-margin Resource (e.g. ± value) exists; only a qu
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Evaluate whether energy-metering profiles need a dedicated numerical uncertainty Resource beyond the existing 0–100 quality level, particularly for billing-grade metering.
+Evaluate whether energy-metering Interoperability Profiles need a dedicated numerical uncertainty Resource beyond the existing 0–100 quality level, particularly for billing-grade metering.
 
 ---
 
@@ -1927,7 +1927,7 @@ None required; the existing optional-Resource model already supports this.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Consider a Public Lighting profile requirement making quality indicator mandatory for billing/compliance-relevant Resources, and evaluate a supplementary numerical uncertainty Resource for metering use cases.
+Consider a Public Lighting Interoperability Profile requirement making quality indicator mandatory for billing/compliance-relevant Resources, and evaluate a supplementary numerical uncertainty Resource for metering use cases.
 
 ---
 
@@ -1936,7 +1936,7 @@ Consider a Public Lighting profile requirement making quality indicator mandator
 | Classification | Finding |
 |---|---|
 | Existing OMA coverage | Measurement Quality Indicator (6042) and Level (6049) consistently defined across lighting, electrical, and LPWAN mesh Objects. |
-| Existing coverage requiring clarification or extension | Quality Resources are optional; no profile currently mandates them. |
+| Existing coverage requiring clarification or extension | Quality Resources are optional; no Interoperability Profile currently mandates them. |
 | New OMA capability required | Possible supplementary numerical uncertainty Resource for metering. |
 | Outside OMA responsibility but must remain linkable | Translating quality levels into municipality-facing trust categories. |
 
@@ -2107,7 +2107,7 @@ Outside OMA responsibility but must remain linkable.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Confirm, in a Public Lighting profile, that physical/environmental-obstruction context is explicitly out of scope for LwM2M Objects and is a Smart Data Model / GIS responsibility.
+Confirm, in a Public Lighting Interoperability Profile, that physical/environmental-obstruction context is explicitly out of scope for LwM2M Objects and is a Smart Data Model / GIS responsibility.
 
 ---
 
@@ -2238,7 +2238,7 @@ Should be possibly complemented at higher levels, keyed by Asset GTIN (`3417/1`)
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Clarify, in a Public Lighting profile, that Asset GTIN and Asset identifier are expected to persist across device replacement events, so that Smart Data Models can maintain continuity of the asset record.
+Clarify, in a Public Lighting Interoperability Profile, that Asset GTIN and Asset identifier are expected to persist across device replacement events, so that Smart Data Models can maintain continuity of the asset record.
 
 ---
 
@@ -2307,7 +2307,7 @@ Translating raw connectivity metrics into an operational-readiness status (e.g. 
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Define, in a Public Lighting profile, a minimum mandatory subset of Objects 4 or 3447 depending on the transport technology used.
+Define, in a Public Lighting Interoperability Profile, a minimum mandatory subset of Objects 4 or 3447 depending on the transport technology used.
 
 ---
 
@@ -2352,7 +2352,7 @@ None material.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-None required; document this three-way distinction explicitly in a Public Lighting profile for implementer clarity.
+None required; document this three-way distinction explicitly in a Public Lighting Interoperability Profile for implementer clarity.
 
 ---
 
@@ -2364,7 +2364,7 @@ None required; document this three-way distinction explicitly in a Public Lighti
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Define a minimum mandatory connectivity-monitoring subset per transport technology in a Public Lighting profile; no new Objects are required.
+Define a minimum mandatory connectivity-monitoring subset per transport technology in a Public Lighting Interoperability Profile; no new Objects are required.
 
 ---
 
@@ -2435,7 +2435,7 @@ Municipality-level policy defining which schedule should apply, and audit of whe
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Retain the Program Scheduler family and Object 3416 manual-override Resources as the reference fallback-behaviour model for Public Lighting profiles.
+Retain the Program Scheduler family and Object 3416 manual-override Resources as the reference fallback-behaviour model for Public Lighting Interoperability Profiles.
 
 ---
 
@@ -2482,7 +2482,7 @@ Correlating Connectivity Monitoring/Statistics (Objects 4, 7, 3447) status with 
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Consider clarifying, in a Public Lighting profile, that "supervisory link active" should be derived by correlating Connectivity Monitoring/Mesh status (Objects 4, 3447) with Program Scheduler state, since the Program Scheduler alone does not need to record this distinction.
+Consider clarifying, in a Public Lighting Interoperability Profile, that "supervisory link active" should be derived by correlating Connectivity Monitoring/Mesh status (Objects 4, 3447) with Program Scheduler state, since the Program Scheduler alone does not need to record this distinction.
 
 ---
 
@@ -2494,7 +2494,7 @@ Consider clarifying, in a Public Lighting profile, that "supervisory link active
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-No new Objects are required. Document, in a Public Lighting profile, the correlation pattern between connectivity status and scheduler state described in Question 3.
+No new Objects are required. Document, in a Public Lighting Interoperability Profile, the correlation pattern between connectivity status and scheduler state described in Question 3.
 
 ---
 

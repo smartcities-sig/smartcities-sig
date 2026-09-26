@@ -23,7 +23,7 @@ The Smart Cities SIG was created to help address this challenge.
 
 The SIG provides a collaborative space where municipalities, standards organizations, ecosystem initiatives, universities, vendors, and interoperability experts can jointly analyze municipality operational realities and progressively transform them into semantically reliable interoperability outputs suitable for Digital Twin consumption.
 
-The SIG does not replace existing standards organizations, Smart Data Object ecosystems, or Digital Twin platforms.
+The SIG does not replace existing standards organizations, Smart Data Models ecosystems, or Digital Twin platforms.
 
 Instead, the SIG acts as:
 - an operational semantic translation initiative,

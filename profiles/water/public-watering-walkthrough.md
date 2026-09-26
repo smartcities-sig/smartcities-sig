@@ -115,13 +115,13 @@ Several modelling rules shoul de madee explicit, so that implementers can build 
 - Always declare the unit and observation interval for water quantities.
 - Encode whether the value refers to consumed water, estimated delivered water, or another derived concept.
 - Include irrigation method, because drip and sprinkler systems are not semantically equivalent.
-- Include minimum resolution and dynamic range assumptions in the profile or implementation guidance.
+- Include minimum resolution and dynamic range assumptions in the Interoperability Profile or implementation guidance.
 - Preserve context on vegetation type, shading, slope, and environmental conditions so the data remains meaningful in a digital twin.
 
 
 # Stage 2 — Reusable Abstractions Emergence
 
-## Candidate Profile Concepts
+## Candidate Interoperability Profile Concepts
 
 - Irrigation Zone
 - Water Meter/Flow Point

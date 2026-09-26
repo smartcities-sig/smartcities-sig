@@ -97,7 +97,7 @@ columns:
     pill: true
     type: text
   - name: "semantic_domain"
-    title: "Semantic Domain"
+    title: "Semantic Category"
     filter: true
     filterOrder: 4
     query: true
@@ -174,7 +174,7 @@ columns:
     type: text
     pill: true
   - name: semantic_domain
-    title: Domain
+    title: Category
     filter: true
     query: true
     hide: false

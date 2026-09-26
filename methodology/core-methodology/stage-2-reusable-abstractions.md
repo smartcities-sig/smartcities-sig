@@ -308,7 +308,7 @@ Stage 2 focuses on semantic and interoperability abstraction derivation.
 The next stage evaluates:
 - ecosystem realization mechanisms,
 - standards contributions,
-- Smart Data Object integration approaches,
+- Smart Data Models integration approaches,
 - validation implications,
 - and Digital Twin interoperability coordination.
 

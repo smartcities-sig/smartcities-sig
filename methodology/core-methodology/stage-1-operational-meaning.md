@@ -8,7 +8,7 @@ layout: doc
 
 ## Introduction
 
-The purpose of Stage 1 is to understand the real operational meaning behind municipality requirements before attempting standards mapping, interoperability modeling, Smart Data Object realization, or Digital Twin integration.
+The purpose of Stage 1 is to understand the real operational meaning behind municipality requirements before attempting standards mapping, interoperability modeling, Smart Data Models realization, or Digital Twin integration.
 
 Municipality operational documents often contain:
 - implicit assumptions,
@@ -141,7 +141,7 @@ One of the most important activities in Stage 1 is identifying semantic distinct
 Different measurements or operational concepts may appear technically related while actually representing very different operational meanings.
 
 Examples may include:
-- service outcome vs infrastructure behavior,
+- service outcome vs infrastructure output,
 - measured vs inferred values,
 - operational efficiency vs service effectiveness,
 - individual asset measurements vs aggregated operational measurements.
@@ -217,7 +217,7 @@ Examples include:
 
 These observations later contribute to:
 - reusable interoperability abstractions,
-- Smart Data Object realization,
+- Smart Data Models realization,
 - and Digital Twin integration considerations.
 
 ---
