@@ -60,7 +60,7 @@ Municipality Operational Reality
         ↓
 Operational Meaning
         ↓
-Reusable Interoperability Abstractions
+Semantic Capabilities
         ↓
 Standards & Ecosystem Mapping
         ↓

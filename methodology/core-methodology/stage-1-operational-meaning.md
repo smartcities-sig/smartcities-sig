@@ -229,6 +229,6 @@ Stage 1 does not yet define reusable interoperability abstractions.
 Instead, Stage 1 creates the operational and semantic foundation from which reusable abstractions may later emerge.
 
 The outputs of Stage 1 become the inputs to:
-- `stage-2-reusable-abstractions.md`
+- [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md)
 
 The objective is to preserve municipality operational meaning before attempting semantic normalization and interoperability reuse.

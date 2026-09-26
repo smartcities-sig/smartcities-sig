@@ -216,7 +216,7 @@ The walkthrough demonstrates how municipality operational meaning progressively 
 
 Stage 3 depends directly on the outputs of:
 - Stage 1 — Operational Meaning
-- Stage 2 — Reusable Interoperability Abstractions
+- Stage 2 — Semantic Capabilities
 
 Without preserving operational meaning and semantic integrity during earlier stages:
 - interoperability realization may become unreliable,
@@ -228,7 +228,7 @@ The methodology therefore preserves the following progression:
 ```text
 Operational Meaning
         ↓
-Reusable Interoperability Abstractions
+Semantic Capabilities
         ↓
 Standards & Ecosystem Mapping
         ↓

@@ -31,14 +31,8 @@ Want to contribute your own city's operational questions to Stage 1? See the inv
 
 ## Semantic Capability Reference
 
-Stage 2 output — the 14 reusable capabilities everything below is classified against.
-
-::EhEmbed
----
-download: true
-dataUrl: /iframe/semantic-capabilities-reference.html
----
-::
+The 14 capabilities everything below is classified against are defined in
+[Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
 
 ## Objects Semantic Capability
 

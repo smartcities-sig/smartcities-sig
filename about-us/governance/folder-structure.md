@@ -55,7 +55,7 @@ smartcities-sig/
 |   ├── core-methodology/
 |   |   ├── methodology-overview.md
 |   |   ├── stage-1-operational-meaning.md
-|   │   ├── stage-2-reusable-abstractions.md
+|   │   ├── stage-2-semantic-capabilities.md
 |   │   └── stage-3-standards-mapping.md
 |   │
 |   ├── supporting-concepts/

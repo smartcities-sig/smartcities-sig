@@ -27,7 +27,7 @@ This walkthrough became one of the foundational practical examples used to shape
 The walkthrough follows the three-stage methodology described in:
 - [Methodology-overview.md](/methodology/core-methodology/methodology-overview.md)
 - [Stage-1-operational-meaning.md](/methodology/core-methodology/stage-1-operational-meaning.md)
-- [Stage-2-reusable-abstractions.md](/methodology/core-methodology/stage-2-reusable-abstractions.md)
+- [Stage-2-semantic-capabilities.md](/methodology/core-methodology/stage-2-semantic-capabilities.md)
 - [Stage-3-standards-mapping.md](/methodology/core-methodology/stage-3-standards-mapping.md)
 
 ---
