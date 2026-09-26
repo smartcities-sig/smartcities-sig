@@ -1,6 +1,6 @@
 ---
 title: Stage 1 — Operational Meaning
-description:
+description: How the Smart Cities SIG captures what a municipality is actually trying to achieve before any standards are considered.
 layout: doc
 ---
 
@@ -8,7 +8,7 @@ layout: doc
 
 ## Introduction
 
-The purpose of Stage 1 is to understand the real operational meaning behind municipality requirements before attempting standards mapping, interoperability modeling, Smart Data Models realization, or Digital Twin integration.
+Stage 1 captures the real operational meaning behind municipality requirements, in the municipality's own terms. It applies the methodology's [Meaning Before Standards](/methodology/core-methodology/methodology-overview.md#meaning-before-standards) principle: no standards mapping, schema design, or architecture discussion happens until the operational intent is understood.
 
 Municipality operational documents often contain:
 - implicit assumptions,
@@ -17,21 +17,10 @@ Municipality operational documents often contain:
 - incomplete contextual information,
 - and operational concerns that are not immediately visible as interoperability requirements.
 
-The objective of this stage is to progressively extract:
-- operational objectives,
-- operational pain points,
-- semantic distinctions,
-- contextual dependencies,
-- and interoperability-relevant observations
-while preserving the original municipality operational intent.
+**Input:** municipality operational material.
+**Output:** operational objectives, operational pain points, semantic distinctions, contextual dependencies, and interoperability-relevant observations — the input to [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
 
-This stage intentionally avoids:
-- premature standards mapping,
-- premature schema design,
-- premature architecture discussions,
-- and premature implementation assumptions.
-
-The focus is understanding the municipality operational reality.
+For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md). For a fill-in template covering this stage, see the [Methodology Worksheet](/methodology/core-methodology/methodology-worksheet.md).
 
 ---
 
@@ -46,32 +35,7 @@ Stage 1 exists to answer the following questions:
 - What contextual information affects interpretation?
 - What interoperability risks are already visible?
 
-This stage creates the operational foundation for all later interoperability and Digital Twin activities.
-
----
-
-# Why Operational Meaning Matters
-
-Municipalities do not usually describe problems using interoperability terminology.
-
-Instead, municipalities describe:
-- operational frustrations,
-- service objectives,
-- maintenance realities,
-- environmental conditions,
-- accountability concerns,
-- performance expectations,
-- and infrastructure limitations.
-
-If interoperability analysis begins too early with:
-- standards,
-- schemas,
-- APIs,
-- or implementation models,
-
-important operational meaning may be lost.
-
-The Smart Cities SIG methodology therefore prioritizes operational understanding before standards realization.
+Municipalities do not usually describe problems using interoperability terminology. They describe operational frustrations, service objectives, maintenance realities, environmental conditions, accountability concerns, performance expectations, and infrastructure limitations. Stage 1 turns that material into operational understanding without losing its meaning.
 
 ---
 
@@ -89,19 +53,7 @@ Stage 1 may analyze different forms of municipality operational material, includ
 - operational procedures,
 - or workshop discussions.
 
-The material may contain:
-- measurements,
-- environmental conditions,
-- operational constraints,
-- device information,
-- contextual metadata,
-- and operational expectations.
-
-The material may also be:
-- incomplete,
-- inconsistent,
-- multilingual,
-- or semantically ambiguous.
+The material may contain measurements, environmental conditions, operational constraints, device information, contextual metadata, and operational expectations. It may also be incomplete, inconsistent, multilingual, or semantically ambiguous.
 
 ---
 
@@ -146,7 +98,7 @@ Examples may include:
 - operational efficiency vs service effectiveness,
 - individual asset measurements vs aggregated operational measurements.
 
-The identification of these distinctions is essential before interoperability abstractions can be derived.
+These distinctions are what Stage 2 later generalizes into semantic capabilities.
 
 ---
 
@@ -154,81 +106,32 @@ The identification of these distinctions is essential before interoperability ab
 
 Operational meaning cannot be separated from context.
 
-Stage 1 therefore analyzes:
-- environmental conditions,
-- operational conditions,
-- location provenance,
-- installation metadata,
-- aggregation conditions,
-- measurement scope,
+Stage 1 therefore records:
+- environmental and operational conditions, such as weather, nearby vegetation, humidity, visibility conditions, or operational scheduling,
+- location provenance and installation metadata,
+- aggregation conditions and measurement scope,
+- whether data was directly measured, inferred from another source, manually configured, or operationally estimated,
 - and operational assumptions.
 
-Examples of contextual dependencies may include:
-- weather conditions,
-- nearby vegetation,
-- humidity,
-- visibility conditions,
-- or operational scheduling.
-
-Provenance considerations may include:
-- whether data was directly measured,
-- inferred from another source,
-- manually configured,
-- or operationally estimated.
-
-These distinctions are important for Digital Twin trustworthiness and interoperability consistency.
+Stage 2 classifies these findings against capabilities such as [Provenance](/methodology/core-methodology/stage-2-semantic-capabilities.md#provenance), [Operational Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#operational-context), and [Physical Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#physical-context).
 
 ---
 
-# Common Operational Meaning Pitfalls
-
-Several common pitfalls may appear during municipality operational analysis.
-
-## Premature Standards Thinking
-Attempting to immediately map municipality concepts into existing standards may distort the original operational meaning.
+# Common Stage 1 Pitfalls
 
 ## Treating All Measurements Equally
-Different measurements may represent:
-- different operational viewpoints,
-- different levels of trust,
-- or different semantic meanings.
+Different measurements may represent different operational viewpoints, different levels of trust, or different semantic meanings.
 
 ## Ignoring Context
-Operational data without context may become:
-- misleading,
-- incomparable,
-- or operationally unreliable.
+Operational data without context may become misleading, incomparable, or operationally unreliable.
 
 ## Ignoring Operational Assumptions
 Municipality material may contain implicit operational assumptions that are not explicitly documented.
+
+Starting from existing standards is the most common pitfall of all; see [Meaning Before Standards](/methodology/core-methodology/methodology-overview.md#meaning-before-standards).
 
 ---
 
 # Public Street Lighting Example
 
-The Public Street Lighting walkthrough demonstrates several examples of Stage 1 operational meaning analysis.
-
-Examples include:
-- distinguishing lux, lumens, and watts as different operational concepts,
-- identifying service outcome vs infrastructure output,
-- recognizing inferred vs directly measured information,
-- identifying environmental dependencies such as fog, vegetation, and building shadows,
-- and recognizing operational concerns related to latency, packet loss, and teleoperation reliability.
-
-These observations later contribute to:
-- reusable interoperability abstractions,
-- Smart Data Models realization,
-- and Digital Twin integration considerations.
-
----
-
-# Relationship to Stage 2
-
-Stage 1 does not yet define reusable interoperability abstractions.
-
-Instead, Stage 1 creates the operational and semantic foundation from which reusable abstractions may later emerge.
-
-The outputs of Stage 1 become the inputs to:
-- [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md)
-
-The objective is to preserve municipality operational meaning before attempting semantic normalization and interoperability reuse.
+The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 1 — Operational Meaning Discovery*) shows this stage in practice: distinguishing lux, lumens, and watts; separating service outcome from infrastructure output; recognizing inferred versus measured values; identifying environmental dependencies such as fog, vegetation, and building shadows; and surfacing concerns about latency, packet loss, and teleoperation reliability.

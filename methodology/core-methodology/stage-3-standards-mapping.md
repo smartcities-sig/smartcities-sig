@@ -1,6 +1,6 @@
 ---
 title: Stage 3 — Standards & Ecosystem Mapping
-description:
+description: How the Smart Cities SIG assesses which standards ecosystems can supply each semantic capability, and coordinates their contributions.
 layout: doc
 ---
 
@@ -8,25 +8,18 @@ layout: doc
 
 ## Introduction
 
-The purpose of Stage 3 is to coordinate how the reusable interoperability abstractions identified during Stage 2 may be realized across standards organizations, Smart Data Model ecosystems, Digital Twin platforms, and interoperability initiatives.
+Stage 3 coordinates how the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) identified in Stage 2 may be realized across standards organizations, Smart Data Models ecosystems, Digital Twin platforms, and interoperability initiatives.
 
-At this stage:
-- operational meaning has already been captured,
-- reusable abstractions have already been identified,
-- and semantic distinctions have already been analyzed.
-
-The objective of Stage 3 is not to force a single implementation model or define a centralized architecture.
-
-Instead, the objective is to:
+At this stage, operational meaning has already been captured and the semantic capabilities are defined. The objective is not to force a single implementation model or define a centralized architecture, but to:
+- assess which ecosystems can supply each capability,
 - coordinate ecosystem contributions,
 - align interoperability realization approaches,
-- preserve semantic consistency,
-- and support semantically reliable Digital Twin consumption.
+- and preserve semantic consistency for Digital Twin consumption.
 
-The Smart Cities SIG acts as:
-- a collaborative ecosystem coordination space,
-- an operational semantic translation initiative,
-- and an interoperability alignment mechanism.
+**Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md) and the municipality operational questions in each Service Profile.
+**Output:** ecosystem assessment reports and coordinated realization approaches.
+
+For the SIG's role and the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
 ---
 
@@ -37,37 +30,15 @@ Stage 3 exists to answer the following questions:
 - Which ecosystem participants can contribute realization mechanisms?
 - Which standards or interoperability assets already exist?
 - What semantic gaps remain unresolved?
-- How can reusable abstractions be conveyed into Smart Data Models and Digital Twin ecosystems?
+- How can semantic capabilities be conveyed into Smart Data Models and Digital Twin ecosystems?
 - What interoperability validation considerations emerge?
 - How can semantic consistency be preserved across ecosystem contributions?
-
-This stage progressively transforms:
-- reusable interoperability understanding
-
-into:
-- coordinated ecosystem realization approaches.
 
 ---
 
 # Why Ecosystem Coordination Matters
 
-Municipality operational realities often span multiple ecosystems simultaneously.
-
-A single municipality use case may involve:
-- IoT devices,
-- operational platforms,
-- semantic integration layers,
-- Digital Twin systems,
-- interoperability standards,
-- and multiple organizational stakeholders.
-
-No single standards organization or ecosystem usually owns all these layers.
-
-The Smart Cities SIG therefore acts as a collaborative meeting point where:
-- municipality operational meaning,
-- semantic interoperability concerns,
-- and ecosystem realization approaches
-can be jointly analyzed and aligned.
+A single municipality use case may involve IoT devices, operational platforms, semantic integration layers, Digital Twin systems, interoperability standards, and multiple organizational stakeholders. No single standards organization or ecosystem usually owns all these layers, so municipality operational meaning, semantic interoperability concerns, and ecosystem realization approaches have to be analyzed and aligned jointly.
 
 ---
 
@@ -85,106 +56,83 @@ Different ecosystem participants contribute different forms of expertise and rea
 | Vendors | Operational implementation realities |
 | Other SDOs and alliances | Domain-specific interoperability assets |
 
-The Smart Cities SIG coordinates these contributions around semantically reliable interoperability objectives.
+---
+
+# Assessing Ecosystems
+
+Each ecosystem is assessed with the [Semantic Capability Assessment Framework](/methodology/assessment-frameworks/semantic-capability-assessment.md) (SCAF), which asks the same questions of every ecosystem for every semantic capability. Each ecosystem's answers are recorded in its own assessment report, listed in the SCAF's [Ecosystem Assessments](/methodology/assessment-frameworks/semantic-capability-assessment.md#ecosystem-assessments) table.
+
+```mermaid
+%%{init: {'flowchart': {'curve': 'linear', 'htmlLabels': true, 'wrappingWidth': 220}}}%%
+flowchart TD
+    A["Stage 2<br/>Semantic Capabilities"] --> B["Semantic Capability<br/>Assessment Framework"]
+    P["Service Profile<br/>Municipality Questions"] --> B
+    B --> C["OMA LwM2M<br/>Assessment"]
+    B --> D["Smart Data Models<br/>Assessment"]
+    C --> E["Digital Twin<br/>Interoperability"]
+    D --> E
+```
+
+Assessment activities typically include identifying compatible interoperability assets, identifying semantic gaps, evaluating contextual metadata requirements, identifying validation implications, and assessing interoperability consistency.
 
 ---
 
-# Standards and Ecosystem Evaluation
+# Mapping to Smart Data Models and Ontologies
 
-At this stage, ecosystem participants may evaluate:
-- existing standards,
-- interoperability models,
-- semantic structures,
-- device models,
-- Smart Data Models,
-- contextual integration approaches,
-- and Digital Twin realization mechanisms.
+After the assessment, each Service Domain is mapped onto the semantic models that will carry it into Digital Twins. The [lighting vs irrigation comparison](/profiles/lighting-vs-irrigation-comparison.md) shows a worked example of both mappings.
 
-Examples of evaluation activities may include:
-- identifying compatible interoperability assets,
-- identifying semantic gaps,
-- evaluating contextual metadata requirements,
-- identifying validation implications,
-- and assessing interoperability consistency.
+## Smart Data Models
 
-The methodology intentionally avoids:
-- prematurely selecting a single implementation approach,
-- or constraining ecosystem participants to one realization mechanism.
+Smart Data Models are one of the primary mechanisms through which operational meaning, contextual metadata, provenance information, and semantic consistency are conveyed into Digital Twin ecosystems. They are treated not as isolated technical schemas but as semantically enriched structures that preserve operational intent across ecosystem boundaries.
 
----
+Pick the closest NGSI entities and properties for the service:
+- device and entity types,
+- outcome-related attributes (the ones the municipality really cares about),
+- and operational and cost attributes (supporting).
 
-# Smart Data Models as Semantic Integration Mechanisms
+Add extensions only when the core model does not cover the key outcome.
 
-Smart Data Models act as one of the primary semantic integration mechanisms through which:
-- operational meaning,
-- contextual metadata,
-- provenance information,
-- interoperability abstractions,
-- and semantic consistency
-may be conveyed into Digital Twin ecosystems.
+Questions to answer:
+- Which existing Smart Data Models best fit this service?
+- Which properties represent outcome measurements, operational signals, and cost, energy, or resource consumption?
 
-Smart Data Models are not treated as isolated technical schemas.
+## SAREF and Other Ontologies
 
-Instead, they are viewed as semantically enriched interoperability structures that help preserve:
-- operational intent,
-- contextual integrity,
-- interoperability consistency,
-- and Digital Twin trustworthiness.
+Use SAREF's measurement pattern:
+- `saref:Device`, `saref:Sensor`, `saref:Actuator`,
+- and `saref:Measurement` that `saref:relatesToProperty` some domain property.
 
-The objective is to ensure that municipality operational meaning remains understandable and interoperable across ecosystem boundaries.
+Choose domain vocabularies such as SAREF4CITY, SAREF4AGRI, or SAREF4ENVI. Further ontologies are still to be considered.
 
----
-
-# Digital Twin Integration Perspective
-
-The final objective of the methodology is to support semantically reliable and operationally useful Digital Twin consumption.
-
-Digital Twins require more than:
-- raw telemetry,
-- disconnected measurements,
-- or isolated device outputs.
-
-Digital Twins require:
-- contextual information,
-- semantic consistency,
-- provenance awareness,
-- interoperability reliability,
-- and operational meaning preservation.
-
-The methodology therefore treats interoperability and semantic integrity as foundational requirements for trustworthy Digital Twin integration.
+Questions to answer:
+- What are the domain properties (for example, illuminance, soil moisture, fill level, occupancy) this service observes or acts upon?
+- How are device roles, measurements (value, unit, time, location), methods, and quality represented consistently across domains?
 
 ---
 
 # Validation and Interoperability Considerations
 
-Stage 3 also introduces interoperability validation considerations.
+Stage 3 also introduces interoperability validation considerations, such as semantic consistency validation, interoperability verification, contextual completeness validation, measurement comparability, provenance integrity, and operational reliability evaluation.
 
-Examples may include:
-- semantic consistency validation,
-- interoperability verification,
-- contextual completeness validation,
-- measurement comparability,
-- provenance integrity,
-- and operational reliability evaluation.
+The objective is to ensure that semantically equivalent information remains interoperable, contextual meaning is preserved, and Digital Twin consumption remains operationally reliable. Validation approaches may evolve through ecosystem collaboration and implementation experience.
 
-The objective is to ensure that:
-- semantically equivalent information remains interoperable,
-- contextual meaning is preserved,
-- and Digital Twin consumption remains operationally reliable.
+---
 
-Validation approaches may later evolve through ecosystem collaboration and implementation experience.
+# Semantic Assembly for Smart City Digital Twins
+
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/bf2e0d31-2550-4abc-92ad-9cf195f6d318" />
+
+*Figure — Collaborative Semantic Assembly for Smart City Digital Twins*
+
+In Stage 3, operational pain points identified by municipalities drive a collaborative standards gap analysis across organizations such as the Open Mobile Alliance, the FIWARE Foundation, academia, and other standards ecosystems.
+
+Reusable atomic semantic components — such as OMA Objects and Resources — are evaluated, harmonized, and assembled into contextual Smart Data Models. These combine telemetry, metadata, operational context, and semantic relationships into interoperable structures that can be reused across smart city domains including public lighting, water management, mobility, environment, and energy.
+
+The outcome is a set of contextualized Smart Data Models consumable by Digital Twins.
 
 ---
 
 # Common Stage 3 Pitfalls
-
-Several risks may appear during standards and ecosystem mapping activities.
-
-## Premature Architecture Lock-In
-Selecting implementation approaches too early may reduce ecosystem flexibility.
-
-## Over-Standardization
-Not every operational observation requires immediate standards formalization.
 
 ## Semantic Drift
 Ecosystem realization approaches must preserve the operational meaning identified during earlier stages.
@@ -195,43 +143,10 @@ The methodology should remain interoperability-oriented rather than tied to a si
 ## Ignoring Municipality Intent
 Ecosystem realization must remain aligned with the original municipality operational objectives.
 
+Premature architecture lock-in and over-standardization are covered by [Meaning Before Standards](/methodology/core-methodology/methodology-overview.md#meaning-before-standards).
+
 ---
 
 # Public Street Lighting Example
 
-The Public Street Lighting walkthrough demonstrates several examples of Stage 3 ecosystem coordination thinking.
-
-Examples include:
-- evaluating how OMA/LwM2M objects may contribute device interoperability components,
-- evaluating how Smart Data Models may carry contextual and semantic information,
-- evaluating FIWARE and Digital Twin consumption considerations,
-- identifying provenance and contextual metadata requirements,
-- and identifying interoperability validation considerations.
-
-The walkthrough demonstrates how municipality operational meaning progressively evolves into coordinated interoperability realization thinking across ecosystem participants.
-
----
-
-# Relationship to Previous Stages
-
-Stage 3 depends directly on the outputs of:
-- Stage 1 — Operational Meaning
-- Stage 2 — Semantic Capabilities
-
-Without preserving operational meaning and semantic integrity during earlier stages:
-- interoperability realization may become unreliable,
-- contextual information may be lost,
-- and Digital Twin integration may become semantically inconsistent.
-
-The methodology therefore preserves the following progression:
-
-```text
-Operational Meaning
-        ↓
-Semantic Capabilities
-        ↓
-Standards & Ecosystem Mapping
-        ↓
-Smart Data Models & Ecosystem Realization
-        ↓
-Digital Twin Consumption
+The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 3 — Ecosystem and Interoperability Thinking*) shows this stage in practice, and the [OMA Semantic Capability Assessment](/methodology/assessment-frameworks/oma-capability-assessment.md) records the detailed OMA findings for Public Lighting.
