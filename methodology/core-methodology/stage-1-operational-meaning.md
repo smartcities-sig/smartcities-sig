@@ -17,8 +17,8 @@ Municipality operational documents often contain:
 - incomplete contextual information,
 - and operational concerns that are not immediately visible as interoperability requirements.
 
-**Input:** municipality operational material.
-**Output:** operational objectives, operational pain points, semantic distinctions, contextual dependencies, and interoperability-relevant observations — the input to [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
+**Input:** municipality operational material, interviews, and workshops.
+**Output:** user stories, an entity sketch, operational objectives, operational pain points, semantic distinctions, contextual dependencies, and interoperability-relevant observations — the input to [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
 
 For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md). For a fill-in template covering this stage, see the [Methodology Worksheet](/methodology/core-methodology/methodology-worksheet.md).
 
@@ -29,6 +29,8 @@ For the methodology as a whole, see the [Methodology Overview](/methodology/core
 Stage 1 exists to answer the following questions:
 
 - What is the municipality actually trying to achieve?
+- Who needs to do what, under which conditions, and why?
+- Which things does the municipality talk about, and what does it say about them?
 - What operational problem is being solved?
 - What do the measurements and operational concepts really mean?
 - What assumptions are implicitly present?
@@ -54,6 +56,47 @@ Stage 1 may analyze different forms of municipality operational material, includ
 - or workshop discussions.
 
 The material may contain measurements, environmental conditions, operational constraints, device information, contextual metadata, and operational expectations. It may also be incomplete, inconsistent, multilingual, or semantically ambiguous.
+
+---
+
+# User Stories
+
+Stage 1 starts by asking the municipality's representatives to describe, in their own words, the problems they want to solve and what a solution would let them do. Each need is written down as a **user story** that follows a fixed pattern, so that the people involved, the actions, the conditions, and the purpose can be picked out of it.
+
+The SIG has not yet fixed the pattern. Two forms are being tested in municipality workshops:
+
+- third person: *<type of user> want to <action> under <conditions> so that <they can achieve a benefit or value>*,
+- first person, in the Agile style: *As a <type of user>, I want to <action> when <conditions>, so that <I can achieve a benefit or value>*.
+
+For example: *Night-shift maintenance crews want to see which streetlights on their route fall below the minimum illuminance, under fog or heavy rain, so that they can repair first where pedestrians are at risk.*
+
+Good user stories are:
+- specific, measurable, achievable, relevant, and testable,
+- written in the municipality's language, not in the language of a standard or a device,
+- and as many and as fine-grained as the municipality can give.
+
+The benefit a story ends with usually names the [Service Outcome](/methodology/core-methodology/stage-2-semantic-capabilities.md#service-outcome) the municipality cares about.
+
+---
+
+# Entity Sketch
+
+Once enough user stories are collected, they are analysed systematically to identify:
+- the **types of entities** the municipality talks about, such as a streetlight, a street segment, or a park zone,
+- and, for each entity type:
+  - the **properties** that characterize it,
+  - the **actions** invoked on it or triggered by it,
+  - and the **events** it emits.
+
+The result is an **entity sketch**: a structured summary of what the stories say, still in the municipality's words. It is not a data model, and it does not use the names of any standard. Actions and events are recorded even though not every ecosystem can represent them yet; how they are represented is decided in [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md#open-questions-for-sig-discussion).
+
+[Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md#classifying-observations) examines each property of the sketch that can be observed.
+
+---
+
+# Returning to the Municipality
+
+Stage 1 is revisited as the later stages progress. Stage 2 may find a property that cannot be observed as described, and Stage 3 may find properties or needs the municipality did not mention. These come back to Stage 1 as questions for the municipality, and the user stories and the entity sketch are updated with its answers. See [how the stages fit together](/methodology/core-methodology/methodology-overview.md#core-methodology).
 
 ---
 
@@ -128,10 +171,13 @@ Operational data without context may become misleading, incomparable, or operati
 ## Ignoring Operational Assumptions
 Municipality material may contain implicit operational assumptions that are not explicitly documented.
 
+## Describing Devices Instead of the Service
+User stories and the entity sketch describe what the people who run the service need, not the devices or the network that supply it. How the infrastructure itself is operated is captured separately, by the [Operational Semantics](/methodology/core-methodology/stage-2-semantic-capabilities.md#operational-semantics) capabilities.
+
 Starting from existing standards is the most common pitfall of all; see [Meaning Before Standards](/methodology/core-methodology/methodology-overview.md#meaning-before-standards).
 
 ---
 
 # Public Street Lighting Example
 
-The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 1 — Operational Meaning Discovery*) shows this stage in practice: distinguishing lux, lumens, and watts; separating service outcome from infrastructure output; recognizing inferred versus measured values; identifying environmental dependencies such as fog, vegetation, and building shadows; and surfacing concerns about latency, packet loss, and teleoperation reliability.
+The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 1 — Operational Meaning Discovery*) shows this stage in practice: distinguishing lux, lumens, and watts; separating service outcome from infrastructure output; recognizing inferred versus measured values; identifying environmental dependencies such as fog, vegetation, and building shadows; and surfacing concerns about latency, packet loss, and teleoperation reliability. The walkthrough predates user stories and the entity sketch, and does not yet include them.
