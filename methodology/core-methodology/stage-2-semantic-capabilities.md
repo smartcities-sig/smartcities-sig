@@ -14,7 +14,7 @@ This page is the authoritative definition of every semantic capability. Other do
 
 For the methodology as a whole, including why operational meaning is captured before any standard is considered, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
-**Input:** operational objectives, pain points, semantic distinctions, and contextual dependencies from Stage 1.
+**Input:** the user stories, entity sketch, operational objectives, pain points, semantic distinctions, and contextual dependencies from Stage 1.
 **Output:** the taxonomy of 14 semantic capabilities in 4 semantic categories below, used by [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md) to assess standards ecosystems.
 
 ---
@@ -65,6 +65,12 @@ Stage 1 material is classified against the capabilities using the following term
 
 Each capability below includes a *How to classify* rule, including tie-breakers against neighbouring capabilities.
 
+When Stage 1 provides an [entity sketch](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch), each property of each entity is examined in turn:
+1. whether, where, and how it can be observed — the [Observation Semantics](#observation-semantics) capabilities,
+2. and under which trustworthiness conditions the observation can be relied on — the [Interpretation Semantics](#interpretation-semantics) capabilities.
+
+A property that cannot be observed as the municipality described it goes back to Stage 1 as a question for the municipality.
+
 ---
 
 # Semantic Categories
@@ -112,7 +118,7 @@ flowchart TD
 
 # Domain Semantics
 
-Domain Semantics describe **what municipalities ultimately care about**. They distinguish the operational service being delivered from the behaviour of the infrastructure providing that service and from the resources it consumes.
+Domain Semantics describe **what municipalities ultimately care about**. They distinguish the operational service being delivered from the behaviour of the infrastructure providing that service and from the resources it consumes. In Stage 1's user stories, the benefit a story ends with usually names the Service Outcome.
 
 Aligned primarily with the Business and Usage viewpoints of ISO/IEC 30141, which describe intended service outcomes, stakeholder needs, and the interaction between IoT systems and the physical entities supporting municipal services.
 
@@ -212,7 +218,7 @@ Aligned primarily with the Foundational IoT and Functional viewpoints of ISO/IEC
 
 # Interpretation Semantics
 
-Interpretation Semantics describe the additional information required to **understand, compare, and trust observations**: where the information originated, how trustworthy it is, under which operating conditions it was obtained, and which physical conditions influenced the result. They let Digital Twins interpret observations consistently across municipalities, vendors, and ecosystems.
+Interpretation Semantics describe the **trustworthiness conditions** of an observation — the additional information required to **understand, compare, and trust observations**: where the information originated, how trustworthy it is, under which operating conditions it was obtained, and which physical conditions influenced the result. They let Digital Twins interpret observations consistently across municipalities, vendors, and ecosystems.
 
 Aligned primarily with the Trustworthiness viewpoint of ISO/IEC 30141, which covers the context, provenance, quality, and descriptive information needed to interpret observations consistently across heterogeneous IoT systems.
 
