@@ -12,7 +12,7 @@ The objective is to find a common way to analyze this kind of work and get a com
 
 This is just a first proposal, prior to the participation of experts in this field.
 
-The rows follow the [Methodology Worksheet](/methodology/core-methodology/methodology-worksheet.md); the last two rows apply the Stage 3 [mapping to Smart Data Models and ontologies](/methodology/core-methodology/stage-3-standards-mapping.md#mapping-to-smart-data-models-and-ontologies).
+The rows follow the [Methodology Worksheet](/methodology/core-methodology/methodology-worksheet.md); the last two rows apply the Stage 4 [mapping to Smart Data Models and ontologies](/methodology/core-methodology/stage-4-smart-data-models-realization.md#mapping-to-smart-data-models-and-ontologies).
 
 
 ## Comparison Table

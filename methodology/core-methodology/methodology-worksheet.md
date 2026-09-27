@@ -107,4 +107,4 @@ Questions to fill in:
 
 ## Next: mapping to semantic models
 
-Mapping the service onto Smart Data Models and SAREF is part of Stage 3; see [Mapping to Smart Data Models and Ontologies](/methodology/core-methodology/stage-3-standards-mapping.md#mapping-to-smart-data-models-and-ontologies).
+Mapping the service onto Smart Data Models and SAREF is part of Stage 4; see [Mapping to Smart Data Models and Ontologies](/methodology/core-methodology/stage-4-smart-data-models-realization.md#mapping-to-smart-data-models-and-ontologies).

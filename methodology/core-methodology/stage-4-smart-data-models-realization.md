@@ -89,7 +89,7 @@ Stage 4 therefore treats incompleteness and disagreement as normal working condi
 
 # Smart Data Models as the Convergence Point
 
-Stage 3 describes Smart Data Models as one of the semantic integration mechanisms through which operational meaning may be conveyed into Digital Twin ecosystems.
+Smart Data Models are one of the primary mechanisms through which operational meaning, contextual metadata, provenance information, and semantic consistency are conveyed into Digital Twin ecosystems. They are treated not as isolated technical schemas but as semantically enriched structures that preserve operational intent across ecosystem boundaries.
 
 Stage 4 treats Smart Data Models as the structure in which convergence is expressed.
 
@@ -100,6 +100,51 @@ Smart Data Models are suited to this role because they carry:
 - and structures that Digital Twin platforms already consume.
 
 A Smart Data Model is therefore not the endpoint of the methodology. It is where contributions from several ecosystems are assembled into something a Digital Twin can use without losing the operational meaning captured during Stage 1.
+
+---
+
+# Semantic Assembly for Smart City Digital Twins
+
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/bf2e0d31-2550-4abc-92ad-9cf195f6d318" />
+
+*Figure — Collaborative Semantic Assembly for Smart City Digital Twins*
+
+Operational pain points identified by municipalities drive the collaborative standards gap analysis of Stage 3, across organizations such as the Open Mobile Alliance, the FIWARE Foundation, academia, and other standards ecosystems. Stage 4 assembles the results.
+
+Reusable atomic semantic components — such as OMA Objects and Resources — are evaluated, harmonized, and assembled into contextual Smart Data Models. These combine telemetry, metadata, operational context, and semantic relationships into interoperable structures that can be reused across smart city domains including public lighting, water management, mobility, environment, and energy.
+
+The outcome is a set of contextualized Smart Data Models consumable by Digital Twins.
+
+---
+
+# Mapping to Smart Data Models and Ontologies
+
+After the Stage 3 assessments, each Service Domain is mapped onto the semantic models that will carry it into Digital Twins. The [lighting vs irrigation comparison](/profiles/lighting-vs-irrigation-comparison.md) shows a worked example of both mappings.
+
+## Smart Data Models
+
+Pick the closest NGSI entities and properties for the service:
+- device and entity types,
+- outcome-related attributes (the ones the municipality really cares about),
+- and operational and cost attributes (supporting).
+
+Add extensions only when the core model does not cover the key outcome.
+
+Questions to answer:
+- Which existing Smart Data Models best fit this service?
+- Which properties represent outcome measurements, operational signals, and cost, energy, or resource consumption?
+
+## SAREF and Other Ontologies
+
+Use SAREF's measurement pattern:
+- `saref:Device`, `saref:Sensor`, `saref:Actuator`,
+- and `saref:Measurement` that `saref:relatesToProperty` some domain property.
+
+Choose domain vocabularies such as SAREF4CITY, SAREF4AGRI, or SAREF4ENVI. Further ontologies are still to be considered.
+
+Questions to answer:
+- What are the domain properties (for example, illuminance, soil moisture, fill level, occupancy) this service observes or acts upon?
+- How are device roles, measurements (value, unit, time, location), methods, and quality represented consistently across domains?
 
 ---
 
