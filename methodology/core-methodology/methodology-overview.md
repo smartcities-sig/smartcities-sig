@@ -79,21 +79,29 @@ If analysis begins too early with standards, schemas, APIs, or implementation mo
 
 # Core Methodology
 
-The Smart Cities SIG methodology is based on four progressive stages.
+The Smart Cities SIG methodology is based on four stages. The work runs through them in order, but not in one direction only: a later stage often finds something an earlier stage missed, and the work goes back to that stage before it continues.
 
-```text
-Municipality Operational Reality
-        ↓
-Operational Meaning
-        ↓
-Semantic Capabilities
-        ↓
-Standards & Ecosystem Mapping
-        ↓
-Smart Data Models & Ecosystem Realization
-        ↓
-Digital Twin Consumption
+```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'htmlLabels': true}}}%%
+flowchart LR
+    M(["Municipality<br/>operational reality"])
+    S1["Stage 1<br/>Operational Meaning"]
+    S2["Stage 2<br/>Semantic Capabilities"]
+    S3["Stage 3<br/>Standards & Ecosystem Mapping"]
+    S4["Stage 4<br/>Smart Data Models Realization"]
+    DT(["Digital Twin<br/>consumption"])
+
+    M --> S1 --> S2 --> S3 --> S4 --> DT
+
+    S2 -. "meaning that is unclear<br/>or cannot be observed" .-> S1
+    S3 -. "concepts the municipality<br/>did not mention" .-> S1
+    S3 -. "gaps to re-check against<br/>the capabilities" .-> S2
+    S4 -. "missing properties,<br/>unresolved mappings" .-> S3
 ```
+
+*Solid arrows show the main flow; dotted arrows show findings sent back to an earlier stage.*
+
+A loop back sends a question, not an answer. When Stage 3 finds a concept the municipality did not mention, Stage 1 asks the municipality whether it matters; the standard does not decide for it (see [Meaning Before Standards](#meaning-before-standards)). What still cannot be resolved is recorded as a [residual gap](/methodology/core-methodology/stage-4-smart-data-models-realization.md#identifying-residual-gaps) in Stage 4.
 
 | Stage | Question it answers | Output |
 |---|---|---|
