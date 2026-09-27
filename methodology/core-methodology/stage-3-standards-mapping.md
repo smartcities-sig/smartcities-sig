@@ -16,7 +16,7 @@ At this stage, operational meaning has already been captured and the semantic ca
 - align interoperability realization approaches,
 - and preserve semantic consistency for Digital Twin consumption.
 
-**Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md) and the municipality operational questions in each Service Profile.
+**Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md), the entity sketch from [Stage 1](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch), and the municipality operational questions in each Service Profile.
 **Output:** ecosystem assessment reports and coordinated realization approaches — the input to [Stage 4 — Smart Data Models Realization](/methodology/core-methodology/stage-4-smart-data-models-realization.md).
 
 For the SIG's role and the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
@@ -69,11 +69,19 @@ flowchart TD
     P["Service Profile<br/>Municipality Questions"] --> B
     B --> C["OMA LwM2M<br/>Assessment"]
     B --> D["Smart Data Models<br/>Assessment"]
-    C --> E["Digital Twin<br/>Interoperability"]
+    C --> E["Stage 4<br/>Smart Data Models Realization"]
     D --> E
 ```
 
 Assessment activities typically include identifying compatible interoperability assets, identifying semantic gaps, evaluating contextual metadata requirements, identifying validation implications, and assessing interoperability consistency.
+
+## Finding Candidate Models and Objects
+
+For each Service Domain, the assessments also look for concrete candidates:
+- **Smart Data Models** whose entity types correspond to the entity types in the Stage 1 [entity sketch](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch). Properties a model defines but the municipality did not mention go back to Stage 1 as questions for the municipality; properties the municipality needs but no model defines are recorded as gaps.
+- **OMA objects** that can supply each observable property under the trustworthiness conditions identified in Stage 2. When no object meets a condition, the condition is re-checked in Stage 2 before it is recorded as a gap.
+
+A candidate is not yet a mapping. Checking that the OMA objects can feed the Smart Data Models, and refining the models where they cannot, is Stage 4.
 
 Bringing the assessment results together, and mapping each Service Domain onto Smart Data Models and ontologies, is the work of [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md).
 
