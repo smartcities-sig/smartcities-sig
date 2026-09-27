@@ -114,6 +114,71 @@ Supporting material:
 - The [Methodology Worksheet](/methodology/core-methodology/methodology-worksheet.md) is the practical template for analysing a Service Domain in Stages 1 and 2.
 - Each Service Profile under `profiles/` holds the walkthrough and municipality operational questions for one Service Domain.
 
+## How the Work Flows
+
+The diagram below shows the main activities inside each stage, and the findings that send the work back to an earlier stage or to the municipality.
+
+```mermaid
+%%{init: {'flowchart': {'curve': 'basis', 'htmlLabels': true}}}%%
+flowchart LR
+    CITY(["Municipality<br/>interviews and workshops"])
+
+    subgraph S1["Stage 1 — Operational Meaning"]
+        direction TB
+        A1["User stories<br/>in the municipality's own words"]
+        B1["Entity sketch<br/>entity types · properties · actions · events"]
+    end
+
+    subgraph S2["Stage 2 — Semantic Capabilities"]
+        direction TB
+        D2["Service outcome<br/>Domain Semantics"]
+        C2["How each property is observed<br/>Observation Semantics"]
+        C3["Trustworthiness conditions<br/>Interpretation Semantics"]
+    end
+
+    subgraph S3["Stage 3 — Standards & Ecosystem Mapping"]
+        direction TB
+        E1["Candidate Smart Data Models"]
+        E4["Candidate OMA objects"]
+    end
+
+    subgraph S4["Stage 4 — Smart Data Models Realization"]
+        direction TB
+        F1["Match OMA objects to Smart Data Models<br/>refine the models · record residual gaps"]
+    end
+
+    OUT1[["Smart Data Models for city Digital Twins"]]
+    OUT2[["Catalogue of OMA objects"]]
+
+    CITY --> A1 --> B1
+    A1 --> D2
+    B1 --> C2 --> C3
+    B1 -- "entity types" --> E1
+    C3 -- "observations and conditions" --> E4
+    E1 --> F1
+    E4 --> F1
+    F1 --> OUT1
+    F1 --> OUT2
+
+    C2 -. "property cannot be observed as described" .-> B1
+    E1 -. "properties the municipality did not mention" .-> CITY
+    E4 -. "no OMA object meets the condition" .-> C3
+    F1 -. "model needs new properties" .-> E1
+    F1 -. "object cannot feed the model" .-> E4
+```
+
+*Solid arrows show the main flow; dotted arrows show findings sent back.*
+
+The search for candidate Smart Data Models needs only the entity types from Stage 1, so it can start before Stage 2 is complete. The search for OMA objects needs the observations and trustworthiness conditions from Stage 2.
+
+| Finding | Found in | Goes back to |
+|---|---|---|
+| A property cannot be observed as the municipality described it | Stage 2 | Stage 1, as a question for the municipality |
+| A Smart Data Model defines properties the municipality did not mention | Stage 3 | Stage 1, as a question for the municipality |
+| No OMA object meets a trustworthiness condition | Stage 3 | Stage 2, to re-check the condition before recording a gap |
+| A Smart Data Model needs new properties | Stage 4 | Stage 3, to look for a model that has them or to record a gap |
+| An OMA object cannot feed the model | Stage 4 | Stage 3, to look for another object or to record a gap |
+
 ## Operational Semantic Translation Model
 
 The model illustrates how municipality operational realities are progressively transformed into reusable interoperability understanding, ecosystem realization approaches, and semantically reliable Digital Twin consumption.
