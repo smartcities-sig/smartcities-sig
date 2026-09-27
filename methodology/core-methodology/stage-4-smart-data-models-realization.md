@@ -1,6 +1,6 @@
 ---
 title: Stage 4 — Smart Data Models Realization
-description:
+description: How the Smart Cities SIG brings independent ecosystem assessment results together into Smart Data Models that Digital Twins can consume.
 layout: doc
 ---
 
@@ -8,11 +8,11 @@ layout: doc
 
 ## Introduction
 
-The purpose of Stage 4 is to bring the ecosystem assessment results produced during Stage 3 together into Smart Data Models, so that reusable semantic capabilities become concretely realizable and consumable by Digital Twins.
+The purpose of Stage 4 is to bring the ecosystem assessment results produced during Stage 3 together into Smart Data Models, so that the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) become concretely realizable and consumable by Digital Twins.
 
 At this stage:
 - operational meaning has already been captured,
-- reusable abstractions have already been identified,
+- the semantic capabilities have already been defined,
 - semantic distinctions have already been analyzed,
 - and ecosystem participants have already assessed their own interoperability assets.
 
@@ -26,6 +26,11 @@ This stage intentionally avoids:
 - and prescribing a single implementation technology.
 
 The detailed definition of this stage is still under development by the Smart Cities SIG. This document is a draft overview intended to support that discussion.
+
+**Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md) and the ecosystem assessment reports from [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md).
+**Output:** converged Smart Data Model realization, with residual gaps recorded.
+
+For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
 ---
 
@@ -71,7 +76,7 @@ Convergence is therefore not an administrative step. It is where interoperabilit
 Stage 4 does not begin from municipality material.
 
 Stage 4 operates on:
-- the reusable semantic capabilities identified during Stage 2,
+- the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) defined in Stage 2,
 - the ecosystem assessment results produced during Stage 3,
 - the semantic gaps and responsibilities recorded in those assessments,
 - and the contextual and provenance requirements preserved from Stage 1.
@@ -120,7 +125,7 @@ The reconciled picture is expressed as Smart Data Model structures, including th
 
 ## Preserving Traceability
 
-Each realization decision remains traceable back through the reusable abstractions to the municipality operational meaning from which it originated.
+Each realization decision remains traceable back through the semantic capabilities to the municipality operational meaning from which it originated.
 
 ---
 
@@ -129,8 +134,8 @@ Each realization decision remains traceable back through the reusable abstractio
 This document defines what Stage 4 is. It does not contain the results of Stage 4.
 
 The convergence work itself is recorded elsewhere in this repository:
-- the per-organization capability assessments under `methodology/assessment-frameworks/`,
-- the concrete model mappings under `profiles/`,
+- the per-ecosystem assessment reports, listed in the [Ecosystem Assessments](/methodology/assessment-frameworks/semantic-capability-assessment.md#ecosystem-assessments) table,
+- the concrete OMA-to-Smart-Data-Models mappings in each Service Profile (for example, [Public Lighting](/profiles/lighting/mappings/oma-smart-data-models-mapping-lighting.md)),
 - and the domain walkthroughs that demonstrate the methodology end to end.
 
 This separation is deliberate. The stage documents describe the methodology and remain stable, while assessment and mapping material evolves continuously as ecosystem contributions arrive.
@@ -141,7 +146,7 @@ This separation is deliberate. The stage documents describe the methodology and 
 
 The following questions remain open and are expected to shape the final definition of this stage.
 
-- Is the unit of convergence the semantic capability, the domain profile, or both?
+- Is the unit of convergence the semantic capability, the Service Profile, or both?
 - What constitutes sufficient coverage for a capability to be considered realized?
 - How are conflicting assessment conclusions reconciled, and by whom?
 - How are residual gaps routed back to the originating standards organization?
@@ -155,7 +160,7 @@ The following questions remain open and are expected to shape the final definiti
 Several risks may appear during Smart Data Model realization activities.
 
 ## Schema-First Convergence
-Beginning from model structure rather than from assessed semantic capability may reintroduce the premature standards thinking that earlier stages avoided.
+Beginning from model structure rather than from assessed semantic capability may reintroduce the premature standards thinking that earlier stages avoided (see [Meaning Before Standards](/methodology/core-methodology/methodology-overview.md#meaning-before-standards)).
 
 ## Losing Traceability to Operational Meaning
 A realization that cannot be traced back to a municipality operational objective may be technically valid and operationally irrelevant.
@@ -173,44 +178,21 @@ Declaring convergence complete before assessment results are sufficiently mature
 
 # Public Street Lighting Example
 
-The Public Street Lighting walkthrough demonstrates several examples of Stage 4 convergence thinking.
+The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) does not yet have a Stage 4 section. Its Stage 3 section, the [OMA assessment](/methodology/assessment-frameworks/oma-capability-assessment.md), the [Smart Data Models assessment](/methodology/assessment-frameworks/sdm-capability-assessment.md), and the [lighting mapping](/profiles/lighting/mappings/oma-smart-data-models-mapping-lighting.md) provide the inputs that Stage 4 convergence would work on.
 
-Examples include:
+For Public Street Lighting, Stage 4 would include:
 - reconciling what device-level objects report against what contextual models must carry,
 - determining where illumination service outcome is realized as distinct from infrastructure output,
 - determining where environmental context such as fog, vegetation, and shadows is carried,
 - recording provenance so that inferred and directly measured values remain distinguishable,
 - and identifying which capabilities remain unrealized by any assessed contribution.
 
-Smart Data Models in the street lighting domain, such as those describing streetlight assets and their operational context, are the natural realization target for this walkthrough. The specific reference models are indicative and remain pending confirmation by the SIG.
-
-The walkthrough demonstrates how coordinated ecosystem realization thinking progressively evolves into concrete, semantically traceable Smart Data Model realization.
+Smart Data Models in the street lighting domain, such as those describing streetlight assets and their operational context, are the natural realization target. The specific reference models are indicative and remain pending confirmation by the SIG.
 
 ---
 
 # Relationship to Previous Stages
 
-Stage 4 depends directly on the outputs of:
-- Stage 1 — Operational Meaning
-- Stage 2 — Reusable Interoperability Abstractions
-- Stage 3 — Standards & Ecosystem Mapping
+Without the assessment results produced during Stage 3, convergence has nothing to reconcile. Without the operational meaning and semantic capabilities preserved during Stages 1 and 2, convergence loses the traceability that makes realization verifiable.
 
-Without the assessment results produced during Stage 3, convergence has nothing to reconcile. Without the operational meaning and reusable abstractions preserved during Stages 1 and 2, convergence loses the traceability that makes realization verifiable.
-
-The methodology therefore preserves the following progression:
-
-```text
-Operational Meaning
-        ↓
-Reusable Interoperability Abstractions
-        ↓
-Standards & Ecosystem Mapping
-        ↓
-Smart Data Models & Ecosystem Realization
-        ↓
-Digital Twin Consumption
-```
-
-The outputs of Stage 4 become the inputs to Digital Twin consumption.
-
-The objective is to ensure that municipality operational meaning, having been captured, generalized, and coordinated across ecosystems, reaches Digital Twins in a form that remains semantically reliable and operationally useful.
+The outputs of Stage 4 become the inputs to Digital Twin consumption. For how the four stages fit together, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md#core-methodology).
