@@ -78,7 +78,7 @@ Assessment activities typically include identifying compatible interoperability 
 ## Finding Candidate Models and Objects
 
 For each Service Domain, the assessments also look for concrete candidates:
-- **Smart Data Models** whose entity types correspond to the entity types in the Stage 1 [entity sketch](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch). Properties a model defines but the municipality did not mention go back to Stage 1 as questions for the municipality; properties the municipality needs but no model defines are recorded as gaps.
+- **Smart Data Models** whose entity types correspond to the entity types in the Stage 1 [entity sketch](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch). Properties a model defines but the municipality did not mention go back to Stage 1 as questions for the municipality; properties the municipality needs but no model defines are recorded as gaps. When no model corresponds to an entity type at all, the entity type is recorded as a candidate for a new Smart Data Model; it is neither dropped nor forced into a model that describes something else.
 - **OMA objects** that can supply each observable property under the trustworthiness conditions identified in Stage 2. When no object meets a condition, the condition is re-checked in Stage 2 before it is recorded as a gap.
 
 A candidate is not yet a mapping. Checking that the OMA objects can feed the Smart Data Models, and refining the models where they cannot, is Stage 4.

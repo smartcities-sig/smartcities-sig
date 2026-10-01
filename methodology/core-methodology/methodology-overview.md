@@ -106,7 +106,7 @@ A loop back sends a question, not an answer. When Stage 3 finds a concept the mu
 | Stage | Question it answers | Output |
 |---|---|---|
 | [Stage 1 — Operational Meaning](/methodology/core-methodology/stage-1-operational-meaning.md) | What is the municipality actually trying to achieve? | User stories, an entity sketch, operational objectives, pain points, semantic distinctions, contextual dependencies |
-| [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) | Which reusable dimensions of meaning does a Digital Twin need? | The taxonomy of 14 semantic capabilities |
+| [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) | Which reusable dimensions of meaning does a Digital Twin need? | The taxonomy of 14 semantic capabilities, and the entity sketch's properties classified against it |
 | [Stage 3 — Standards & Ecosystem Mapping](/methodology/core-methodology/stage-3-standards-mapping.md) | Which ecosystems can supply each capability, and where are the gaps? | Ecosystem assessment reports, produced with the [Semantic Capability Assessment Framework](/methodology/assessment-frameworks/semantic-capability-assessment.md) |
 | [Stage 4 — Smart Data Models Realization](/methodology/core-methodology/stage-4-smart-data-models-realization.md) | How do the ecosystem contributions come together into Smart Data Models a Digital Twin can consume? | Converged Smart Data Model realization, a catalogue of the OMA objects that can feed it, and the residual gaps |
 
@@ -131,7 +131,7 @@ flowchart LR
 
     subgraph S2["Stage 2 — Semantic Capabilities"]
         direction TB
-        D2["Service outcome<br/>Domain Semantics"]
+        D2["What each property is about<br/>Domain Semantics"]
         C2["How each property is observed<br/>Observation Semantics"]
         C3["Trustworthiness conditions<br/>Interpretation Semantics"]
     end
@@ -144,7 +144,7 @@ flowchart LR
 
     subgraph S4["Stage 4 — Smart Data Models Realization"]
         direction TB
-        F1["Match OMA objects to Smart Data Models<br/>refine the models · record residual gaps"]
+        F1["Match OMA objects to Smart Data Models<br/>refine the models · draft missing models · record residual gaps"]
     end
 
     OUT1[["Smart Data Models for city Digital Twins"]]
@@ -152,7 +152,7 @@ flowchart LR
 
     CITY --> A1 --> B1
     A1 --> D2
-    B1 --> C2 --> C3
+    B1 --> D2 --> C2 --> C3
     B1 -- "entity types" --> E1
     C3 -- "observations and conditions" --> E4
     E1 --> F1
@@ -179,10 +179,13 @@ The search for candidate Smart Data Models needs only the entity types from Stag
 | A Smart Data Model needs new properties | Stage 4 | Stage 3, to look for a model that has them or to record a gap |
 | An OMA object cannot feed the model | Stage 4 | Stage 3, to look for another object or to record a gap |
 
+When no Smart Data Model fits an entity type, Stage 3 records it, and Stage 4 drafts a new model from the entity sketch.
+
 ## Operational Semantic Translation Model
 
 The model illustrates how municipality operational realities are progressively transformed into reusable interoperability understanding, ecosystem realization approaches, and semantically reliable Digital Twin consumption.
 
-<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9f5f7d3c-eb7f-456b-a29e-0c1aa7a9a0f3" />
-
-*Figure — Smart Cities SIG Operational Semantic Translation Model*
+<figure>
+    <img src="../../public/images/operational-semantic-smartcities-v2.png" alt="From Municipal Needs to Trusted Digital Twins: the Smart Cities SIG operational semantic translation pathway, from municipality operational reality through the four SIG stages and ecosystem contributions to semantic integration and Digital Twin consumption">
+    <figcaption><i>Figure — Smart Cities SIG Operational Semantic Translation Model</i></figcaption>
+</figure>
