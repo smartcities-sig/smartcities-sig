@@ -144,7 +144,7 @@ flowchart LR
 
     subgraph S4["Stage 4 — Smart Data Models Realization"]
         direction TB
-        F1["Match OMA objects to Smart Data Models<br/>refine the models · record residual gaps"]
+        F1["Match OMA objects to Smart Data Models<br/>refine the models · draft missing models · record residual gaps"]
     end
 
     OUT1[["Smart Data Models for city Digital Twins"]]
@@ -178,6 +178,8 @@ The search for candidate Smart Data Models needs only the entity types from Stag
 | No OMA object meets a trustworthiness condition | Stage 3 | Stage 2, to re-check the condition before recording a gap |
 | A Smart Data Model needs new properties | Stage 4 | Stage 3, to look for a model that has them or to record a gap |
 | An OMA object cannot feed the model | Stage 4 | Stage 3, to look for another object or to record a gap |
+
+When no Smart Data Model fits an entity type, Stage 3 records it, and Stage 4 drafts a new model from the entity sketch.
 
 ## Operational Semantic Translation Model
 
