@@ -12,6 +12,21 @@ Each step names the [semantic capabilities](/methodology/core-methodology/stage-
 
 ---
 
+## 0. User stories and entities
+
+*Feeds: [Service Outcome](/methodology/core-methodology/stage-2-semantic-capabilities.md#service-outcome); the entities and properties it identifies are examined in the steps that follow*
+
+Collect [user stories](/methodology/core-methodology/stage-1-operational-meaning.md#user-stories) from the people who run the service, in their own words, then draw up the [entity sketch](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch).
+
+Example pattern:
+
+> "<type of user> want to <action> under <conditions> so that <they can achieve a benefit or value>."
+
+Questions to fill in:
+- Who needs to do what, under which conditions, and why?
+- Which types of entities do the stories mention?
+- For each entity type, which properties, actions, and events do the stories mention?
+
 ## 1. Service outcome (what we really care about)
 
 *Feeds: [Service Outcome](/methodology/core-methodology/stage-2-semantic-capabilities.md#service-outcome)*

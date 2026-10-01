@@ -28,7 +28,7 @@ This stage intentionally avoids:
 The detailed definition of this stage is still under development by the Smart Cities SIG. This document is a draft overview intended to support that discussion.
 
 **Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md) and the ecosystem assessment reports from [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md).
-**Output:** converged Smart Data Model realization, with residual gaps recorded.
+**Output:** converged Smart Data Model realization, including new models drafted where none fitted, a catalogue of the OMA objects that can feed it, and the residual gaps recorded.
 
 For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
@@ -78,6 +78,8 @@ Stage 4 does not begin from municipality material.
 Stage 4 operates on:
 - the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) defined in Stage 2,
 - the ecosystem assessment results produced during Stage 3,
+- the candidate Smart Data Models and OMA objects identified in Stage 3,
+- the entity types for which Stage 3 found no Smart Data Model,
 - the semantic gaps and responsibilities recorded in those assessments,
 - and the contextual and provenance requirements preserved from Stage 1.
 
@@ -128,7 +130,7 @@ Pick the closest NGSI entities and properties for the service:
 - outcome-related attributes (the ones the municipality really cares about),
 - and operational and cost attributes (supporting).
 
-Add extensions only when the core model does not cover the key outcome.
+Add extensions only when the core model does not cover the key outcome. When no existing model fits an entity type, a new model is drafted instead; see [Drafting New Smart Data Models](#drafting-new-smart-data-models).
 
 Questions to answer:
 - Which existing Smart Data Models best fit this service?
@@ -155,6 +157,14 @@ The following activities are expected to characterize Stage 4 work. Their detail
 ## Reconciling Assessment Results
 
 Assessment results from different ecosystems are compared for each semantic capability, so that agreement, partial coverage, and disagreement become explicit.
+
+## Matching OMA Objects to Smart Data Models
+
+The candidate OMA objects are checked against the candidate Smart Data Models: can each object feed the properties of the model, under the trustworthiness conditions identified in Stage 2? Where a model lacks a property that the municipality needs, the model is refined; where no object can feed a property, the finding goes back to Stage 3. The OMA objects that pass form the catalogue of objects a municipality can rely on to supply the models.
+
+## Drafting New Smart Data Models
+
+When Stage 3 found no Smart Data Model for an entity type, a new one is drafted from the entity sketch: the entity type, its properties together with the semantic capabilities they were classified against in Stage 2, and the trustworthiness conditions that must stay attached to them. The draft follows the conventions of existing Smart Data Models, reuses their common properties where they apply, and is proposed to the Smart Data Models programme. OMA objects are then matched against it in the same way as against an existing model.
 
 ## Assigning Realization Responsibility
 
@@ -197,6 +207,8 @@ The following questions remain open and are expected to shape the final definiti
 - How are residual gaps routed back to the originating standards organization?
 - What validation confirms that operational meaning survived realization?
 - How are converged results maintained as ecosystem assessments are updated?
+- Who drafts and proposes a new Smart Data Model when none fits an entity type: SIG participants, the Smart Data Models programme, or both?
+- How are the actions and events captured in the Stage 1 entity sketch represented? Smart Data Models do not cover them yet; support is expected through NGSI-LD, and the W3C Web of Things Thing Model is one option under consideration.
 
 ---
 

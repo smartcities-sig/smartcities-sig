@@ -8,14 +8,14 @@ layout: doc
 
 ## Introduction
 
-Stage 2 generalizes the operational meaning captured in [Stage 1](/methodology/core-methodology/stage-1-operational-meaning.md) into **semantic capabilities**: reusable dimensions of meaning that a Digital Twin needs in order to interpret municipality operational data correctly.
+Stage 2 generalizes the operational meaning captured in [Stage 1](/methodology/core-methodology/stage-1-operational-meaning.md) into **semantic capabilities**: reusable dimensions of meaning that a Digital Twin needs in order to interpret municipality operational data correctly, and applies them to each property of the Stage 1 entity sketch.
 
 This page is the authoritative definition of every semantic capability. Other documents — the [Semantic Capability Assessment Framework](/methodology/assessment-frameworks/semantic-capability-assessment.md), the ecosystem assessment reports, and the Service Profiles — link here rather than restating the definitions.
 
 For the methodology as a whole, including why operational meaning is captured before any standard is considered, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
-**Input:** operational objectives, pain points, semantic distinctions, and contextual dependencies from Stage 1.
-**Output:** the taxonomy of 14 semantic capabilities in 4 semantic categories below, used by [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md) to assess standards ecosystems.
+**Input:** the user stories, entity sketch, operational objectives, pain points, semantic distinctions, and contextual dependencies from Stage 1.
+**Output:** for each Service Domain, the properties of the Stage 1 entity sketch, each classified against the taxonomy of 14 semantic capabilities in 4 semantic categories below. [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md) uses them to find candidate OMA objects and to assess standards ecosystems; [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md) uses them to check that those objects can feed the Smart Data Models.
 
 ---
 
@@ -23,10 +23,13 @@ For the methodology as a whole, including why operational meaning is captured be
 
 Stage 2 exists to answer the following questions:
 
-- What reusable concepts emerge from the operational analysis?
-- Which concepts repeat across Service Domains such as public lighting, water management, or waste management?
+- What is each property in the entity sketch about: the service outcome, the output of the infrastructure, or the resources consumed?
+- Whether, where, and how can each property be observed?
+- Under which trustworthiness conditions can each observation be relied on?
 - What contextual information must always remain attached to the data?
-- What semantic distinctions must be preserved?
+- Which distinctions recur across Service Domains such as public lighting, water management, or waste management?
+
+The capabilities are the same for every Service Domain. Stage 2 applies them to each new domain, and adds a capability only when an existing one cannot hold the meaning (see [Artificial Generalization](#artificial-generalization)).
 
 ---
 
@@ -45,7 +48,7 @@ They are not yet standards objects, schemas, APIs, or implementation models. How
 
 # How Capabilities Emerge
 
-Semantic capabilities emerge progressively during operational analysis. The process usually involves:
+This section describes how the taxonomy was built and how it grows. Semantic capabilities emerge progressively during operational analysis. The process usually involves:
 1. identifying operational distinctions,
 2. recognizing repeated semantic patterns,
 3. separating operational meaning from local implementation details,
@@ -59,11 +62,20 @@ This process should remain iterative, practical, and operationally grounded. The
 
 Stage 1 material is classified against the capabilities using the following terms:
 
-- An **observation** is the raw, possibly compound fact as originally stated in the municipality or ecosystem material.
+- An **observation** is the raw, possibly compound fact as originally stated: a property in the entity sketch, or a statement in municipality or ecosystem material.
 - A **sub-observation** is what results from splitting an observation so that each piece is fundamentally about exactly one capability.
 - That capability is the sub-observation's **Primary Capability**. A sub-observation may also carry **Companion Capabilities** that provide context.
 
 Each capability below includes a *How to classify* rule, including tie-breakers against neighbouring capabilities.
+
+When Stage 1 provides an [entity sketch](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch), each property of each entity is examined in turn:
+1. what the property is about — the [Domain Semantics](#domain-semantics) capabilities: the service outcome the municipality cares about, the output of the infrastructure, or the resources it consumes,
+2. whether, where, and how it can be observed — the [Observation Semantics](#observation-semantics) capabilities,
+3. and under which trustworthiness conditions the observation can be relied on — the [Interpretation Semantics](#interpretation-semantics) capabilities.
+
+[Operational Semantics](#operational-semantics) describe how the infrastructure is operated and managed. How they apply to the entity sketch, for example to the entities themselves or to their actions and events, is still under discussion by the SIG.
+
+A property that cannot be observed as the municipality described it goes back to Stage 1 as a question for the municipality.
 
 ---
 
@@ -112,7 +124,7 @@ flowchart TD
 
 # Domain Semantics
 
-Domain Semantics describe **what municipalities ultimately care about**. They distinguish the operational service being delivered from the behaviour of the infrastructure providing that service and from the resources it consumes.
+Domain Semantics describe **what municipalities ultimately care about**. They distinguish the operational service being delivered from the behaviour of the infrastructure providing that service and from the resources it consumes. In Stage 1, the benefit a user story ends with usually names the Service Outcome, and each property in the entity sketch is classified as one of the three capabilities below.
 
 Aligned primarily with the Business and Usage viewpoints of ISO/IEC 30141, which describe intended service outcomes, stakeholder needs, and the interaction between IoT systems and the physical entities supporting municipal services.
 
@@ -212,7 +224,7 @@ Aligned primarily with the Foundational IoT and Functional viewpoints of ISO/IEC
 
 # Interpretation Semantics
 
-Interpretation Semantics describe the additional information required to **understand, compare, and trust observations**: where the information originated, how trustworthy it is, under which operating conditions it was obtained, and which physical conditions influenced the result. They let Digital Twins interpret observations consistently across municipalities, vendors, and ecosystems.
+Interpretation Semantics describe the **trustworthiness conditions** of an observation — the additional information required to **understand, compare, and trust observations**: where the information originated, how trustworthy it is, under which operating conditions it was obtained, and which physical conditions influenced the result. They let Digital Twins interpret observations consistently across municipalities, vendors, and ecosystems.
 
 Aligned primarily with the Trustworthiness viewpoint of ISO/IEC 30141, which covers the context, provenance, quality, and descriptive information needed to interpret observations consistently across heterogeneous IoT systems.
 
@@ -268,7 +280,7 @@ Aligned primarily with the Trustworthiness viewpoint of ISO/IEC 30141, which cov
 
 # Operational Semantics
 
-Operational Semantics describe the information required to **operate, maintain, and control infrastructure** safely, reliably, and efficiently throughout its lifecycle. While the other categories explain what is observed and how to interpret it, these capabilities support operational planning, maintenance, resilience, remote operation, and lifecycle management.
+Operational Semantics describe the information required to **operate, maintain, and control infrastructure** safely, reliably, and efficiently throughout its lifecycle. While the other categories explain what is observed and how to interpret it, these capabilities support operational planning, maintenance, resilience, remote operation, and lifecycle management. Whether, and how, these capabilities apply to the entity sketch is under discussion by the SIG.
 
 Aligned primarily with the Functional and Construction viewpoints of ISO/IEC 30141, which describe how IoT capabilities are organized, implemented, and operated to support real-world municipal services.
 
@@ -338,3 +350,5 @@ The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walk
 # Relationship to Stage 3
 
 The capabilities defined here are the reference against which [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md) assesses standards ecosystems, using the [Semantic Capability Assessment Framework](/methodology/assessment-frameworks/semantic-capability-assessment.md).
+
+Stage 3 also uses the classified properties to find candidate OMA objects. [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md) checks those objects against the Smart Data Models under the same trustworthiness conditions, and uses the Domain Semantics classification to tell the outcome attributes of a model from its operational and cost attributes.
