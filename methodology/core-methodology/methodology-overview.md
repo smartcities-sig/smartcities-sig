@@ -185,6 +185,7 @@ When no Smart Data Model fits an entity type, Stage 3 records it, and Stage 4 dr
 
 The model illustrates how municipality operational realities are progressively transformed into reusable interoperability understanding, ecosystem realization approaches, and semantically reliable Digital Twin consumption.
 
-<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9f5f7d3c-eb7f-456b-a29e-0c1aa7a9a0f3" />
-
-*Figure — Smart Cities SIG Operational Semantic Translation Model*
+<figure>
+    <img src="/images/operational-semantic-smartcities-v2.png" alt="From Municipal Needs to Trusted Digital Twins: the Smart Cities SIG operational semantic translation pathway, from municipality operational reality through the four SIG stages and ecosystem contributions to semantic integration and Digital Twin consumption">
+    <figcaption><i>Figure — Smart Cities SIG Operational Semantic Translation Model</i></figcaption>
+</figure>
