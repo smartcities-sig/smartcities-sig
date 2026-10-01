@@ -106,7 +106,7 @@ A loop back sends a question, not an answer. When Stage 3 finds a concept the mu
 | Stage | Question it answers | Output |
 |---|---|---|
 | [Stage 1 — Operational Meaning](/methodology/core-methodology/stage-1-operational-meaning.md) | What is the municipality actually trying to achieve? | User stories, an entity sketch, operational objectives, pain points, semantic distinctions, contextual dependencies |
-| [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) | Which reusable dimensions of meaning does a Digital Twin need? | The taxonomy of 14 semantic capabilities |
+| [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) | Which reusable dimensions of meaning does a Digital Twin need? | The taxonomy of 14 semantic capabilities, and the entity sketch's properties classified against it |
 | [Stage 3 — Standards & Ecosystem Mapping](/methodology/core-methodology/stage-3-standards-mapping.md) | Which ecosystems can supply each capability, and where are the gaps? | Ecosystem assessment reports, produced with the [Semantic Capability Assessment Framework](/methodology/assessment-frameworks/semantic-capability-assessment.md) |
 | [Stage 4 — Smart Data Models Realization](/methodology/core-methodology/stage-4-smart-data-models-realization.md) | How do the ecosystem contributions come together into Smart Data Models a Digital Twin can consume? | Converged Smart Data Model realization, a catalogue of the OMA objects that can feed it, and the residual gaps |
 
@@ -131,7 +131,7 @@ flowchart LR
 
     subgraph S2["Stage 2 — Semantic Capabilities"]
         direction TB
-        D2["Service outcome<br/>Domain Semantics"]
+        D2["What each property is about<br/>Domain Semantics"]
         C2["How each property is observed<br/>Observation Semantics"]
         C3["Trustworthiness conditions<br/>Interpretation Semantics"]
     end
@@ -152,7 +152,7 @@ flowchart LR
 
     CITY --> A1 --> B1
     A1 --> D2
-    B1 --> C2 --> C3
+    B1 --> D2 --> C2 --> C3
     B1 -- "entity types" --> E1
     C3 -- "observations and conditions" --> E4
     E1 --> F1
