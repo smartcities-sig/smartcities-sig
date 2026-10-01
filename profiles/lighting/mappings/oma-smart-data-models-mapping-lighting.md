@@ -6,6 +6,8 @@ layout: doc
 
 # {{ $doc.title }}
 
+> **Note:** This is an early Stage 1 checklist, kept as the record of the original municipality material. The current analysis lives in the [OMA Semantic Capability Assessment](/methodology/assessment-frameworks/oma-capability-assessment.md) and the [Smart Data Models Semantic Capability Assessment](/methodology/assessment-frameworks/sdm-capability-assessment.md).
+
 - [**Reference Document**](https://groups.io/g/smartcities-sig/files/Discussion/2026/20260513-especificacion%20de%20caso%20de%20uso%20lighting%20v0.1.docx)  
 
 ## Quantities to be measured

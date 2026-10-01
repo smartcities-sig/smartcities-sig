@@ -27,7 +27,7 @@ This walkthrough became one of the foundational practical examples used to shape
 The walkthrough follows the three-stage methodology described in:
 - [Methodology-overview.md](/methodology/core-methodology/methodology-overview.md)
 - [Stage-1-operational-meaning.md](/methodology/core-methodology/stage-1-operational-meaning.md)
-- [Stage-2-reusable-abstractions.md](/methodology/core-methodology/stage-2-reusable-abstractions.md)
+- [Stage-2-semantic-capabilities.md](/methodology/core-methodology/stage-2-semantic-capabilities.md)
 - [Stage-3-standards-mapping.md](/methodology/core-methodology/stage-3-standards-mapping.md)
 
 ---
@@ -265,7 +265,7 @@ The walkthrough identified that:
 
 This later influenced:
 - interoperability abstraction thinking,
-- Smart Data Object considerations,
+- Smart Data Models considerations,
 - and Digital Twin trustworthiness analysis.
 
 ---
@@ -331,20 +331,22 @@ These abstractions did not originate from:
 
 Instead, they emerged progressively from the municipality operational analysis itself.
 
-| Candidate Reusable Abstraction | Description |
-|---|---|
-| `MeasuredServiceOutcome` | Actual public-service result, such as lux on a street surface |
-| `DeviceOutput` | What the luminaire emits, such as lumens |
-| `EnergyConsumption` | Watts consumed, active/reactive power, voltage, frequency |
-| `MeasurementPoint` | Luminaire, cabinet, line head, street surface |
-| `MeasurementScope` | Single asset, line, zone, group, managed area |
-| `MeasurementMethod` | Direct, inferred, proxy, aggregated |
-| `TemporalResolution` | Time interval and aggregation policy |
-| `OperationalContext` | Weather, fog, humidity, temperature |
-| `PhysicalContext` | Orientation, vegetation, obstructions, nearby buildings |
-| `AssetResponsibilityContext` | Contracts, management zones, maintenance ownership |
-| `NetworkOperabilityContext` | Latency, packet loss, teleoperation reliability |
-| `FallbackBehavior` | Local operation independent from intelligent control |
+| Candidate Reusable Abstraction | Description | Now: Semantic Capability |
+|---|---|---|
+| `MeasuredServiceOutcome` | Actual public-service result, such as lux on a street surface | [Service Outcome](/methodology/core-methodology/stage-2-semantic-capabilities.md#service-outcome) |
+| `DeviceOutput` | What the luminaire emits, such as lumens | [Infrastructure Output](/methodology/core-methodology/stage-2-semantic-capabilities.md#infrastructure-output) |
+| `EnergyConsumption` | Watts consumed, active/reactive power, voltage, frequency | [Resource Consumption](/methodology/core-methodology/stage-2-semantic-capabilities.md#resource-consumption) |
+| `MeasurementPoint` | Luminaire, cabinet, line head, street surface | [Observation Point](/methodology/core-methodology/stage-2-semantic-capabilities.md#observation-point) |
+| `MeasurementScope` | Single asset, line, zone, group, managed area | [Observation Scope](/methodology/core-methodology/stage-2-semantic-capabilities.md#observation-scope) |
+| `MeasurementMethod` | Direct, inferred, proxy, aggregated | [Observation Method](/methodology/core-methodology/stage-2-semantic-capabilities.md#observation-method) |
+| `TemporalResolution` | Time interval and aggregation policy | [Temporal Semantics](/methodology/core-methodology/stage-2-semantic-capabilities.md#temporal-semantics) |
+| `OperationalContext` | Weather, fog, humidity, temperature | [Operational Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#operational-context) |
+| `PhysicalContext` | Orientation, vegetation, obstructions, nearby buildings | [Physical Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#physical-context) |
+| `AssetResponsibilityContext` | Contracts, management zones, maintenance ownership | [Asset Management Context](/methodology/core-methodology/stage-2-semantic-capabilities.md#asset-management-context) |
+| `NetworkOperabilityContext` | Latency, packet loss, teleoperation reliability | [Network Operability](/methodology/core-methodology/stage-2-semantic-capabilities.md#network-operability) |
+| `FallbackBehavior` | Local operation independent from intelligent control | [Fallback Behaviour](/methodology/core-methodology/stage-2-semantic-capabilities.md#fallback-behaviour) |
+
+> **Note:** These candidate names are kept as they emerged. They were later refined into the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) shown in the last column. Provenance and Measurement Quality, which the walkthrough grouped under a single "Measurement Provenance & Quality" concept, were separated into two capabilities during that refinement.
 
 The walkthrough also progressively identified that many of these abstractions may later apply across multiple municipality domains, including:
 - water management,
@@ -360,16 +362,16 @@ This reinforced the importance of:
 
 ---
 
-# Candidate Profile Concepts
+# Candidate Interoperability Profile Concepts
 
-As reusable abstractions emerged, several candidate profile concepts also became visible.
+As reusable abstractions emerged, several candidate Interoperability Profile concepts also became visible.
 
-These were not treated as finalized standards profiles, but as:
+These were not treated as finalized Interoperability Profiles, but as:
 - emerging interoperability realization ideas.
 
 Examples included:
 
-| Candidate Profile Concept | Focus Area |
+| Candidate Interoperability Profile Concept | Focus Area |
 |---|---|
 | Public Lighting Service Outcome Profile | Lux, street-surface context, obstruction, environmental conditions |
 | Public Lighting Energy Efficiency Profile | Watts, voltage, frequency, cabinet aggregation |

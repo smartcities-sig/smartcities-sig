@@ -1,6 +1,6 @@
 ---
-title: Semantic Capability Reference
-description: null
+title: OMA LwM2M Registry Capability Classification
+description: Every resource in the OMA LwM2M Registry classified against the Smart Cities SIG semantic capabilities.
 layout: web
 ---
 
@@ -8,42 +8,24 @@ layout: web
 
 ## Introduction
 
-A raw registry value doesn't answer a municipality's question by itself — a lux reading only means something once you
-know where it was taken, how it was produced, and what it's supposed to represent. The Smart Cities SIG closes that
-gap in three stages:
+This page classifies every resource in the OMA LwM2M Registry against the
+[semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) defined in Stage 2, so you can
+see directly which capabilities OMA can supply today and where the gaps are.
 
-- **Stage 1 — Operational Meaning**: captures what a municipality is actually trying to accomplish, in its own terms.
-- **Stage 2 — Reusable Abstractions**: generalizes that into a standards-independent taxonomy of 14 semantic capabilities.
-- **Stage 3 — Standards & Ecosystem Mapping**: checks which standards ecosystems — starting here with OMA LwM2M — can actually supply the information each capability needs.
-
-This page shows the output of Stages 2 and 3 for OMA LwM2M. The **Semantic Capability Reference** below is Stage 2's
-taxonomy: the 14 capabilities every registry resource is classified against, and how to apply them. The **Objects
-Semantic Capability** and **Common Resources Capability Reference** tables that follow are Stage 3's assessment:
-every resource in the OMA LwM2M Registry, classified against those capabilities, so you can see directly what OMA can
-currently supply today and where the gaps are. The full assessment methodology — baseline revisions, scope, and
-confidence scoring — is documented in `oma-capability-assessment.md`.
+It is resource-by-resource evidence supporting the [OMA Semantic Capability Assessment](./oma-capability-assessment.md),
+which answers the [assessment questions](./semantic-capability-assessment.md) capability by capability and documents
+the assessment baseline and scope. For where this fits in the methodology, see the
+[Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
 > **Status:** The classifications in the tables below are a working analysis, not a finalized SIG position. Entries
-> flagged `Candidate Capability`, and object range 3410–3429, have not yet had a group review pass. Treat this as a
+> flagged `Candidate Capability`, and object range 3410–3429, have not yet had a group review pass. The **Confidence**
+> column records the classifier's confidence in each call; its scoring scale is not yet documented. Treat this as a
 > draft for discussion, not a settled answer.
-
-Want to contribute your own city's operational questions to Stage 1? See the invitation at the bottom of this page.
-
-## Semantic Capability Reference
-
-Stage 2 output — the 14 reusable capabilities everything below is classified against.
-
-::EhEmbed
----
-download: true
-dataUrl: /iframe/semantic-capabilities-reference.html
----
-::
 
 ## Objects Semantic Capability
 
-Stage 3 assessment: every object-specific resource in the OMA LwM2M Registry, classified against the capabilities
-above, with a confidence score and a note explaining the call. *Working analysis — not yet reviewed by the group.*
+Every object-specific resource in the OMA LwM2M Registry, classified against the semantic capabilities, with a
+confidence score and a note explaining the call. *Working analysis — not yet reviewed by the group.*
 
 ::EhDynamicTable
 ---
@@ -97,7 +79,7 @@ columns:
     pill: true
     type: text
   - name: "semantic_domain"
-    title: "Semantic Domain"
+    title: "Semantic Category"
     filter: true
     filterOrder: 4
     query: true
@@ -174,7 +156,7 @@ columns:
     type: text
     pill: true
   - name: semantic_domain
-    title: Domain
+    title: Category
     filter: true
     query: true
     hide: false

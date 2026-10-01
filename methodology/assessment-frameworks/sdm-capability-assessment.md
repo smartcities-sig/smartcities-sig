@@ -11,7 +11,8 @@ layout: doc
 ## Purpose
 
 This report assesses how the [Smart Data Models](https://smartdatamodels.org) (SDM) framework represents the semantic capabilities identified by the Smart Cities SIG's
-[Semantic Capability Assessment Framework](./semantic-capability-assessment.md).
+[Semantic Capability Assessment Framework](./semantic-capability-assessment.md); the capabilities themselves are defined in
+[Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
 It is the Smart Data Models counterpart to the [OMA Semantic Capability Assessment](./oma-capability-assessment.md): where that report evaluates what OMA LwM2M devices and edge controllers can contribute, this report evaluates whether the Smart Data Models entities and attributes that receive that contribution can preserve its meaning.
 
 Sources consulted for this assessment: [smartdatamodels.org](https://smartdatamodels.org), the [smart-data-models GitHub organization](https://github.com/smart-data-models),
@@ -23,6 +24,7 @@ and the `sdm_translator` project.
 
 Before assessing each of the 14 capabilities individually, some general observations apply across the whole framework:
 
+- **Extensibility.** In principle, every capability can be preserved: data models can be created at any level of abstraction and linked to one another through relationships. Relationships are not type-restricted — they point to another entity, not to a specific entity type — so it is up to the implementer to link the right type for the purpose.
 - **Domain semantics.** "Domain" has a different meaning in Smart Data Models than in this framework: it is simply a group of subjects gathered under a common industry area (for example, Weather, Water, Device). A subject —
   and the data models within it — can belong to more than one domain.
 - **Observation semantics.** The observation method is not, in general, a first-class attribute in Smart Data Models. Some models do carry a `source` attribute (several data models under the `Device` subject use it,
@@ -133,8 +135,6 @@ It is not clear whether fallback behaviour is represented in any form in Smart D
 
 ## Recommendation
 
-Extend the Capability Assessment Matrix in the
-[Semantic Capability Assessment Framework](./semantic-capability-assessment.md#capability-assessment-matrix)
-with the findings above, and prioritize discussion on the capabilities with
-weakest or least consistent coverage: **Observation Method**, **Fallback
+This report is the authoritative record of the Smart Data Models assessment; update the summary above as findings evolve.
+Prioritize discussion on the capabilities with weakest or least consistent coverage: **Observation Method**, **Fallback
 Behaviour**, and **Network Operability**.
