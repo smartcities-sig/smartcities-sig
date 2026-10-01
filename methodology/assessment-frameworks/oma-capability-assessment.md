@@ -780,6 +780,8 @@ Infrastructure Output represents how the lighting infrastructure itself is behav
 
 The uCIFI outdoor-lighting Objects maintained by OMA provide strong, purpose-built coverage of dimming level, color temperature, and control-gear operating state, including a rich set of alarm conditions. The main gap is not the availability of infrastructure telemetry, but the absence of a general, reusable relationship that formally binds a given output measurement to the luminaire asset and pole it belongs to, beyond co-location on the same LwM2M Client.
 
+The uCIFI water Objects (Water Meter, Irrigation Valve, Pressure Monitoring Sensor) show the same pattern for the Water Management and Irrigation domain: pressure and valve-position telemetry are available and, in the case of Object 3425, already distinguish commanded, command-in-action, and measured status in the same three-tier pattern used by Object 3416 for lighting. The main gaps are the absence of a mandatory current flow-rate Resource in the Water Meter Object and the absence of a water-specific asset-identity Object comparable to the Luminaire Asset Object used for lighting.
+
 ---
 
 # OMA Question 1
@@ -832,6 +834,51 @@ The Smart Data Model should keep infrastructure output entities (luminaire, lamp
 
 Retain Object 3416 as the primary infrastructure-output Object for street lighting. Document explicitly, in a Public Lighting profile, that Resources in 3416 represent infrastructure behaviour and must not be interpreted as service outcome.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know the actual opening level of an irrigation valve, the actual pressure maintained at a monitored point in the distribution network, and the actual delivered flow, independently of whether the resulting irrigation or consumer service outcome is adequate, so that network and irrigation infrastructure behaviour can be monitored and maintained.
+
+### Required OMA Contribution
+
+**Telemetry**
+
+- Actual valve opening level achieved by an irrigation valve
+- Measured water pressure at the monitored point
+- Current or recent flow-rate extrema at the meter
+
+**Configuration or operational intent**
+
+- Default valve status applied when the device is powered on
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|---|
+| [`3425`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3425.xml) Irrigation Valve | `3425/2` Status | 1 / uCIFI | O | Object-specific | Direct measured valve opening level (0–100%) actually achieved, the water-domain analogue of the measured Dimming level in Object 3416. |
+| `3425` Irrigation Valve | `3425/3` Command; `3425/4` Command in action | 1 / uCIFI | O | Object-specific | The same Command / Command-in-action / measured-status three-tier pattern already identified in Object 3416, explicitly accounting for LPWAN propagation delay between a sent command and the value actually applied. |
+| [`3427`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3427.xml) Pressure Monitoring Sensor | `3427/1` Pressure | 1 / uCIFI | M | Object-specific | Mandatory measured water pressure output at the monitored point in the distribution network. |
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | `3424/7` Minimum flow rate; `3424/8` Maximum flow rate | 1 / uCIFI | O | Object-specific | Flow-rate extrema recorded since the last metering value; the closest available proxy to an instantaneous delivered-flow output, since no direct current flow-rate Resource is defined. |
+| `3424` Water Meter | `3424/1` Cumulated water volume | 1 / uCIFI | M | Object-specific | Cumulative delivered volume; addressed separately under Semantic Capability 3: Resource Consumption, mirroring the same cumulative/instantaneous split already noted for Object 3418. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Object 3427 mandatorily reports measured pressure, and Object 3425 already separates commanded, command-in-action, and measured valve status. Object 3424 has no mandatory, direct current flow-rate Resource; min/max flow-rate extrema are the only available proxy for instantaneous delivered flow.
+
+### Missing Semantics
+
+- No mandatory or optional "current flow rate" Resource in Object 3424; instantaneous delivered-flow output must be inferred from optional min/max extrema or derived from successive cumulative-volume readings.
+- No Resource formally states that a given `3424`, `3425`, and `3427` Instance describe the same irrigation zone or network segment, beyond co-location on the same Client (the same linked-asset gap identified for lighting).
+
+### Smart Data Model Responsibility
+
+The Smart Data Model should derive instantaneous flow by differentiating successive cumulative-volume readings when no direct flow Resource is reported, and should correlate meter, valve, and pressure-sensor Instances into a single irrigation zone or network-segment entity.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add a current flow-rate Resource to Object 3424, consistent with the direct "last or current" measurement pattern already used by `3427/1` Pressure. Extend the linked-asset relationship recommended for Public Lighting (Question 3) to also bind 3424, 3425, and 3427 Instances to a common irrigation zone or network segment.
+
 ---
 
 # OMA Question 2
@@ -878,6 +925,45 @@ The Smart Data Model should convert raw operating-state flags into work-order-re
 
 Define a Public Lighting profile that makes a minimum operating-state subset (lamp failure, control gear failure, relay failure) mandatory for interoperable fault detection across vendors.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether a water meter, irrigation valve, or pressure sensor is operating normally, degraded, or failed, so that leaks, fraud, and valve malfunctions can be distinguished from a legitimate drop in demand or pressure.
+
+### Required OMA Contribution
+
+**Telemetry**
+
+- Boolean or enumerated anomaly indicators for leaks, back flow, blockage, fraud, and hammer effect
+- An indicator that a configured schedule cannot be executed by an irrigation valve
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | `3424/9` Leak suspected; `3424/10` Leak detected | 1 / uCIFI | O | Object-specific | Two-stage leak indication, from a lower-confidence suspicion to a confirmed detection. |
+| `3424` Water Meter | `3424/11` Back flow detected; `3424/12` Blocked meter; `3424/13` Fraud detected | 1 / uCIFI | O | Object-specific | Additional discrete anomaly flags covering network and meter-integrity conditions. |
+| [`3427`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3427.xml) Pressure Monitoring Sensor | `3427/3` Leak detected; `3427/4` Hammer effect detected | 1 / uCIFI | O | Object-specific | Pressure-side leak confirmation, independent of the meter-side indication in Object 3424, plus a water-hammer anomaly specific to pressurized pipelines. |
+| [`3425`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3425.xml) Irrigation Valve | `3425/6` Invalid scheduler | 1 / uCIFI | O | Object-specific | Indicates that an assigned scheduler cannot be executed or is unsupported by the valve, an operating-state anomaly specific to autonomous irrigation control. |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** The combination of Objects 3424 and 3427 provides complementary, two-sided leak detection (meter-side and pressure-side) plus fraud, blockage, and back-flow indicators, and Object 3425 reports scheduler-execution failures.
+
+### Missing Semantics
+
+- All anomaly Resources are optional; no Water/Irrigation profile currently mandates a minimum subset for interoperable fault reporting.
+- Unlike Object 3416's bitmask failure-reason Resources, none of the water anomaly flags carry an accompanying reason code to narrow down the root cause.
+
+### Smart Data Model Responsibility
+
+The Smart Data Model should convert raw anomaly flags into work-order-ready maintenance events, associating them with asset ownership and crew assignment, and should correlate meter-side and pressure-side leak indications into a single leak event.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Define a Water/Irrigation profile that makes a minimum anomaly subset (leak detected, invalid scheduler) mandatory, and consider adding a reason/bitmask Resource to the water anomaly flags, analogous to the failure-reason Resources already defined in Object 3416.
+
 ---
 
 # OMA Question 3
@@ -920,6 +1006,43 @@ The Smart Data Model should maintain the authoritative asset register (pole, lum
 
 Generalize the Core Link output-reference pattern into a reusable "linked asset" Resource that measurement and control Objects such as 3416 and 3418 can adopt.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know which physical water meter, irrigation valve, or pressure sensor produced a given output measurement in order to route maintenance and to associate output history with a specific piece of network or irrigation equipment.
+
+### Required OMA Contribution
+
+**Metadata and relationships**
+
+- Identifier linking a meter, valve, or pressure-sensor Instance to the physical asset it represents
+- Manufacturer and nameplate identity of that asset
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|---|
+| [`3410`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3410.xml) Device Extension | `3410/4` Asset identifier | 1 / uCIFI | O | Object-specific | Same generic free-text asset-identifier Resource used for Public Lighting; reusable for a water meter, valve, or pressure-sensor Instance when the Client also exposes Object 3410. |
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | `3424/3` Type of meter | 1 / uCIFI | O | Object-specific | Free-text meter-type description; identifies a category of equipment, not a specific physical asset instance. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Unlike Public Lighting, which has a dedicated Luminaire Asset Object (3417) with a mandatory GTIN, the Water Management and Irrigation domain has no equivalent water-specific asset-identity Object; the only available mechanism is the generic, optional, free-text Asset identifier in Object 3410.
+
+### Missing Semantics
+
+- No dedicated water/irrigation asset-identity Object (GTIN, manufacturer, year of manufacture) comparable to the Luminaire Asset Object used for lighting.
+- No Resource formally links a `3424`, `3425`, or `3427` Instance to the pipe, zone, or parcel it is installed on.
+
+### Smart Data Model Responsibility
+
+The Smart Data Model should maintain the authoritative asset register for meters, valves, and pressure sensors (make, model, installation location, network segment) since OMA does not currently define a water-specific nameplate Object.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Evaluate whether a water-specific asset Object, patterned on the Luminaire Asset Object, is warranted; in the meantime, document that Object 3410 Asset identifier is the generic cross-domain mechanism and ensure it is consistently populated for water and irrigation equipment.
+
 ---
 
 # OMA Question 4
@@ -944,7 +1067,28 @@ Severity triage, maintenance prioritization, and cross-asset comparison belong i
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Prioritize a Public Lighting profile over new Object definitions: the Registry's infrastructure-output vocabulary is already rich, but it is under- constrained by mandatory status and relationship generalization.
+Prioritize a Public Lighting profile over new Object definitions: the Registry's infrastructure-output vocabulary is already rich, but it is under-constrained by mandatory status and relationship generalization.
+
+## Water Management and Irrigation
+
+### Required OMA Contribution
+
+- A mandatory current flow-rate Resource in Object 3424 (see Question 1)
+- A minimum mandatory anomaly subset across Objects 3424, 3425, and 3427 (see Question 2)
+- A reusable linked-asset relationship binding meter, valve, and pressure-sensor Instances (see Question 1)
+- Evaluation of a dedicated water/irrigation asset-identity Object (see Question 3)
+
+### Coverage Assessment
+
+**Existing coverage requiring extension.** Pressure and anomaly telemetry are strong; the main gaps are a missing current flow-rate Resource in Object 3424 and the absence of a water-specific asset-identity Object, in addition to the same profiling and relationship-generalization gaps identified for lighting.
+
+### Smart Data Model Responsibility
+
+Severity triage, maintenance prioritization, and cross-asset comparison belong in the Smart Data Model / Digital Twin layer, as for Public Lighting.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add a current flow-rate Resource to Object 3424 as a genuine telemetry gap; otherwise prioritize profiling and the shared linked-asset relationship over new Object definitions.
 
 ---
 
@@ -952,9 +1096,9 @@ Prioritize a Public Lighting profile over new Object definitions: the Registry's
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Object 3416 dimming level, color temperature, and a rich operating-state/alarm model; Object 3418 electrical output at the light source. |
-| Existing coverage requiring clarification or extension | Asset-linking between controller, meter, and luminaire asset Instances; mandatory profile subset for fault reporting. |
-| New OMA capability required | None identified; a reusable linked-asset relationship and profiling are sufficient. |
+| Existing OMA coverage | Object 3416 dimming level, color temperature, and a rich operating-state/alarm model; Object 3418 electrical output at the light source; Object 3427 mandatory pressure and Object 3425's Command/Command-in-action/Status pattern; broad leak, fraud, and back-flow anomaly flags across Objects 3424 and 3427. |
+| Existing coverage requiring clarification or extension | Asset-linking between controller, meter, and luminaire or water-asset Instances; mandatory profile subset for fault reporting in both domains. |
+| New OMA capability required | A current flow-rate Resource for Object 3424; otherwise a reusable linked-asset relationship and profiling are sufficient for both domains. |
 | Outside OMA responsibility but must remain linkable | Maintenance prioritization, work-order generation, and comparison against service outcome. |
 
 ---
@@ -970,6 +1114,8 @@ Resource Consumption represents the energy consumed to deliver the public lighti
 **Existing OMA coverage.**
 
 The uCIFI electrical Objects maintained by OMA (Electrical Monitor, Single-Phase Electrical Meter, Three-Phase Electrical Meter Complement) provide mature, Zhaga/D4i-aligned energy measurement at both the single light-point level and the cabinet/feeder level. The main clarification required is how a single light-point measurement should be aggregated into cabinet, zone, or municipality totals, which is a Smart Data Model responsibility, and how consumption should be explicitly linked to the service outcome it supports.
+
+The uCIFI Water Meter Object provides a directly analogous mandatory cumulative-consumption Resource, in m3 rather than Wh, but has no equivalent of Object 3422's linked-instance aggregation pattern for combining multiple meters into a network-segment or zone total.
 
 ---
 
@@ -1017,6 +1163,43 @@ The Smart Data Model should aggregate consumption across luminaires, cabinets, a
 
 No new Objects are required. Reuse 3418, 3421, and 3422 as the standard consumption Objects for Public Lighting profiles.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know how much water is delivered through an individual meter, in order to manage network losses, consumer billing, and irrigation budgets.
+
+### Required OMA Contribution
+
+**Telemetry**
+
+- Cumulated delivered water volume
+- Flow-rate extrema supporting consumption-pattern analysis
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | `3424/1` Cumulated water volume | 1 / uCIFI | M | Object-specific | Mandatory cumulative delivered volume since last reset (`3424/2` Cumulated water meter value reset), the direct water-domain analogue of `3418/6` Cumulated active energy. |
+| `3424` Water Meter | `3424/4` Cumulated pulse value; `3424/6` Pulse ratio | 1 / uCIFI | O | Object-specific | Alternate raw-pulse representation of the same cumulative consumption, convertible to volume via the pulse ratio; a redundancy pattern not present in the electrical Objects. |
+| `3424` Water Meter | `3424/7` Minimum flow rate; `3424/8` Maximum flow rate | 1 / uCIFI | O | Object-specific | Flow-rate extrema since the last metering value, supporting consumption-pattern analysis in the absence of an instantaneous flow Resource (see Semantic Capability 2, Question 1). |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** Object 3424 provides a mandatory, unit-consistent cumulative-volume Resource directly analogous to `3418/6`, plus a redundant pulse-based representation not found in the electrical Objects.
+
+### Missing Semantics
+
+- No explicit Resource states whether a given 3424 Instance's volume supports an irrigation service outcome versus another use (e.g. a shared distribution-network connection), mirroring the same gap already identified for electrical consumption.
+
+### Smart Data Model Responsibility
+
+The Smart Data Model should aggregate consumption across meters, zones, and parcels, and associate it with the irrigation service outcome it supports, consistent with the `WaterConsumptionObserved` mapping already identified for Object 3424.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+No new Objects are required. Reuse Object 3424 as the standard consumption Object for Water Management and Irrigation profiles, consistent with the role played by 3418/3421/3422 for Public Lighting.
+
 ---
 
 # OMA Question 2
@@ -1054,6 +1237,31 @@ Aggregation and normalization across mixed single-phase/three-phase deployments.
 
 None required beyond continuing to require the unified-rate (`Un`) naming convention in any future electrical metering Object.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | `3424/1` Cumulated water volume (m3) | 1 / uCIFI | A single, consistent volumetric unit, directly comparable across meter Instances and distinct from the electrical Wh/varh/VAh family of units. |
+| `3424` Water Meter | `3424/7-8` Minimum/Maximum flow rate (m3/s) | 1 / uCIFI | Consistent SI-derived flow unit, enabling direct comparison with any future instantaneous flow-rate Resource (see Semantic Capability 2, Question 1). |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** Water volume and flow-rate units are internally consistent within Object 3424; cross-domain consistency with energy/fuel/battery usage is not required, since water is a distinct resource type with its own SI-derived unit family.
+
+### Missing Semantics
+
+None specific to unit or semantic consistency within the water domain.
+
+### Smart Data Model Responsibility
+
+Normalizing water, energy, and other resource-consumption types into a common municipal resource-budgeting view.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None required; continue using m3 and m3/s consistently in any future water-metering Resource.
+
 ---
 
 # OMA Question 3
@@ -1081,6 +1289,31 @@ None material; efficiency benchmarking across assets is a Smart Data Model analy
 ### Smart Data Model Responsibility
 
 Benchmarking efficiency across luminaires, cabinets, and time periods.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None required.
+
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | `3424/9-13` Leak suspected/detected, back flow, blocked meter, fraud detected | 1 / uCIFI | Anomaly flags supporting root-cause analysis of consumption irregularities, the water-domain analogue of the voltage-sag/swell counters in Object 3421. |
+| [`3427`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3427.xml) Pressure Monitoring Sensor | `3427/1` Pressure | 1 / uCIFI | Mandatory pressure context supporting efficiency and network-loss analysis alongside delivered volume. |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** The combination of cumulative volume, flow-rate extrema, pressure, and anomaly flags is sufficient for operational efficiency analysis at the meter level; no electrical-style power-factor equivalent exists for water, but none is operationally required.
+
+### Missing Semantics
+
+None material; benchmarking efficiency across meters and zones is a Smart Data Model analytics function, not a device semantic gap.
+
+### Smart Data Model Responsibility
+
+Benchmarking consumption efficiency and network loss across meters, zones, and time periods.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
@@ -1119,16 +1352,41 @@ Zone, group, and service-outcome association of consumption values.
 
 Generalize the linked-meter-instance pattern demonstrated by Object 3422 so it can express additional scope relationships beyond three-phase composition.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | Object scope is intrinsically a single meter | 1 / uCIFI | Scope is implicit in Object identity, with no equivalent of the 3422 linked-instance pattern to aggregate several meters into a network segment or irrigation zone. |
+| [`3410`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3410.xml) Device Extension | `3410/4` Asset identifier | 1 / uCIFI | Optional free-text link from the metering device to the asset/zone it serves, shared with Public Lighting. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Unlike the electrical domain, the water domain has no Object analogous to 3422 that explicitly names constituent meter Instances; association with a zone, parcel, or service outcome relies entirely on the generic, optional Asset identifier.
+
+### Missing Semantics
+
+- A linked-meter-instance pattern for Object 3424, analogous to `3422/36-38`, to express that several meters together serve a given irrigation zone or network segment.
+
+### Smart Data Model Responsibility
+
+Zone, parcel, and service-outcome association of water consumption values.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Extend the same linked-instance generalization recommended for Object 3422 (Question 4, Public Lighting) to also cover Object 3424, so that water consumption can be explicitly scoped to a zone or network segment.
+
 ---
 
 # Resource Consumption Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Objects 3418, 3421, and 3422 provide consistent, unit-aligned energy and power measurements from light-point to cabinet scale. |
-| Existing coverage requiring clarification or extension | Generalizing the 3422 linked-meter-instance pattern to other scope relationships. |
+| Existing OMA coverage | Objects 3418, 3421, and 3422 provide consistent, unit-aligned energy and power measurements from light-point to cabinet scale; Object 3424 provides an analogous mandatory cumulative-volume Resource for water, with redundant pulse-based representation and rich anomaly flags. |
+| Existing coverage requiring clarification or extension | Generalizing the 3422 linked-meter-instance pattern to other scope relationships, including Object 3424. |
 | New OMA capability required | None identified. |
-| Outside OMA responsibility but must remain linkable | Zone/group aggregation, efficiency benchmarking, and association with service outcome. |
+| Outside OMA responsibility but must remain linkable | Zone/group aggregation, efficiency benchmarking, and association with service outcome, for both energy and water consumption. |
 
 ---
 
@@ -1143,6 +1401,8 @@ Observation Point identifies where a measurement physically or logically origina
 **Existing coverage requiring clarification or extension.**
 
 The Registry represents device/Client location precisely through Object 6, but it does not generally distinguish the observation point of an individual measurement Resource from the location of the Client that hosts it. This mirrors the finding already documented for Service Outcome (OMA Question 4).
+
+The same gap applies to the Water Management and Irrigation domain, and is more pronounced there since no water-specific asset Object comparable to the Luminaire Asset Object (3417) exists to anchor a meter, valve, or pressure sensor Instance to a physical location beyond Client co-location.
 
 ---
 
@@ -1191,6 +1451,43 @@ The Smart Data Model should relate the OMA-reported Client/asset identity to the
 
 Reuse the same observation-point/observed-feature extension already recommended for Service Outcome (extending Object 509 or defining reusable metadata) so that it also covers infrastructure-output and consumption Objects such as 3416, 3418, 3421, and 3422.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether a given pressure, flow, or valve-position measurement originates from a specific meter chamber, valve pit, or network node, in order to interpret it correctly and route maintenance.
+
+### Required OMA Contribution
+
+**Metadata and relationships**
+
+- Type of observation point (meter chamber, valve pit, network node)
+- Link between the observation and the observation point
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|
+| [`6`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/6.xml)`/0` Latitude; `6/1` Longitude | 0 / OMA | M | Object-specific | Represents Client location; a 3424/3425/3427 Instance co-located on the same Client inherits this location by association only. |
+| `3424/3` Type of meter | 1 / uCIFI | O | Object-specific | Free-text meter-type description, not a location or observation-point type. |
+| `3410/4` Asset identifier | 1 / uCIFI | O | Object-specific | Free-text identifier that could encode a chamber or pit reference, but with no controlled vocabulary, shared with Public Lighting. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** The gap is identical to Public Lighting, and sharper, since the water domain has no equivalent of the Luminaire Asset Object (3417) to anchor physical-asset identity at all (see Semantic Capability 2, Question 3).
+
+### Missing Semantics
+
+- Controlled observation-point vocabulary for water and irrigation equipment (meter chamber, valve pit, network node, parcel).
+
+### Smart Data Model Responsibility
+
+The Smart Data Model should relate the OMA-reported Client/asset identity to the specific chamber, pit, or parcel in municipality or network geography.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Extend the same observation-point/observed-feature mechanism recommended for Public Lighting (Question 1) to cover Objects 3424, 3425, and 3427.
+
 ---
 
 # OMA Question 2
@@ -1222,6 +1519,27 @@ Digital Twins should model observation point as a distinct, queryable attribute 
 
 Same recommendation as Question 1: a reusable observation-point Resource, independent from both Location (6) and Luminaire Asset (3417).
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Assessment |
+|---|---|---|
+| `6/0-1` Latitude/Longitude | 0 / OMA | Tied to the Client, not to an independent observation-point concept. |
+| `3424/3` Type of meter | 1 / uCIFI | Identifies a category of equipment, conflating (at best) asset type with location, with no independent observation-point concept. |
+
+### Coverage Assessment
+
+**Existing coverage requiring extension.** As for Public Lighting, observation point and asset identity are not modeled as independent concepts; the gap is sharper here since there is no water-specific asset Object at all.
+
+### Missing Semantics
+
+- A standalone observation-point concept, distinct from both Client location and the generic Asset identifier.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Same recommendation as for Public Lighting: a reusable observation-point Resource, independent from Location (6) and from whatever asset-identity mechanism is adopted for water equipment (see Semantic Capability 2, Question 3).
+
 ---
 
 # OMA Question 3
@@ -1252,6 +1570,26 @@ Should be possibly done at higher level, using Client identity as the correlatio
 
 Consider a lightweight "co-observed asset" Core Link Resource so that multiple Object Instances describing the same physical luminaire can declare that relationship explicitly rather than relying on Client co-location.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Assessment |
+|---|---|---|
+| [`3427`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3427.xml) Pressure Monitoring Sensor and [`3425`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3425.xml) Irrigation Valve co-located on the same Client | 1 / uCIFI | Multiple Object Instances can coexist on one Client (e.g. a valve assembly with an integrated pressure sensor), but no Resource states that they observe the same physical asset from different points, mirroring the 3416/3418 co-location finding for Public Lighting. |
+
+### Coverage Assessment
+
+**Indirect or ambiguous.** Co-location on the same Client is the only available signal, as for Public Lighting.
+
+### Missing Semantics
+
+- Explicit cross-Object relationship confirming that two Object Instances on the same Client refer to the same physical valve or network node.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Extend the same "co-observed asset" Core Link Resource recommended for Public Lighting to Objects 3424, 3425, and 3427.
+
 ---
 
 # OMA Question 4
@@ -1276,15 +1614,21 @@ Human-readable address and place-name enrichment (e.g. "Pl. Mayor, 1, 28231 Las 
 
 Do not attempt to standardize human-readable addressing within OMA; instead, ensure that Location Object 6 coordinates remain reliably populated and linkable so that Smart Data Models can perform reverse-geocoding.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Same recommendation as for Public Lighting: rely on Location Object 6 coordinates and Smart Data Model reverse-geocoding for human-readable addressing of water and irrigation equipment.
+
 ---
 
 # Observation Point Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Location Object 6 for Client-level coordinates; asset identity Resources in 3410 and 3417. |
-| Existing coverage requiring clarification or extension | No controlled observation-point vocabulary or explicit point-to-asset relationship. |
-| New OMA capability required | Controlled observation-point type and a co-observed-asset relationship. |
+| Existing OMA coverage | Location Object 6 for Client-level coordinates; asset identity Resources in 3410 and 3417; `3424/3` Type of meter as a weak category signal. |
+| Existing coverage requiring clarification or extension | No controlled observation-point vocabulary or explicit point-to-asset relationship, for either Public Lighting or Water Management and Irrigation; the gap is sharper for water, which lacks a 3417-equivalent asset Object. |
+| New OMA capability required | Controlled observation-point type and a co-observed-asset relationship, applicable to both domains. |
 | Outside OMA responsibility but must remain linkable | Human-readable addressing and place-name enrichment. |
 
 ---
@@ -1298,6 +1642,8 @@ Observation Scope describes whether a measurement represents a single luminaire,
 ## Overall Capability Conclusion
 
 **Existing OMA coverage, expressed through Object identity rather than an explicit scope Resource.**
+
+For Water Management and Irrigation, scope is similarly implicit in Object identity (a single meter, valve, or sensor), but without any analogue of the 3422 linked-instance aggregation pattern, making cross-meter scope composition a clearer gap than for Public Lighting.
 
 ---
 
@@ -1341,6 +1687,34 @@ The Smart Data Model should record how many and which luminaires are served by e
 
 Document, in a Public Lighting profile, that Object identity determines scope (3418 = single luminaire, 3421/3422 = cabinet feeder), and consider generalizing the 3422 linked-instance pattern for other scope compositions.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether a volume or pressure measurement represents a single meter, valve, or sensor, or an aggregate of several serving the same irrigation zone or network segment, so that KPIs are not miscalculated by mixing scopes.
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter; [`3425`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3425.xml) Irrigation Valve; [`3427`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3427.xml) Pressure Monitoring Sensor | Object identity | 1 / uCIFI | Scope is a single meter, valve, or sensor by Object design; none of the three Objects defines a linked-instance Resource comparable to `3422/36-38`. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Scope is entirely implicit in Object choice; unlike the electrical domain, there is no water-domain equivalent of the 3422 three-phase composition pattern to make an aggregate scope explicit.
+
+### Missing Semantics
+
+- A general, explicit scope Resource (e.g. number of meters/valves represented) is not defined for water Objects, and no domain-specific composition pattern exists either.
+
+### Smart Data Model Responsibility
+
+The Smart Data Model should record how many and which meters, valves, or sensors are associated with each irrigation zone or network segment.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Document, in a Water/Irrigation profile, that Object identity determines scope (3424/3425/3427 = single asset), and extend the same scope-generalization recommended for Public Lighting (reusing the 3422 linked-instance pattern) to water Objects.
+
 ---
 
 # OMA Question 2
@@ -1372,6 +1746,26 @@ Should be possibly done at higher level, in the network/asset topology model.
 
 Generalize the 3422 linked-instance approach as the reusable pattern for any future aggregated-scope Object.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter (multiple Instances on a network-segment Client) | Object identity only | 1 / uCIFI | Individual meters are distinguished by Instance number, but nothing states which parcel or zone each Instance serves. |
+
+### Coverage Assessment
+
+**Indirect or ambiguous.** No water Object names the constituent Instances it aggregates, a weaker position than the 3422 three-phase composition pattern already available for Public Lighting.
+
+### Missing Semantics
+
+- A general mechanism to list the meters, valves, or sensors represented by a zone- or network-segment-level measurement.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+When the 3422 linked-instance approach is generalized into a reusable pattern (as recommended in Question 1), apply it to Object 3424 as a first adopter outside Public Lighting.
+
 ---
 
 # OMA Question 3
@@ -1402,6 +1796,28 @@ Cross-asset and cross-zone aggregation (e.g. total energy per district).
 
 Provide a template for a general aggregation-metadata Resource applicable across Objects.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+No matching Object or Resource was identified; Object 3424 has no equivalent of `3422/8` Total active power import on the 3 lines, and no aggregation-function metadata.
+
+### Coverage Assessment
+
+**New OMA capability required.** Unlike the electrical domain, the water domain has no example of explicit, Resource-level aggregation to build on.
+
+### Missing Semantics
+
+- Aggregation-function metadata (sum, mean, min, max) for combining multiple water meter or pressure sensor Instances into a zone-level figure.
+
+### Smart Data Model Responsibility
+
+Cross-meter and cross-zone aggregation (e.g. total water delivered per irrigation district).
+
+### Recommendation to the OMA Smart Cities Working Group
+
+When a general aggregation-metadata Resource is defined (as recommended in Question 1 for Public Lighting), ensure it is equally applicable to Object 3424, since water has no existing aggregation example of its own to draw on.
+
 ---
 
 # OMA Question 4
@@ -1418,16 +1834,22 @@ Provide a template for a general aggregation-metadata Resource applicable across
 
 Generalize the patterns already present in Objects 3422 and 7 (linked Instances; collection window) into reusable, cross-Object scope and aggregation metadata.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Apply the same reusable scope and aggregation metadata, once generalized from Objects 3422 and 7, to Objects 3424, 3425, and 3427, since the water domain currently has no comparable pattern of its own.
+
 ---
 
 # Observation Scope Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Object identity conveys implicit scope (3418 = luminaire, 3421/3422 = cabinet); Object 3422 makes three-phase composition explicit. |
-| Existing coverage requiring clarification or extension | General aggregation-function and represented-asset-list metadata. |
-| New OMA capability required | Reusable scope/aggregation Resource generalized from the 3422 and Connectivity Statistics patterns. |
-| Outside OMA responsibility but must remain linkable | Zone and district-level aggregation and topology. |
+| Existing OMA coverage | Object identity conveys implicit scope (3418 = luminaire, 3421/3422 = cabinet; 3424/3425/3427 = single water asset); Object 3422 makes three-phase composition explicit. |
+| Existing coverage requiring clarification or extension | General aggregation-function and represented-asset-list metadata for both domains. |
+| New OMA capability required | Reusable scope/aggregation Resource generalized from the 3422 and Connectivity Statistics patterns, applicable to water Objects as well, which currently have no composition example of their own. |
+| Outside OMA responsibility but must remain linkable | Zone and district-level aggregation and topology, for both energy and water networks. |
 
 ---
 
@@ -1440,6 +1862,8 @@ Observation Method describes whether a lighting-related value was measured, esti
 ## Overall Capability Conclusion
 
 **Existing coverage limited to measured values; new OMA capability required for other methods.**
+
+Object 3425 (Irrigation Valve) reproduces the same Command / Command-in-action / measured-Status three-tier pattern already identified in Object 3416, giving the Water Management and Irrigation domain the same partial coverage and the same generalization gap.
 
 ---
 
@@ -1484,6 +1908,37 @@ Externally generated predictions (e.g. predicted energy savings from a dimming p
 
 Recognize the Command / Command-in-action / measured-value pattern in Object 3416 as a useful model, and generalize it into reusable observation-method metadata for other measurement Objects such as 3418.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether an irrigation valve's reported position was directly measured, commanded, or is the value actually applied after network propagation, since a commanded value does not guarantee the corresponding physical valve movement actually occurred.
+
+### Existing Object and Resource Evidence
+
+| Method | Evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| Measured | `3425/2` Status ("actual level of opening of the valve") | 1 / uCIFI | Description explicitly states the value is measured, not commanded, directly mirroring `3416/3` Dimming level. |
+| Commanded / configured | `3425/3` Command; `3425/1` Default status | 1 / uCIFI | Explicitly a command sent to the valve, structurally distinct from the measured Status Resource. |
+| Command in action | `3425/4` Command in action | 1 / uCIFI | An intermediate method: the actual value applied after LPWAN propagation, explicitly distinguished by description from both the sent Command and the measured Status, reproducing the exact three-tier pattern of Object 3416. |
+| Measured (pressure) | `3427/1` Pressure | 1 / uCIFI | Measured Resource with no method Resource attached, the same gap already identified for `3418/4` Active power. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Object 3425 independently reproduces the same three-tier Command/Command-in-action/measured pattern as Object 3416, confirming this is a reusable design idiom across uCIFI Objects rather than a one-off; it remains specific to these two Objects and is not a general, reusable observation-method Resource.
+
+### Missing Semantics
+
+- A general, reusable observation-method Resource (measured / commanded / estimated / predicted) applicable outside the specific 3416 and 3425 patterns, such as for `3427/1` Pressure.
+
+### Smart Data Model Responsibility
+
+Externally generated predictions (e.g. predicted irrigation demand from a soil-moisture model) belong in the Smart Data Model.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Recognize that Objects 3416 and 3425 independently converge on the same Command/Command-in-action/measured-value pattern, and generalize it into reusable observation-method metadata applicable across both Public Lighting and Water Management and Irrigation Objects.
+
 ---
 
 # OMA Question 2
@@ -1510,6 +1965,22 @@ Recognize the Command / Command-in-action / measured-value pattern in Object 341
 
 Add a queryable observation-method Resource so that clients do not need to hard-code Resource-specific knowledge to infer method.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| [`3424`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3424.xml) Water Meter | `3424/7-8` Minimum/Maximum flow rate | 1 / uCIFI | Explicitly an extremum computed since the last metering value, i.e. a derived statistic rather than a direct instantaneous measurement; nothing marks it as such beyond the textual description, the same gap already identified for `3416/41` Virtual power output. |
+
+### Coverage Assessment
+
+**New OMA capability required.** As with Public Lighting, the distinction between a direct measurement and a derived statistic relies on reading Resource descriptions rather than querying a method flag.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Same recommendation as for Public Lighting: add a queryable observation-method Resource applicable across both domains.
+
 ---
 
 # OMA Question 3
@@ -1530,6 +2001,20 @@ Predictive maintenance models and simulated illumination results belong in the S
 
 No device-side change is required unless a controller performs local prediction; if it does, reuse the same observation-method metadata recommended in Question 1.
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**New OMA capability required.** No Object in the Water Management and Irrigation evidence base represents a predicted or simulated value; leak and anomaly detection in Objects 3424 and 3427 are threshold- or rule-triggered rather than model-predicted, the same pattern already identified for Public Lighting's end-of-life alarms.
+
+### Smart Data Model Responsibility
+
+Predictive maintenance models and simulated irrigation-demand results belong in the Smart Data Model / Digital Twin layer.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+No device-side change is required; if a controller performs local prediction, reuse the same observation-method metadata recommended in Question 1.
+
 ---
 
 # OMA Question 4
@@ -1542,16 +2027,22 @@ No device-side change is required unless a controller performs local prediction;
 
 Generalize the Command / Command-in-action / measured-value pattern from Object 3416 into a reusable observation-method Resource for use across Objects 3416, 3418, 3421, and 3422.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Generalize the same Command / Command-in-action / measured-value pattern, independently confirmed by Object 3425, into a reusable observation-method Resource for use across Objects 3424, 3425, and 3427 as well.
+
 ---
 
 # Observation Method Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Object 3416 already distinguishes command, command-in-action, and measured dimming level by Resource design. |
-| Existing coverage requiring clarification or extension | The 3416 pattern is not generalized to other Objects or expressed as a queryable method flag. |
-| New OMA capability required | Reusable, cross-Object observation-method Resource; no representation of predicted/simulated values. |
-| Outside OMA responsibility but must remain linkable | Predictive maintenance and simulation models. |
+| Existing OMA coverage | Object 3416 already distinguishes command, command-in-action, and measured dimming level by Resource design; Object 3425 independently reproduces the identical three-tier pattern for valve position. |
+| Existing coverage requiring clarification or extension | The 3416/3425 pattern is not generalized to other Objects (3418, 3427) or expressed as a queryable method flag. |
+| New OMA capability required | Reusable, cross-Object observation-method Resource covering both domains; no representation of predicted/simulated values in either domain. |
+| Outside OMA responsibility but must remain linkable | Predictive maintenance and simulation models, for both lighting and irrigation. |
 
 ---
 
@@ -1564,6 +2055,8 @@ Temporal Semantics describe the time basis of a lighting observation: whether it
 ## Overall Capability Conclusion
 
 **Existing OMA coverage for instantaneous timestamps; existing coverage requiring clarification for aggregation windows.**
+
+The same Timestamp/Fractional Timestamp Common Resources are consistently present on Objects 3424, 3425, and 3427, but none of the three water Objects defines a measurement-period Resource comparable to `3421/24`.
 
 ---
 
@@ -1608,6 +2101,36 @@ Time-series storage, historical comparison, and forecasting.
 
 None required; continue mandating Timestamp availability through Common.xml.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether a volume, pressure, or valve-position value represents the current instant or a value accumulated since the last reset.
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|
+| `3424/5518`; `3425/5518`; `3427/5518` Timestamp | 1 / uCIFI (Common Resource) | O | Reusable | Consistent timestamp Resource across all three water Objects, identical to the lighting pattern. |
+| `3424/6050`; `3425/6050`; `3427/6050` Fractional Timestamp | 1 / uCIFI (Common Resource) | O | Reusable | Sub-second precision available consistently across the same Objects. |
+| `3424/1` Cumulated water volume; `3424/2` Cumulated water meter value reset | 1 / uCIFI | M / O | Object-specific | Explicitly cumulative "since last reset," the direct water-domain analogue of `3418/6-7`. |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** Timestamp and fractional timestamp are consistently available across all three water Objects examined, and cumulative-since-reset semantics are explicit in Object 3424.
+
+### Missing Semantics
+
+None material for point-in-time and cumulative-since-reset semantics.
+
+### Smart Data Model Responsibility
+
+Time-series storage, historical comparison, and forecasting.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None required; continue mandating Timestamp availability through Common.xml for water Objects as well.
+
 ---
 
 # OMA Question 2
@@ -1634,6 +2157,24 @@ None required; continue mandating Timestamp availability through Common.xml.
 ### Recommendation to the OMA Smart Cities Working Group
 
 Add a Measurement period Resource to Object 3418, consistent with the pattern already present in Object 3421.
+
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+No matching Resource was identified; Objects 3424, 3425, and 3427 define no equivalent of `3421/24` Measurement period of Instantaneous value.
+
+### Coverage Assessment
+
+**Existing coverage requiring extension.** None of the three water Objects defines an explicit interval Resource, a gap that will become directly relevant once a current flow-rate Resource is added to Object 3424 (see Semantic Capability 2, Question 1).
+
+### Missing Semantics
+
+- No interval Resource for the Pressure (`3427/1`), Status (`3425/2`), or any future current flow-rate Resource in Object 3424.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add a Measurement period Resource to Objects 3424 and 3427, consistent with the pattern already present in Object 3421, and include it alongside the current flow-rate Resource recommended for Object 3424.
 
 ---
 
@@ -1662,6 +2203,26 @@ Add a Measurement period Resource to Object 3418, consistent with the pattern al
 
 Reuse the Connectivity Statistics start/stop/period pattern for energy and power Objects.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Assessment |
+|---|---|---|
+| `3424/2` Cumulated water meter value reset | 1 / uCIFI | Marks the start of a new cumulative period but does not record its duration or scheduled end, the same gap already identified for `3418/7`. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** As for Public Lighting, the Connectivity Statistics start/stop/period pattern is a strong template that is not reused by Object 3424 for defining bounded aggregation windows.
+
+### Missing Semantics
+
+- Aggregation-window metadata for the cumulative water-volume counter, beyond a bare reset event.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Reuse the Connectivity Statistics start/stop/period pattern for Object 3424 as well, consistent with the recommendation already made for the electrical Objects.
+
 ---
 
 # OMA Question 4
@@ -1674,15 +2235,21 @@ Reuse the Connectivity Statistics start/stop/period pattern for energy and power
 
 Add a Measurement period Resource to Object 3418 and consider a shared aggregation-window pattern (modelled on Connectivity Statistics) reusable across electrical Objects.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add a Measurement period Resource to Objects 3424 and 3427, and extend the shared aggregation-window pattern (modelled on Connectivity Statistics) to Object 3424 as well.
+
 ---
 
 # Temporal Semantics Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Timestamp and Fractional Timestamp consistently available; explicit measurement period in Object 3421; explicit collection window in Connectivity Statistics. |
-| Existing coverage requiring clarification or extension | Object 3418 lacks a measurement-period Resource; no shared aggregation-window pattern reused across electrical Objects. |
-| New OMA capability required | None; generalization of existing patterns is sufficient. |
+| Existing OMA coverage | Timestamp and Fractional Timestamp consistently available across lighting and water Objects; explicit measurement period in Object 3421; explicit collection window in Connectivity Statistics; explicit cumulative-since-reset semantics in Objects 3418 and 3424. |
+| Existing coverage requiring clarification or extension | Objects 3418, 3424, and 3427 lack a measurement-period Resource; no shared aggregation-window pattern reused across electrical or water Objects. |
+| New OMA capability required | None; generalization of existing patterns is sufficient for both domains. |
 | Outside OMA responsibility but must remain linkable | Historical time-series analytics and forecasting. |
 
 ---
@@ -1698,6 +2265,8 @@ Provenance identifies where a lighting observation or command originated: the lu
 **Existing coverage requiring clarification or extension.**
 
 OMA Data Model instances implemented by street-lighting devices normally refer only to raw infrastructure telemetry generated by the device itself; externally supplied information (control-room commands, asset-management updates) is only partially distinguishable from device-native telemetry.
+
+The Water Management and Irrigation domain shares the same gap and is weaker in one respect: Object 3425 (Irrigation Valve) has no equivalent of `3416/54` Manual override active, so even the partial provenance signal available for lighting commands is absent for irrigation valve commands.
 
 ---
 
@@ -1742,6 +2311,36 @@ Attribution of externally supplied commands to a specific control-room operator,
 
 Add a discrete "command source" enumeration Resource to Object 3416, distinguishing schedule, manual override, and direct write, complementing the existing Manual override active flag.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether an irrigation valve's position resulted from its assigned scheduler, a manual override, or a direct write, in order to audit and troubleshoot irrigation behaviour.
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Assessment |
+|---|---|---|
+| `3425/5` Scheduler ID | 1 / uCIFI | Identifies which scheduler(s) are assigned to the valve's Command, a partial provenance signal naming the autonomous source, but not distinguishing it from a manual direct write to `3425/3` Command. |
+| `3425/4` Command in action | 1 / uCIFI | Description notes the value may differ from the sent Command on slow LPWAN networks, but does not expose whether the Command originated from a scheduler or a manual write. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Object 3425 is weaker than Object 3416 for provenance: it has no equivalent of `3416/54` Manual override active, so there is no boolean signal at all distinguishing scheduler-driven from manually commanded valve positions, only the Scheduler ID assignment itself.
+
+### Missing Semantics
+
+- A discrete provenance/source Resource for `Command in action`, as already identified for Object 3416.
+- Unlike Object 3416, Object 3425 lacks any override-active indicator; adding one would bring it to parity with the lighting domain.
+
+### Smart Data Model Responsibility
+
+Attribution of externally supplied irrigation commands to a specific control-room operator, work order, or asset-management transaction.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add the same discrete "command source" enumeration Resource recommended for Object 3416 to Object 3425, and additionally add an override-active indicator to Object 3425 so it reaches parity with the partial provenance signal already available in Object 3416.
+
 ---
 
 # OMA Question 2
@@ -1768,6 +2367,26 @@ Add a discrete "command source" enumeration Resource to Object 3416, distinguish
 
 Clarify, in a Public Lighting profile, which Resources are expected to be locally measured versus retrieved from an external bus (DALI/Zhaga D4i), since this affects trust and latency assumptions.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Assessment |
+|---|---|---|
+| `3425/5` Scheduler ID; `3425/3` Command | 1 / uCIFI | Both Resources are read/write, with no Resource distinguishing whether the current Command value was set by the identified scheduler or by a separate manual write. |
+
+### Coverage Assessment
+
+**Existing coverage requiring extension**, and weaker than Public Lighting since no boolean override-active distinction exists at all for Object 3425.
+
+### Missing Semantics
+
+- Provenance metadata distinguishing scheduler-driven from manually written Command values in Object 3425, and for telemetry values retrieved from an external sensor bus in Objects 3424 and 3427.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Extend the Question 1 recommendation (command-source Resource and override-active indicator) to Object 3425, and clarify, in a Water/Irrigation profile, which Resources are expected to be locally measured versus bus-relayed.
+
 ---
 
 # OMA Question 3
@@ -1788,6 +2407,20 @@ Historical provenance logging and audit trails.
 
 None beyond the Question 1 recommendation; historical provenance is better addressed by the Smart Data Model / Digital Twin's own event log.
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**Existing coverage requiring extension.** As for Public Lighting, there is no historical record, within Object 3425 itself, of which command source was in effect at a past point in time, beyond the Timestamp of the current Command in action value; the absence of an override-active flag makes this gap more acute, since even the current state is only partially inferable.
+
+### Smart Data Model Responsibility
+
+Historical provenance logging and audit trails for irrigation commands.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None beyond the Question 1 recommendation; historical provenance is better addressed by the Smart Data Model / Digital Twin's own event log.
+
 ---
 
 # OMA Question 4
@@ -1800,16 +2433,22 @@ None beyond the Question 1 recommendation; historical provenance is better addre
 
 Add a discrete command-source Resource to Object 3416, complementing Manual override active, and clarify in a Public Lighting profile which Resources are locally measured versus bus-relayed.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add a discrete command-source Resource and an override-active indicator to Object 3425, bringing it to parity with Object 3416, and clarify in a Water/Irrigation profile which Resources are locally measured versus bus-relayed.
+
 ---
 
 # Provenance Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Manufacturer/Serial Number identify the reporting device; Manual override active partially signals command provenance. |
-| Existing coverage requiring clarification or extension | No discrete command-source Resource; no distinction between locally measured and bus-relayed telemetry. |
-| New OMA capability required | Command-source enumeration Resource. |
-| Outside OMA responsibility but must remain linkable | Historical provenance/audit logging tied to control-room operators and work orders. |
+| Existing OMA coverage | Manufacturer/Serial Number identify the reporting device; Manual override active partially signals lighting command provenance; Scheduler ID identifies the autonomous source assigned to an irrigation valve's Command. |
+| Existing coverage requiring clarification or extension | No discrete command-source Resource in either domain; no distinction between locally measured and bus-relayed telemetry; Object 3425 additionally lacks any override-active indicator, unlike Object 3416. |
+| New OMA capability required | Command-source enumeration Resource for Objects 3416 and 3425; an override-active indicator for Object 3425. |
+| Outside OMA responsibility but must remain linkable | Historical provenance/audit logging tied to control-room operators and work orders, for both lighting and irrigation commands. |
 
 ---
 
@@ -1824,6 +2463,8 @@ Measurement Quality describes how reliable a lighting-related observation is, su
 **Existing OMA coverage.**
 
 The Measurement Quality Indicator and Measurement Quality Level Common Resources are already defined and consistently made available across the street-lighting Objects examined in this assessment.
+
+For Water Management and Irrigation, the same Common Resource pair is available on Objects 3424 and 3427, but notably absent from Object 3425 (Irrigation Valve), which defines no quality Resources at all.
 
 ---
 
@@ -1869,6 +2510,36 @@ Translating a numeric quality level into a municipality-facing confidence catego
 
 Consider making Measurement Quality Indicator mandatory within a Public Lighting profile for energy Resources used in billing or compliance reporting.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether a water volume, pressure, or valve-position measurement can be trusted before using it for billing, leak-response dispatch, or compliance reporting.
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|
+| `3424/6042` Measurement Quality Indicator; `3424/6049` Measurement Quality Level | 0 / OMA (Common Resource) | O | Reusable | Available on the Water Meter. |
+| `3427/6042`; `3427/6049` | 0 / OMA (Common Resource) | O | Reusable | Available on the Pressure Monitoring Sensor. |
+| `3425` Irrigation Valve | No Measurement Quality Indicator or Level Resource defined | 1 / uCIFI | — | Not applicable | Unlike every other Object examined in this assessment, Object 3425 does not expose the Common Resource pair at all, even though it reports a measured Status value. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** The Common Resource pair (6042/6049) is available on Objects 3424 and 3427, consistent with the broader Registry pattern, but Object 3425 is a genuine outlier in omitting it entirely.
+
+### Missing Semantics
+
+- Object 3425 defines no Measurement Quality Indicator or Level Resource, unlike every other Object examined in this assessment, including its closest structural analogue, Object 3416.
+
+### Smart Data Model Responsibility
+
+Translating a numeric quality level into a municipality-facing confidence category (e.g. "billing grade," "indicative only").
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add the Measurement Quality Indicator and Measurement Quality Level Common Resources to Object 3425, closing the one identified gap in an otherwise consistent Registry-wide pattern; consider making the Indicator mandatory within a Water/Irrigation profile for volume Resources used in billing.
+
 ---
 
 # OMA Question 2
@@ -1895,6 +2566,20 @@ No numerical uncertainty/error-margin Resource (e.g. ± value) exists; only a qu
 
 Evaluate whether energy-metering profiles need a dedicated numerical uncertainty Resource beyond the existing 0–100 quality level, particularly for billing-grade metering.
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**Existing OMA coverage** for Objects 3424 and 3427, via the same 0–100 Measurement Quality Level Resource; **not available** for Object 3425 pending the Question 1 recommendation.
+
+### Missing Semantics
+
+Same as Public Lighting: no numerical uncertainty/error-margin Resource exists; only a qualitative pass/fail-oriented scale is defined where the Common Resource pair is present at all.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Same as Public Lighting: evaluate whether water-metering profiles need a dedicated numerical uncertainty Resource, once the Question 1 gap in Object 3425 is closed.
+
 ---
 
 # OMA Question 3
@@ -1917,6 +2602,16 @@ Evaluate whether energy-metering profiles need a dedicated numerical uncertainty
 
 None required; the existing optional-Resource model already supports this.
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**Existing OMA coverage** for Objects 3424 and 3427, via the same optional-Resource model; Object 3425 provides no quality signal at all until the Question 1 gap is closed, so incompleteness of its Status Resource cannot currently be flagged.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Closing the Question 1 gap in Object 3425 would also resolve this finding.
+
 ---
 
 # OMA Question 4
@@ -1929,15 +2624,21 @@ None required; the existing optional-Resource model already supports this.
 
 Consider a Public Lighting profile requirement making quality indicator mandatory for billing/compliance-relevant Resources, and evaluate a supplementary numerical uncertainty Resource for metering use cases.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Add the Measurement Quality Indicator and Measurement Quality Level Common Resources to Object 3425 as the priority action for this capability; otherwise mirror the Public Lighting recommendations for a mandatory-quality profile requirement and a supplementary numerical uncertainty Resource.
+
 ---
 
 # Measurement Quality Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Measurement Quality Indicator (6042) and Level (6049) consistently defined across lighting, electrical, and LPWAN mesh Objects. |
+| Existing OMA coverage | Measurement Quality Indicator (6042) and Level (6049) consistently defined across lighting, electrical, LPWAN mesh, Water Meter (3424), and Pressure Monitoring Sensor (3427) Objects. |
 | Existing coverage requiring clarification or extension | Quality Resources are optional; no profile currently mandates them. |
-| New OMA capability required | Possible supplementary numerical uncertainty Resource for metering. |
+| New OMA capability required | Add the Measurement Quality Indicator/Level Common Resource pair to Object 3425, which uniquely omits it; possible supplementary numerical uncertainty Resource for metering. |
 | Outside OMA responsibility but must remain linkable | Translating quality levels into municipality-facing trust categories. |
 
 ---
@@ -1953,6 +2654,8 @@ Operational Context describes conditions such as electrical line quality or weat
 **Existing coverage requiring clarification or extension.**
 
 Electrical line-quality context is well covered by the Electrical Monitor and electrical meter Objects. Environmental context relies on generic IPSO/uCIFI environmental sensor Objects that are not natively linked to a specific lighting installation.
+
+For Water Management and Irrigation, the same generic environmental sensor Objects (notably Temperature, Humidity, and Rain Gauge) are directly relevant operational context for irrigation scheduling, with the same linking gap.
 
 ---
 
@@ -2000,6 +2703,43 @@ Correlating weather/traffic context with lighting service performance at the str
 
 Reuse the same observation-point/linked-asset extension recommended for Service Outcome (OMA Question 1) to connect environmental sensor Instances to the lighting assets they contextualize.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether recent or forecast rainfall, soil temperature, or ambient humidity should influence an irrigation schedule, and whether a pressure drop is caused by a distribution-network condition rather than the monitored segment itself.
+
+### Required OMA Contribution
+
+**Telemetry**
+
+- Rainfall accumulation relevant to irrigation-skip decisions
+- Soil or ambient temperature and humidity when available on the same infrastructure
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Assessment |
+|---|---|---|---|
+| [`3446`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3446.xml) Rain Gauge | Rainfall accumulation | 1 / uCIFI | Directly relevant operational context for irrigation scheduling, enabling rain-skip logic to avoid watering during or after rainfall. |
+| [`3303`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3303.xml) Temperature; [`3304`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3304.xml) Humidity | Sensor Value (5700) | 1 / IPSO Alliance | Generic environmental sensors already mapped, in the Water Management reference mapping, to `AgriParcelRecord` soilTemperature and relativeHumidity, supporting irrigation-demand estimation. |
+| [`3427`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3427.xml) Pressure Monitoring Sensor | `3427/1` Pressure | 1 / uCIFI | A pressure drop recorded at a network node is itself operational context for interpreting a downstream valve or meter reading, independent of the local asset's own condition. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Rainfall, temperature, and humidity sensors are generic Objects with no native relationship to the specific meter, valve, or parcel they contextualize, the same gap already identified for Public Lighting.
+
+### Missing Semantics
+
+- Explicit relationship linking an environmental sensor Instance (Rain Gauge, Temperature, Humidity) to the specific irrigation zone or parcel it contextualizes.
+
+### Smart Data Model Responsibility
+
+Correlating rainfall and soil-condition context with irrigation scheduling and water-consumption performance at the parcel or zone level.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Extend the same observation-point/linked-asset mechanism recommended for Public Lighting to connect Rain Gauge, Temperature, and Humidity sensor Instances to the irrigation zones or parcels they contextualize.
+
 ---
 
 # OMA Question 2
@@ -2020,6 +2760,20 @@ Should be possibly done at higher level, joining weather-service or traffic data
 
 No new Object required; rely on the linked-asset relationship recommended across this assessment.
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**Existing coverage requiring extension**, as described above.
+
+### Smart Data Model Responsibility
+
+Should be possibly done at higher level, joining weather-service rainfall forecasts or soil-condition data with irrigation telemetry.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+No new Object required; rely on the same linked-asset relationship recommended across this assessment.
+
 ---
 
 # OMA Question 3
@@ -2032,16 +2786,22 @@ No new Object required; rely on the linked-asset relationship recommended across
 
 Extend the linked-asset relationship (recommended for Observation Point and Service Outcome) to environmental sensor Objects so that operational context can be formally associated with the lighting asset it affects.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Extend the same linked-asset relationship to Rain Gauge, Temperature, and Humidity sensor Objects so that rainfall and soil-condition context can be formally associated with the irrigation zone or parcel it affects.
+
 ---
 
 # Operational Context Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Electrical line-quality context via Objects 3418 and 3421; a broad set of environmental sensor Objects (3303, 3304, 3432, 3446, 3449, 3450) available for co-deployment. |
-| Existing coverage requiring clarification or extension | No native relationship linking an environmental sensor Instance to the specific lighting asset it contextualizes. |
-| New OMA capability required | Linked-asset relationship (shared with Observation Point). |
-| Outside OMA responsibility but must remain linkable | Weather-service and traffic-data correlation with lighting performance. |
+| Existing OMA coverage | Electrical line-quality context via Objects 3418 and 3421; a broad set of environmental sensor Objects (3303, 3304, 3432, 3446, 3449, 3450) available for co-deployment with lighting or irrigation infrastructure; pressure context via Object 3427. |
+| Existing coverage requiring clarification or extension | No native relationship linking an environmental sensor Instance to the specific lighting or irrigation asset it contextualizes. |
+| New OMA capability required | Linked-asset relationship (shared with Observation Point), applicable to both domains. |
+| Outside OMA responsibility but must remain linkable | Weather-service, rainfall-forecast, and traffic-data correlation with lighting and irrigation performance. |
 
 ---
 
@@ -2056,6 +2816,8 @@ Physical Context describes environmental features (trees, buildings, terrain) th
 **Outside OMA responsibility but must remain linkable.**
 
 This capability is not well covered by the existing Data Model and should be managed at higher levels, using OMA-provided location and asset identifiers as the join key.
+
+The same conclusion applies to Water Management and Irrigation: soil type, pipe material and depth, and terrain affecting pressure and infiltration are outside OMA responsibility but must remain linkable via Location (6) and the water equipment's asset identifier.
 
 ---
 
@@ -2093,6 +2855,32 @@ GIS-sourced vegetation, building, and terrain data should be associated with the
 
 No OMA action required; ensure Location Object 6 remains reliably populated so Smart Data Models can join it with external GIS physical-context data.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether a pressure anomaly or irrigation underperformance is caused by soil type, pipe material and depth, or terrain, rather than by the meter, valve, or sensor itself.
+
+### Required OMA Contribution
+
+None; the Registry provides no Resource describing soil type, pipe material, terrain, or elevation profile, and none is expected at the device level.
+
+### Existing Object and Resource Evidence
+
+No matching Object or Resource was identified in the water-relevant Registry Objects examined in this assessment.
+
+### Coverage Assessment
+
+Outside OMA responsibility but must remain linkable.
+
+### Smart Data Model Responsibility
+
+GIS-sourced soil, pipe-network, and terrain data should be associated with the OMA-reported meter/valve/sensor location (Object 6) and asset identifier (`3410/4`).
+
+### Recommendation to the OMA Smart Cities Working Group
+
+No OMA action required; ensure Location Object 6 remains reliably populated so Smart Data Models can join it with external GIS and pipe-network data.
+
 ---
 
 # OMA Question 2
@@ -2109,6 +2897,16 @@ Outside OMA responsibility but must remain linkable.
 
 Confirm, in a Public Lighting profile, that physical/environmental-obstruction context is explicitly out of scope for LwM2M Objects and is a Smart Data Model / GIS responsibility.
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+Outside OMA responsibility but must remain linkable.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Confirm, in a Water/Irrigation profile, that soil, pipe-network, and terrain context is explicitly out of scope for LwM2M Objects and is a Smart Data Model / GIS responsibility.
+
 ---
 
 # OMA Question 3
@@ -2121,6 +2919,12 @@ Confirm, in a Public Lighting profile, that physical/environmental-obstruction c
 
 None; no device-side capability is needed. Ensure location and asset identifiers remain the stable join key for external physical-context data.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None; no device-side capability is needed. Ensure Location (6) and the water equipment's asset identifier remain the stable join key for external soil, pipe-network, and terrain data.
+
 ---
 
 # Physical Context Disposition Summary
@@ -2130,7 +2934,7 @@ None; no device-side capability is needed. Ensure location and asset identifiers
 | Existing OMA coverage | None. |
 | Existing coverage requiring clarification or extension | Not applicable. |
 | New OMA capability required | None. |
-| Outside OMA responsibility but must remain linkable | Vegetation, building, terrain, and shadow data, joined via Location (6) and Luminaire Asset (3417) identifiers. |
+| Outside OMA responsibility but must remain linkable | Vegetation, building, terrain, and shadow data for lighting, joined via Location (6) and Luminaire Asset (3417); soil, pipe-network, and terrain data for water, joined via Location (6) and Asset identifier (`3410/4`). |
 
 ---
 
@@ -2145,6 +2949,8 @@ Asset Management Context represents ownership, maintenance responsibility, warra
 **Existing coverage requiring clarification or extension.**
 
 Devices expose useful lifecycle-adjacent information (operating hours, installation date, manufacturer identity), but ownership, contracts, and warranty terms are expected to be managed at higher levels.
+
+Water Management and Irrigation equipment shares the same generic Device Extension (3410) lifecycle Resources, but has no equivalent of the Luminaire Asset Object (3417) for manufacturer-level identity, nor of Object 3416's operating-hours and end-of-life threshold Resources.
 
 ---
 
@@ -2192,6 +2998,37 @@ Ownership, responsible organization, maintenance contracts, warranty status, and
 
 Retain Objects 3410 and 3417 as the standard source of installation date, operating hours, and manufacturer identity; do not attempt to standardize ownership or contractual information within OMA.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know who owns and maintains each meter, valve, or pressure sensor, when it was installed, and how close it is to end of life, to plan maintenance and replacement budgets.
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|---|
+| [`3410`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3410.xml) Device Extension | `3410/4` Asset identifier; `3410/5` Installation date; `3410/9` Device operating hours | 1 / uCIFI | O | Reusable | Same generic installation-date and operating-hours lifecycle tracking used for Public Lighting, directly reusable for a water meter, valve, or pressure-sensor Client. |
+| [`3410`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3410.xml) Device Extension | `3410/7` Maintenance | 1 / uCIFI | O | Reusable | Boolean flag indicating the device is currently in maintenance mode. |
+| `3424` Water Meter; `3425` Irrigation Valve; `3427` Pressure Monitoring Sensor | No manufacturer-level asset identity, operating-hours, or end-of-life threshold Resources | 1 / uCIFI | — | Not applicable | Unlike Object 3416 (`3416/15,56,64,65`) and Object 3417 (`3417/1-3`), none of the three water Objects exposes a device-reported wear counter, end-of-life threshold, or manufacturer-level nameplate identity of its own. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** The generic Device Extension (3410) is directly reusable for water equipment, but the domain-specific lifecycle depth available for lighting (via 3416 and 3417) has no counterpart for meters, valves, or pressure sensors.
+
+### Missing Semantics
+
+- No water-specific asset Object comparable to 3417 for manufacturer-level identity (see also Semantic Capability 2, Question 3).
+- No operating-hours or end-of-life threshold Resource in Objects 3424, 3425, or 3427, comparable to `3416/15,56,64,65`.
+
+### Smart Data Model Responsibility
+
+Ownership, responsible organization, maintenance contracts, warranty status, and remaining useful-life estimation should be maintained by the Smart Data Model, keyed to the OMA-reported Asset identifier (`3410/4`) pending resolution of the asset-identity gap.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Retain Object 3410 as the standard source of installation date and operating hours for water equipment; evaluate whether a water-specific asset Object (per Semantic Capability 2, Question 3) and operating-hours/end-of-life Resources, patterned on Object 3416, are warranted for meters, valves, and pressure sensors.
+
 ---
 
 # OMA Question 2
@@ -2207,6 +3044,16 @@ Installation date, operating hours, maintenance-mode flag, and manufacturer iden
 ### Recommendation to the OMA Smart Cities Working Group
 
 None required; the current allocation between device-observable lifecycle data (OMA) and administrative/contractual data (Smart Data Model) is appropriate.
+
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+Installation date, operating hours, and maintenance-mode flag are appropriately represented within LwM2M Object 3410 for water equipment, since a device can observe or be configured with this information directly, consistent with Public Lighting.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None required; the current allocation is appropriate for water equipment as well.
 
 ---
 
@@ -2224,6 +3071,16 @@ Ownership, responsible organization, maintenance contracts, and warranty status 
 
 Should be possibly complemented at higher levels, keyed by Asset GTIN (`3417/1`) and Asset identifier (`3410/4`).
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+Ownership, responsible organization, maintenance contracts, and warranty status should remain external for water equipment as well, since a device cannot observe or verify this information.
+
+### Smart Data Model Responsibility
+
+Should be possibly complemented at higher levels, keyed by Asset identifier (`3410/4`), pending resolution of the water-specific asset-identity gap identified in Question 1.
+
 ---
 
 # OMA Question 4
@@ -2240,16 +3097,26 @@ Should be possibly complemented at higher levels, keyed by Asset GTIN (`3417/1`)
 
 Clarify, in a Public Lighting profile, that Asset GTIN and Asset identifier are expected to persist across device replacement events, so that Smart Data Models can maintain continuity of the asset record.
 
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**Existing coverage requiring extension.** The generic Asset identifier (`3410/4`) provides a usable join key, but, absent a water-specific asset Object, it is the only one, making continuity across device replacement even more dependent on correct external record-keeping than for Public Lighting.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Clarify, in a Water/Irrigation profile, that the Asset identifier is expected to persist across device replacement events, and prioritize the Question 1 recommendation for a water-specific asset Object to bring continuity practice to parity with Public Lighting.
+
 ---
 
 # Asset Management Context Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Installation date, operating hours, maintenance flag (3410); manufacturer identity, year/week of manufacture (3417); lamp/driver operating hours and end-of-life threshold (3416). |
-| Existing coverage requiring clarification or extension | Persistence of Asset GTIN/identifier across device replacement. |
-| New OMA capability required | None identified. |
-| Outside OMA responsibility but must remain linkable | Ownership, responsible organization, maintenance contracts, and warranty status. |
+| Existing OMA coverage | Installation date, operating hours, maintenance flag (3410), reusable for both lighting and water equipment; manufacturer identity, year/week of manufacture (3417), lamp/driver operating hours and end-of-life threshold (3416), specific to lighting. |
+| Existing coverage requiring clarification or extension | Persistence of Asset GTIN/identifier across device replacement, for both domains; water equipment additionally lacks any manufacturer-level asset identity or operating-hours/end-of-life Resource of its own. |
+| New OMA capability required | None identified for Public Lighting; evaluate a water-specific asset Object and operating-hours/end-of-life Resources for Objects 3424, 3425, and 3427. |
+| Outside OMA responsibility but must remain linkable | Ownership, responsible organization, maintenance contracts, and warranty status, for both lighting and water assets. |
 
 ---
 
@@ -2264,6 +3131,8 @@ Network Operability describes the communication conditions that determine whethe
 **Existing OMA coverage.**
 
 Connectivity Monitoring, Connectivity Statistics, and the uCIFI LPWAN Mesh Objects together provide a detailed communication-quality and failure model, and the Device object's Error Code Resource explicitly distinguishes a connectivity failure from other device error types.
+
+These Objects are bearer-level and domain-independent, so the same coverage applies directly to a Water Management and Irrigation Client hosting Objects 3424, 3425, or 3427, with no domain-specific adaptation required.
 
 ---
 
@@ -2309,6 +3178,35 @@ Translating raw connectivity metrics into an operational-readiness status (e.g. 
 
 Define, in a Public Lighting profile, a minimum mandatory subset of Objects 4 or 3447 depending on the transport technology used.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need to know whether a water meter, irrigation valve, or pressure sensor can currently be remotely monitored or controlled, and whether an apparent fault is caused by a communication problem rather than the equipment itself.
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|---|
+| [`4`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/4.xml) Connectivity Monitoring | `4/2` Radio Signal Strength; `4/3` Link Quality | 0 / OMA | M signal strength; O link quality | Reusable | Generic bearer-agnostic signal-quality Resources, equally applicable to a water/irrigation Client. |
+| [`3447`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3447.xml) LPWAN Mesh Connectivity; [`3448`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3448.xml) LPWAN Mesh Statistics | `3447/3` Status; `3447/4` Connection Errors; `3448/4,9,11` packet-error counters | 1 / uCIFI | M status; O others | Object-specific | Mesh-specific connectivity status and error statistics, equally applicable where water or irrigation equipment shares the same 802.15.4-based mesh deployment as street lighting. |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** The same bearer-level Objects used for Public Lighting apply directly to Water Management and Irrigation Clients, with no domain-specific gap.
+
+### Missing Semantics
+
+None material.
+
+### Smart Data Model Responsibility
+
+Translating raw connectivity metrics into an operational-readiness status for irrigation and metering equipment.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Extend the same minimum mandatory connectivity-monitoring subset recommended for Public Lighting to a Water/Irrigation profile, depending on the transport technology used.
+
 ---
 
 # OMA Question 2
@@ -2320,6 +3218,16 @@ Define, in a Public Lighting profile, a minimum mandatory subset of Objects 4 or
 ### Coverage Assessment
 
 **Existing OMA coverage.** Yes: `4/2` Radio Signal Strength, `3447/29-31` signal-to-noise ratio, RSSI, and noise floor all support continuous communication-quality monitoring.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None required.
+
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**Existing OMA coverage.** The same bearer-level signal-quality Resources (`4/2`, `3447/29-31`) apply directly to water and irrigation equipment.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
@@ -2354,6 +3262,24 @@ None material.
 
 None required; document this three-way distinction explicitly in a Public Lighting profile for implementer clarity.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Failure category | Object and Resource | Source / Owner | Assessment |
+|---|---|---|---|
+| Communication failure | `3447/4` Connection Errors; `3448` Tx/Rx discard and malformed-packet counters | 1 / uCIFI | Explicitly scoped to the mesh communication layer, equally applicable to a water/irrigation Client. |
+| Communication failure (generic) | `3/11` Error Code = 7 ("IP connectivity failure") | 0 / OMA | Same Device object Error Code enumeration applies regardless of the hosted application-layer Object. |
+| Device external asset failure | `3424/9-13` leak/back-flow/blockage/fraud flags; `3427/3-4` leak/hammer-effect flags; `3425/6` Invalid scheduler | 1 / uCIFI | Asset-level anomaly indicators, structurally separate from both Device Error Code and connectivity Objects, mirroring the role of `3416/5,7` for lighting. |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** The same three-way distinction (communication failure, device intrinsic failure, external asset failure) already identified for Public Lighting applies directly to water and irrigation equipment, using Objects 3424, 3425, and 3427 in place of 3416.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None required; document the same three-way distinction in a Water/Irrigation profile for implementer clarity.
+
 ---
 
 # OMA Question 4
@@ -2366,16 +3292,22 @@ None required; document this three-way distinction explicitly in a Public Lighti
 
 Define a minimum mandatory connectivity-monitoring subset per transport technology in a Public Lighting profile; no new Objects are required.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Define the same minimum mandatory connectivity-monitoring subset per transport technology in a Water/Irrigation profile; no new Objects are required.
+
 ---
 
 # Network Operability Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Objects 4, 7, 3447, and 3448 cover signal quality, traffic statistics, and mesh-specific error counters; Device Error Code explicitly separates connectivity failure from other error types. |
-| Existing coverage requiring clarification or extension | No mandatory minimum subset defined per transport technology. |
+| Existing OMA coverage | Objects 4, 7, 3447, and 3448 cover signal quality, traffic statistics, and mesh-specific error counters for any LwM2M Client, including water and irrigation equipment; Device Error Code explicitly separates connectivity failure from other error types. |
+| Existing coverage requiring clarification or extension | No mandatory minimum subset defined per transport technology, for either domain. |
 | New OMA capability required | None identified. |
-| Outside OMA responsibility but must remain linkable | Translating raw metrics into an operational-readiness status for Digital Twins. |
+| Outside OMA responsibility but must remain linkable | Translating raw metrics into an operational-readiness status for Digital Twins, for both lighting and water/irrigation equipment. |
 
 ---
 
@@ -2390,6 +3322,8 @@ Fallback Behaviour describes how a luminaire behaves autonomously when normal su
 **Existing OMA coverage.**
 
 The Program Scheduler family (3452–3457), combined with the manual-override Resources in Object 3416, provides one of the most complete autonomous and override-behaviour models in the Registry.
+
+Object 3425 (Irrigation Valve) is explicitly designed to plug into the same Program Scheduler family via its `3425/5` Scheduler ID Resource, so the Fallback Behaviour model already described for Public Lighting applies directly to irrigation with no new Objects required; the main gap is that Object 3425 lacks a manual-override mechanism as well-defined as `3416`'s.
 
 ---
 
@@ -2437,6 +3371,44 @@ Municipality-level policy defining which schedule should apply, and audit of whe
 
 Retain the Program Scheduler family and Object 3416 manual-override Resources as the reference fallback-behaviour model for Public Lighting profiles.
 
+## Water Management and Irrigation
+
+### Municipality Operational Need
+
+Municipalities need assurance that irrigation continues operating on its configured schedule, and that a valve reverts to a safe default position, if communication with the control platform is lost.
+
+### Required OMA Contribution
+
+**Configuration or operational intent**
+
+- A locally stored default valve position
+- A locally executable irrigation schedule, reusing the same scheduling engine as Public Lighting
+
+### Existing Object and Resource Evidence
+
+| Object | Resource evidence | Source / Owner | Requirement status | Reuse | Assessment |
+|---|---|---|---|---|---|
+| [`3425`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3425.xml) Irrigation Valve | `3425/1` Default status | 1 / uCIFI | O | Object-specific | Default valve opening level "applied when the device is powered ON," the irrigation-domain analogue of `3416/4` Default dimming level. |
+| `3425` Irrigation Valve | `3425/5` Scheduler ID | 1 / uCIFI | O | Object-specific | Identifiers of the schedulers assigned to the valve's Command, a direct, explicit reference into the same Program Scheduler family (3452–3457) used by Public Lighting, confirming the schedule framework is designed to be reused across domains rather than being lighting-specific. |
+| [`3452`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3452.xml) Program Scheduler; [`3453`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3453.xml) Calendar Rule; [`3454`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3454.xml) Program Function; [`3457`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3457.xml) Program Manager | `3452/6-7` Output Instances/Targets able to reference a `3425` Instance | 1 / uCIFI | M | Object-specific | The same autonomous multi-program scheduling model, including priority-based conflict resolution and seasonal calendar rules, applies unchanged when its output target is an irrigation valve rather than a lamp controller. |
+| `3425` Irrigation Valve | `3425/6` Invalid scheduler | 1 / uCIFI | O | Object-specific | Signals when an assigned scheduler cannot be executed, relevant to verifying fallback readiness, the irrigation-domain counterpart of `3457/11` Error Conditions. |
+
+### Coverage Assessment
+
+**Existing OMA coverage.** Object 3425 is explicitly designed to be driven by the same Program Scheduler family already assessed for Public Lighting, so the autonomous fallback model requires no new Objects; a Default status Resource provides a safe power-on value, directly mirroring `3416/4`.
+
+### Missing Semantics
+
+- Object 3425 has no equivalent of `3416/50-54` (manual override start/end time, default duration, and active flag); a manual override to 3425 relies solely on writing `3425/3` Command with no bounded-duration or active-flag mechanism.
+
+### Smart Data Model Responsibility
+
+Municipality-level policy defining which irrigation schedule should apply, and audit of when fallback behaviour was actually in effect.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Retain the Program Scheduler family and Object 3425's Scheduler ID linkage as the reference fallback-behaviour model for Water/Irrigation profiles; extend Object 3425 with bounded manual-override Resources (start time, end time, default duration, active flag) analogous to `3416/50-54`, which it currently lacks.
+
 ---
 
 # OMA Question 2
@@ -2448,6 +3420,16 @@ Retain the Program Scheduler family and Object 3416 manual-override Resources as
 ### Coverage Assessment
 
 **Existing OMA coverage.** Yes — the Program Scheduler/Calendar Rule/Program Function/Program Manager Object family is purpose-built for this, including priority-based conflict resolution (`3452/2`) and compound-operation composition (`3452/8`).
+
+### Recommendation to the OMA Smart Cities Working Group
+
+None required.
+
+## Water Management and Irrigation
+
+### Coverage Assessment
+
+**Existing OMA coverage.** Yes — the same Program Scheduler/Calendar Rule/Program Function/Program Manager Object family drives Object 3425 via its Scheduler ID Resource, including the same priority-based conflict resolution and compound-operation composition available for lighting.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
@@ -2484,6 +3466,31 @@ Correlating Connectivity Monitoring/Statistics (Objects 4, 7, 3447) status with 
 
 Consider clarifying, in a Public Lighting profile, that "supervisory link active" should be derived by correlating Connectivity Monitoring/Mesh status (Objects 4, 3447) with Program Scheduler state, since the Program Scheduler alone does not need to record this distinction.
 
+## Water Management and Irrigation
+
+### Existing Object and Resource Evidence
+
+| Object and Resource | Source / Owner | Assessment |
+|---|---|---|
+| `3425/6` Invalid scheduler | 1 / uCIFI | Indicates when the assigned scheduler cannot be executed, a relevant transition into a degraded state, the irrigation-domain counterpart of `3457/11` Error Conditions. |
+
+### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Object 3425 has no equivalent of `3416/54` Manual override active at all (see Question 1), so unlike Public Lighting, there is currently no explicit Resource distinguishing manually commanded operation from autonomous scheduler execution for irrigation valves.
+
+### Missing Semantics
+
+- A manual-override-active indicator for Object 3425 (see Question 1).
+- The same "supervisory link active" gap identified for Public Lighting, since the scheduler runs autonomously regardless of supervisory connectivity.
+
+### Smart Data Model Responsibility
+
+Correlating Connectivity Monitoring/Statistics status with Program Scheduler activity for irrigation valves, mirroring the approach recommended for Public Lighting.
+
+### Recommendation to the OMA Smart Cities Working Group
+
+Once a manual-override-active Resource is added to Object 3425 (Question 1), apply the same "supervisory link active" correlation approach recommended for Public Lighting to Water/Irrigation profiles.
+
 ---
 
 # OMA Question 4
@@ -2496,16 +3503,22 @@ Consider clarifying, in a Public Lighting profile, that "supervisory link active
 
 No new Objects are required. Document, in a Public Lighting profile, the correlation pattern between connectivity status and scheduler state described in Question 3.
 
+## Water Management and Irrigation
+
+### Recommendation to the OMA Smart Cities Working Group
+
+No new Program Scheduler family Objects are required; add bounded manual-override Resources to Object 3425 (Question 1) and document, in a Water/Irrigation profile, the same correlation pattern between connectivity status and scheduler state described in Question 3.
+
 ---
 
 # Fallback Behaviour Disposition Summary
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Program Scheduler family (3452–3457) for autonomous operation; Object 3416 manual-override mechanism with bounded duration and automatic reversion. |
-| Existing coverage requiring clarification or extension | No explicit "supervisory link active" indicator separate from Manual override active. |
-| New OMA capability required | None; correlation with Connectivity Monitoring/Mesh status is sufficient. |
-| Outside OMA responsibility but must remain linkable | Municipality policy defining applicable schedules and audit of fallback periods. |
+| Existing OMA coverage | Program Scheduler family (3452–3457) for autonomous operation, reused unchanged by Object 3425 via its Scheduler ID Resource; Object 3416 manual-override mechanism with bounded duration and automatic reversion; Object 3425 Default status for a safe power-on value. |
+| Existing coverage requiring clarification or extension | No explicit "supervisory link active" indicator separate from Manual override active, for either domain; Object 3425 additionally lacks any bounded manual-override mechanism comparable to `3416/50-54`. |
+| New OMA capability required | Bounded manual-override Resources (start time, end time, default duration, active flag) for Object 3425; otherwise correlation with Connectivity Monitoring/Mesh status is sufficient for both domains. |
+| Outside OMA responsibility but must remain linkable | Municipality policy defining applicable schedules and audit of fallback periods, for both lighting and irrigation. |
 
 ---
 

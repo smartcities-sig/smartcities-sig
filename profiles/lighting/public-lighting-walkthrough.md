@@ -435,6 +435,32 @@ These contributions may help preserve:
 
 ---
 
+## Reducing Telemetry Cost Without Losing Relevant Information
+
+The Teleoperation and Operational Reliability analysis in Stage 1 already identified that network behavior — latency, packet loss, and teleoperation responsiveness — is itself part of operational trustworthiness. A closely related concern, surfaced directly from municipality operational material, is that continuously transferring sensor data in real time may carry a cost that is not always justified by the operational value of each individual update.
+
+> Sensor data may not always need to be available in real time, since transferring large quantities of data has a cost. Interoperability mechanisms must make it possible to reduce that cost without risking the loss of any operationally relevant information.
+
+This reframes network efficiency not simply as a transport-layer optimization, but as a continuation of the same semantic concern already identified for measurement quality and temporal resolution: the system must still receive every operationally relevant update, even when it is not polling continuously.
+
+LwM2M, as one of the device interoperability mechanisms identified above, already provides two complementary techniques that address this concern:
+
+| Technique | Reporting Trigger | Operational Fit |
+|---|---|---|
+| LwM2M Observe | The device is instructed to report only when a defined condition is met — a time period has elapsed, a measured value has changed, or a threshold has been crossed | Best suited when the system needs to monitor a specific resource against custom, situation-specific conditions |
+| LwM2M Send | The device autonomously reports an update whenever it determines the information is relevant | Best suited when a resource is already known, by design, to be operationally relevant every time it changes — ready to report out of the box, without per-resource configuration |
+
+Both techniques let the receiving system obtain operationally relevant updates without continuously polling every resource, which directly addresses the network cost and teleoperation reliability concerns identified earlier in the walkthrough.
+
+The distinction between the two techniques maps onto a distinction already present elsewhere in this walkthrough, between information whose relevance is intrinsic to the resource itself and information whose relevance depends on situational, custom-defined conditions:
+
+- **LwM2M Send** fits resources that are relevant by design every time they change, such as a dimming value or an energy measurement that is naturally worth reporting whenever a new value is applied. These resources do not need to be individually instructed to become useful — they are operationally meaningful out of the box, immediately after deployment.
+- **LwM2M Observe** fits resources whose relevance depends on a condition defined by the consuming system, such as retrieving an illuminance value only when it has changed significantly, or only once a threshold meaningful to a specific operational scenario has been crossed. This approach is more flexible, since it allows any resource to be monitored according to requirements that are specific to the system consuming the data.
+
+Neither technique replaces the semantic concerns already identified in this walkthrough — measurement method, temporal resolution, and provenance still need to remain explicit regardless of how a value reaches the platform. What both techniques add is an operational delivery layer: a way to preserve semantic completeness and timeliness while avoiding the cost of continuous polling across multiple resources and devices.
+
+---
+
 ## Smart Data Models as Semantic Integration Mechanisms
 
 The walkthrough progressively identified that Smart Data Models may act as semantic integration mechanisms capable of carrying:
