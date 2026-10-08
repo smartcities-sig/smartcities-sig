@@ -58,4 +58,4 @@ Explore the new open standards profile designed to streamline smart water manage
 ## Connect & Get Involved
 All events are free to attend, and after each session attendees will have the opportunity to ask questions and network directly with key speakers and participating organizations.
 
-Can't wait for the Expo? Join the conversation early or get involved with the group by visiting the [SmartCities SIG Community Page](/https://groups.io/g/smartcities-sig).
+Can't wait for the Expo? Join the conversation early or get involved with the group by visiting the [SmartCities SIG Community Page](https://groups.io/g/smartcities-sig).
