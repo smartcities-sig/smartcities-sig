@@ -86,3 +86,5 @@ jobs:
           message: |
             🔍 **Web preview** for `${{ github.event.pull_request.head.ref }}` @ ${{ github.event.pull_request.head.sha }}
             ${{ steps.deploy.outputs.url }}
+
+            🔄 [Re-run this preview](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) (opens the run, then click **Re-run all jobs**)
