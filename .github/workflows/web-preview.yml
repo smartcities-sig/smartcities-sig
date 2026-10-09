@@ -63,16 +63,25 @@ jobs:
 
       - name: Remove alias (PR closed)
         if: steps.flag.outputs.enabled == 'true' && github.event.action == 'closed'
-        run: npx vercel alias rm "$ALIAS" --yes --token "$VERCEL_TOKEN" || true
+        # REST API instead of the CLI: team-scoped tokens make CLI commands that
+        # look up a user fail with "User not found".
+        run: |
+          curl -s -X DELETE -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v2/aliases/$ALIAS?teamId=$VERCEL_ORG_ID" || true
 
       - name: Deploy preview
         if: steps.flag.outputs.enabled == 'true' && github.event.action != 'closed'
         id: deploy
         run: |
           OVERRIDES=$(jq -nc --arg k "${GITHUB_REPOSITORY,,}" --arg v "$HEAD_REF" '{($k): $v}')
-          URL=$(npx vercel deploy --token "$VERCEL_TOKEN" \
+          URL=$(npx vercel deploy --token "$VERCEL_TOKEN" --scope "$VERCEL_ORG_ID" \
             --build-env CONTENT_REF_OVERRIDES="$OVERRIDES")
-          npx vercel alias set "$URL" "$ALIAS" --token "$VERCEL_TOKEN" --scope "$VERCEL_ORG_ID"
+          HOST=${URL#https://}
+          DEPLOYMENT_ID=$(curl -sf -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v13/deployments/$HOST?teamId=$VERCEL_ORG_ID" | jq -r .id)
+          curl -sf -X POST -H "Authorization: Bearer $VERCEL_TOKEN" -H "Content-Type: application/json" \
+            -d "$(jq -nc --arg a "$ALIAS" '{alias: $a}')" \
+            "https://api.vercel.com/v2/deployments/$DEPLOYMENT_ID/aliases?teamId=$VERCEL_ORG_ID" > /dev/null
           echo "url=https://$ALIAS" >> "$GITHUB_OUTPUT"
         env:
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
