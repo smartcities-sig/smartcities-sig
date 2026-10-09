@@ -101,7 +101,7 @@ The primary objective in this initiative is to demonstrate the tangible, real-wo
 
 ## Libelium Positioning
 
-**Libelium** develops IoT sensing and software solutions for smart cities and infrastructure, connecting physical-world observations with urban data platforms, data spaces, and digital twins. Through its sensing technologies and **iris360** platform, Libelium brings an end-to-end perspective on how data is generated, managed, shared, and transformed into actionable information for municipalities.
+**Libelium** develops IoT sensing and software solutions for smart cities and infrastructure, connecting physical-world observations with urban data platforms, data spaces, and digital twins. Through its sensing technologies and platform, Libelium brings an end-to-end perspective on how data is generated, managed, shared, and transformed into actionable information for municipalities.
 
 Libelium participates in the **Smart Cities SIG** as an IoT device manufacturer and platform provider, a contributor of practical implementation experience, and an advocate for open standards, trustworthy data, and implementation-neutral ecosystem collaboration. Libelium has also been a key promoter for a long time of OMA LwM2M with reserved objects group and a key promoter and contributor of the Smart Data Models. At the same time, the company is member of the FIWARE Foundation, with a key role in the Board of Directors.
 
