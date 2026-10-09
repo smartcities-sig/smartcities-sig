@@ -1,0 +1,87 @@
+# TEMPLATE — copy into each content repo as .github/workflows/web-preview.yml.
+# Deploys a preview of the web app (its `main`) that reads THIS repo's PR branch.
+#
+# Secrets needed in the content repo:
+#   VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
+#   NUXT_GITHUB_TOKEN  the same PAT the web app uses to fetch content; here it
+#                      also checks out the web repo, so it must be able to read
+#                      the web repo as well as the content repos
+# Repo variable:
+#   WEB_REPO         e.g. elastic-hub/smartcities-sig-web
+#   ALIAS_PREFIX     e.g. smartcities-sig-web-content   (-> <prefix>-pr-<n>.vercel.app)
+name: Web preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+concurrency:
+  group: web-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: write
+
+env:
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  ALIAS: ${{ vars.ALIAS_PREFIX }}-pr-${{ github.event.pull_request.number }}.vercel.app
+
+jobs:
+  preview:
+    # Fork PRs can't read secrets and their branches aren't readable by the web build.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out web app (main)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.WEB_REPO }}
+          ref: main
+          token: ${{ secrets.NUXT_GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci --ignore-scripts
+
+      - name: Is preview enabled for this repo?
+        id: flag
+        run: echo "enabled=$(npx jiti scripts/content-preview.ts '${{ github.repository }}')" >> "$GITHUB_OUTPUT"
+
+      - name: Notify - preview disabled
+        if: steps.flag.outputs.enabled != 'true' && github.event.action != 'closed'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: web-preview
+          message: |
+            ℹ️ **Web preview is disabled for this repository** (`preview: false` in the web app's `collections.ts`).
+
+      - name: Remove alias (PR closed)
+        if: steps.flag.outputs.enabled == 'true' && github.event.action == 'closed'
+        run: npx vercel alias rm "$ALIAS" --yes --token "$VERCEL_TOKEN" || true
+
+      - name: Deploy preview
+        if: steps.flag.outputs.enabled == 'true' && github.event.action != 'closed'
+        id: deploy
+        run: |
+          OVERRIDES=$(jq -nc --arg k "${GITHUB_REPOSITORY,,}" --arg v "$HEAD_REF" '{($k): $v}')
+          URL=$(npx vercel deploy --token "$VERCEL_TOKEN" \
+            --build-env CONTENT_REF_OVERRIDES="$OVERRIDES")
+          npx vercel alias set "$URL" "$ALIAS" --token "$VERCEL_TOKEN" --scope "$VERCEL_ORG_ID"
+          echo "url=https://$ALIAS" >> "$GITHUB_OUTPUT"
+        env:
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+
+      - name: Comment preview URL
+        if: steps.deploy.outcome == 'success'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: web-preview
+          message: |
+            🔍 **Web preview** for `${{ github.event.pull_request.head.ref }}` @ ${{ github.event.pull_request.head.sha }}
+            ${{ steps.deploy.outputs.url }}
