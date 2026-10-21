@@ -63,7 +63,7 @@ positionText: left
 spanText: m
 alignText: left
 urlImage: /content-images/content/images/SmartCities-SIG-Public-Water-Management-Event.webp
-altImage: "Event poster: Open Standards for Smart Cities: Public Water Management Profile Handover. Wednesday, 4 November 2026, 15:45 – 16:00. Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90."
+altImage: "Event poster: Open Standards for Smart Cities: Public Water Management Profile Handover. Wednesday, 4 November 2026, 15:15 – 15:30. Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90."
 title: |
     Open Standards for Smart Cities: Public Water Management Profile Handover
 text: |
@@ -73,7 +73,7 @@ text: |
 
     📅 Wednesday, 4 November 2026
 
-    ⏰ 15:45 – 16:00
+    ⏰ 15:15 – 15:30
 ---
 ::
 
