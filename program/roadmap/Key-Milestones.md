@@ -43,7 +43,7 @@ positionText: right
 spanText: m
 alignText: left
 urlImage: /content-images/content/images/SmartCities-SIG-Public-Lighting-Event.webp
-altImage: "Event poster: Open Standards for Smart Cities: Public Street Lighting Profile Handover. Wednesday, 4 November 2026, 11:30 – 11:45. Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90."
+altImage: "Event poster: Open Standards for Smart Cities: Public Street Lighting Profile Handover. Wednesday, 4 November 2026, 11:15 – 11:30. Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90."
 title: |
     Open Standards for Smart Cities: Public Street Lighting Profile Handover
 text: |
@@ -53,7 +53,7 @@ text: |
 
     📅 Wednesday, 4 November 2026
 
-    ⏰ 11:30 – 11:45
+    ⏰ 11:15 – 11:30
 ---
 ::
 
