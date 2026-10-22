@@ -25,7 +25,7 @@ For the methodology as a whole, see the [Methodology Overview](/methodology/core
 ---
 
 # Purpose of Stage 1
-
+ 
 Stage 1 exists to answer the following questions:
 
 - What is the municipality actually trying to achieve?
