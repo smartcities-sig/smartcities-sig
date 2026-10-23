@@ -18,7 +18,7 @@ Municipality operational documents often contain:
 - and operational concerns that are not immediately visible as interoperability requirements.
 
 **Input:** municipality operational material, interviews, and workshops.
-**Output:** user stories, an entity sketch, operational objectives, operational pain points, semantic distinctions, contextual dependencies, and interoperability-relevant observations — the input to [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
+**Output:** user stories, each with the questions the Digital Twin must answer; an entity sketch, including the relationships between its entities; operational objectives, operational pain points, semantic distinctions, contextual dependencies, and information held by other units; a register of requirements; and interoperability-relevant observations — the input to [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
 
 For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md). For a fill-in template covering this stage, see the [Methodology Worksheet](/methodology/core-methodology/methodology-worksheet.md).
 
