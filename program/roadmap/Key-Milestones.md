@@ -38,7 +38,21 @@ text: |
 ::eh-avatar
 ---
 srcAvatar: https://media.licdn.com/dms/image/v2/C4E03AQFW27tK2wCX_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517694929730?e=1794441600&v=beta&t=UEEZNlnTmf1pX5lQWRTxMP3IV1-zfRCfQAzhvIwr0yQ
-altAvatar: JPC
+altAvatar: Juange
+positionDetails: down
+name: |
+    Juange Muñoz
+role: |
+    Madrid City Council
+company: |
+    Madrid City Council
+github: https://github.com/juange2015
+---
+::
+::eh-avatar
+---
+srcAvatar: https://media.licdn.com/dms/image/v2/C4E03AQFW27tK2wCX_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517694929730?e=1794441600&v=beta&t=UEEZNlnTmf1pX5lQWRTxMP3IV1-zfRCfQAzhvIwr0yQ
+altAvatar: Joaquin Prado
 positionDetails: down
 name: |
     Joaquin Prado
@@ -47,9 +61,6 @@ role: |
 company: |
     OMA
 linkedin: https://www.linkedin.com/in/jpradocueva/
-facebook: https://www.linkedin.com/in/jpradocueva/
-instagram: https://www.linkedin.com/in/jpradocueva/
-twitter: https://www.linkedin.com/in/jpradocueva/
 ---
 ::
 ::eh-avatar
@@ -58,32 +69,12 @@ srcAvatar: https://media.licdn.com/dms/image/v2/C4E03AQFW27tK2wCX_g/profile-disp
 altAvatar: JPC
 positionDetails: down
 name: |
-    Joaquin Prado
+    Juanjo Hierro
 role: |
-    Co-Founder
+    Chairman SC
 company: |
-    Standards-Hub
-linkedin: https://www.linkedin.com/in/jpradocueva/
-facebook: https://www.linkedin.com/in/jpradocueva/
-instagram: https://www.linkedin.com/in/jpradocueva/
-twitter: https://www.linkedin.com/in/jpradocueva/
----
-::
-::eh-avatar
----
-srcAvatar: https://media.licdn.com/dms/image/v2/C4E03AQFW27tK2wCX_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517694929730?e=1794441600&v=beta&t=UEEZNlnTmf1pX5lQWRTxMP3IV1-zfRCfQAzhvIwr0yQ
-altAvatar: JPC
-positionDetails: down
-name: |
-    Joaquin Prado
-role: |
-    Co-Founder
-company: |
-    Standards-Hub
-linkedin: https://www.linkedin.com/in/jpradocueva/
-facebook: https://www.linkedin.com/in/jpradocueva/
-instagram: https://www.linkedin.com/in/jpradocueva/
-twitter: https://www.linkedin.com/in/jpradocueva/
+    FIREWARE
+linkedin: https://www.linkedin.com/in/jhierro/
 ---
 ::
 ::
