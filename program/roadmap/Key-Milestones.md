@@ -37,7 +37,7 @@ text: |
 ---
 ::eh-avatar
 ---
-srcAvatar: 
+srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
 altAvatar: Juange
 positionDetails: down
 name: |
@@ -79,7 +79,7 @@ linkedin: https://www.linkedin.com/in/jhierro/
 ::
 ::eh-avatar
 ---
-srcAvatar: /images/avatars/vittorio-pettonati.jpg
+srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
 altAvatar: Vittorio
 positionDetails: down
 name: |
@@ -113,7 +113,7 @@ text: |
 ---
 ::eh-avatar
 ---
-srcAvatar: 
+srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
 altAvatar: Juange
 positionDetails: down
 name: |
@@ -155,7 +155,7 @@ linkedin: https://www.linkedin.com/in/jhierro/
 ::
 ::eh-avatar
 ---
-srcAvatar: /images/avatars/vittorio-pettonati.jpg
+srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
 altAvatar: Vittorio
 positionDetails: down
 name: |
@@ -189,7 +189,7 @@ text: |
 ---
 ::eh-avatar
 ---
-srcAvatar: 
+srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
 altAvatar: Juange
 positionDetails: down
 name: |
@@ -231,7 +231,7 @@ linkedin: https://www.linkedin.com/in/jhierro/
 ::
 ::eh-avatar
 ---
-srcAvatar: /images/avatars/vittorio-pettonati.jpg
+srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
 altAvatar: Vittorio
 positionDetails: down
 name: |
