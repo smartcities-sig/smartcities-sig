@@ -111,6 +111,62 @@ text: |
 
     ⏰ 11:15 – 11:30
 ---
+::eh-avatar
+---
+srcAvatar: 
+altAvatar: Juange
+positionDetails: down
+name: |
+    Juange Muñoz
+role: |
+    Madrid City Council
+company: |
+    Madrid City Council
+github: https://github.com/juange2015
+---
+::
+::eh-avatar
+---
+srcAvatar: https://www.linkedin.com/in/jpradocueva/
+altAvatar: Joaquin Prado
+positionDetails: down
+name: |
+    Joaquin Prado
+role: |
+    Technical Director
+company: |
+    OMA
+linkedin: https://www.linkedin.com/in/jpradocueva/
+---
+::
+::eh-avatar
+---
+srcAvatar: https://www.linkedin.com/in/jhierro/
+altAvatar: Juango
+positionDetails: down
+name: |
+    Juanjo Hierro
+role: |
+    Chairman SC
+company: |
+    FIREWARE
+linkedin: https://www.linkedin.com/in/jhierro/
+---
+::
+::eh-avatar
+---
+srcAvatar: https://www.linkedin.com/in/vittoriopettonati
+altAvatar: Vittorio
+positionDetails: down
+name: |
+    Vittorio Pettonati
+role: |
+    Senior Project Manager
+company: |
+    AIOTI
+linkedin: https://www.linkedin.com/in/vittoriopettonati/
+---
+::
 ::
 
 ::eh-text-img
@@ -131,6 +187,62 @@ text: |
 
     ⏰ 15:15 – 15:30
 ---
+::eh-avatar
+---
+srcAvatar: 
+altAvatar: Juange
+positionDetails: down
+name: |
+    Juange Muñoz
+role: |
+    Madrid City Council
+company: |
+    Madrid City Council
+github: https://github.com/juange2015
+---
+::
+::eh-avatar
+---
+srcAvatar: https://www.linkedin.com/in/jpradocueva/
+altAvatar: Joaquin Prado
+positionDetails: down
+name: |
+    Joaquin Prado
+role: |
+    Technical Director
+company: |
+    OMA
+linkedin: https://www.linkedin.com/in/jpradocueva/
+---
+::
+::eh-avatar
+---
+srcAvatar: https://www.linkedin.com/in/jhierro/
+altAvatar: Juango
+positionDetails: down
+name: |
+    Juanjo Hierro
+role: |
+    Chairman SC
+company: |
+    FIREWARE
+linkedin: https://www.linkedin.com/in/jhierro/
+---
+::
+::eh-avatar
+---
+srcAvatar: https://www.linkedin.com/in/vittoriopettonati
+altAvatar: Vittorio
+positionDetails: down
+name: |
+    Vittorio Pettonati
+role: |
+    Senior Project Manager
+company: |
+    AIOTI
+linkedin: https://www.linkedin.com/in/vittoriopettonati/
+---
+::
 ::
 
 ## Connect & Get Involved
