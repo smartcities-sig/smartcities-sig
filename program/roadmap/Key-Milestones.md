@@ -66,7 +66,7 @@ linkedin: https://www.linkedin.com/in/jpradocueva/
 ::eh-avatar
 ---
 srcAvatar: https://www.linkedin.com/in/jhierro/
-altAvatar: JPC
+altAvatar: Juango
 positionDetails: down
 name: |
     Juanjo Hierro
@@ -75,6 +75,20 @@ role: |
 company: |
     FIREWARE
 linkedin: https://www.linkedin.com/in/jhierro/
+---
+::
+::eh-avatar
+---
+srcAvatar: https://www.linkedin.com/in/vittoriopettonati
+altAvatar: Vittorio
+positionDetails: down
+name: |
+    Vittorio Pettonati
+role: |
+    Senior Project Manager
+company: |
+    AIOTI
+linkedin: https://www.linkedin.com/in/vittoriopettonati/
 ---
 ::
 ::
