@@ -39,28 +39,31 @@ layout: doc
 
 - Electrical Monitor (OMA) Object [#3418](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3418.xml)
 
+- Illuminance (OMA) Object [#3301](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3301.xml)
+
+- Presence (OMA) Object [#3302](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3302.xml)
+
+- Traffic Counter (OMA) Object [#3432](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3432.xml)
+
 - Street Light (Smart Data Models) Object [#Streetlight](https://github.com/smart-data-models/dataModel.Streetlighting/blob/master/Streetlight/doc/spec.md)
-
-
 
 ## Mappable information
 
-| OMA                                                | FIWARE                   |
-| -------------------------------------------------- | ------------------------ |
-| Latitude (6/1) Longitude (6/2)                     | location                 |
-| Command in action (3416/2) Dimming level (3418/35) | powerState               |
-| Timestamp (3418/5518)                              | observationDateTime      |
-| Active power (3418/4)                              | powerConsumtpion         |
-| Cumulated active energy (3418/6)                   | lifetimePowerConsumption |
-| Power factor (3418/5)                              | powerFactor              |
-| Supply current (3418/2)                            | current                  |
-| Supply voltage (3418/1)                            | voltage                  |
-| Lamp ON timestamp                                  | dateLastSwitchingOn      |
-| Actual light color temperature (3416/40)           | *TODO*                   |
-| *TODO*                                             | dateLastSwitchingOff     |
-| Sensor Value (3301/5700)                           | illuminanceLevel         |
-
-
+| OMA Objects                    | OMA Resources                       | Smart Data Model Entities | Smart Data Model Properties |
+| ------------------------------ | ----------------------------------- | ------------------------- | --------------------------- |
+| Location (6)                   | Latitude (1)                        | Streetlight               | location                    |
+| Location (6)                   | Longitude (2)                       | Streetlight               | location                    |
+| Outdoor Lamp Controller (3416) | Command in action                   | Streetlight               | powerState                  |
+| Outdoor Lamp Controller (3416) | Timestamp (5518)                    | Streetlight               | observationDateTime         |
+| Outdoor Lamp Controller (3416) | Lamp ON timestamp (17)              | Streetlight               | dateLastSwitchingOn         |
+| Outdoor Lamp Controller (3416) | TODO                                | Streetlight               | dateLastSwitchingOff        |
+| Outdoor Lamp Controller (3416) | Actual light color temperature (40) | TODO                      | TODO                        |
+| Electrical Monitor (3418)      | Active power (4)                    | Streetlight               | powerConsumtpion            |
+| Electrical Monitor (3418)      | Cumulated active energy (6)         | Streetlight               | lifetimePowerConsumption    |
+| Electrical Monitor (3418)      | Power factor (5)                    | Streetlight               | powerFactor                 |
+| Electrical Monitor (3418)      | Supply current (2)                  | Streetlight               | current                     |
+| Electrical Monitor (3418)      | Supply voltage (1)                  | Streetlight               | voltage                     |
+| Illuminance (3301)             | Sensor Value (5700)                 | Streetlight               | illuminanceLevel            |
 
 It seems there is no possibility of control over dimming, but that could be absolutely acceptable. This also explains why the vast majority of the resources are related to the Electrical Monitor (3418) and not to the Outdoor Lamp Controller (3416)
 The nominal lamp output in lumen at 100% dimming should be added to the OMA Data Model
@@ -86,20 +89,20 @@ Cabinet Controller Manager (OMA) Object [#601](https://github.com/OpenMobileAlli
 
 StreetlightControlCabinet (Smart Data Models) Object [#StreetlightControlCabinet](https://github.com/smart-data-models/dataModel.Streetlighting/blob/master/StreetlightControlCabinet/doc/spec.md)
 
-
 ## Mappable information
 
-| OMA                                                  | FIWARE                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------ |
-| Latitude (6/1) Longitude (6/2)                       | location                                               |
-| Active power export (3421/x/17)                      | activePowerR<br />activePowerS<br />activePowerT       |
-| Active energy export Un (3422/18)                    | energyConsumed                                         |
-| Frequency (3421/11)                                  | frequency                                              |
-| Instantaneous Power Factor (3421/x/13)               | powerFactorR<br />powerFactorS<br />powerFactorT       |
-| Reactive energy export Un (3422/22)                  | reactiveEnergyConsumed                                 |
-| Reactive power export (3421/x/19)                    | reactivePowerR<br />reactivePowerS<br />reactivePowerT |
-| Total active power export on the 3 lines (3422/9)    | totalActivePower                                       |
-| Total reactive power import on the 3 lines (3422/10) | totalReactivePower                                     |
-| Voltage (3421/x/1)                                   | voltageR<br />voltageS<br />voltageT                   |
+| OMA Objects                                    | OMA Resources                                   | Smart Data Model Entities | Smart Data Model Properties                            |
+| ---------------------------------------------- | ----------------------------------------------- | ------------------------- | ------------------------------------------------------ |
+| Location (6)                                   | Latitude (1)                                    | StreetlightControlCabinet | location                                               |
+| Location (6)                                   | Longitude (2)                                   | StreetlightControlCabinet | location                                               |
+| Single-phase electrical meter (3421)           | Active power export (17)                        | StreetlightControlCabinet | activePowerR<br />activePowerS<br />activePowerT       |
+| Single-phase electrical meter (3421)           | Frequency (11)                                  | StreetlightControlCabinet | frequency                                              |
+| Single-phase electrical meter (3421)           | Instantaneous Power Factor (13)                 | StreetlightControlCabinet | powerFactorR<br />powerFactorS<br />powerFactorT       |
+| Single-phase electrical meter (3421)           | Reactive power export (19)                      | StreetlightControlCabinet | reactivePowerR<br />reactivePowerS<br />reactivePowerT |
+| Single-phase electrical meter (3421)           | Voltage (1)                                     | StreetlightControlCabinet | voltageR<br />voltageS<br />voltageT                   |
+| Three-phase electrical meter complement (3422) | Active energy export Un (18)                    | StreetlightControlCabinet | energyConsumed                                         |
+| Three-phase electrical meter complement (3422) | Reactive energy export Un (22)                  | StreetlightControlCabinet | reactiveEnergyConsumed                                 |
+| Three-phase electrical meter complement (3422) | Total active power export on the 3 lines (9)    | StreetlightControlCabinet | totalActivePower                                       |
+| Three-phase electrical meter complement (3422) | Total reactive power import on the 3 lines (10) | StreetlightControlCabinet | totalReactivePower                                     |
 
 Cabinet controller mapping may be somehow complex. Various data models have been defined over the years, with different level of details.

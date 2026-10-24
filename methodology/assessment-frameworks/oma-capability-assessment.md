@@ -1434,6 +1434,8 @@ Municipalities need to know whether a given electrical or dimming measurement or
 | [`6`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/6.xml)`/0` Latitude; `6/1` Longitude | 0 / OMA | M | Object-specific | Represents Client location; a 3416/3418 Instance co-located on the same Client inherits this location by association only. |
 | `3417/1` Asset GTIN; `3417/13` Luminaire identification | 1 / uCIFI | M GTIN | Object-specific | Identifies the physical asset, but not a location or observation-point type. |
 | `3410/4` Asset identifier | 1 / uCIFI | O | Object-specific | Free-text identifier that could encode a pole or cabinet reference, but with no controlled vocabulary. |
+| `3302/5750` Application Type; `3302/5751` Sensor Type; `3432/5751` Sensor Type | 1 / IPSO Alliance (3302); 1 / uCIFI (3432) | O | Reusable | Describes application or sensing technology in free text, not the physical detection point or monitored area. |
+| `3432/20` Label; `3432/21` UID | 1 / uCIFI | O | Object-specific | Names and identifies the area to be analyzed, but does not define its geometry, lane, detection point, or lighting-asset relationship. |
 
 ### Coverage Assessment
 
@@ -1442,6 +1444,7 @@ Municipalities need to know whether a given electrical or dimming measurement or
 ### Missing Semantics
 
 - Controlled observation-point vocabulary for street-lighting equipment (luminaire, pole, cabinet, feeder)
+- Presence and traffic sensors require a distinction between sensor installation position, detection point/zone, and the lighting assets serving that zone; Client co-location and a traffic-area UID alone do not establish these relationships.
 
 ### Smart Data Model Responsibility
 
@@ -1449,7 +1452,7 @@ The Smart Data Model should relate the OMA-reported Client/asset identity to the
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Reuse the same observation-point/observed-feature extension already recommended for Service Outcome (extending Object 509 or defining reusable metadata) so that it also covers infrastructure-output and consumption Objects such as 3416, 3418, 3421, and 3422.
+Reuse the same observation-point/observed-feature extension already recommended for Service Outcome (extending Object 509 or defining reusable metadata) so that it also covers infrastructure-output and consumption Objects such as 3416, 3418, 3421, and 3422, and context sensors 3302 and 3432. For sensors, distinguish the installation point from the observed detection zone.
 
 ## Water Management and Irrigation
 
@@ -1627,7 +1630,7 @@ Same recommendation as for Public Lighting: rely on Location Object 6 coordinate
 | Classification | Finding |
 |---|---|
 | Existing OMA coverage | Location Object 6 for Client-level coordinates; asset identity Resources in 3410 and 3417; `3424/3` Type of meter as a weak category signal. |
-| Existing coverage requiring clarification or extension | No controlled observation-point vocabulary or explicit point-to-asset relationship, for either Public Lighting or Water Management and Irrigation; the gap is sharper for water, which lacks a 3417-equivalent asset Object. |
+| Existing coverage requiring clarification or extension | No controlled observation-point vocabulary or explicit point-to-asset relationship, for either Public Lighting or Water Management and Irrigation; presence/traffic sensors additionally need installation-point versus detection-zone relationships; the gap is sharper for water, which lacks a 3417-equivalent asset Object. |
 | New OMA capability required | Controlled observation-point type and a co-observed-asset relationship, applicable to both domains. |
 | Outside OMA responsibility but must remain linkable | Human-readable addressing and place-name enrichment. |
 
@@ -1644,6 +1647,8 @@ Observation Scope describes whether a measurement represents a single luminaire,
 **Existing OMA coverage, expressed through Object identity rather than an explicit scope Resource.**
 
 For Water Management and Irrigation, scope is similarly implicit in Object identity (a single meter, valve, or sensor), but without any analogue of the 3422 linked-instance aggregation pattern, making cross-meter scope composition a clearer gap than for Public Lighting.
+
+For presence and traffic context, **existing coverage requires clarification or extension**: 3302 does not define detection-zone scope or occupant counts, while 3432 conditionally identifies categories and areas without defining lane geometry or overlapping coverage.
 
 ---
 
@@ -1670,6 +1675,8 @@ Municipalities need to know whether an energy or electrical-quality measurement 
 | [`3418`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3418.xml) Electrical Monitor | Object identity | 1 / uCIFI | Scope is a single light point/luminaire, by Object design. |
 | [`3421`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3421.xml) Single-Phase Electrical Meter | Object identity | 1 / uCIFI | Scope is a single electrical line, typically a lighting cabinet circuit serving many luminaires. |
 | [`3422`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3422.xml) Three-Phase Electrical Meter Complement | `3422/36-38` L1/L2/L3 Meter Instance | 1 / uCIFI | Scope is explicitly the aggregate of three named `3421` Instances, one of the few cases where scope composition is Resource-explicit rather than purely implied by Object identity. |
+| [`3302`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3302.xml) Presence | `3302/5500` Digital Input State (M, reusable); `3302/5501` Digital Input Counter (O, reusable) | 1 / IPSO Alliance | Digital detection and cumulative active-state detections, not the number of people currently occupying a space; spatial coverage is not explicit. |
+| [`3432`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3432.xml) Traffic Counter | `3432/0` Vehicle type (O); `3432/21` UID (O), both object-specific | 1 / uCIFI | Category scope is explicit when Vehicle type is implemented; area identity is conditional and area geometry/lane scope is not defined. Resource Instance IDs associate categories with their measurements. |
 
 ### Coverage Assessment
 
@@ -1678,6 +1685,7 @@ Municipalities need to know whether an energy or electrical-quality measurement 
 ### Missing Semantics
 
 - A general, explicit scope Resource (e.g. number of luminaires represented) is not defined; the three-phase pattern is domain-specific and not generalized.
+- Sensor detection geometry, lane/section coverage, and overlap between sensors remain unspecified. Traffic-category totals may overlap and must not be blindly added; presence detections must not be reinterpreted as headcounts.
 
 ### Smart Data Model Responsibility
 
@@ -1847,7 +1855,7 @@ Apply the same reusable scope and aggregation metadata, once generalized from Ob
 | Classification | Finding |
 |---|---|
 | Existing OMA coverage | Object identity conveys implicit scope (3418 = luminaire, 3421/3422 = cabinet; 3424/3425/3427 = single water asset); Object 3422 makes three-phase composition explicit. |
-| Existing coverage requiring clarification or extension | General aggregation-function and represented-asset-list metadata for both domains. |
+| Existing coverage requiring clarification or extension | General aggregation-function and represented-asset-list metadata for both domains; presence detection-zone scope and traffic category/lane/overlap rules for 3302/3432. |
 | New OMA capability required | Reusable scope/aggregation Resource generalized from the 3422 and Connectivity Statistics patterns, applicable to water Objects as well, which currently have no composition example of their own. |
 | Outside OMA responsibility but must remain linkable | Zone and district-level aggregation and topology, for both energy and water networks. |
 
@@ -1891,6 +1899,8 @@ Municipalities need to know whether a dimming level or energy value was directly
 | Commanded / configured | `3416/1` Command; `3416/4` Default dimming level | 1 / uCIFI | Explicitly a command sent to the controller, structurally distinct from the measured Resource 3. |
 | Command in action | `3416/2` Command in action | 1 / uCIFI | An intermediate method: the actual command applied after LPWAN or control-gear adjustment, explicitly distinguished by description from both the sent command and the measured dimming level. |
 | Measured (electrical) | `3418/4` Active power; `3421/16` Active power+ | 1 / uCIFI | Measured Resources with no method Resource attached; method is only inferable from the Object's description text, not a queryable Resource. |
+| Detected / counted | `3302/5500` Digital Input State (M); `3302/5501` Digital Input Counter (O), both reusable | 1 / IPSO Alliance | Reports digital state and active-state detections; optional `3302/5751` Sensor Type (reusable) is free text, not a controlled detection-method classification. |
+| Counted / aggregated | `3432/3` Cumulated number today (M); `3432/7-12` period counts and average speeds (O), all object-specific | 1 / uCIFI | Device-reported counts and statistics, not an explicit declaration of sensing technology, classification algorithm, or any estimation method. |
 
 ### Coverage Assessment
 
@@ -1899,6 +1909,7 @@ Municipalities need to know whether a dimming level or energy value was directly
 ### Missing Semantics
 
 - A general, reusable observation-method Resource (measured / commanded / estimated / predicted) applicable outside the specific 3416 pattern.
+- For presence/traffic observations, sensing technology and counting/classification method must remain distinguishable from a platform-derived occupancy estimate or traffic-flow calculation.
 
 ### Smart Data Model Responsibility
 
@@ -2040,7 +2051,7 @@ Generalize the same Command / Command-in-action / measured-value pattern, indepe
 | Classification | Finding |
 |---|---|
 | Existing OMA coverage | Object 3416 already distinguishes command, command-in-action, and measured dimming level by Resource design; Object 3425 independently reproduces the identical three-tier pattern for valve position. |
-| Existing coverage requiring clarification or extension | The 3416/3425 pattern is not generalized to other Objects (3418, 3427) or expressed as a queryable method flag. |
+| Existing coverage requiring clarification or extension | The 3416/3425 pattern is not generalized to other Objects (3418, 3427) or expressed as a queryable method flag; presence/traffic sensor-type text does not classify detection, counting, or estimation methods. |
 | New OMA capability required | Reusable, cross-Object observation-method Resource covering both domains; no representation of predicted/simulated values in either domain. |
 | Outside OMA responsibility but must remain linkable | Predictive maintenance and simulation models, for both lighting and irrigation. |
 
@@ -2054,7 +2065,9 @@ Temporal Semantics describe the time basis of a lighting observation: whether it
 
 ## Overall Capability Conclusion
 
-**Existing OMA coverage for instantaneous timestamps; existing coverage requiring clarification for aggregation windows.**
+**Existing OMA coverage for timestamp encoding; existing coverage requiring clarification or extension for timestamp association and aggregation windows.**
+
+Presence (3302) and Traffic Counter (3432) include optional timestamps; 3432 additionally defines optional measuring periods and period counts. Their use in adaptive lighting requires coherent value/time association, freshness rules, exact window boundaries, daily rollover, and reset handling.
 
 The same Timestamp/Fractional Timestamp Common Resources are consistently present on Objects 3424, 3425, and 3427, but none of the three water Objects defines a measurement-period Resource comparable to `3421/24`.
 
@@ -2084,14 +2097,18 @@ Municipalities need to know whether an energy or dimming value represents the cu
 | `3416/6050`; `3418/6050`; `3421/6050`; `3422/6050` Fractional Timestamp | 1 / uCIFI (Common Resource) | O | Reusable | Sub-second precision available consistently across the same Objects. |
 | `3418/6` Cumulated active energy; `3418/7` Energy reset | 1 / uCIFI | O | Object-specific | Explicitly cumulative "since last energy counter reset," a distinct temporal semantic from an instantaneous value. |
 | `3421/24` Measurement period of Instantaneous value | 1 / uCIFI | O | Object-specific | Explicitly declares the averaging period underlying an "instantaneous" value. |
+| `3302/5518`, `3432/5518` Timestamp; `3302/6050`, `3432/6050` Fractional Timestamp | 1 / IPSO Alliance (3302); 1 / uCIFI (3432) | O | Reusable | Measurement time and optional sub-second precision for presence/traffic context; neither is guaranteed by the Object definition. |
+| `3302/5903` Busy to Clear delay; `3302/5904` Clear to Busy delay | 1 / IPSO Alliance | O | Reusable | Configurable state-transition delays in milliseconds, relevant to response latency; not aggregation windows. |
+| `3302/5501` Digital Input Counter; `3302/5505` Digital Input Counter Reset | 1 / IPSO Alliance | O | Reusable | Cumulative active-state detections and a reset operation, without a reset timestamp or counting-window boundary. |
+| `3432/1-3` cumulative count, reset, and today's count; `3432/4-6` Measuring periods; `3432/7-9` counts during last periods | 1 / uCIFI | M `3`; O others | Object-specific | Distinguishes since-reset, daily, and period counts; periods are in seconds, but exact window boundaries and the timezone/day boundary for "today" are not explicit. |
 
 ### Coverage Assessment
 
-**Existing OMA coverage.** Timestamp and fractional timestamp are consistently available (as Common Resources) across all relevant lighting Objects, and cumulative-since-reset semantics are explicit.
+**Existing coverage requiring clarification or extension.** Timestamp and fractional timestamp are available as optional Common Resources across lighting and presence/traffic Objects. Traffic Counter additionally defines measuring periods, but safe cross-system correlation requires profile rules for timestamp association, window boundaries, daily rollover, and resets.
 
 ### Missing Semantics
 
-None material for point-in-time and cumulative-since-reset semantics.
+For presence/traffic context, optional timestamps do not guarantee freshness. Counter reset time, exact start/end of traffic windows, rolling versus aligned windows, and the timezone/day boundary for "today" are not explicit. The single Timestamp Resource in 3432 also needs an association rule when multiple categories and period statistics update at different times.
 
 ### Smart Data Model Responsibility
 
@@ -2099,7 +2116,7 @@ Time-series storage, historical comparison, and forecasting.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-None required; continue mandating Timestamp availability through Common.xml.
+Require Timestamp in the relevant Public Lighting sensing profile and Fractional Timestamp where response/correlation precision requires it. Define coherent timestamp-to-value association, reset/rollover handling, and window boundary conventions for 3302/3432, reusing the aggregation-window metadata recommended below. Presence transition delays must be included when assessing response latency.
 
 ## Water Management and Irrigation
 
@@ -2190,6 +2207,7 @@ Add a Measurement period Resource to Objects 3424 and 3427, consistent with the 
 |---|---|---|
 | Connectivity Statistics `7/6` Start; `7/7` Stop; `7/8` Collection Period | 0 / OMA | Explicit start/stop/period pattern for a bounded collection window. |
 | `3418/7` Energy reset | 1 / uCIFI | Marks the start of a new cumulative period but does not record its duration or scheduled end. |
+| `3432/4-6` Measuring periods; `3432/7-9` counts during last periods (O, object-specific) | 1 / uCIFI | Explicit durations and paired counts already exist, but do not expose exact interval start/end or rolling versus aligned-window rules. |
 
 ### Coverage Assessment
 
@@ -2198,6 +2216,7 @@ Add a Measurement period Resource to Objects 3424 and 3427, consistent with the 
 ### Missing Semantics
 
 - Aggregation-window metadata for cumulative energy counters (3418, 3421, 3422), beyond a bare reset event.
+- Traffic Counter window boundaries and daily/reset conventions; preserve the existing 3432 period/count pairs rather than duplicating them.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
@@ -2233,7 +2252,7 @@ Reuse the Connectivity Statistics start/stop/period pattern for Object 3424 as w
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Add a Measurement period Resource to Object 3418 and consider a shared aggregation-window pattern (modelled on Connectivity Statistics) reusable across electrical Objects.
+Add a Measurement period Resource to Object 3418 and consider a shared aggregation-window pattern (modelled on Connectivity Statistics) reusable across electrical Objects and 3302/3432 counters. Retain 3432's existing durations and paired counts, adding only missing boundary/reset conventions and timestamp association.
 
 ## Water Management and Irrigation
 
@@ -2247,8 +2266,8 @@ Add a Measurement period Resource to Objects 3424 and 3427, and extend the share
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Timestamp and Fractional Timestamp consistently available across lighting and water Objects; explicit measurement period in Object 3421; explicit collection window in Connectivity Statistics; explicit cumulative-since-reset semantics in Objects 3418 and 3424. |
-| Existing coverage requiring clarification or extension | Objects 3418, 3424, and 3427 lack a measurement-period Resource; no shared aggregation-window pattern reused across electrical or water Objects. |
+| Existing OMA coverage | Timestamp and Fractional Timestamp available across lighting, presence/traffic, and water Objects; explicit measurement period in 3421 and traffic period/count pairs in 3432; explicit collection window in Connectivity Statistics; cumulative counters in 3302, 3432, 3418, and 3424. |
+| Existing coverage requiring clarification or extension | Objects 3418, 3424, and 3427 lack a measurement-period Resource; no shared aggregation-window pattern reused across electrical or water Objects; 3302/3432 require timestamp association, freshness, window/reset, and daily-rollover conventions. |
 | New OMA capability required | None; generalization of existing patterns is sufficient for both domains. |
 | Outside OMA responsibility but must remain linkable | Historical time-series analytics and forecasting. |
 
@@ -2294,6 +2313,7 @@ Municipalities need to know whether a dimming change resulted from the device's 
 | `3416/54` Manual override active | 1 / uCIFI | Indicates that a manually supplied override, rather than the autonomous schedule, is currently determining device behaviour, a partial provenance signal. |
 | `3416/2` Command in action | 1 / uCIFI | Description explicitly notes the value "could have been set by a manual override command, a scheduled action (e.g. control program) or any other mechanism," but does not expose which one applied via a dedicated Resource. |
 | `3` Device | `3/0` Manufacturer; `3/2` Serial Number | 0 / OMA | Identifies the reporting device itself, i.e. the technical origin of any telemetry hosted by that Client, but not the origin of a specific command. |
+| `3302` Presence; `3432` Traffic Counter | Client endpoint, Object/Instance identity, and category Resource Instance identity for 3432 | 1 / IPSO Alliance (3302); 1 / uCIFI (3432) | Identifies the reporting stream, not necessarily the physical sensor behind an edge gateway; preserve this identity when correlating sensing with a lighting action. |
 
 ### Coverage Assessment
 
@@ -2302,6 +2322,7 @@ Municipalities need to know whether a dimming change resulted from the device's 
 ### Missing Semantics
 
 - A discrete provenance/source Resource for `Command in action`, distinguishing schedule-, override-, or direct-write origin.
+- A presence/traffic-driven lighting action also needs traceability to the input observation(s) and applied rule. Neither 3302 nor 3432 provides a causal link to an Outdoor Lamp Controller command.
 
 ### Smart Data Model Responsibility
 
@@ -2446,7 +2467,7 @@ Add a discrete command-source Resource and an override-active indicator to Objec
 | Classification | Finding |
 |---|---|
 | Existing OMA coverage | Manufacturer/Serial Number identify the reporting device; Manual override active partially signals lighting command provenance; Scheduler ID identifies the autonomous source assigned to an irrigation valve's Command. |
-| Existing coverage requiring clarification or extension | No discrete command-source Resource in either domain; no distinction between locally measured and bus-relayed telemetry; Object 3425 additionally lacks any override-active indicator, unlike Object 3416. |
+| Existing coverage requiring clarification or extension | No discrete command-source Resource in either domain; no distinction between locally measured and bus-relayed telemetry; presence/traffic-driven actions need input/rule/command traceability; Object 3425 additionally lacks any override-active indicator, unlike Object 3416. |
 | New OMA capability required | Command-source enumeration Resource for Objects 3416 and 3425; an override-active indicator for Object 3425. |
 | Outside OMA responsibility but must remain linkable | Historical provenance/audit logging tied to control-room operators and work orders, for both lighting and irrigation commands. |
 
@@ -2493,14 +2514,16 @@ Municipalities need to know whether an energy, dimming, or connectivity measurem
 | `3421/6042`; `3421/6049` | 0 / OMA (Common Resource) | O | Reusable | Available on the Single-Phase Electrical Meter. |
 | `3422/6042`; `3422/6049` | 0 / OMA (Common Resource) | O | Reusable | Available on the Three-Phase Electrical Meter Complement. |
 | `3447/6042`; `3447/6049`; `3448/6042`; `3448/6049` | 0 / OMA (Common Resource) | O | Reusable | Available on the LPWAN Mesh Connectivity and Statistics Objects, extending quality semantics to network measurements as well. |
+| `3302/6042`; `3302/6049`; `3432/6042`; `3432/6049` | 0 / OMA (Common Resource); consuming Objects Source 1 / IPSO Alliance and uCIFI respectively | O | Reusable | Quality indicator (0..23) and quality level (0..100) for presence/traffic measurements; their absence is not evidence of a valid empty space or zero traffic. |
 
 ### Coverage Assessment
 
-**Existing OMA coverage.** The Common Resource pair (6042/6049) is consistently defined across every uCIFI Object examined in this assessment, from lighting control to electrical metering to LPWAN mesh statistics.
+**Existing OMA coverage for quality encoding; existing coverage requiring clarification or extension for profile guarantees.** The Common Resource pair (6042/6049) is available across the assessed lighting, presence, traffic, and network measurements, but remains optional.
 
 ### Missing Semantics
 
 - All quality Resources are optional; devices may omit them entirely, and no Public Lighting profile currently mandates their presence.
+- Presence/traffic quality does not itself declare freshness, sensor health, detection probability, or false-positive/false-negative rates. In 3432, the single quality pair needs a defined association with category/period measurements.
 
 ### Smart Data Model Responsibility
 
@@ -2509,6 +2532,8 @@ Translating a numeric quality level into a municipality-facing confidence catego
 ### Recommendation to the OMA Smart Cities Working Group
 
 Consider making Measurement Quality Indicator mandatory within a Public Lighting profile for energy Resources used in billing or compliance reporting.
+
+For sensor-driven lighting, require quality and freshness handling appropriate to the safety policy. Preserve standard quality codes (0 unchecked; 1/2 rejected; 3 suspicious; 4 accepted) and level 0 rejection; do not assume vendor-specific codes or a missing quality value mean acceptance. Specify which 3432 measurements the reported quality applies to.
 
 ## Water Management and Irrigation
 
@@ -2636,8 +2661,8 @@ Add the Measurement Quality Indicator and Measurement Quality Level Common Resou
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Measurement Quality Indicator (6042) and Level (6049) consistently defined across lighting, electrical, LPWAN mesh, Water Meter (3424), and Pressure Monitoring Sensor (3427) Objects. |
-| Existing coverage requiring clarification or extension | Quality Resources are optional; no profile currently mandates them. |
+| Existing OMA coverage | Measurement Quality Indicator (6042) and Level (6049) defined across lighting, electrical, presence (3302), traffic (3432), LPWAN mesh, Water Meter (3424), and Pressure Monitoring Sensor (3427) Objects. |
+| Existing coverage requiring clarification or extension | Quality Resources are optional; no profile currently mandates them; traffic category/period association and sensor-input quality/freshness handling require explicit profile rules. |
 | New OMA capability required | Add the Measurement Quality Indicator/Level Common Resource pair to Object 3425, which uniquely omits it; possible supplementary numerical uncertainty Resource for metering. |
 | Outside OMA responsibility but must remain linkable | Translating quality levels into municipality-facing trust categories. |
 
@@ -2653,7 +2678,7 @@ Operational Context describes conditions such as electrical line quality or weat
 
 **Existing coverage requiring clarification or extension.**
 
-Electrical line-quality context is well covered by the Electrical Monitor and electrical meter Objects. Environmental context relies on generic IPSO/uCIFI environmental sensor Objects that are not natively linked to a specific lighting installation.
+Electrical line-quality context is well covered by the Electrical Monitor and electrical meter Objects. Environmental, presence, and traffic context relies on IPSO/uCIFI sensor Objects that are not natively linked to a specific lighting installation. Objects 3302 and 3432 already supply relevant presence and traffic telemetry; the remaining requirement is an interoperable sensing profile and explicit observation/control relationships, not a new generic presence or vehicle-counter Object.
 
 For Water Management and Irrigation, the same generic environmental sensor Objects (notably Temperature, Humidity, and Rain Gauge) are directly relevant operational context for irrigation scheduling, with the same linking gap.
 
@@ -2669,12 +2694,24 @@ For Water Management and Irrigation, the same generic environmental sensor Objec
 
 Municipalities need to know whether poor lighting service, a nuisance alarm, or unusual energy consumption is caused by electrical supply problems or weather conditions, rather than by the luminaire itself.
 
+They also need to adapt lighting to actual pedestrian, cyclist, and vehicle use, especially in tunnels and low-use night-time areas, while respecting safety minimums. Presence and traffic are operational demand context, not measurements of delivered illumination or proof that the lighting service is adequate.
+
 ### Required OMA Contribution
 
 **Telemetry**
 
 - Supply voltage and frequency quality indicators
 - Locally relevant environmental measurements (temperature, humidity, rainfall, wind) when available on the same infrastructure
+- Presence state and, where supported, detection counts and categorized traffic counts over known periods
+- Observation time and quality sufficient to distinguish a valid clear/zero observation from unavailable, invalid, or stale sensing
+
+**Configuration or operational intent**
+
+- Presence transition delays and traffic measuring periods required for local sensing/control
+
+**Metadata and relationships**
+
+- Reporting sensor identity, monitored area, category/direction scope, and association to the affected lighting assets or local control inputs
 
 ### Existing Object and Resource Evidence
 
@@ -2682,26 +2719,106 @@ Municipalities need to know whether poor lighting service, a nuisance alarm, or 
 |---|---|---|---|
 | [`3418`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3418.xml) Electrical Monitor | `3418/20-23` Low/High voltage threshold and flags | 1 / uCIFI | Direct operational-context signal distinguishing a supply-quality problem from a luminaire fault. |
 | [`3421`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3421.xml) Single-Phase Electrical Meter | `3421/41-53` voltage sag/swell/cut counters and thresholds | 1 / uCIFI | Rich power-quality event context at the cabinet feeder. |
-| [`3303`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3303.xml) Temperature; [`3304`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3304.xml) Humidity | 1 / IPSO Alliance | Generic environmental sensors that can be co-deployed on lighting poles/cabinets to provide ambient context. |
-| [`3446`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3446.xml) Rain Gauge; [`3449`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3449.xml) Anemometer | 1 / uCIFI | Rainfall and wind context relevant to visibility and lighting demand. |
-| [`3432`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3432.xml) Traffic Counter | 1 / uCIFI | Traffic-related operational context sometimes co-located with street lighting poles. |
-| [`3450`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3450.xml) Wet Bulb Globe Temperature | 1 / uCIFI | Heat-stress context, occasionally co-deployed on lighting infrastructure. |
+| [`3303`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3303.xml) Temperature; [`3304`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3304.xml) Humidity | Environmental readings | 1 / IPSO Alliance | Generic environmental sensors that can be co-deployed on lighting poles/cabinets to provide ambient context. |
+| [`3446`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3446.xml) Rain Gauge; [`3449`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3449.xml) Anemometer | Rainfall and wind readings | 1 / uCIFI | Rainfall and wind context relevant to visibility and lighting demand. |
+| [`3302`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3302.xml) Presence | `3302/5500` Digital Input State; optional detection counter, delays, timestamps, and quality | 1 / IPSO Alliance | Direct digital-presence context for adaptive lighting; detailed evidence and limits below. |
+| [`3432`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3432.xml) Traffic Counter | `3432/3` Cumulated number today; optional categories, period counts, speed, direction, timestamps, and quality | 1 / uCIFI | Direct traffic-demand context, not merely an external traffic feed; detailed evidence and limits below. |
+| [`3450`](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3450.xml) Wet Bulb Globe Temperature | Heat-stress readings | 1 / uCIFI | Heat-stress context, occasionally co-deployed on lighting infrastructure. |
 
 ### Coverage Assessment
 
-**Existing coverage requiring clarification or extension.** Electrical line-quality context is object-specific and strong (3418, 3421). Environmental context relies on generic sensor Objects with no native relationship to the specific luminaire or cabinet they contextualize, beyond Client co-location.
+**Existing coverage requiring clarification or extension.** Electrical line-quality context is object-specific and strong (3418, 3421). Environmental, presence, and traffic sensing exists, but optional Resources and missing sensor-to-area/lighting relationships prevent an unconditional claim of interoperable adaptive-lighting support.
 
 ### Missing Semantics
 
 - Explicit relationship linking an environmental sensor Instance to the specific lighting asset(s) it contextualizes.
+- Profile requirements for presence/traffic categories, time windows, quality/freshness, units, and local response/fallback semantics, detailed below.
 
 ### Smart Data Model Responsibility
 
-Correlating weather/traffic context with lighting service performance at the street or zone level.
+Correlating weather, presence, and traffic context with lighting service performance at the street or zone level. Preserve source identity, category Resource Instance IDs, timestamps, units, quality, and counter/window semantics; keep measured context separate from derived occupancy or flow.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Reuse the same observation-point/linked-asset extension recommended for Service Outcome (OMA Question 1) to connect environmental sensor Instances to the lighting assets they contextualize.
+Reuse the same observation-point/linked-asset extension recommended for Service Outcome (OMA Question 1) to connect environmental, presence, and traffic sensor Instances to the monitored areas and lighting assets they contextualize. Adopt the sensing-profile recommendations below.
+
+### Presence and Traffic Sensing for Adaptive Lighting
+
+#### Municipality Operational Need
+
+Various use cases foreseen by the municipality require to rely on dynamic lighting scenarios based on measurements performed by presence or vehicle detection sensors.
+
+The operational information chain is:
+
+```text
+Presence / traffic observation (3302 / 3432)
+    -> monitored area, time, category, quality and provenance
+    -> demand interpretation and applicable safety policy
+    -> lighting command / local control rule
+    -> observed lighting output and service-outcome assessment
+```
+
+Detection alone does not prove lighting adequacy, and no-detection alone does not justify switching lighting off.
+
+#### Required OMA Contribution
+
+- **Telemetry:** digital presence state; traffic counts at the required category and time scope; optional speed/direction statistics where operationally justified; measurement time and quality.
+- **Configuration or operational intent:** transition delays and measuring periods needed on the device; locally required control-input bindings, safety constraints, priorities, and invalid/stale-input behaviour.
+- **Metadata and relationships:** Client/Object/Instance identity, category Resource Instance identity, monitored-area reference, and explicit association to the lighting target or local program that consumes the observation.
+
+Municipality policy, geographic interpretation, and platform-derived demand estimates remain outside the sensing Objects unless the device needs their relevant parameters for local operation.
+
+#### Existing Object and Resource Evidence
+
+Both Objects are optional and allow multiple Object Instances. Mandatory Resource status below applies only when the corresponding Object is implemented.
+
+| Object and Resource | Source / Owner | Requirement status | Reuse | Contribution and limits |
+|---|---|---|---|---|
+| `3302/5500` Digital Input State | 1 / IPSO Alliance | M | Reusable | Read-only Boolean digital input state supporting presence detection; a profile must establish its active/clear interpretation. It is not an occupant count or user classification. |
+| `3302/5501` Digital Input Counter; `3302/5505` Digital Input Counter Reset | 1 / IPSO Alliance | O | Reusable | Read-only cumulative active-state detections and an executable reset. Repeated detections need not correspond to distinct people or vehicles. |
+| `3302/5903` Busy to Clear delay; `3302/5904` Clear to Busy delay | 1 / IPSO Alliance | O | Reusable | Read/write transition delays in ms; relevant to restoring lighting on detection and avoiding rapid oscillation. Not an end-to-end lighting-response guarantee. |
+| `3302/5750` Application Type; `3302/5751` Sensor Type | 1 / IPSO Alliance | O | Reusable | Read/write application label and read-only sensor-type text (e.g. PIR). Neither defines a controlled pedestrian/vehicle/cyclist classification or detection geometry. |
+| `3432/0` Vehicle type | 1 / uCIFI | O | Object-specific | Read-only multi-instance category enumeration described as DATEX II v3 aligned; examples include any vehicle (1), bicycle (5), pedestrian (47), and unknown (99). Resource Instance 0 is reserved for any vehicle (value 1); corresponding measurement Resource Instance IDs should match the category Resource Instance ID. IDs are not category values. |
+| `3432/1` Cumulated number; `3432/2` Reset cumulated number; `3432/3` Cumulated number today | 1 / uCIFI | M `3`; O `1`, `2` | Object-specific | Read-only multi-instance counts since reset and for today; single-instance executable reset. A daily count alone does not provide short-window demand for adaptive lighting. |
+| `3432/4-6` Measuring period 1/2/3; `3432/7-9` Cumulated number during last period 1/2/3 | 1 / uCIFI | O | Object-specific | Read/write multi-instance durations in seconds paired with read-only multi-instance counts. Count divided by a known duration can yield a platform-derived flow rate; the model does not expose that rate as a separate Resource. |
+| `3432/10-12` Average speed during last period 1/2/3; `3432/13-15` Average distance during last period 1/2/3 | 1 / uCIFI | O | Object-specific | Read-only multi-instance statistics for the corresponding periods. Speed and inter-vehicle distance Units fields are empty; do not assume km/h or metres. |
+| `3432/16` Speed limit threshold; `3432/17` Percentage above speed limit | 1 / uCIFI | O | Object-specific | Read/write multi-instance threshold and read-only multi-instance percentage. Threshold units and the percentage's observation window need clarification; these are optional risk context, not minimum presence support. |
+| `3432/18` Cumulated number (forward); `3432/19` Cumulated number (reverse) | 1 / uCIFI | O | Object-specific | Read-only multi-instance directional counts; geographic meaning of forward/reverse and their accumulation/reset basis need explicit interpretation. |
+| `3432/20` Label; `3432/21` UID; `3432/5751` Sensor Type | 1 / uCIFI | O | Object-specific `20`, `21`; reusable `5751` | Read/write area label/identifier and read-only sensor-type text. Area UID is a candidate integration key, not a typed link to a lane, street segment, luminaire, or control program. |
+| `3302/5518`, `3432/5518` Timestamp; `3302/6050`, `3432/6050` Fractional Timestamp | 1 / IPSO Alliance (3302); 1 / uCIFI (3432) | O | Reusable | Read-only measurement time, with optional fractional seconds (0..1). Preserve measurement time separately from receipt time. |
+| `3302/6042`, `3432/6042` Measurement Quality Indicator; `3302/6049`, `3432/6049` Measurement Quality Level | 1 / IPSO Alliance (3302); 1 / uCIFI (3432); quality Resources defined by OMA | O | Reusable | Read-only quality code (0..23) and quality level (0..100). No dedicated sensor-health or stale-input state is supplied by these Resources. |
+
+#### Coverage Assessment
+
+**Existing coverage requiring clarification or extension.** Object 3302 provides basic presence-state telemetry and optional detection timing/counters. Object 3432 provides a mandatory daily count and conditional category, interval, direction, and speed support. This is substantial existing sensing coverage, but neither Object independently represents current occupancy, the complete adaptive-lighting decision, or its safety outcome.
+
+No new generic presence or vehicle-counting Object is justified by these needs. Reusable relationship/metadata extensions and an application profile are still required for consistent cross-vendor use.
+
+#### Missing Semantics
+
+- Explicit monitored-feature/detection-zone and sensor-to-lighting-target relationships, including lane, orientation, overlapping coverage, and edge-gateway sensor identity.
+- Controlled presence-state/application interpretation; a binary presence signal does not classify pedestrians, cyclists, or vehicles.
+- Category-to-measurement Resource Instance alignment and aggregation rules that avoid double-counting overlapping categories or the all-vehicle total.
+- Mandatory profile combinations for short-window counts and periods, rather than assuming the mandatory daily counter is sufficient.
+- Exact traffic-window boundaries, timezone/day rollover, reset history, directional count basis, and coherent timestamp/quality association across multi-instance measurements.
+- Explicit units for traffic speed/distance/threshold Resources and a time basis for the above-limit percentage.
+- Invalid, missing, and stale-input handling, detection/response latency requirements, and traceability from input through rule to lighting action. Sensor quality is not a substitute for communication status or sensor health.
+
+#### Smart Data Model Responsibility
+
+Represent sensor assets, geographic detection zones, road/lane direction, served lighting assets, and municipal safety/operating policies. Preserve category codes and Resource Instance associations without assuming a target-model vocabulary has identical semantics. Keep binary presence, detection counts, traffic counts, derived flow, and inferred occupancy distinct.
+
+The Digital Twin correlates these observations with lighting output/outcome, evaluates applicable safety minima, and records why an adaptive action was taken. It must not interpret missing data as zero traffic or a failed sensor as an empty street. User profiles and service needs are contextual inputs, not personally identifying observations required from either sensor Object.
+
+#### Recommendation to the OMA Smart Cities Working Group
+
+1. Include 3302 v1.1 and 3432 v2.1 as existing sensing building blocks in the Public Lighting profile. Require only the capabilities selected for the deployment: basic presence uses `3302/5500`; category-specific traffic requires `3432/0` and corresponding counts; interval demand requires a paired period/count such as `3432/4` and `3432/7`. Speed and direction remain conditional.
+2. Require measurement timestamps and appropriate quality/freshness rules for control inputs; require fractional timestamps where latency requirements justify them. Specify category alignment, coherent value/time/quality association, period boundaries, daily rollover, and reset handling.
+3. Clarify presence polarity, counter semantics, traffic units, category aggregation, and direction through controlled profile conventions or Object/Resource clarification rather than undocumented vendor assumptions.
+4. Reuse the observation-point/observed-feature and linked-asset mechanism recommended elsewhere in this assessment to relate each sensor to its detection area and lighting target. Preserve endpoint, Object Instance, and Resource Instance identity during mapping.
+5. Specify and validate the local control binding, response latency, applicable safety minimums, command priorities, and behaviour on invalid/stale inputs using the existing control/scheduler mechanisms where adequate. The presence/traffic Objects themselves do not establish these guarantees; assess any remaining control-semantic gap before proposing a new Source 0 extension.
+
+These recommendations supplement Observation Point, Observation Scope, Observation Method, Temporal Semantics, Provenance, Measurement Quality, and Fallback Behaviour; presence/traffic sensing remains Operational Context rather than a new service-outcome capability.
 
 ## Water Management and Irrigation
 
@@ -2754,7 +2871,7 @@ Extend the same observation-point/linked-asset mechanism recommended for Public 
 
 ### Smart Data Model Responsibility
 
-Should be possibly done at higher level, joining weather-service or traffic data with lighting telemetry.
+Join externally supplied weather-service or traffic data with lighting telemetry at the Smart Data Model/Digital Twin layer. Device-reported 3302/3432 sensing is a distinct OMA contribution and should retain its source, category, temporal, and quality semantics rather than being treated as an unqualified external feed.
 
 ### Recommendation to the OMA Smart Cities Working Group
 
@@ -2784,7 +2901,7 @@ No new Object required; rely on the same linked-asset relationship recommended a
 
 ### Recommendation to the OMA Smart Cities Working Group
 
-Extend the linked-asset relationship (recommended for Observation Point and Service Outcome) to environmental sensor Objects so that operational context can be formally associated with the lighting asset it affects.
+Extend the linked-asset relationship (recommended for Observation Point and Service Outcome) to environmental, Presence (3302), and Traffic Counter (3432) sensor Objects so that operational context can be formally associated with the monitored area and lighting asset it affects. Apply the presence/traffic profile requirements in Question 1 rather than defining duplicate sensing Objects.
 
 ## Water Management and Irrigation
 
@@ -2798,10 +2915,10 @@ Extend the same linked-asset relationship to Rain Gauge, Temperature, and Humidi
 
 | Classification | Finding |
 |---|---|
-| Existing OMA coverage | Electrical line-quality context via Objects 3418 and 3421; a broad set of environmental sensor Objects (3303, 3304, 3432, 3446, 3449, 3450) available for co-deployment with lighting or irrigation infrastructure; pressure context via Object 3427. |
-| Existing coverage requiring clarification or extension | No native relationship linking an environmental sensor Instance to the specific lighting or irrigation asset it contextualizes. |
-| New OMA capability required | Linked-asset relationship (shared with Observation Point), applicable to both domains. |
-| Outside OMA responsibility but must remain linkable | Weather-service, rainfall-forecast, and traffic-data correlation with lighting and irrigation performance. |
+| Existing OMA coverage | Electrical line-quality context via Objects 3418 and 3421; environmental sensing via 3303, 3304, 3446, 3449, and 3450; digital presence via 3302 and daily traffic counts via 3432, with optional category/period/speed/direction support; pressure context via 3427. |
+| Existing coverage requiring clarification or extension | Sensor-to-area/asset/control relationships; presence/traffic profile requirements for optional Resources, categories, units, time windows, resets, quality/freshness, and safe local response. |
+| New OMA capability required | Reusable observed-feature/linked-asset relationships and any residual control metadata not representable through existing mechanisms; no new generic presence or vehicle-counter Object required. |
+| Outside OMA responsibility but must remain linkable | Municipality safety policy, detection-zone geography, derived occupancy/flow, external weather/traffic correlation, and assessment of delivered lighting outcomes. |
 
 ---
 
@@ -3321,7 +3438,7 @@ Fallback Behaviour describes how a luminaire behaves autonomously when normal su
 
 **Existing OMA coverage.**
 
-The Program Scheduler family (3452–3457), combined with the manual-override Resources in Object 3416, provides one of the most complete autonomous and override-behaviour models in the Registry.
+The Program Scheduler family (3452–3457), combined with the manual-override Resources in Object 3416, provides one of the most complete autonomous and override-behaviour models in the Registry. This covers schedule/override fallback; sensor-driven lighting additionally requires clarification or extension for invalid or stale presence/traffic inputs and safety-policy enforcement.
 
 Object 3425 (Irrigation Valve) is explicitly designed to plug into the same Program Scheduler family via its `3425/5` Scheduler ID Resource, so the Fallback Behaviour model already described for Public Lighting applies directly to irrigation with no new Objects required; the main gap is that Object 3425 lacks a manual-override mechanism as well-defined as `3416`'s.
 
@@ -3343,6 +3460,7 @@ Municipalities need assurance that street lighting continues operating safely an
 
 - A locally stored default schedule and default operating values
 - A manual-override mechanism with a bounded duration
+- For presence/traffic-driven operation, locally applicable behaviour when the sensor input is invalid, unavailable, or stale, without interpreting this as clear/zero demand
 
 ### Existing Object and Resource Evidence
 
@@ -3361,7 +3479,7 @@ Municipalities need assurance that street lighting continues operating safely an
 
 ### Missing Semantics
 
-None material for the autonomous/override behaviour itself.
+None material for the autonomous schedule/override behaviour itself. For presence/traffic-driven operation, Objects 3302/3432 do not define loss-of-sensing detection, stale-input thresholds, a guaranteed response time, or the resulting safe lighting level; a default dimming value alone does not establish when or how sensor-failure fallback is triggered.
 
 ### Smart Data Model Responsibility
 
@@ -3370,6 +3488,8 @@ Municipality-level policy defining which schedule should apply, and audit of whe
 ### Recommendation to the OMA Smart Cities Working Group
 
 Retain the Program Scheduler family and Object 3416 manual-override Resources as the reference fallback-behaviour model for Public Lighting profiles.
+
+For 3302/3432-driven programs, additionally specify and test sensor-input validity/freshness, response timing, safety-minimum and emergency/override priority rules, fallback selection, and recovery behaviour. Reuse existing scheduling/default mechanisms where sufficient; do not claim that sensing Objects alone guarantee safe autonomous adaptation.
 
 ## Water Management and Irrigation
 
@@ -3516,7 +3636,7 @@ No new Program Scheduler family Objects are required; add bounded manual-overrid
 | Classification | Finding |
 |---|---|
 | Existing OMA coverage | Program Scheduler family (3452–3457) for autonomous operation, reused unchanged by Object 3425 via its Scheduler ID Resource; Object 3416 manual-override mechanism with bounded duration and automatic reversion; Object 3425 Default status for a safe power-on value. |
-| Existing coverage requiring clarification or extension | No explicit "supervisory link active" indicator separate from Manual override active, for either domain; Object 3425 additionally lacks any bounded manual-override mechanism comparable to `3416/50-54`. |
+| Existing coverage requiring clarification or extension | No explicit "supervisory link active" indicator separate from Manual override active, for either domain; Object 3425 additionally lacks any bounded manual-override mechanism comparable to `3416/50-54`; presence/traffic-driven lighting needs explicit invalid/stale-input, safety-priority, response, and recovery rules. |
 | New OMA capability required | Bounded manual-override Resources (start time, end time, default duration, active flag) for Object 3425; otherwise correlation with Connectivity Monitoring/Mesh status is sufficient for both domains. |
 | Outside OMA responsibility but must remain linkable | Municipality policy defining applicable schedules and audit of fallback periods, for both lighting and irrigation. |
 
@@ -3534,13 +3654,13 @@ The table below consolidates the disposition of all fourteen semantic capabiliti
 | 4 | Observation Point | Existing coverage requiring clarification or extension |
 | 5 | Observation Scope | Existing coverage requiring clarification or extension |
 | 6 | Observation Method | New OMA capability required |
-| 7 | Temporal Semantics | Existing OMA coverage |
+| 7 | Temporal Semantics | Existing coverage requiring clarification or extension for presence/traffic windows, resets, and timestamp association |
 | 8 | Provenance | Existing coverage requiring clarification or extension |
-| 9 | Measurement Quality | Existing OMA coverage |
+| 9 | Measurement Quality | Existing OMA coverage for encoding; profile guarantees and presence/traffic value association require clarification |
 | 10 | Operational Context | Existing coverage requiring clarification or extension |
 | 11 | Physical Context | Outside OMA responsibility but must remain linkable |
 | 12 | Asset Management Context | Existing coverage requiring clarification or extension |
 | 13 | Network Operability | Existing OMA coverage |
-| 14 | Fallback Behaviour | Existing OMA coverage |
+| 14 | Fallback Behaviour | Existing OMA coverage for schedules/overrides; sensor-input failure and safety handling require clarification or extension |
 
 Across all fourteen capabilities, the recurring pattern is that the uCIFI Objects maintained by OMA already provide rich, purpose-built telemetry and control Resources for Public Lighting. The most common gap is not missing measurement capability, but the absence of a small number of reusable, cross-Object relationship and metadata patterns — a linked-asset/observation-point relationship, a generalized observation-method Resource, and a generalized aggregation-window Resource — that, if standardized once, would close most of the "requiring clarification or extension" findings above.
