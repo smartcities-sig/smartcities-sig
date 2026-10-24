@@ -39,6 +39,7 @@ text: |
 ---
 srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
 altAvatar: Juange
+style: "width: 15rem"
 positionDetails: down
 name: |
     Juange Muñoz
@@ -53,6 +54,7 @@ github: https://github.com/juange2015
 ---
 srcAvatar: https://avatars.githubusercontent.com/u/3258579?v=4
 altAvatar: Joaquin Prado
+style: "width: 15rem"
 positionDetails: down
 name: |
     Joaquin Prado
@@ -67,6 +69,7 @@ linkedin: https://www.linkedin.com/in/jpradocueva/
 ---
 srcAvatar: https://avatars.githubusercontent.com/u/920172?v=4
 altAvatar: Juanjo
+style: "width: 15rem"
 positionDetails: down
 name: |
     Juanjo Hierro
@@ -81,6 +84,7 @@ linkedin: https://www.linkedin.com/in/jhierro/
 ---
 srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
 altAvatar: Vittorio
+style: "width: 15rem"
 positionDetails: down
 name: |
     Vittorio Pettonati
@@ -115,6 +119,7 @@ text: |
 ---
 srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
 altAvatar: Juange
+style: "width: 15rem"
 positionDetails: down
 name: |
     Juange Muñoz
@@ -129,6 +134,7 @@ github: https://github.com/juange2015
 ---
 srcAvatar: /content-images/content/images/avatars/alberto-abella.jpg
 altAvatar: Alberto Abella
+style: "width: 15rem"
 positionDetails: down
 name: |
     Alberto Abella
@@ -143,6 +149,7 @@ linkedin: https://www.linkedin.com/in/albertoabella/
 ---
 srcAvatar: /content-images/content/images/avatars/carlo-bernocco.jpg
 altAvatar: Carlo Bernocco
+style: "width: 15rem"
 positionDetails: down
 name: |
     Carlo Bernocco
@@ -157,6 +164,7 @@ linkedin: https://www.linkedin.com/in/carlo-bernocco/
 ---
 srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
 altAvatar: Vittorio
+style: "width: 15rem"
 positionDetails: down
 name: |
     Vittorio Pettonati
@@ -191,6 +199,7 @@ text: |
 ---
 srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
 altAvatar: Juange
+style: "width: 15rem"
 positionDetails: down
 name: |
     Juange Muñoz
@@ -205,6 +214,7 @@ github: https://github.com/juange2015
 ---
 srcAvatar: /content-images/content/images/avatars/olivier-carmona.jpg
 altAvatar: Olivier Carmona
+style: "width: 15rem"
 positionDetails: down
 name: |
     Olivier Carmona
@@ -219,6 +229,7 @@ linkedin: https://www.linkedin.com/in/oliviercarmona/
 ---
 srcAvatar: /content-images/content/images/avatars/antonio-jara.jpg
 altAvatar: Antonio
+style: "width: 15rem"
 positionDetails: down
 name: |
     Antonio Jara
@@ -233,6 +244,7 @@ linkedin: https://www.linkedin.com/in/jara-iot/
 ---
 srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
 altAvatar: Vittorio
+style: "width: 15rem"
 positionDetails: down
 name: |
     Vittorio Pettonati
