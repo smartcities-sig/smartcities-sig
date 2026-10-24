@@ -51,7 +51,7 @@ github: https://github.com/juange2015
 ::
 ::eh-avatar
 ---
-srcAvatar: https://www.linkedin.com/in/jpradocueva/
+srcAvatar: https://media.licdn.com/dms/image/v2/C4E03AQFW27tK2wCX_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517694929730?e=1794441600&v=beta&t=UEEZNlnTmf1pX5lQWRTxMP3IV1-zfRCfQAzhvIwr0yQ
 altAvatar: Joaquin Prado
 positionDetails: down
 name: |
@@ -65,7 +65,7 @@ linkedin: https://www.linkedin.com/in/jpradocueva/
 ::
 ::eh-avatar
 ---
-srcAvatar: https://www.linkedin.com/in/jhierro/
+srcAvatar: 
 altAvatar: Juango
 positionDetails: down
 name: |
@@ -79,7 +79,7 @@ linkedin: https://www.linkedin.com/in/jhierro/
 ::
 ::eh-avatar
 ---
-srcAvatar: https://www.linkedin.com/in/vittoriopettonati
+srcAvatar: 
 altAvatar: Vittorio
 positionDetails: down
 name: |
