@@ -141,7 +141,7 @@ name: |
 role: |
     Manager at Gaiax
 company: |
-    OMA
+    Gaia-X
 linkedin: https://www.linkedin.com/in/albertoabella/
 ---
 ::
@@ -234,7 +234,7 @@ positionDetails: down
 name: |
     Antonio Jara
 role: |
-    CTO Libelium
+    CTO
 company: |
     Libelium
 linkedin: https://www.linkedin.com/in/jara-iot/
