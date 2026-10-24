@@ -43,9 +43,9 @@ positionDetails: down
 name: |
     Joaquin Prado
 role: |
-    Co-Founder
+    Technical Director
 company: |
-    Standards-Hub
+    OMA
 linkedin: https://www.linkedin.com/in/jpradocueva/
 facebook: https://www.linkedin.com/in/jpradocueva/
 instagram: https://www.linkedin.com/in/jpradocueva/
