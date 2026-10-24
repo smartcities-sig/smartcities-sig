@@ -47,6 +47,40 @@ Madrid supports the initiative by providing coordination based on these principl
 Madrid views the **Smart Cities SIG** as a collaborative ecosystem initiative intended to complement, not compete with, existing standards organizations, ecosystem alliances, interoperability programs, and industry initiatives.
 
 
+## AIOTI Positioning
+
+The [Alliance for AI, IoT and Edge Continuum Innovation (AIOTI)](https://aioti.eu/) participates in the Smart Cities SIG through its [Cities 5.0 Working Group](https://aioti.eu/cities-5-0/), whose scope covers the selection of standards, interoperability, scalability, energy efficiency and green enablement, smart transportation, e-services, disaster preparedness and resilience, and convergence to Digital Twins.
+
+AIOTI participates in the Smart Cities SIG as:
+
+- a European multi-stakeholder community bringing together cities, industry, SMEs, startups, research and academia,
+- a bridge between municipal needs, standardisation activities, and EU research and innovation initiatives,
+- and a channel for replicating validated interoperability approaches across European cities.
+
+The Cities 5.0 WG shares the SIG's core principle: **data is the critical asset; devices are merely tools**. Since *"a digital twin is what you feed it"*, AIOTI prioritises data quality, a shared semantic context for every data item in use (with traceback), and a *"testing before investing"* approach, which is significantly more cost-effective than correcting deployments afterwards.
+
+AIOTI proposes to contribute to the Smart Cities SIG through:
+
+- **Harmonisation across architectural layers:** Supporting the alignment of low-level object standardisation (e.g., [OMA SpecWorks](https://www.openmobilealliance.org/) LwM2M objects) with high-level frameworks (e.g., FIWARE [Smart Data Models](https://smartdatamodels.org/)) and [AIOTI's High-Level Architecture (HLA)](https://aioti.eu/aioti-high-level-architecture-hla-report-r7/), advancing a Solution Architecture Template based on the [eGovERA](https://interoperable-europe.ec.europa.eu/collection/european-interoperability-reference-architecture-eira/solution/egovera-business-agnostic-0) reference architecture, and addressing the coexistence of legacy and new device generations.
+- **Cross-group expertise:** Connecting the SIG with relevant AIOTI horizontal groups, notably Standardisation and [Testing and Experimentation Environments (TEE)](https://aioti.eu/tee/), in line with the SIG's laboratory-to-field validation approach.
+- **Replicability and critical mass:** Helping turn SIG outcomes into a replicable model for multiple cities rather than a single-city solution. Only a critical mass of cities expressing shared requirements will achieve a market response to their needs; otherwise, cities will deploy what others decide to manufacture.
+- **From use cases to challenges and EU initiatives:** Transforming municipal use cases into challenges for companies and startups — ensuring there is at least one interested client — and, when mature, into EU initiatives fostering interoperability, including consortia for EU-funded projects and common activities with ongoing Horizon Europe projects.
+- **Real-world convergence (TRL 7–9):** Promoting the confluence of approaches into effective and efficient IoT deployments in cities: not just another standard, but a selection of solutions demonstrated in real use cases.
+- **Dissemination and knowledge transfer:** Sharing SIG results across the AIOTI community, feeding identified gaps into European standardisation mapping efforts (such as the joint AIOTI / StandICT.eu [IoT Standardisation Gaps Report](https://aioti.eu/wp-content/uploads/StandICT.eu-IoT-Standardisation-Gaps-Release-2.pdf)), and supporting organised knowledge transfer to traditional city service providers, so that municipal organisations can absorb high-volume, high-quality data and manage by results rather than by efforts.
+
+AIOTI supports the initiative on the basis of interoperability, scalability, cybersecurity, openness, implementation neutrality, and public-private collaboration.
+
+AIOTI views the **Smart Cities SIG** as a collaborative ecosystem initiative that complements, rather than competes with, existing standards organizations, ecosystem alliances, interoperability programs, and industry initiatives — helping European cities protect long-term investments through human-centric, sustainable, open, and interoperable city services.
+
+### AIOTI Reference Materials
+
+* [AIOTI Cities 5.0 Working Group](https://aioti.eu/cities-5-0/)
+* [AIOTI High-Level Architecture (HLA) Report R7](https://aioti.eu/aioti-high-level-architecture-hla-report-r7/)
+* [AIOTI Testing and Experimentation Environments (TEE)](https://aioti.eu/tee/)
+* [AIOTI / StandICT.eu IoT Standardisation Gaps (Release 2)](https://aioti.eu/wp-content/uploads/StandICT.eu-IoT-Standardisation-Gaps-Release-2.pdf)
+* [AIOTI Website](https://aioti.eu/)
+
+
 ## Open Mobile Alliance (OMA) Positioning
 
 The Open Mobile Alliance (OMA) participates in the Smart Cities SIG as:
