@@ -43,7 +43,7 @@ positionDetails: down
 name: |
     Juange Muñoz
 role: |
-    Madrid City Council
+    Head of Service for IoT and 5G
 company: |
     Madrid City Council
 github: https://github.com/juange2015
@@ -73,7 +73,7 @@ name: |
 role: |
     Chairman SC
 company: |
-    FIREWARE
+    FIWARE
 linkedin: https://www.linkedin.com/in/jhierro/
 ---
 ::
@@ -119,7 +119,7 @@ positionDetails: down
 name: |
     Juange Muñoz
 role: |
-    Madrid City Council
+    Head of Service for IoT and 5G
 company: |
     Madrid City Council
 github: https://github.com/juange2015
@@ -127,30 +127,30 @@ github: https://github.com/juange2015
 ::
 ::eh-avatar
 ---
-srcAvatar: https://avatars.githubusercontent.com/u/3258579?v=4
-altAvatar: Joaquin Prado
+srcAvatar: /content-images/content/images/avatars/alberto-abella.jpg
+altAvatar: Alberto Abella
 positionDetails: down
 name: |
-    Joaquin Prado
+    Alberto Abella
 role: |
-    Technical Director
+    Manager at Gaiax
 company: |
     OMA
-linkedin: https://www.linkedin.com/in/jpradocueva/
+linkedin: https://www.linkedin.com/in/albertoabella/
 ---
 ::
 ::eh-avatar
 ---
-srcAvatar: https://avatars.githubusercontent.com/u/920172?v=4
-altAvatar: Juanjo
+srcAvatar: /content-images/content/images/avatars/carlo-bernocco.jpg
+altAvatar: Carlo Bernocco
 positionDetails: down
 name: |
-    Juanjo Hierro
+    Carlo Bernocco
 role: |
-    Chairman SC
+    Head Business & Customer Success
 company: |
-    FIREWARE
-linkedin: https://www.linkedin.com/in/jhierro/
+    Paradox Engineering
+linkedin: https://www.linkedin.com/in/carlo-bernocco/
 ---
 ::
 ::eh-avatar
@@ -195,7 +195,7 @@ positionDetails: down
 name: |
     Juange Muñoz
 role: |
-    Madrid City Council
+    Head of Service for IoT and 5G
 company: |
     Madrid City Council
 github: https://github.com/juange2015
@@ -203,30 +203,30 @@ github: https://github.com/juange2015
 ::
 ::eh-avatar
 ---
-srcAvatar: https://avatars.githubusercontent.com/u/3258579?v=4
-altAvatar: Joaquin Prado
+srcAvatar: /content-images/content/images/avatars/olivier-carmona.jpg
+altAvatar: Olivier Carmona
 positionDetails: down
 name: |
-    Joaquin Prado
+    Olivier Carmona
 role: |
-    Technical Director
+    OMA Utility WG Chair
 company: |
     OMA
-linkedin: https://www.linkedin.com/in/jpradocueva/
+linkedin: https://www.linkedin.com/in/oliviercarmona/
 ---
 ::
 ::eh-avatar
 ---
-srcAvatar: https://avatars.githubusercontent.com/u/920172?v=4
-altAvatar: Juanjo
+srcAvatar: /content-images/content/images/avatars/antonio-jara.jpg
+altAvatar: Antonio
 positionDetails: down
 name: |
-    Juanjo Hierro
+    Antonio Jara
 role: |
-    Chairman SC
+    CTO Libelium
 company: |
-    FIREWARE
-linkedin: https://www.linkedin.com/in/jhierro/
+    Libelium
+linkedin: https://www.linkedin.com/in/jara-iot/
 ---
 ::
 ::eh-avatar
