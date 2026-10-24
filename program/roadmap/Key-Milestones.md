@@ -66,7 +66,7 @@ linkedin: https://www.linkedin.com/in/jpradocueva/
 ::eh-avatar
 ---
 srcAvatar: 
-altAvatar: Juango
+altAvatar: Juanjo
 positionDetails: down
 name: |
     Juanjo Hierro
