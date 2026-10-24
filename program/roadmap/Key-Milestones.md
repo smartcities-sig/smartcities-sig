@@ -29,12 +29,72 @@ title: |
 text: |
     Discover how to achieve semantic continuity and end-to-end interoperability—from raw sensor data straight into your municipal Digital Twin.
 
-    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90
+    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Gran Vía
 
     📅 Tuesday, 3 November 2026
 
     ⏰ 16:15 – 16:30
 ---
+::eh-avatar
+---
+srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
+altAvatar: Juange
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Juange Muñoz
+role: |
+    Head of Service for IoT and 5G
+company: |
+    Madrid City Council
+github: https://github.com/juange2015
+---
+::
+::eh-avatar
+---
+srcAvatar: https://avatars.githubusercontent.com/u/3258579?v=4
+altAvatar: Joaquin Prado
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Joaquin Prado
+role: |
+    Technical Director
+company: |
+    OMA
+linkedin: https://www.linkedin.com/in/jpradocueva/
+---
+::
+::eh-avatar
+---
+srcAvatar: https://avatars.githubusercontent.com/u/920172?v=4
+altAvatar: Juanjo
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Juanjo Hierro
+role: |
+    Chairman SC
+company: |
+    FIWARE
+linkedin: https://www.linkedin.com/in/jhierro/
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
+altAvatar: Vittorio
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Vittorio Pettonati
+role: |
+    Senior Project Manager
+company: |
+    AIOTI
+linkedin: https://www.linkedin.com/in/vittoriopettonati/
+---
+::
 ::
 
 ::eh-text-img
@@ -49,12 +109,72 @@ title: |
 text: |
     An exclusive look at the newly developed open standards profile tailored specifically for public street lighting.
 
-    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90
+    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Retiro
 
     📅 Wednesday, 4 November 2026
 
     ⏰ 11:15 – 11:30
 ---
+::eh-avatar
+---
+srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
+altAvatar: Juange
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Juange Muñoz
+role: |
+    Head of Service for IoT and 5G
+company: |
+    Madrid City Council
+github: https://github.com/juange2015
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/alberto-abella.jpg
+altAvatar: Alberto Abella
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Alberto Abella
+role: |
+    Manager at Gaiax
+company: |
+    Gaia-X
+linkedin: https://www.linkedin.com/in/albertoabella/
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/carlo-bernocco.jpg
+altAvatar: Carlo Bernocco
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Carlo Bernocco
+role: |
+    Head Business & Customer Success
+company: |
+    Paradox Engineering
+linkedin: https://www.linkedin.com/in/carlo-bernocco/
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
+altAvatar: Vittorio
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Vittorio Pettonati
+role: |
+    Senior Project Manager
+company: |
+    AIOTI
+linkedin: https://www.linkedin.com/in/vittoriopettonati/
+---
+::
 ::
 
 ::eh-text-img
@@ -69,12 +189,72 @@ title: |
 text: |
     Explore the new open standards profile designed to streamline smart water management and municipal data integration.
 
-    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90
+    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Gran Vía
 
     📅 Wednesday, 4 November 2026
 
     ⏰ 15:15 – 15:30
 ---
+::eh-avatar
+---
+srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
+altAvatar: Juange
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Juange Muñoz
+role: |
+    Head of Service for IoT and 5G
+company: |
+    Madrid City Council
+github: https://github.com/juange2015
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/olivier-carmona.jpg
+altAvatar: Olivier Carmona
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Olivier Carmona
+role: |
+    OMA Utility WG Chair
+company: |
+    OMA
+linkedin: https://www.linkedin.com/in/oliviercarmona/
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/antonio-jara.jpg
+altAvatar: Antonio
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Antonio Jara
+role: |
+    CTO
+company: |
+    Libelium
+linkedin: https://www.linkedin.com/in/jara-iot/
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
+altAvatar: Vittorio
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Vittorio Pettonati
+role: |
+    Senior Project Manager
+company: |
+    AIOTI
+linkedin: https://www.linkedin.com/in/vittoriopettonati/
+---
+::
 ::
 
 ## Connect & Get Involved
