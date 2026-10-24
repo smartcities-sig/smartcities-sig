@@ -29,7 +29,7 @@ title: |
 text: |
     Discover how to achieve semantic continuity and end-to-end interoperability—from raw sensor data straight into your municipal Digital Twin.
 
-    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90
+    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Gran Vía
 
     📅 Tuesday, 3 November 2026
 
@@ -105,7 +105,7 @@ title: |
 text: |
     An exclusive look at the newly developed open standards profile tailored specifically for public street lighting.
 
-    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90
+    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Retiro
 
     📅 Wednesday, 4 November 2026
 
@@ -181,7 +181,7 @@ title: |
 text: |
     Explore the new open standards profile designed to streamline smart water management and municipal data integration.
 
-    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90
+    📍 Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Gran Vía
 
     📅 Wednesday, 4 November 2026
 
