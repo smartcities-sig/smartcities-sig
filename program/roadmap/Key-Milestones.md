@@ -147,17 +147,17 @@ linkedin: https://www.linkedin.com/in/kinga-stachura/
 ::
 ::eh-avatar
 ---
-srcAvatar: /content-images/content/images/avatars/antonio-jara.jpg
-altAvatar: Antonio
+srcAvatar: /content-images/content/images/avatars/alberto-abella.jpg
+altAvatar: Alberto Abella
 style: "width: 15rem"
 positionDetails: down
 name: |
-    Antonio Jara
+    Alberto Abella
 role: |
-    CTO
+    Smart Data Models Leader
 company: |
-    Libelium
-linkedin: https://www.linkedin.com/in/jara-iot/
+    FIWARE TSC
+linkedin: https://www.linkedin.com/in/albertoabella/
 ---
 ::
 ::eh-avatar
