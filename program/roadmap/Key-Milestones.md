@@ -37,7 +37,7 @@ text: |
 ---
 ::eh-avatar
 ---
-srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
+srcAvatar: /content-images/content/images/avatars/juange-munoz.jpg
 altAvatar: Juange
 style: "width: 15rem"
 positionDetails: down
@@ -47,7 +47,7 @@ role: |
     Head of Service for IoT and 5G
 company: |
     Madrid City Council
-github: https://github.com/juange2015
+linkedin: https://www.linkedin.com/in/juan-jes%C3%BAs-m-271607173/
 ---
 ::
 ::eh-avatar
@@ -117,7 +117,7 @@ text: |
 ---
 ::eh-avatar
 ---
-srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
+srcAvatar: /content-images/content/images/avatars/juange-munoz.jpg
 altAvatar: Juange
 style: "width: 15rem"
 positionDetails: down
@@ -127,7 +127,7 @@ role: |
     Head of Service for IoT and 5G
 company: |
     Madrid City Council
-github: https://github.com/juange2015
+linkedin: https://www.linkedin.com/in/juan-jes%C3%BAs-m-271607173/
 ---
 ::
 ::eh-avatar
@@ -197,7 +197,7 @@ text: |
 ---
 ::eh-avatar
 ---
-srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
+srcAvatar: /content-images/content/images/avatars/juange-munoz.jpg
 altAvatar: Juange
 style: "width: 15rem"
 positionDetails: down
@@ -207,7 +207,7 @@ role: |
     Head of Service for IoT and 5G
 company: |
     Madrid City Council
-github: https://github.com/juange2015
+linkedin: https://www.linkedin.com/in/juan-jes%C3%BAs-m-271607173/
 ---
 ::
 ::eh-avatar
