@@ -102,98 +102,18 @@ linkedin: https://www.linkedin.com/in/vittoriopettonati/
 positionText: right
 spanText: m
 alignText: left
-urlImage: /content-images/content/images/SmartCities-SIG-Public-Lighting-Event.webp
-altImage: "Event poster: Open Standards for Smart Cities: Public Street Lighting Profile Handover. Wednesday, 4 November 2026, 11:15 – 11:30. Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90."
+urlImage: /content-images/content/images/SmartCities-SIG-Public-Water-Management-Event.webp
+altImage: "Event poster: Open Standards for Smart Cities: Public Water Management Profile Handover. Wednesday, 4 November 2026, 11:15 – 11:30. Madrid, Capital Digital (Madrid Municipality) Stand, Pavilion 3, Stand D90 - El Retiro."
 title: |
-    Open Standards for Smart Cities: Public Street Lighting Profile Handover
+    Open Standards for Smart Cities: Public Water Management Profile Handover
 text: |
-    An exclusive look at the newly developed open standards profile tailored specifically for public street lighting.
+    Explore the new open standards profile designed to streamline smart water management and municipal data integration.
 
     📍 Madrid, Capital Digital (Madrid Municipality) Stand, Pavilion 3, Stand D90 - El Retiro
 
     📅 Wednesday, 4 November 2026
 
     ⏰ 11:15 – 11:30
----
-::eh-avatar
----
-srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
-altAvatar: Juange
-style: "width: 15rem"
-positionDetails: down
-name: |
-    Juange Muñoz
-role: |
-    Head of Service for IoT and 5G
-company: |
-    Madrid City Council
-github: https://github.com/juange2015
----
-::
-::eh-avatar
----
-srcAvatar: /content-images/content/images/avatars/alberto-abella.jpg
-altAvatar: Alberto Abella
-style: "width: 15rem"
-positionDetails: down
-name: |
-    Alberto Abella
-role: |
-    Manager at Gaiax
-company: |
-    Gaia-X
-linkedin: https://www.linkedin.com/in/albertoabella/
----
-::
-::eh-avatar
----
-srcAvatar: /content-images/content/images/avatars/carlo-bernocco.jpg
-altAvatar: Carlo Bernocco
-style: "width: 15rem"
-positionDetails: down
-name: |
-    Carlo Bernocco
-role: |
-    Product Portfolio Manager
-company: |
-    Paradox Engineering
-linkedin: https://www.linkedin.com/in/carlo-bernocco/
----
-::
-::eh-avatar
----
-srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
-altAvatar: Vittorio
-style: "width: 15rem"
-positionDetails: down
-name: |
-    Vittorio Pettonati
-role: |
-    Senior Project Manager
-company: |
-    AIOTI
-linkedin: https://www.linkedin.com/in/vittoriopettonati/
----
-::
-::
-
-::eh-text-img
----
-positionText: left
-spanText: m
-alignText: left
-urlImage: /content-images/content/images/SmartCities-SIG-Public-Water-Management-Event.webp
-altImage: "Event poster: Open Standards for Smart Cities: Public Water Management Profile Handover. Wednesday, 4 November 2026, 15:15 – 15:30. Ayuntamiento de Madrid (Madrid Municipality) Stand, Pavilion 3, Stand D90."
-title: |
-    Open Standards for Smart Cities: Public Water Management Profile Handover
-text: |
-    Explore the new open standards profile designed to streamline smart water management and municipal data integration.
-
-    📍 Madrid, Capital Digital (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Gran Vía
-
-    📅 Wednesday, 4 November 2026
-
-    ⏰ 15:15 – 15:30
 ---
 ::eh-avatar
 ---
@@ -238,6 +158,86 @@ role: |
 company: |
     Libelium
 linkedin: https://www.linkedin.com/in/jara-iot/
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/vittorio-pettonati.jpg
+altAvatar: Vittorio
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Vittorio Pettonati
+role: |
+    Senior Project Manager
+company: |
+    AIOTI
+linkedin: https://www.linkedin.com/in/vittoriopettonati/
+---
+::
+::
+
+::eh-text-img
+---
+positionText: left
+spanText: m
+alignText: left
+urlImage: /content-images/content/images/SmartCities-SIG-Public-Lighting-Event.webp
+altImage: "Event poster: Open Standards for Smart Cities: Public Street Lighting Profile Handover. Wednesday, 4 November 2026, 15:15 – 15:45. Madrid, Capital Digital (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Gran Vía."
+title: |
+    Open Standards for Smart Cities: Public Street Lighting Profile Handover
+text: |
+    An exclusive look at the newly developed open standards profile tailored specifically for public street lighting.
+
+    📍 Madrid, Capital Digital (Madrid Municipality) Stand, Pavilion 3, Stand D90 - Gran Vía
+
+    📅 Wednesday, 4 November 2026
+
+    ⏰ 15:15 – 15:45
+---
+::eh-avatar
+---
+srcAvatar: https://avatars.githubusercontent.com/u/13125557?v=4
+altAvatar: Juange
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Juange Muñoz
+role: |
+    Head of Service for IoT and 5G
+company: |
+    Madrid City Council
+github: https://github.com/juange2015
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/alberto-abella.jpg
+altAvatar: Alberto Abella
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Alberto Abella
+role: |
+    Manager at Gaiax
+company: |
+    Gaia-X
+linkedin: https://www.linkedin.com/in/albertoabella/
+---
+::
+::eh-avatar
+---
+srcAvatar: /content-images/content/images/avatars/carlo-bernocco.jpg
+altAvatar: Carlo Bernocco
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Carlo Bernocco
+role: |
+    Product Portfolio Manager
+company: |
+    Paradox Engineering
+linkedin: https://www.linkedin.com/in/carlo-bernocco/
 ---
 ::
 ::eh-avatar
