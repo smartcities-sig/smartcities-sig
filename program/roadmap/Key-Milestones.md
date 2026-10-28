@@ -74,7 +74,7 @@ positionDetails: down
 name: |
     Juanjo Hierro
 role: |
-    Chairman SC
+    Chairman TSC
 company: |
     FIWARE
 linkedin: https://www.linkedin.com/in/jhierro/
@@ -132,17 +132,17 @@ linkedin: https://www.linkedin.com/in/juan-jes%C3%BAs-m-271607173/
 ::
 ::eh-avatar
 ---
-srcAvatar: /content-images/content/images/avatars/olivier-carmona.jpg
-altAvatar: Olivier Carmona
+srcAvatar: /content-images/content/images/avatars/kinga-stachura.jpg
+altAvatar: Kinga Stachura
 style: "width: 15rem"
 positionDetails: down
 name: |
-    Olivier Carmona
+    Kinga Stachura
 role: |
-    OMA Utility WG Chair
+    New Business Manager
 company: |
-    OMA
-linkedin: https://www.linkedin.com/in/oliviercarmona/
+    AVSystem
+linkedin: https://www.linkedin.com/in/kinga-stachura/
 ---
 ::
 ::eh-avatar
@@ -219,9 +219,9 @@ positionDetails: down
 name: |
     Alberto Abella
 role: |
-    Manager at Gaiax
+    Smart Data Models Leader
 company: |
-    Gaia-X
+    FIWARE TSC
 linkedin: https://www.linkedin.com/in/albertoabella/
 ---
 ::
