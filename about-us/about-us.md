@@ -56,7 +56,7 @@ Additional focus areas may be introduced based on ecosystem interest and contrib
 The Smart Cities SIG follows a structured process:
 
 <figure>
-    <img src="..public/images/smartcities-sig-approach-v2.svg" alt="Smart Cities SIG Approach: the four methodology stages (Operational Meaning, Semantic Capabilities, Standards and Ecosystem Mapping split into standards organizations and open source, and Smart Data Models Realization including Smart City Profiles), followed by Proof of Concept Validation, with feedback loops">
+    <img src="../public/images/smartcities-sig-approach-v2.svg" alt="Smart Cities SIG Approach: the four methodology stages (Operational Meaning, Semantic Capabilities, Standards and Ecosystem Mapping split into standards organizations and open source, and Smart Data Models Realization including Smart City Profiles), followed by Proof of Concept Validation, with feedback loops">
     <figcaption><i>Figure — Smart Cities SIG Approach: From Municipal Requirements to Proof of Concept Validation</i></figcaption>
 </figure>
 
