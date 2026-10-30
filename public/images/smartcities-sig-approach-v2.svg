@@ -40,35 +40,48 @@
 <text x="46" y="380" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >business requirements from</text>
 <text x="46" y="400" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >municipalities.</text>
 <text x="46" y="445" font-size="17" font-weight="700" fill="#1f5fc4" text-anchor="start" >Examples</text>
-<circle cx="50" cy="467" r="3.5" fill="#1f5fc4"/>
-<text x="62" y="472" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Water management</text>
-<circle cx="50" cy="491" r="3.5" fill="#1f5fc4"/>
-<text x="62" y="496" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Waste management</text>
-<circle cx="50" cy="515" r="3.5" fill="#1f5fc4"/>
-<text x="62" y="520" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Smart lighting</text>
-<circle cx="50" cy="539" r="3.5" fill="#1f5fc4"/>
-<text x="62" y="544" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Mobility</text>
-<circle cx="50" cy="563" r="3.5" fill="#1f5fc4"/>
-<text x="62" y="568" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Environmental monitoring</text>
-<circle cx="50" cy="587" r="3.5" fill="#1f5fc4"/>
-<text x="62" y="592" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >and more</text>
+<circle cx="50" cy="465" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="470" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Water management</text>
+<circle cx="50" cy="487" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="492" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Waste management</text>
+<circle cx="50" cy="509" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="514" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Smart lighting</text>
+<circle cx="50" cy="531" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="536" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Mobility</text>
+<circle cx="50" cy="553" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="558" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Environmental monitoring</text>
+<circle cx="50" cy="575" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="580" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >and more</text>
+<text x="46" y="615" font-size="17" font-weight="700" fill="#1f5fc4" text-anchor="start" >Outputs</text>
+<circle cx="50" cy="635" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="640" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >User stories</text>
+<circle cx="50" cy="657" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="662" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Entity sketch</text>
+<circle cx="50" cy="679" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="684" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Operational objectives</text>
+<circle cx="50" cy="701" r="3.5" fill="#1f5fc4"/>
+<text x="62" y="706" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Pain points</text>
 <circle cx="470" cy="265" r="40" fill="#1e8a3c"/>
 <rect x="463" y="243" width="14" height="12" rx="2" fill="none" stroke="#fff" stroke-width="3.5"/>
 <path d="M470 255 V265 M455 273 V265 H485 V273" fill="none" stroke="#fff" stroke-width="3.5"/>
 <rect x="448" y="273" width="14" height="12" rx="2" fill="none" stroke="#fff" stroke-width="3.5"/>
 <rect x="478" y="273" width="14" height="12" rx="2" fill="none" stroke="#fff" stroke-width="3.5"/>
-<text x="356" y="340" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Identify data exchange requirements,</text>
-<text x="356" y="360" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >stakeholders, systems, interfaces</text>
-<text x="356" y="380" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >and interoperability gaps.</text>
-<text x="356" y="445" font-size="17" font-weight="700" fill="#1e8a3c" text-anchor="start" >Outputs</text>
+<text x="356" y="340" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Map Stage 1 operational needs to</text>
+<text x="356" y="360" font-size="15" fill="#3c4658"><tspan font-weight="700" fill="#1e8a3c">14 semantic capabilities</tspan>,</text>
+<text x="356" y="380" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >classifying each property of the</text>
+<text x="356" y="400" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >entity sketch.</text>
+<text x="356" y="445" font-size="17" font-weight="700" fill="#1e8a3c" text-anchor="start" >Capabilities</text>
 <circle cx="360" cy="467" r="3.5" fill="#1e8a3c"/>
-<text x="372" y="472" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Information flows</text>
+<text x="372" y="472" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Domain Semantics (3)</text>
 <circle cx="360" cy="491" r="3.5" fill="#1e8a3c"/>
-<text x="372" y="496" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Stakeholder interactions</text>
+<text x="372" y="496" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Observation Semantics (4)</text>
 <circle cx="360" cy="515" r="3.5" fill="#1e8a3c"/>
-<text x="372" y="520" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Integration points</text>
+<text x="372" y="520" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Interpretation Semantics (4)</text>
 <circle cx="360" cy="539" r="3.5" fill="#1e8a3c"/>
-<text x="372" y="544" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Interoperability requirements</text>
+<text x="372" y="544" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Operational Semantics (3)</text>
+<text x="356" y="615" font-size="17" font-weight="700" fill="#1e8a3c" text-anchor="start" >Output</text>
+<text x="356" y="640" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Properties classified by capability,</text>
+<text x="356" y="660" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >ready for Stage 3</text>
 <circle cx="810.0" cy="252" r="36" fill="#5b3fb5"/>
 <path transform="translate(794.0 236)" fill="#fff" d="M0 0H11a5 5 0 1 1 10 0H32V11a5 5 0 1 1 0 10V32H21a5 5 0 1 0-10 0H0V21a5 5 0 1 0 0-10Z"/>
 <text x="810.0" y="312" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >Map municipal needs to existing standards,</text>
@@ -100,7 +113,7 @@
 <circle cx="693" cy="644" r="3.5" fill="#5b3fb5"/>
 <text x="705" y="649" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >and other open-source communities</text>
 <text x="676" y="702" font-size="17" font-weight="700" fill="#5b3fb5" text-anchor="start" >Output</text>
-<text x="676" y="726" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Common semantic understanding</text>
+<text x="676" y="726" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Ecosystem assessment reports</text>
 <rect x="1035" y="218" width="300" height="306" rx="9" fill="#e9f6f7" stroke="#12868f" stroke-width="1.6"/>
 <rect x="1035" y="536" width="300" height="196" rx="9" fill="#e9f6f7" stroke="#12868f" stroke-width="1.6"/>
 <circle cx="1185.0" cy="264" r="34" fill="#12868f"/>
