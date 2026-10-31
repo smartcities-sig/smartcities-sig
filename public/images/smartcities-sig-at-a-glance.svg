@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 956" width="1700" height="956" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Smart Cities SIG at a glance</title>
+<desc id="d">The problem cities face (too many standards and devices, data without context, manual adaptation and vendor lock-in); what the SIG is (open, implementation-neutral, not a standards body); its goal (the city's needs drive the data, not the device); the four stages from Operational Meaning to Smart Data Models Realization, ending in a Smart City Profile, with a Proof of Concept in 2027; and where it stands in October 2026, with the Smart City Expo World Congress in Barcelona as the next milestone.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4a5160"/></marker><marker id="ahWhite" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fff"/></marker><filter id="sh" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1d2433" flood-opacity=".10"/></filter></defs>
+<rect width="1700" height="956" fill="#ffffff"/>
+<text x="850.0" y="54" font-size="36" font-weight="700" fill="#13295b" text-anchor="middle" >Smart Cities SIG at a glance</text>
+<text x="850.0" y="84" font-size="17" font-weight="400" fill="#3c4658" text-anchor="middle" >Open, implementation-neutral collaboration on smart city interoperability · since May 2026</text>
+<rect x="30" y="104" width="1640" height="132" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M200 104 H42 a12 12 0 0 0 -12 12 V224 a12 12 0 0 0 12 12 H200 z" fill="#13295b"/>
+<text x="115.0" y="165.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >THE</text>
+<text x="115.0" y="187.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >PROBLEM</text>
+<rect x="230.0" y="118" width="460.0" height="104" rx="9" fill="#f6f8fc" stroke="#d4dbe8"/>
+<circle cx="270.0" cy="170.0" r="24" fill="#13295b"/>
+<circle cx="262.0" cy="163.0" r="6" fill="#fff"/>
+<rect x="272.0" y="157.0" width="12" height="12" rx="1.5" fill="#fff"/>
+<path d="M267.0 172.0 l7 12 h-14 z" fill="#fff"/>
+<text x="310.0" y="150" font-size="18" font-weight="700" fill="#13295b" text-anchor="start" >Too many standards and devices</text>
+<text x="310.0" y="176" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Cities face many IoT standards and devices</text>
+<text x="310.0" y="196" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >that don't fit together.</text>
+<rect x="710.0" y="118" width="460.0" height="104" rx="9" fill="#f6f8fc" stroke="#d4dbe8"/>
+<circle cx="750.0" cy="170.0" r="24" fill="#13295b"/>
+<text x="750.0" y="180.0" font-size="30" font-weight="700" fill="#fff" text-anchor="middle" >?</text>
+<text x="790.0" y="150" font-size="18" font-weight="700" fill="#13295b" text-anchor="start" >Data without context</text>
+<text x="790.0" y="176" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Data reaches the Digital Twin without what was</text>
+<text x="790.0" y="196" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >measured, where, how, and how far to trust it.</text>
+<rect x="1190.0" y="118" width="460.0" height="104" rx="9" fill="#f6f8fc" stroke="#d4dbe8"/>
+<circle cx="1230.0" cy="170.0" r="24" fill="#13295b"/>
+<path d="M1223.0 168.0 V162.0 a7 7 0 0 1 14 0 V168.0" fill="none" stroke="#fff" stroke-width="3.5"/>
+<rect x="1219.0" y="167.0" width="22" height="16" rx="3" fill="#fff"/>
+<circle cx="1230.0" cy="174.0" r="2.5" fill="#13295b"/>
+<text x="1270.0" y="150" font-size="18" font-weight="700" fill="#13295b" text-anchor="start" >Manual work and vendor lock-in</text>
+<text x="1270.0" y="176" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Each city adapts the data by hand, and</text>
+<text x="1270.0" y="196" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >vendor choices lock it in.</text>
+<rect x="30" y="248" width="1640" height="132" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M200 248 H42 a12 12 0 0 0 -12 12 V368 a12 12 0 0 0 12 12 H200 z" fill="#13295b"/>
+<text x="115.0" y="309.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >WHAT THE</text>
+<text x="115.0" y="331.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >SIG IS</text>
+<text x="240" y="292" font-size="20" font-weight="700" fill="#13295b" text-anchor="start" >Open, implementation-neutral, and not a standards body</text>
+<text x="240" y="322" font-size="16" font-weight="400" fill="#3c4658" text-anchor="start" >It analyzes real municipal needs and feeds its findings back to the organizations</text>
+<text x="240" y="344" font-size="16" font-weight="400" fill="#3c4658" text-anchor="start" >that own the specifications: OMA, FIWARE / Smart Data Models, and others.</text>
+<line x1="1010" y1="270" x2="1010" y2="358" stroke="#d4dbe8" stroke-width="1.6"/>
+<text x="1040" y="286" font-size="13" font-weight="700" fill="#3c4658" text-anchor="start" letter-spacing="1">WHO TAKES PART</text>
+<rect x="1040" y="302" width="139.76" height="30" rx="15" fill="#eef1f7" stroke="#13295b" stroke-width="1.4"/>
+<text x="1109.88" y="322" font-size="14" font-weight="700" fill="#13295b" text-anchor="middle" >Municipalities</text>
+<rect x="1189.76" y="302" width="210.32000000000002" height="30" rx="15" fill="#eef1f7" stroke="#13295b" stroke-width="1.4"/>
+<text x="1294.92" y="322" font-size="14" font-weight="700" fill="#13295b" text-anchor="middle" >Standards organizations</text>
+<rect x="1410.08" y="302" width="84.88" height="30" rx="15" fill="#eef1f7" stroke="#13295b" stroke-width="1.4"/>
+<text x="1452.52" y="322" font-size="14" font-weight="700" fill="#13295b" text-anchor="middle" >Vendors</text>
+<rect x="1040" y="342" width="210.32000000000002" height="30" rx="15" fill="#eef1f7" stroke="#13295b" stroke-width="1.4"/>
+<text x="1145.16" y="362" font-size="14" font-weight="700" fill="#13295b" text-anchor="middle" >Open-source communities</text>
+<rect x="1260.32" y="342" width="116.24000000000001" height="30" rx="15" fill="#eef1f7" stroke="#13295b" stroke-width="1.4"/>
+<text x="1318.44" y="362" font-size="14" font-weight="700" fill="#13295b" text-anchor="middle" >Researchers</text>
+<rect x="30" y="392" width="1640" height="44" rx="22" fill="#13295b"/>
+<circle cx="70" cy="415" r="16" fill="none" stroke="#fff" stroke-width="3"/>
+<circle cx="70" cy="415" r="10" fill="none" stroke="#fff" stroke-width="3"/>
+<circle cx="70" cy="415" r="4" fill="none" stroke="#fff" stroke-width="3"/>
+<line x1="70" y1="415" x2="87" y2="398" stroke="#fff" stroke-width="3" marker-end="url(#ahWhite)"/>
+<text x="102" y="421" font-size="19" fill="#fff"><tspan font-weight="700">The goal: the city's needs drive the data, not the device.</tspan><tspan fill="#c9d3ea"> For each Service Domain, a Smart City Profile that any city can adopt.</tspan></text>
+<rect x="30" y="448" width="1640" height="250" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M200 448 H42 a12 12 0 0 0 -12 12 V686 a12 12 0 0 0 12 12 H200 z" fill="#13295b"/>
+<text x="115.0" y="557.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >HOW:</text>
+<text x="115.0" y="579.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >FOUR</text>
+<text x="115.0" y="601.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >STAGES</text>
+<rect x="230" y="474" width="236" height="202" rx="10" fill="#fff" stroke="#1f5fc4" stroke-opacity=".45" stroke-width="2"/>
+<path d="M230 538 V484 a10 10 0 0 1 10 -10 H456 a10 10 0 0 1 10 10 V538 z" fill="#1f5fc4"/>
+<text x="348.0" y="510" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >OPERATIONAL</text>
+<text x="348.0" y="528" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >MEANING</text>
+<circle cx="348.0" cy="474" r="16" fill="#1f5fc4" stroke="#fff" stroke-width="3"/>
+<text x="348.0" y="481" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >1</text>
+<circle cx="348.0" cy="572" r="24" fill="#1f5fc4"/>
+<circle cx="345.0" cy="569.0" r="9.120000000000001" fill="none" stroke="#fff" stroke-width="3.0"/>
+<line x1="352.8" y1="576.8" x2="360.0" y2="584.0" stroke="#fff" stroke-width="4.2" stroke-linecap="round"/>
+<text x="348.0" y="624" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >What the city wants to</text>
+<text x="348.0" y="642" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >achieve, in its own words:</text>
+<text x="348.0" y="660" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >user stories, entity sketch</text>
+<path d="M470 575.0 H494" fill="none" stroke="#4a5160" stroke-width="4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="500" y="474" width="236" height="202" rx="10" fill="#fff" stroke="#1e8a3c" stroke-opacity=".45" stroke-width="2"/>
+<path d="M500 538 V484 a10 10 0 0 1 10 -10 H726 a10 10 0 0 1 10 10 V538 z" fill="#1e8a3c"/>
+<text x="618.0" y="510" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >SEMANTIC</text>
+<text x="618.0" y="528" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >CAPABILITIES</text>
+<circle cx="618.0" cy="474" r="16" fill="#1e8a3c" stroke="#fff" stroke-width="3"/>
+<text x="618.0" y="481" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >2</text>
+<circle cx="618.0" cy="572" r="24" fill="#1e8a3c"/>
+<g transform="translate(618.0 572) scale(0.6) translate(-618.0 -572)">
+<rect x="611.0" y="550" width="14" height="12" rx="2" fill="none" stroke="#fff" stroke-width="3.5"/>
+<path d="M618.0 562 V572 M603.0 580 V572 H633.0 V580" fill="none" stroke="#fff" stroke-width="3.5"/>
+<rect x="596.0" y="580" width="14" height="12" rx="2" fill="none" stroke="#fff" stroke-width="3.5"/>
+<rect x="626.0" y="580" width="14" height="12" rx="2" fill="none" stroke="#fff" stroke-width="3.5"/>
+</g>
+<text x="618.0" y="624" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >Needs classified against</text>
+<text x="618.0" y="642" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >14 standards-independent</text>
+<text x="618.0" y="660" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >capabilities in 4 categories</text>
+<path d="M740 575.0 H764" fill="none" stroke="#4a5160" stroke-width="4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="770" y="474" width="236" height="202" rx="10" fill="#fff" stroke="#5b3fb5" stroke-opacity=".45" stroke-width="2"/>
+<path d="M770 538 V484 a10 10 0 0 1 10 -10 H996 a10 10 0 0 1 10 10 V538 z" fill="#5b3fb5"/>
+<text x="888.0" y="510" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >STANDARDS &amp;</text>
+<text x="888.0" y="528" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >ECOSYSTEM MAPPING</text>
+<circle cx="888.0" cy="474" r="16" fill="#5b3fb5" stroke="#fff" stroke-width="3"/>
+<text x="888.0" y="481" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >3</text>
+<circle cx="888.0" cy="572" r="24" fill="#5b3fb5"/>
+<path transform="translate(877.3333333333334 561.3333333333334) scale(0.6666666666666666)" fill="#fff" d="M0 0H11a5 5 0 1 1 10 0H32V11a5 5 0 1 1 0 10V32H21a5 5 0 1 0-10 0H0V21a5 5 0 1 0 0-10Z"/>
+<text x="888.0" y="624" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >How standards bodies and</text>
+<text x="888.0" y="642" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >open-source ecosystems</text>
+<text x="888.0" y="660" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >supply each capability</text>
+<path d="M1010 575.0 H1034" fill="none" stroke="#4a5160" stroke-width="4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="1040" y="474" width="236" height="202" rx="10" fill="#fff" stroke="#12868f" stroke-opacity=".45" stroke-width="2"/>
+<path d="M1040 538 V484 a10 10 0 0 1 10 -10 H1266 a10 10 0 0 1 10 10 V538 z" fill="#12868f"/>
+<text x="1158.0" y="510" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >SMART DATA MODELS</text>
+<text x="1158.0" y="528" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" >REALIZATION</text>
+<circle cx="1158.0" cy="474" r="16" fill="#12868f" stroke="#fff" stroke-width="3"/>
+<text x="1158.0" y="481" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >4</text>
+<circle cx="1158.0" cy="572" r="24" fill="#12868f"/>
+<g transform="translate(1158.0 572) scale(0.7058823529411765) translate(-1158.0 -572)">
+<polygon points="1158.0,549.0 1168.0,554 1158.0,559.0 1148.0,554" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1148.0,554 1158.0,559.0 1158.0,569.0 1148.0,564" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1168.0,554 1158.0,559.0 1158.0,569.0 1168.0,564" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1148.0,566.0 1158.0,571 1148.0,576.0 1138.0,571" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1138.0,571 1148.0,576.0 1148.0,586.0 1138.0,581" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1158.0,571 1148.0,576.0 1148.0,586.0 1158.0,581" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1168.0,566.0 1178.0,571 1168.0,576.0 1158.0,571" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1158.0,571 1168.0,576.0 1168.0,586.0 1158.0,581" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1178.0,571 1168.0,576.0 1168.0,586.0 1178.0,581" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/>
+</g>
+<text x="1158.0" y="624" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >Results consolidated and</text>
+<text x="1158.0" y="642" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >checked for Digital Twin</text>
+<text x="1158.0" y="660" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >consumption</text>
+<path d="M1280 575.0 H1304" fill="none" stroke="#4a5160" stroke-width="4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="1310" y="474" width="340" height="202" rx="10" fill="#fff" stroke="#12868f" stroke-width="2.6"/>
+<text x="1480.0" y="504" font-size="20" font-weight="700" fill="#12868f" text-anchor="middle" >Smart City Profile</text>
+<text x="1480.0" y="526" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >One per Service Domain, for any city</text>
+<circle cx="1338" cy="549" r="3.5" fill="#12868f"/>
+<text x="1350" y="554" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Smart Data Models</text>
+<circle cx="1338" cy="569" r="3.5" fill="#12868f"/>
+<text x="1350" y="574" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >The OMA objects that feed them</text>
+<circle cx="1338" cy="589" r="3.5" fill="#12868f"/>
+<text x="1350" y="594" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Required metadata</text>
+<circle cx="1338" cy="609" r="3.5" fill="#12868f"/>
+<text x="1350" y="614" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Residual gaps</text>
+<rect x="1328" y="634" width="304" height="28" rx="14" fill="#fff" stroke="#13295b" stroke-width="2"/>
+<text x="1480.0" y="653" font-size="13" fill="#13295b" text-anchor="middle"><tspan font-weight="400">then </tspan><tspan font-weight="700">Proof of Concept · Phase 6 · 2027</tspan></text>
+<rect x="30" y="710" width="1640" height="222" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M200 710 H42 a12 12 0 0 0 -12 12 V920 a12 12 0 0 0 12 12 H200 z" fill="#13295b"/>
+<text x="115.0" y="805.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >WHERE WE</text>
+<text x="115.0" y="827.0" font-size="18" font-weight="700" fill="#fff" text-anchor="middle" >STAND</text>
+<text x="115.0" y="849.0" font-size="14" font-weight="400" fill="#c9d3ea" text-anchor="middle" >October 2026</text>
+<rect x="230" y="728" width="236" height="50" rx="10" fill="#fdf2e1" stroke="#b26a00" stroke-width="1.6"/>
+<circle cx="250" cy="753" r="11" fill="#1f5fc4"/>
+<text x="250" y="758" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >1</text>
+<text x="268" y="748" font-size="13" font-weight="700" fill="#b26a00" text-anchor="start" >IN PROGRESS</text>
+<text x="268" y="767" font-size="12" font-weight="400" fill="#3c4658" text-anchor="start" >Workshops held; stories next</text>
+<rect x="500" y="728" width="236" height="50" rx="10" fill="#e7f5ec" stroke="#1e8a3c" stroke-width="1.6"/>
+<circle cx="520" cy="753" r="11" fill="#1e8a3c"/>
+<text x="520" y="758" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >2</text>
+<text x="538" y="748" font-size="13" font-weight="700" fill="#1e8a3c" text-anchor="start" >DONE</text>
+<text x="538" y="767" font-size="12" font-weight="400" fill="#3c4658" text-anchor="start" >14 capabilities in 4 categories</text>
+<rect x="770" y="728" width="236" height="50" rx="10" fill="#e7f5ec" stroke="#1e8a3c" stroke-width="1.6"/>
+<circle cx="790" cy="753" r="11" fill="#5b3fb5"/>
+<text x="790" y="758" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >3</text>
+<text x="808" y="748" font-size="13" font-weight="700" fill="#1e8a3c" text-anchor="start" >OMA DONE · SDM PARTIAL</text>
+<text x="808" y="767" font-size="12" font-weight="400" fill="#3c4658" text-anchor="start" >Assessment reports published</text>
+<rect x="1040" y="728" width="236" height="50" rx="10" fill="#e4f4f5" stroke="#12868f" stroke-width="1.6"/>
+<circle cx="1060" cy="753" r="11" fill="#12868f"/>
+<text x="1060" y="758" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >4</text>
+<text x="1078" y="748" font-size="13" font-weight="700" fill="#12868f" text-anchor="start" >STARTED</text>
+<text x="1078" y="767" font-size="12" font-weight="400" fill="#3c4658" text-anchor="start" >Draft method and early mappings</text>
+<line x1="230" y1="796" x2="1276" y2="796" stroke="#d4dbe8" stroke-width="1.4"/>
+<text x="234" y="830" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Service Domains</text>
+<rect x="380" y="809" width="156.0" height="30" rx="15" fill="#e9f6f7" stroke="#12868f" stroke-width="1.4"/>
+<text x="458.0" y="829" font-size="15" font-weight="700" fill="#12868f" text-anchor="middle" >Public Lighting</text>
+<rect x="548.0" y="809" width="273.6" height="30" rx="15" fill="#e9f6f7" stroke="#12868f" stroke-width="1.4"/>
+<text x="684.8" y="829" font-size="15" font-weight="700" fill="#12868f" text-anchor="middle" >Water Management &amp; Irrigation</text>
+<text x="234" y="876" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Strongest so far</text>
+<text x="380" y="876" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Stages 2 and 3: the capability taxonomy, the municipality questions,</text>
+<text x="380" y="897" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >and the OMA and Smart Data Models assessments.</text>
+<rect x="1310" y="728" width="340" height="186" rx="10" fill="#13295b"/>
+<circle cx="1350" cy="766" r="22" fill="#fff"/>
+<line x1="1342" y1="754" x2="1342" y2="779" stroke="#13295b" stroke-width="3" stroke-linecap="round"/>
+<path d="M1343 754 h17 l-4 6 l4 6 h-17 z" fill="#13295b"/>
+<text x="1384" y="761" font-size="13" font-weight="700" fill="#c9d3ea" text-anchor="start" letter-spacing="1">NEXT MILESTONE</text>
+<text x="1384" y="780" font-size="14" font-weight="400" fill="#c9d3ea" text-anchor="start" >November 2026</text>
+<text x="1332" y="822" font-size="19" font-weight="700" fill="#fff" text-anchor="start" >Smart City Expo World Congress</text>
+<text x="1332" y="847" font-size="19" font-weight="700" fill="#fff" text-anchor="start" >Barcelona</text>
+<line x1="1332" y1="864" x2="1628" y2="864" stroke="#3a4c7a" stroke-width="1.4"/>
+<text x="1332" y="890" font-size="15" font-weight="400" fill="#c9d3ea" text-anchor="start" >After that: the Smart City Profiles</text>
+</svg>

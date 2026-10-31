@@ -45,7 +45,7 @@ See the <a href="/governance/charter.md" target="blank">Charter</a> for detailed
 The initial focus areas of the Smart Cities SIG are:
 
 - [Public Lighting Profile](/profiles/lighting/public-lighting-walkthrough.md)
-- [Smart Water Metering Profile](/profiles/water/public-watering-walkthrough.md)
+- [Water Management & Irrigation Profile](/profiles/water/public-watering-walkthrough.md)
 
 Additional focus areas may be introduced based on ecosystem interest and contributor participation.
 
@@ -56,7 +56,7 @@ Additional focus areas may be introduced based on ecosystem interest and contrib
 The Smart Cities SIG follows a structured process:
 
 <figure>
-    <img src="../public/images/smartcities-sig-approach-v2.svg" alt="Smart Cities SIG Approach: the four methodology stages (Operational Meaning, Semantic Capabilities, Standards and Ecosystem Mapping split into standards organizations and open source, and Smart Data Models Realization including Smart City Profiles), followed by Proof of Concept Validation, with feedback loops">
+    <img src="../public/images/smartcities-sig-approach-v2.svg" alt="Smart Cities SIG Approach: the four methodology stages (Operational Meaning, Semantic Capabilities, Standards and Ecosystem Mapping split into standards organizations and open source, and Smart Data Models Realization, which produces a Smart City Profile per Service Domain checked for Digital Twin consumption), followed by Proof of Concept Validation in 2027, with feedback loops">
     <figcaption><i>Figure — Smart Cities SIG Approach: From Municipal Requirements to Proof of Concept Validation</i></figcaption>
 </figure>
 

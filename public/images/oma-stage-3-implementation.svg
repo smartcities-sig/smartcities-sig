@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 956" width="1700" height="956" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">How we implement Stage 3: the OMA LwM2M example</title>
+<desc id="d">Stage 3 for OMA LwM2M and Public Lighting. It takes a spec per property from Stage 2, plus the entity sketch and the city's questions, asks every ecosystem the same questions, and checks OMA in two ways: every data point in the registry (draft) and every capability. The output is an assessment report for Stage 4 with recommendations to the OMA SmartCities Working Group. Public Lighting result: 6 capabilities covered today, 6 partly covered, 1 needs a new OMA capability, 1 belongs to other systems. Where we are: done, open questions on the draft classification, and next steps: SIG review, propose three shared labels to OMA, and find Smart Data Models that fit the entity sketch.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4a5160"/></marker><filter id="sh" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1d2433" flood-opacity=".10"/></filter><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#e3e7ee"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c4cad6" stroke-width="4"/></pattern></defs>
+<rect width="1700" height="956" fill="#ffffff"/>
+<text x="850" y="54" font-size="36" font-weight="700" fill="#13295b" text-anchor="middle" >How we implement Stage 3: the OMA LwM2M example</text>
+<text x="850" y="84" font-size="17" font-weight="400" fill="#3c4658" text-anchor="middle" >Standards &amp; Ecosystem Mapping · Public Lighting · Can today&#x27;s devices supply what the city needs to know?</text>
+<rect x="30" y="106" width="1640" height="150" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M180 106 H42 a12 12 0 0 0 -12 12 V244 a12 12 0 0 0 12 12 H180 z" fill="#13295b"/>
+<text x="105" y="178.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >HOW IT</text>
+<text x="105" y="200.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WORKS</text>
+<rect x="204" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-opacity="1"/>
+<rect x="218" y="132" width="130" height="24" rx="12" fill="#13295b"/>
+<text x="283.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">FROM STAGE 2</text>
+<text x="218" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >A spec per property</text>
+<text x="218" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Plus the entity sketch and</text>
+<text x="218" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >the city&#x27;s lighting questions</text>
+<path d="M475 181.0 L494 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="499" y="120" width="268" height="122" rx="9" fill="#f1edfb" stroke="#5b3fb5" stroke-opacity="0.55"/>
+<rect x="513" y="132" width="166" height="24" rx="12" fill="#5b3fb5"/>
+<text x="596.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">SHARED QUESTIONS</text>
+<text x="513" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Same for every ecosystem</text>
+<text x="513" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >OMA devices, Smart Data</text>
+<text x="513" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Models and Digital Twins</text>
+<path d="M770 181.0 L789 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="794" y="120" width="268" height="122" rx="9" fill="#f1edfb" stroke="#5b3fb5" stroke-opacity="0.55"/>
+<rect x="808" y="132" width="85" height="24" rx="12" fill="#5b3fb5"/>
+<text x="850.5" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">CHECK A</text>
+<rect x="808" y="167" width="20" height="20" rx="4" fill="#13295b"/>
+<text x="818" y="182" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >A</text>
+<text x="836" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Every data point</text>
+<text x="808" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Sort each OMA data point into</text>
+<text x="808" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >one of the 14 capabilities</text>
+<path d="M1065 181.0 L1084 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1089" y="120" width="268" height="122" rx="9" fill="#f1edfb" stroke="#5b3fb5" stroke-opacity="0.55"/>
+<rect x="1103" y="132" width="85" height="24" rx="12" fill="#5b3fb5"/>
+<text x="1145.5" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">CHECK B</text>
+<rect x="1103" y="167" width="20" height="20" rx="4" fill="#13295b"/>
+<text x="1113" y="182" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >B</text>
+<text x="1131" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Every capability</text>
+<text x="1103" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Can OMA lighting objects supply it?</text>
+<text x="1103" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >No? Re-check in Stage 2 first.</text>
+<path d="M1360 181.0 L1379 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1384" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-opacity="1"/>
+<rect x="1398" y="132" width="112" height="24" rx="12" fill="#13295b"/>
+<text x="1454.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">TO STAGE 4</text>
+<text x="1398" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Assessment report</text>
+<text x="1398" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >What OMA supplies, the gaps, and</text>
+<text x="1398" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >recommendations to the OMA WG</text>
+<rect x="30" y="272" width="800" height="400" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<rect x="30" y="272" width="800" height="6" rx="3" fill="#5b3fb5"/>
+<rect x="54" y="292" width="32" height="32" rx="7" fill="#13295b"/>
+<text x="70" y="315" font-size="19" font-weight="700" fill="#fff" text-anchor="middle" >A</text>
+<text x="98" y="315" font-size="21" font-weight="700" fill="#13295b" text-anchor="start" >Every data point, one by one</text>
+<text x="54" y="346" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Each data point a device can report is sorted into one of the 14 capabilities.</text>
+<rect x="600" y="294" width="206" height="30" rx="15" fill="#fff6e0" stroke="#c47f00" stroke-width="1.6"/>
+<text x="703" y="314" font-size="13" font-weight="700" fill="#8a5a00" text-anchor="middle" >DRAFT · NOT YET REVIEWED</text>
+<rect x="54" y="364" width="224" height="76" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-opacity="1"/>
+<text x="166.0" y="402" font-size="32" font-weight="700" fill="#13295b" text-anchor="middle" >391</text>
+<text x="166.0" y="426" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >device types in the OMA registry</text>
+<path d="M283 402 L311 402" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="318" y="364" width="224" height="76" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-opacity="1"/>
+<text x="430.0" y="402" font-size="32" font-weight="700" fill="#13295b" text-anchor="middle" >197</text>
+<text x="430.0" y="426" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >relevant to city services</text>
+<path d="M547 402 L575 402" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="582" y="364" width="224" height="76" rx="9" fill="#f1edfb" stroke="#5b3fb5" stroke-opacity="0.6"/>
+<text x="694.0" y="402" font-size="32" font-weight="700" fill="#5b3fb5" text-anchor="middle" >2,752</text>
+<text x="694.0" y="426" font-size="14" font-weight="400" fill="#3c4658" text-anchor="middle" >data points classified</text>
+<text x="54" y="472" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >Where the data points fall</text>
+<clipPath id="barclip"><rect x="54" y="482" width="752" height="24" rx="6"/></clipPath>
+<g clip-path="url(#barclip)">
+<rect x="54.0" y="482" width="149.5" height="24" fill="#2f2178"/>
+<rect x="203.5" y="482" width="211.5" height="24" fill="#5b3fb5"/>
+<rect x="415.0" y="482" width="71.6" height="24" fill="#8f78db"/>
+<rect x="486.6" y="482" width="197.8" height="24" fill="#c3b6ef"/>
+<rect x="684.4" y="482" width="121.6" height="24" fill="url(#hatch)"/>
+</g>
+<rect x="54" y="519" width="16" height="16" rx="4" fill="#2f2178"/>
+<text x="80" y="532" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >Domain</text>
+<text x="204" y="532" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >what the city cares about</text>
+<text x="806" y="532" font-size="15" font-weight="700" fill="#13295b" text-anchor="end" >547</text>
+<rect x="54" y="541" width="16" height="16" rx="4" fill="#5b3fb5"/>
+<text x="80" y="554" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >Observation</text>
+<text x="204" y="554" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >where, how and when it was measured</text>
+<text x="806" y="554" font-size="15" font-weight="700" fill="#13295b" text-anchor="end" >774</text>
+<rect x="54" y="563" width="16" height="16" rx="4" fill="#8f78db"/>
+<text x="80" y="576" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >Interpretation</text>
+<text x="204" y="576" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >who reported it and how far to trust it</text>
+<text x="806" y="576" font-size="15" font-weight="700" fill="#13295b" text-anchor="end" >262</text>
+<rect x="54" y="585" width="16" height="16" rx="4" fill="#c3b6ef"/>
+<text x="80" y="598" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >Operational</text>
+<text x="204" y="598" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >keeping the assets running</text>
+<text x="806" y="598" font-size="15" font-weight="700" fill="#13295b" text-anchor="end" >724</text>
+<rect x="54" y="607" width="16" height="16" rx="4" fill="url(#hatch)"/>
+<text x="80" y="620" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >Not yet placed</text>
+<text x="204" y="620" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >commands, or candidates for a new capability</text>
+<text x="806" y="620" font-size="15" font-weight="700" fill="#13295b" text-anchor="end" >445</text>
+<text x="54" y="656" font-size="14" font-weight="400" fill="#6b7487" text-anchor="start" >About half (49%) reuse OMA&#x27;s shared building blocks, such as Timestamp.</text>
+<rect x="860" y="272" width="810" height="400" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<rect x="860" y="272" width="810" height="6" rx="3" fill="#5b3fb5"/>
+<rect x="884" y="292" width="32" height="32" rx="7" fill="#13295b"/>
+<text x="900" y="315" font-size="19" font-weight="700" fill="#fff" text-anchor="middle" >B</text>
+<text x="928" y="315" font-size="21" font-weight="700" fill="#13295b" text-anchor="start" >Every capability, one by one</text>
+<text x="884" y="346" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >For each of the 14 capabilities: can OMA lighting devices supply it today?</text>
+<rect x="1496" y="294" width="150" height="30" rx="15" fill="#13295b"/>
+<text x="1571" y="314" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >PUBLIC LIGHTING</text>
+<rect x="884" y="362" width="179" height="5" rx="2.5" fill="#2f2178"/>
+<text x="973.5" y="386" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">DOMAIN</text>
+<rect x="884" y="398" width="179" height="44" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-width="1.8"/>
+<rect x="884" y="398" width="7" height="44" rx="3" fill="#c47f00"/>
+<text x="902" y="425" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Service Outcome</text>
+<rect x="884" y="449" width="179" height="44" rx="8" fill="#e7f4eb" stroke="#1e8a3c" stroke-width="1.8"/>
+<rect x="884" y="449" width="7" height="44" rx="3" fill="#1e8a3c"/>
+<text x="902" y="468" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Infrastructure</text>
+<text x="902" y="484" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Output</text>
+<rect x="884" y="500" width="179" height="44" rx="8" fill="#e7f4eb" stroke="#1e8a3c" stroke-width="1.8"/>
+<rect x="884" y="500" width="7" height="44" rx="3" fill="#1e8a3c"/>
+<text x="902" y="519" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Resource</text>
+<text x="902" y="535" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Consumption</text>
+<rect x="1078" y="362" width="179" height="5" rx="2.5" fill="#5b3fb5"/>
+<text x="1167.5" y="386" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">OBSERVATION</text>
+<rect x="1078" y="398" width="179" height="44" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-width="1.8"/>
+<rect x="1078" y="398" width="7" height="44" rx="3" fill="#c47f00"/>
+<text x="1096" y="425" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Observation Point</text>
+<rect x="1078" y="449" width="179" height="44" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-width="1.8"/>
+<rect x="1078" y="449" width="7" height="44" rx="3" fill="#c47f00"/>
+<text x="1096" y="476" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Observation Scope</text>
+<rect x="1078" y="500" width="179" height="44" rx="8" fill="#fde8de" stroke="#c2410c" stroke-width="1.8"/>
+<rect x="1078" y="500" width="7" height="44" rx="3" fill="#c2410c"/>
+<text x="1096" y="527" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Observation Method</text>
+<rect x="1078" y="551" width="179" height="44" rx="8" fill="#e7f4eb" stroke="#1e8a3c" stroke-width="1.8"/>
+<rect x="1078" y="551" width="7" height="44" rx="3" fill="#1e8a3c"/>
+<text x="1096" y="578" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Temporal Semantics</text>
+<rect x="1272" y="362" width="179" height="5" rx="2.5" fill="#8f78db"/>
+<text x="1361.5" y="386" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">INTERPRETATION</text>
+<rect x="1272" y="398" width="179" height="44" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-width="1.8"/>
+<rect x="1272" y="398" width="7" height="44" rx="3" fill="#c47f00"/>
+<text x="1290" y="425" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Provenance</text>
+<rect x="1272" y="449" width="179" height="44" rx="8" fill="#e7f4eb" stroke="#1e8a3c" stroke-width="1.8"/>
+<rect x="1272" y="449" width="7" height="44" rx="3" fill="#1e8a3c"/>
+<text x="1290" y="476" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Measurement Quality</text>
+<rect x="1272" y="500" width="179" height="44" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-width="1.8"/>
+<rect x="1272" y="500" width="7" height="44" rx="3" fill="#c47f00"/>
+<text x="1290" y="527" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Operational Context</text>
+<rect x="1272" y="551" width="179" height="44" rx="8" fill="#eef1f5" stroke="#5f6b7d" stroke-width="1.8" stroke-dasharray="5 4"/>
+<rect x="1272" y="551" width="7" height="44" rx="3" fill="#5f6b7d"/>
+<text x="1290" y="578" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Physical Context</text>
+<rect x="1466" y="362" width="179" height="5" rx="2.5" fill="#c3b6ef"/>
+<text x="1555.5" y="386" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">OPERATIONAL</text>
+<rect x="1466" y="398" width="179" height="44" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-width="1.8"/>
+<rect x="1466" y="398" width="7" height="44" rx="3" fill="#c47f00"/>
+<text x="1484" y="417" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Asset Management</text>
+<text x="1484" y="433" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Context</text>
+<rect x="1466" y="449" width="179" height="44" rx="8" fill="#e7f4eb" stroke="#1e8a3c" stroke-width="1.8"/>
+<rect x="1466" y="449" width="7" height="44" rx="3" fill="#1e8a3c"/>
+<text x="1484" y="476" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Network Operability</text>
+<rect x="1466" y="500" width="179" height="44" rx="8" fill="#e7f4eb" stroke="#1e8a3c" stroke-width="1.8"/>
+<rect x="1466" y="500" width="7" height="44" rx="3" fill="#1e8a3c"/>
+<text x="1484" y="527" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Fallback Behaviour</text>
+<rect x="884" y="609" width="32" height="21" rx="6" fill="#e7f4eb" stroke="#1e8a3c" stroke-width="1.8"/>
+<text x="900" y="624" font-size="14" font-weight="700" fill="#1e8a3c" text-anchor="middle" >6</text>
+<text x="928" y="624" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Covered today</text>
+<rect x="1272" y="609" width="32" height="21" rx="6" fill="#fdf3dc" stroke="#c47f00" stroke-width="1.8"/>
+<text x="1288" y="624" font-size="14" font-weight="700" fill="#c47f00" text-anchor="middle" >6</text>
+<text x="1316" y="624" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Partly covered: needs clarifying</text>
+<rect x="884" y="637" width="32" height="21" rx="6" fill="#fde8de" stroke="#c2410c" stroke-width="1.8"/>
+<text x="900" y="652" font-size="14" font-weight="700" fill="#c2410c" text-anchor="middle" >1</text>
+<text x="928" y="652" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Needs a new OMA capability</text>
+<rect x="1272" y="637" width="32" height="21" rx="6" fill="#eef1f5" stroke="#5f6b7d" stroke-width="1.8" stroke-dasharray="4 3"/>
+<text x="1288" y="652" font-size="14" font-weight="700" fill="#5f6b7d" text-anchor="middle" >1</text>
+<text x="1316" y="652" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Belongs elsewhere, must stay linkable</text>
+<rect x="30" y="688" width="1640" height="150" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M180 688 H42 a12 12 0 0 0 -12 12 V826 a12 12 0 0 0 12 12 H180 z" fill="#13295b"/>
+<text x="105" y="760.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WHERE</text>
+<text x="105" y="782.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WE ARE</text>
+<rect x="204" y="702" width="459" height="122" rx="9" fill="#fff" stroke="#1e8a3c" stroke-opacity=".5" stroke-width="2"/>
+<rect x="204" y="702" width="459" height="34" rx="9" fill="#1e8a3c"/>
+<rect x="204" y="726" width="459" height="10" fill="#1e8a3c"/>
+<text x="222" y="725" font-size="14" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.8">DONE</text>
+<circle cx="228" cy="757" r="5" fill="#1e8a3c"/>
+<text x="242" y="762" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >All 14 capabilities checked for Public Lighting</text>
+<circle cx="228" cy="781" r="5" fill="#1e8a3c"/>
+<text x="242" y="786" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Draft sort of all 2,752 OMA data points</text>
+<circle cx="228" cy="805" r="5" fill="#1e8a3c"/>
+<text x="242" y="810" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Recommendations drafted for the OMA WG</text>
+<rect x="699" y="702" width="459" height="122" rx="9" fill="#fff" stroke="#c47f00" stroke-opacity=".5" stroke-width="2"/>
+<rect x="699" y="702" width="459" height="34" rx="9" fill="#c47f00"/>
+<rect x="699" y="726" width="459" height="10" fill="#c47f00"/>
+<text x="717" y="725" font-size="14" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.8">OPEN QUESTIONS</text>
+<circle cx="723" cy="757" r="5" fill="#c47f00"/>
+<text x="737" y="762" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >245 data points may need a new capability</text>
+<circle cx="723" cy="781" r="5" fill="#c47f00"/>
+<text x="737" y="786" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >34 shared blocks change meaning by device</text>
+<circle cx="723" cy="805" r="5" fill="#c47f00"/>
+<text x="737" y="810" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Objects 3410–3429: not looked at yet</text>
+<rect x="1194" y="702" width="459" height="122" rx="9" fill="#fff" stroke="#1f5fc4" stroke-opacity=".5" stroke-width="2"/>
+<rect x="1194" y="702" width="459" height="34" rx="9" fill="#1f5fc4"/>
+<rect x="1194" y="726" width="459" height="10" fill="#1f5fc4"/>
+<text x="1212" y="725" font-size="14" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.8">NEXT</text>
+<circle cx="1218" cy="757" r="5" fill="#1f5fc4"/>
+<text x="1232" y="762" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >SIG review of the draft sort of data points</text>
+<circle cx="1218" cy="781" r="5" fill="#1f5fc4"/>
+<text x="1232" y="786" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Propose 3 shared labels to the OMA WG</text>
+<circle cx="1218" cy="805" r="5" fill="#1f5fc4"/>
+<text x="1232" y="810" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Find Smart Data Models that fit the sketch</text>
+<rect x="30" y="852" width="1640" height="64" rx="12" fill="#13295b"/>
+<text x="56" y="891" font-size="15" font-weight="700" fill="#c3b6ef" text-anchor="start" letter-spacing="1">KEY FINDING</text>
+<text x="186" y="880" font-size="17" font-weight="400" fill="#fff" text-anchor="start" >OMA lighting devices already report most of what the city needs. What is missing is a few shared labels:</text>
+<text x="186" y="902" font-size="17" font-weight="400" fill="#fff" text-anchor="start" >which asset or spot was measured, how the value was obtained (measured or estimated), and over what time period.</text>
+<text x="850" y="942" font-size="12" font-weight="400" fill="#6b7487" text-anchor="middle" >Smart Cities SIG working analysis, October 2026. A covers the whole OMA LwM2M Registry (draft classification); B covers Public Lighting.</text>
+</svg>
