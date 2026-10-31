@@ -28,7 +28,7 @@ This stage intentionally avoids:
 The detailed definition of this stage is still under development by the Smart Cities SIG. This document is a draft overview intended to support that discussion.
 
 **Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md) and the ecosystem assessment reports from [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md).
-**Output:** converged Smart Data Model realization, including new models drafted where none fitted, a catalogue of the OMA objects that can feed it, and the residual gaps recorded.
+**Output:** for each Service Domain, a **Smart City Profile**: the converged Smart Data Model realization, including new models drafted where none fitted, a catalogue of the OMA objects that can feed it, and the residual gaps recorded.
 
 For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
@@ -181,6 +181,10 @@ The reconciled picture is expressed as Smart Data Model structures, including th
 ## Preserving Traceability
 
 Each realization decision remains traceable back through the semantic capabilities to the municipality operational meaning from which it originated.
+
+## Checking Digital Twin Consumption
+
+The Smart City Profile is checked against the [Digital Twin questions](/methodology/assessment-frameworks/semantic-capability-assessment.md#_4-digital-twin-questions) of the Semantic Capability Assessment Framework: can a Digital Twin consuming the profile answer the municipality operational questions? The Digital Twin is the consumer of the methodology's output, not an ecosystem assessed in Stage 3. Anything it cannot answer is recorded as a residual gap or goes back to Stage 3.
 
 ---
 

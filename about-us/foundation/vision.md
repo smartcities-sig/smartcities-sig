@@ -28,7 +28,7 @@ The initiative is intended to remain:
 
 Initial activities focus on:
 - Smart Lighting
-- Water / Smart Water Metering
+- Water Management & Irrigation (irrigation in green areas)
 
 while establishing reusable collaboration and interoperability approaches that may support additional smart city domains in future phases.
 

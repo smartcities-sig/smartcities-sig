@@ -45,7 +45,7 @@ See the <a href="/governance/charter.md" target="blank">Charter</a> for detailed
 The initial focus areas of the Smart Cities SIG are:
 
 - [Public Lighting Profile](/profiles/lighting/public-lighting-walkthrough.md)
-- [Smart Water Metering Profile](/profiles/water/public-watering-walkthrough.md)
+- [Water Management & Irrigation Profile](/profiles/water/public-watering-walkthrough.md)
 
 Additional focus areas may be introduced based on ecosystem interest and contributor participation.
 
