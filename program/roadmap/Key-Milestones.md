@@ -212,6 +212,21 @@ linkedin: https://www.linkedin.com/in/juan-jes%C3%BAs-m-271607173/
 ::
 ::eh-avatar
 ---
+srcAvatar: https://avatars.githubusercontent.com/u/3258579?v=4
+altAvatar: Joaquin Prado
+style: "width: 15rem"
+positionDetails: down
+name: |
+    Joaquin Prado
+role: |
+    Technical Director
+company: |
+    OMA
+linkedin: https://www.linkedin.com/in/jpradocueva/
+---
+::
+::eh-avatar
+---
 srcAvatar: /content-images/content/images/avatars/alberto-abella.jpg
 altAvatar: Alberto Abella
 style: "width: 15rem"
