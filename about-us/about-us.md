@@ -32,6 +32,7 @@ By collaborating across these communities, the SIG seeks to accelerate the adopt
 ## What We Do
 
 The Smart Cities SIG explores challenges and requirements in multiple smart city focus areas and develops reusable assets that can support future standards, implementations, and ecosystem collaboration following a well-defined methodology. Among these assets, it will produce:
+
 - a set of smart data models to be published under the Smart Data Models initiative ([website](https://smartdatamodels.org/), [github](https://github.com/smart-data-models)) which will provide the basis for building the digital twin data representation of the City
 - a set of OMA objects specifications cities can take as reference to determine what devices they can deploy to feed systems managing the digital twin data representation of the City
 - an analysis on how to translate from OMA objects into smart data models to ensure portability end-to-end between devices and the systems managing the digital twin data representation of the City
@@ -91,7 +92,7 @@ Please refer to [Getting Started](/community/getting-started.md) for a step-by-s
 
 ## Join the Community
 
-The success of the Smart Cities SIG depends on participation from municipalities, industry, academia, and standards organizations.
+The success of the **Smart Cities SIG** depends on participation from municipalities, industry, academia, and standards organizations.
 
 If you are interested in contributing requirements, reviewing outputs, participating in Proof of Concept activities, or sharing implementation experiences, we encourage you to join the Smart Cities SIG community.
 
