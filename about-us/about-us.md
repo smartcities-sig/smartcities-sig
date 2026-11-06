@@ -6,7 +6,7 @@ layout: doc
 
 # {{ $doc.title }}
 
-The Smart Cities Special Interest Group (SIG) was initiated by Madrid Digital Capital @ Madrid City Council, and is facilitated by the [Open Mobile Alliance (OMA)](https://www.openmobilealliance.org/media/articles/2026-05-25-oma-smartcities-sig-kickoff-news/) with active participation of members of the [FIWARE Community](https://fiware.org) involved in the Smart Data Models initiative ([website](https://smartdatamodels.org/), [github](https://github.com/smart-data-models)) and members of the [AIOTI Smart Cities 5.0 WG](https://aioti.eu/cities-5-0/).
+The *Smart Cities Special Interest Group (SIG)* was initiated by Madrid Digital Capital @ Madrid City Council, and is facilitated by the [Open Mobile Alliance (OMA)](https://www.openmobilealliance.org/media/articles/2026-05-25-oma-smartcities-sig-kickoff-news/) with active participation of members of the [FIWARE Community](https://fiware.org) involved in the Smart Data Models initiative ([website](https://smartdatamodels.org/), [github](https://github.com/smart-data-models)) and members of the [AIOTI Smart Cities 5.0 WG](https://aioti.eu/cities-5-0/).
 
 The initiative was created to help municipalities, industry, academia, and standards organizations collaborate on practical smart city interoperability challenges using reusable and standards-based approaches.
 
@@ -32,6 +32,7 @@ By collaborating across these communities, the SIG seeks to accelerate the adopt
 ## What We Do
 
 The Smart Cities SIG explores challenges and requirements in multiple smart city focus areas and develops reusable assets that can support future standards, implementations, and ecosystem collaboration following a well-defined methodology. Among these assets, it will produce:
+
 - a set of smart data models to be published under the Smart Data Models initiative ([website](https://smartdatamodels.org/), [github](https://github.com/smart-data-models)) which will provide the basis for building the digital twin data representation of the City
 - a set of OMA objects specifications cities can take as reference to determine what devices they can deploy to feed systems managing the digital twin data representation of the City
 - an analysis on how to translate from OMA objects into smart data models to ensure portability end-to-end between devices and the systems managing the digital twin data representation of the City
