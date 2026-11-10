@@ -14,7 +14,7 @@ This page is the authoritative definition of every semantic capability. Other do
 
 For the methodology as a whole, including why operational meaning is captured before any standard is considered, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
-**Input:** the user stories, entity sketch, operational objectives, pain points, semantic distinctions, and contextual dependencies from Stage 1.
+**Input:** from Stage 1, the user stories, each with the questions the Digital Twin must answer; the entity sketch, including the relationships between its entities; operational objectives, operational pain points, semantic distinctions, contextual dependencies, and information held by other units; the register of requirements; and interoperability-relevant observations. The register of requirements is received, but requirements are not classified against the capabilities; how Stage 2 should treat them is still under discussion by the SIG.
 **Output:** for each Service Domain, the properties of the Stage 1 entity sketch, each classified against the taxonomy of 14 semantic capabilities in 4 semantic categories below. [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md) uses them to find candidate OMA objects and to assess standards ecosystems; [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md) uses them to check that those objects can feed the Smart Data Models.
 
 ---
