@@ -6,20 +6,9 @@ layout: web
 
 # {{ $doc.title }}
 
-This document describes the target repository structure for the Smart Cities SIG initiative.
+This document describes the current structure of the Smart Cities SIG repository and the few additions that are planned.
 
-The structure is intended to support:
-- governance and program coordination,
-- Service Profile development,
-- ecosystem collaboration,
-- reusable documentation,
-- and future website generation using a GitHub-native content model.
-
-The repository is designed to centralize governance, program operations, technical work, meeting records, presentations, and supporting documentation in a single location.
-
-The structure below represents the intended long-term organization of the repository. Folders and subfolders will be created incrementally and only as needed based on the evolution of the project, profiles, contributors, and collaboration requirements.
-
-This approach keeps the repository lightweight during the early stages of the initiative while providing a scalable structure for future growth.
+Folders are created only when there is content for them. Planned additions are listed separately below the tree, and each one is tied to a stage of the [methodology](/methodology/core-methodology/methodology-overview.md) or to the [release plan](/program/roadmap/release-planning.md).
 
 Within `methodology/` and `profiles/`, each kind of content has a single home:
 - the methodology narrative lives in `core-methodology/methodology-overview.md`,
@@ -30,153 +19,81 @@ Within `methodology/` and `profiles/`, each kind of content has a single home:
 
 New files should link to these homes rather than restate their content.
 
+## Current structure
+
 ```text
 smartcities-sig/
 │
 ├── LICENSE
-├── site.config.yml
 │
-├── about-us/
-|   ├── about-us.md
-|   ├── foundation/
-|   │   ├── README.md
-|   │   ├── vision.md
-|   │   ├── historical-context.md
-|   │   ├── ecosystem-positioning.md
-|   │   ├── stakeholder-analysis.md
-|   │   └── standards-landscape.md
-|   |
-|   └──governance/
-|       ├── README.md
-|       ├── charter.md
-|       ├── participation-rules.md
-|       ├── code-of-conduct.md
-|       ├── the-way-we-work.md
-|       └── folder-structure.md
-|
-|── community/
+├── about-us/                      Why the SIG exists and how it is governed
+│   ├── about-us.md
+│   ├── foundation/
+│   │   ├── vision.md
+│   │   └── ecosystem-positioning.md
+│   └── governance/
+│       ├── charter.md
+│       ├── participation-rules.md
+│       ├── code-of-conduct.md
+│       ├── the-way-we-work.md
+│       └── folder-structure.md
+│
+├── community/                     How to join and contribute
 │   ├── CONTRIBUTING.md
 │   ├── getting-started.md
 │   └── participant-organizations.md
 │
-|── methodology/
-│   ├── README.md
-|   ├── core-methodology/
-|   |   ├── methodology-overview.md
-|   |   ├── stage-1-operational-meaning.md
-|   │   ├── stage-2-semantic-capabilities.md
-|   │   ├── stage-3-standards-mapping.md
-|   │   ├── stage-4-smart-data-models-realization.md
-|   │   └── methodology-worksheet.md
-|   │
-|   └── assessment-frameworks/
-|       ├── README.md
-|       ├── semantic-capability-assessment.md
-|       ├── oma-capability-assessment.md
-|       ├── oma-registry-capability-classification.md
-|       └── sdm-capability-assessment.md
-|
-|── news/
-|   ├── announcements/
-|   └── outreach/
-|       ├── workshops/
-|       └── event-materials/
+├── methodology/                   How the work is done
+│   ├── core-methodology/          The four stages
+│   │   ├── methodology-overview.md
+│   │   ├── stage-1-operational-meaning.md
+│   │   ├── stage-2-semantic-capabilities.md
+│   │   ├── stage-3-standards-mapping.md
+│   │   ├── stage-4-smart-data-models-realization.md
+│   │   └── methodology-worksheet.md
+│   └── assessment-frameworks/     Stage 3: the method and its results
+│       ├── semantic-capability-assessment.md      (method)
+│       ├── oma-capability-assessment.md           (results)
+│       ├── oma-registry-capability-classification.md  (results, appendix)
+│       └── sdm-capability-assessment.md           (results)
 │
-├── shared-models/
-│   ├── measurement/
-│   ├── context/
-│   ├── provenance/
-│   ├── temporal/
-│   ├── operational-zones/
-│   └── service-outcomes/
-|
-├── profiles/
-│   ├── README.md
+├── profiles/                      The methodology applied to each Service Domain
 │   ├── lighting-vs-irrigation-comparison.md
 │   ├── lighting/
-|   │   ├── README.md
 │   │   ├── public-lighting-walkthrough.md
 │   │   ├── municipality-questions.md
-│   │   ├── use-cases/
-│   │   ├── mappings/
-|   |   |   └── oma-smart-data-models-mapping-lighting.md
-│   │   ├── semantic-model/
-│   │   ├── interoperability/
-|   │   ├── digital-twin/
-|   |   |   ├── digital-twin-view.md
-|   |   |   ├── smart-data-models-requirements.md
-|   |   |   └── consumption-scenarios.md
-│   │   ├── validation/
-│   │   ├── references/
-│   │   └── releases/
-│   │
-│   ├── water/
-|   │   ├── README.md
-│   │   ├── public-watering-walkthrough.md
-│   │   ├── municipality-questions.md
-│   │   ├── use-cases/
-│   │   ├── mappings/
-|   |   |   └── oma-smart-data-models-mapping-water.md
-│   │   ├── semantic-model/
-│   │   ├── interoperability/
-|   │   ├── digital-twin/
-|   |   |   ├── digital-twin-view.md
-|   |   |   ├── smart-data-models-requirements.md
-|   |   |   └── consumption-scenarios.md
-│   │   ├── validation/
-│   │   ├── references/
-│   │   └── releases/
-│   │
-│   ├── cross-domain/
-│   |    ├── shared-observations/
-│   |    ├── reusable-patterns/
-│   |    ├── common-semantics/
-│   |    └── interoperability-gaps/
-|   |
-|   ├── shared-models/
-|   │   ├── measurement/
-|   │   ├── context/
-|   │   ├── provenance/
-|   │   ├── temporal/
-|   │   ├── operational-zones/
-│   └── service-outcomes/
-|
-├── program/
-│   ├── README.md
-│   ├── roadmap/
-│   │   └──  release-planning.md
-│   │
-│   └── reports/
-│       ├── progress-reports/
-│       ├── retrospectives/
-│       └── lessons-learned/
-|
-├── public/
-│   └── images/
-│       └──  image.png
+│   │   └── mappings/
+│   │       └── oma-smart-data-models-mapping-lighting.md
+│   └── water/
+│       ├── public-watering-walkthrough.md
+│       ├── municipality-questions.md
+│       └── mappings/
+│           └── oma-smart-data-models-mapping-water.md
 │
-|
-├── meetings/
-│   ├── minutes/
-│   │   └── 2026/
-│   └── presentations/
+├── program/                       When: phases, milestones, status
+│   └── roadmap/
+│       ├── release-planning.md
+│       └── Key-Milestones.md
 │
-├── templates/
-│   ├── README.md
-│   ├── meeting-minutes-template.md
-│   ├── presentation-template.md
-│   └── contribution-template.md
+├── news/                          Announcements and articles
+│   ├── news.md
+│   ├── social-media.md
+│   └── articles/
 │
-├── working/
-│   ├── README.md
-│   ├── exploratory-analysis/
-│   ├── brainstorming/
-│   ├── temporary-discussions/
-│   └── early-concepts/
+├── publications/                  Published releases
+│   └── v1_0/
 │
-└── archive/
-    ├── README.md
-    ├── deprecated-content/
-    ├── obsolete-proposals/
-    └── historical-records/
+└── public/                        Images and embedded pages
+    ├── images/
+    └── iframe/                    Training lessons on the semantic capabilities
 ```
+
+## Planned additions
+
+| Addition | Purpose | When |
+|---|---|---|
+| `profiles/<domain>/smart-city-profile.md` | The Smart City Profile for each Service Domain, the Stage 4 deliverable, started from the domain's OMA – Smart Data Models mapping | Phase 5 |
+| `profiles/<domain>/validation/` | Proof of Concept results for each Service Domain | Phase 6 |
+| `profiles/<new-domain>/` | A new Service Domain, with the same files as lighting and water | When the group adds a domain |
+
+Content that would restate the semantic capabilities, such as shared measurement, context, provenance or temporal models, belongs in [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md), not in separate folders.

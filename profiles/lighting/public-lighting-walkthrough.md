@@ -320,7 +320,7 @@ Reliable interoperability also requires:
 
 ---
 
-# Stage 2 — Reusable Abstractions Emergence
+# Stage 2 — Semantic Capabilities
 
 As the operational analysis progressed, several reusable interoperability abstractions began to emerge.
 
@@ -410,7 +410,7 @@ This became one of the strongest practical outputs of the walkthrough:
 
 ---
 
-# Stage 3 — Ecosystem and Interoperability Thinking
+# Stage 3 — Standards & Ecosystem Mapping
 
 Once the operational meaning and reusable abstractions became clearer, the walkthrough progressively evolved toward ecosystem realization thinking.
 
@@ -476,3 +476,12 @@ Semantic & Contextual Enrichment
 Smart Data Models & Ecosystem Realization
         ↓
 Digital Twin Consumption
+```
+
+---
+
+# Stage 4 — Smart Data Models Realization
+
+Stage 4 consolidates the Stage 3 results into the Public Lighting **Smart City Profile**: the consolidated Smart Data Models, the OMA objects that can feed them, the required metadata, and the recorded residual gaps. The Smart City Profile is checked against the Digital Twin questions in the [Semantic Capability Assessment Framework](/methodology/assessment-frameworks/semantic-capability-assessment.md#_4-digital-twin-questions): can a Digital Twin consume it?
+
+This section is not written yet. Its starting point is the [OMA – Smart Data Models mapping](./mappings/oma-smart-data-models-mapping-lighting.md). See [Stage 4 — Smart Data Models Realization](/methodology/core-methodology/stage-4-smart-data-models-realization.md) for the method.

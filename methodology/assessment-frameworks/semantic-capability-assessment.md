@@ -100,6 +100,8 @@ Evaluate whether a Digital Twin consuming the available information can successf
 
 If not, identify which semantic information is missing and which ecosystem may be best positioned to provide it.
 
+The Digital Twin is the consumer of the methodology's output, not an ecosystem with its own assessment report. These questions are applied in [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md#checking-digital-twin-consumption), when the Smart City Profile is checked.
+
 ---
 
 # Ecosystem Assessments

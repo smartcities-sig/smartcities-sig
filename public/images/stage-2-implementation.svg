@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 956" width="1700" height="956" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">How we implement Stage 2: giving data its meaning</title>
+<desc id="d">Stage 2 takes the user stories and entity sketch from Stage 1 and asks three questions of each observable property of an entity type: what is it about, where and how is it observed, and under which conditions it can be trusted. The answers, classified against 14 semantic capabilities in 4 categories aligned with ISO/IEC 30141:2024, give Stage 3 a spec per property: what to look for in the standards. Worked example: Madrid need L-0015, the lux received in the area of use (a sidewalk or roadway). Where we are: capabilities and rules defined and tested; open questions on the actions and events the sketch records, and on context and requirements; next steps.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4a5160"/></marker><filter id="sh" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1d2433" flood-opacity=".10"/></filter></defs>
+<rect width="1700" height="956" fill="#ffffff"/>
+<text x="850" y="54" font-size="36" font-weight="700" fill="#13295b" text-anchor="middle" >How we implement Stage 2: giving data its meaning</text>
+<text x="850" y="84" font-size="17" font-weight="400" fill="#3c4658" text-anchor="middle" >Semantic Capabilities · Three questions for each property in the entity sketch · 14 capabilities for any city service</text>
+<rect x="30" y="106" width="1640" height="150" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M180 106 H42 a12 12 0 0 0 -12 12 V244 a12 12 0 0 0 12 12 H180 z" fill="#13295b"/>
+<text x="105" y="178.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >HOW IT</text>
+<text x="105" y="200.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WORKS</text>
+<rect x="204" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-opacity="1"/>
+<rect x="218" y="132" width="130" height="24" rx="12" fill="#13295b"/>
+<text x="283.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">FROM STAGE 1</text>
+<text x="218" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Stories + entity sketch</text>
+<text x="218" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Each observable property of</text>
+<text x="218" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >an entity type, one at a time</text>
+<path d="M475 181.0 L494 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="499" y="120" width="268" height="122" rx="9" fill="#e7f4eb" stroke="#1e8a3c" stroke-opacity="0.55"/>
+<rect x="513" y="132" width="112" height="24" rx="12" fill="#1e8a3c"/>
+<text x="569.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">QUESTION 1</text>
+<text x="513" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >What is it about?</text>
+<text x="513" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >The result people get, what the</text>
+<text x="513" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >infrastructure does, or what it uses</text>
+<path d="M770 181.0 L789 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="794" y="120" width="268" height="122" rx="9" fill="#e7f4eb" stroke="#1e8a3c" stroke-opacity="0.55"/>
+<rect x="808" y="132" width="112" height="24" rx="12" fill="#1e8a3c"/>
+<text x="864.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">QUESTION 2</text>
+<text x="808" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Where and how observed?</text>
+<text x="808" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Point, scope, method, time basis.</text>
+<text x="808" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Not observable? Back to the city.</text>
+<path d="M1065 181.0 L1084 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1089" y="120" width="268" height="122" rx="9" fill="#e7f4eb" stroke="#1e8a3c" stroke-opacity="0.55"/>
+<rect x="1103" y="132" width="112" height="24" rx="12" fill="#1e8a3c"/>
+<text x="1159.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">QUESTION 3</text>
+<text x="1103" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >When can it be trusted?</text>
+<text x="1103" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Source, quality, and the context:</text>
+<text x="1103" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >changing (dimming) or fixed (trees)</text>
+<path d="M1360 181.0 L1379 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1384" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-opacity="1"/>
+<rect x="1398" y="132" width="112" height="24" rx="12" fill="#13295b"/>
+<text x="1454.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">TO STAGE 3</text>
+<text x="1398" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >A spec per property</text>
+<text x="1398" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >What it is about, how it is observed</text>
+<text x="1398" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >and when to trust it: what to look for</text>
+<rect x="30" y="272" width="800" height="400" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<rect x="30" y="272" width="800" height="6" rx="3" fill="#1e8a3c"/>
+<text x="54" y="312" font-size="21" font-weight="700" fill="#13295b" text-anchor="start" >14 capabilities in 4 categories</text>
+<text x="54" y="338" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >The same capabilities apply to lighting, water and any other service.</text>
+<rect x="592" y="292" width="214" height="44" rx="8" fill="#fff" stroke="#13295b" stroke-width="1.6"/>
+<circle cx="616" cy="314" r="13" fill="#13295b"/>
+<path d="M610 314 l4 4 l8 -9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="638" y="310" font-size="11" font-weight="700" fill="#6b7487" text-anchor="start" letter-spacing="0.6">ALIGNED WITH</text>
+<text x="638" y="328" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >ISO/IEC 30141:2024</text>
+<rect x="54" y="356" width="179" height="5" rx="2.5" fill="#16692e"/>
+<text x="143.5" y="378" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">DOMAIN</text>
+<text x="143.5" y="394" font-size="12" font-weight="400" fill="#6b7487" text-anchor="middle" >Q1 · what it&#x27;s about</text>
+<rect x="54" y="404" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="54" y="404" width="6" height="60" rx="3" fill="#16692e"/>
+<text x="70" y="429" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Service Outcome</text>
+<text x="70" y="448" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >lux on the sidewalk</text>
+<rect x="54" y="472" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="54" y="472" width="6" height="60" rx="3" fill="#16692e"/>
+<text x="70" y="497" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Infrastructure Output</text>
+<text x="70" y="516" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >lumens from the luminaire</text>
+<rect x="54" y="540" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="54" y="540" width="6" height="60" rx="3" fill="#16692e"/>
+<text x="70" y="565" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Resource Consumption</text>
+<text x="70" y="584" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >energy used, in watts</text>
+<rect x="246" y="356" width="179" height="5" rx="2.5" fill="#1e8a3c"/>
+<text x="335.5" y="378" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">OBSERVATION</text>
+<text x="335.5" y="394" font-size="12" font-weight="400" fill="#6b7487" text-anchor="middle" >Q2 · how it&#x27;s observed</text>
+<rect x="246" y="404" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="246" y="404" width="6" height="60" rx="3" fill="#1e8a3c"/>
+<text x="262" y="429" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Observation Point</text>
+<text x="262" y="448" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >street surface, cabinet</text>
+<rect x="246" y="472" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="246" y="472" width="6" height="60" rx="3" fill="#1e8a3c"/>
+<text x="262" y="497" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Observation Scope</text>
+<text x="262" y="516" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >lamp, street or district</text>
+<rect x="246" y="540" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="246" y="540" width="6" height="60" rx="3" fill="#1e8a3c"/>
+<text x="262" y="565" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Observation Method</text>
+<text x="262" y="584" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >measured or estimated</text>
+<rect x="246" y="608" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="246" y="608" width="6" height="60" rx="3" fill="#1e8a3c"/>
+<text x="262" y="633" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Temporal Semantics</text>
+<text x="262" y="652" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >instant or hourly average</text>
+<rect x="438" y="356" width="179" height="5" rx="2.5" fill="#4fae68"/>
+<text x="527.5" y="378" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">INTERPRETATION</text>
+<text x="527.5" y="394" font-size="12" font-weight="400" fill="#6b7487" text-anchor="middle" >Q3 · when to trust it</text>
+<rect x="438" y="404" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="438" y="404" width="6" height="60" rx="3" fill="#4fae68"/>
+<text x="454" y="429" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Provenance</text>
+<text x="454" y="448" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >sensor, operator, GIS</text>
+<rect x="438" y="472" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="438" y="472" width="6" height="60" rx="3" fill="#4fae68"/>
+<text x="454" y="497" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Measurement Quality</text>
+<text x="454" y="516" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >accuracy, completeness</text>
+<rect x="438" y="540" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="438" y="540" width="6" height="60" rx="3" fill="#4fae68"/>
+<text x="454" y="565" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Operational Context</text>
+<text x="454" y="584" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >fog, rain, traffic</text>
+<rect x="438" y="608" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="438" y="608" width="6" height="60" rx="3" fill="#4fae68"/>
+<text x="454" y="633" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Physical Context</text>
+<text x="454" y="652" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >trees, buildings, slope</text>
+<rect x="630" y="356" width="179" height="5" rx="2.5" fill="#9fd3ad"/>
+<text x="719.5" y="378" font-size="13" font-weight="700" fill="#13295b" text-anchor="middle" letter-spacing="0.6">OPERATIONAL</text>
+<text x="719.5" y="394" font-size="12" font-weight="400" fill="#6b7487" text-anchor="middle" >running the assets</text>
+<rect x="630" y="404" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="630" y="404" width="6" height="60" rx="3" fill="#9fd3ad"/>
+<text x="646" y="424" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Asset Management</text>
+<text x="646" y="440" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Context</text>
+<text x="646" y="456" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >owner, contract, repairs</text>
+<rect x="630" y="472" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="630" y="472" width="6" height="60" rx="3" fill="#9fd3ad"/>
+<text x="646" y="497" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Network Operability</text>
+<text x="646" y="516" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >is the lamp reachable?</text>
+<rect x="630" y="540" width="179" height="60" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="630" y="540" width="6" height="60" rx="3" fill="#9fd3ad"/>
+<text x="646" y="565" font-size="13" font-weight="700" fill="#13295b" text-anchor="start" >Fallback Behaviour</text>
+<text x="646" y="584" font-size="12" font-weight="400" fill="#6b7487" text-anchor="start" >local schedule if offline</text>
+<rect x="860" y="272" width="810" height="400" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<rect x="860" y="272" width="810" height="6" rx="3" fill="#1e8a3c"/>
+<text x="884" y="312" font-size="21" font-weight="700" fill="#13295b" text-anchor="start" >Example: Madrid need L-0015</text>
+<text x="884" y="338" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >“Know the effective lighting received in the area of use” · Technician / Operator</text>
+<rect x="884" y="352" width="762" height="36" rx="8" fill="#13295b"/>
+<text x="900" y="375" font-size="12" font-weight="700" fill="#9fd3ad" text-anchor="start" letter-spacing="0.8">ENTITY</text>
+<text x="960" y="375" font-size="16" font-weight="700" fill="#fff" text-anchor="start" >Area of use (sidewalk or roadway)</text>
+<text x="1260" y="375" font-size="12" font-weight="700" fill="#9fd3ad" text-anchor="start" letter-spacing="0.8">PROPERTY</text>
+<text x="1342" y="375" font-size="16" font-weight="700" fill="#fff" text-anchor="start" >Lux received</text>
+<text x="1630" y="375" font-size="13" font-weight="400" fill="#c9d3e6" text-anchor="end" font-style="italic">evenness is a second property</text>
+<rect x="884" y="396" width="762" height="31" rx="8" fill="#fff" stroke="#d4dbe8"/>
+<circle cx="908" cy="411.5" r="15" fill="#1e8a3c"/>
+<text x="908" y="416.5" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >Q1</text>
+<text x="932" y="416.5" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >What is it about?</text>
+<circle cx="1098" cy="412" r="9" fill="#1e8a3c"/>
+<path d="M1093.5 412 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1116" y="417" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Service Outcome: the light people receive, not what the lamp emits</text>
+<rect x="884" y="432" width="762" height="73" rx="8" fill="#fff" stroke="#d4dbe8"/>
+<circle cx="908" cy="468.5" r="15" fill="#1e8a3c"/>
+<text x="908" y="473.5" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >Q2</text>
+<text x="932" y="473.5" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >Where and how?</text>
+<circle cx="1098" cy="448" r="9" fill="#1e8a3c"/>
+<path d="M1093.5 448 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1116" y="453" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Observation Point: on the sidewalk or roadway</text>
+<circle cx="1098" cy="469" r="9" fill="#c47f00"/>
+<text x="1098" y="474" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="1116" y="474" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Method: occasional campaigns; instrument not stated</text>
+<circle cx="1098" cy="490" r="9" fill="#c47f00"/>
+<text x="1098" y="495" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="1116" y="495" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Scope, height and time basis: not stated</text>
+<rect x="884" y="510" width="762" height="73" rx="8" fill="#fff" stroke="#d4dbe8"/>
+<circle cx="908" cy="546.5" r="15" fill="#1e8a3c"/>
+<text x="908" y="551.5" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >Q3</text>
+<text x="932" y="551.5" font-size="15" font-weight="700" fill="#13295b" text-anchor="start" >When to trust it?</text>
+<circle cx="1098" cy="526" r="9" fill="#1e8a3c"/>
+<path d="M1093.5 526 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1116" y="531" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Operational Context: the installation&#x27;s dimming at that moment</text>
+<circle cx="1098" cy="547" r="9" fill="#c47f00"/>
+<text x="1098" y="552" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="1116" y="552" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Physical Context: “surfaces, positions”; which ones not stated</text>
+<circle cx="1098" cy="568" r="9" fill="#c47f00"/>
+<text x="1098" y="573" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="1116" y="573" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Source and quality of the reading: not stated</text>
+<rect x="884" y="588" width="762" height="31.5" rx="8" fill="#efebfa" stroke="#5b3fb5" stroke-opacity=".6"/>
+<text x="900" y="608.75" font-size="12" font-weight="700" fill="#5b3fb5" text-anchor="start" letter-spacing="0.8">TO STAGE 3</text>
+<text x="1040" y="608.75" font-size="14" font-weight="400" fill="#13295b" text-anchor="start" >Find a standard that gives lux in the area of use, with the dimming at that moment</text>
+<rect x="884" y="624.5" width="762" height="31.5" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-opacity=".6"/>
+<text x="900" y="645.25" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="start" letter-spacing="0.8">BACK TO MADRID</text>
+<text x="1040" y="645.25" font-size="14" font-weight="400" fill="#13295b" text-anchor="start" >Height and scope of the reading · required level, who sets it · the city&#x27;s question</text>
+<rect x="30" y="688" width="1640" height="150" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M180 688 H42 a12 12 0 0 0 -12 12 V826 a12 12 0 0 0 12 12 H180 z" fill="#13295b"/>
+<text x="105" y="760.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WHERE</text>
+<text x="105" y="782.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WE ARE</text>
+<rect x="204" y="702" width="459" height="122" rx="9" fill="#fff" stroke="#1e8a3c" stroke-opacity=".5" stroke-width="2"/>
+<rect x="204" y="702" width="459" height="34" rx="9" fill="#1e8a3c"/>
+<rect x="204" y="726" width="459" height="10" fill="#1e8a3c"/>
+<text x="222" y="725" font-size="14" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.8">DONE</text>
+<circle cx="228" cy="757" r="5" fill="#1e8a3c"/>
+<text x="242" y="762" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >14 capabilities, built from street lighting</text>
+<circle cx="228" cy="781" r="5" fill="#1e8a3c"/>
+<text x="242" y="786" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Rules for each capability, with tie-breakers</text>
+<circle cx="228" cy="805" r="5" fill="#1e8a3c"/>
+<text x="242" y="810" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Tested: 14 Madrid stories, 2,752 OMA data points (draft)</text>
+<rect x="699" y="702" width="459" height="122" rx="9" fill="#fff" stroke="#c47f00" stroke-opacity=".5" stroke-width="2"/>
+<rect x="699" y="702" width="459" height="34" rx="9" fill="#c47f00"/>
+<rect x="699" y="726" width="459" height="10" fill="#c47f00"/>
+<text x="717" y="725" font-size="14" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.8">OPEN QUESTIONS</text>
+<circle cx="723" cy="757" r="5" fill="#c47f00"/>
+<text x="737" y="762" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Actions the sketch records: e.g. dimming a street</text>
+<circle cx="723" cy="781" r="5" fill="#c47f00"/>
+<text x="737" y="786" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Events the sketch records: e.g. a lamp failure</text>
+<circle cx="723" cy="805" r="5" fill="#c47f00"/>
+<text x="737" y="810" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Context and requirements: e.g. trees, backup power</text>
+<rect x="1194" y="702" width="459" height="122" rx="9" fill="#fff" stroke="#1f5fc4" stroke-opacity=".5" stroke-width="2"/>
+<rect x="1194" y="702" width="459" height="34" rx="9" fill="#1f5fc4"/>
+<rect x="1194" y="726" width="459" height="10" fill="#1f5fc4"/>
+<text x="1212" y="725" font-size="14" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.8">NEXT</text>
+<circle cx="1218" cy="757" r="5" fill="#1f5fc4"/>
+<text x="1232" y="762" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >SIG decisions on the open questions</text>
+<circle cx="1218" cy="781" r="5" fill="#1f5fc4"/>
+<text x="1232" y="786" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Classify the sketches from Stage 1 small groups</text>
+<circle cx="1218" cy="805" r="5" fill="#1f5fc4"/>
+<text x="1232" y="810" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Confirm reuse with the 33 irrigation needs</text>
+<rect x="30" y="852" width="1640" height="64" rx="12" fill="#13295b"/>
+<text x="56" y="891" font-size="15" font-weight="700" fill="#9fd3ad" text-anchor="start" letter-spacing="1">KEY MESSAGE</text>
+<text x="196" y="880" font-size="17" font-weight="400" fill="#fff" text-anchor="start" >A value is only useful with its meaning attached: what it is about, where and how it was measured,</text>
+<text x="196" y="902" font-size="17" font-weight="400" fill="#fff" text-anchor="start" >and when it can be trusted. Stage 2 makes that meaning explicit, before any standard is chosen.</text>
+<text x="850" y="942" font-size="12" font-weight="400" fill="#6b7487" text-anchor="middle" >Smart Cities SIG working analysis, October 2026. Example from the needs collected in workshops with Madrid municipality departments; classification is the SIG&#x27;s pilot reading, not yet validated with Madrid.</text>
+</svg>

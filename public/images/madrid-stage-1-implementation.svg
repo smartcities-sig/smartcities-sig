@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 956" width="1700" height="956" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">How we implement Stage 1: learning from Madrid</title>
+<desc id="d">Stage 1 with Madrid municipality departments: two workshops (September to October 2026) validated 55 street lighting needs and 33 irrigation needs, the raw material of Stage 1. A pilot rewrote 11 lighting needs as 14 user stories. Example: need L-0005, as the workshop table gave it, became three desk-written stories (an action, a property and an event), but the table lacks facts Stage 2 needs, such as how presence is known today. A guided interview skill was built for small groups. The Stage 1 output is user stories and an entity sketch: the types of entities, each with its properties, actions and events. Workshops give breadth and small groups give depth. Next: improve the skill, run a focused street lighting workshop with it, then extend to watering and other cities.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4a5160"/></marker><filter id="sh" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1d2433" flood-opacity=".10"/></filter></defs>
+<rect width="1700" height="956" fill="#ffffff"/>
+<text x="850" y="54" font-size="36" font-weight="700" fill="#13295b" text-anchor="middle" >How we implement Stage 1: learning from Madrid</text>
+<text x="850" y="84" font-size="17" font-weight="400" fill="#3c4658" text-anchor="middle" >Operational Meaning · What city departments need to know, in their own words · Focus: public street lighting</text>
+<rect x="30" y="106" width="1640" height="150" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M180 106 H42 a12 12 0 0 0 -12 12 V244 a12 12 0 0 0 12 12 H180 z" fill="#13295b"/>
+<text x="105" y="178.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WHAT WE</text>
+<text x="105" y="200.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >DID</text>
+<rect x="204" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-width="1"/>
+<rect x="218" y="132" width="130" height="24" rx="12" fill="#1f5fc4"/>
+<text x="283.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">SEP–OCT 2026</text>
+<text x="218" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Two workshops with Madrid</text>
+<text x="218" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >1st collected needs; 2nd narrowed</text>
+<text x="218" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >them down and summarised them</text>
+<path d="M475 181.0 L494 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="499" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-width="1"/>
+<rect x="513" y="132" width="130" height="24" rx="12" fill="#1f5fc4"/>
+<text x="578.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">RAW MATERIAL</text>
+<text x="513" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Validated needs</text>
+<text x="513" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >55 street lighting needs</text>
+<text x="513" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >33 irrigation needs</text>
+<path d="M770 181.0 L789 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="794" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-width="1"/>
+<rect x="808" y="132" width="148" height="24" rx="12" fill="#1f5fc4"/>
+<text x="882.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">FIRST ATTEMPTS</text>
+<text x="808" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Desk analysis and pilot</text>
+<text x="808" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >11 lighting needs → 14 user stories,</text>
+<text x="808" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >raising 19 questions for Madrid</text>
+<path d="M1065 181.0 L1084 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1089" y="120" width="268" height="122" rx="9" fill="#f6f8fc" stroke="#d4dbe8" stroke-width="1"/>
+<rect x="1103" y="132" width="94" height="24" rx="12" fill="#1f5fc4"/>
+<text x="1150.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">OCT 2026</text>
+<text x="1103" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >Skill for small groups</text>
+<text x="1103" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >A guided interview with the</text>
+<text x="1103" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >department; not yet field-tested</text>
+<path d="M1360 181.0 L1379 181.0" fill="none" stroke="#4a5160" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1384" y="120" width="268" height="122" rx="9" fill="#eaf1fc" stroke="#1f5fc4" stroke-width="2"/>
+<rect x="1398" y="132" width="148" height="24" rx="12" fill="#13295b"/>
+<text x="1472.0" y="149" font-size="12" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">STAGE 1 OUTPUT</text>
+<text x="1398" y="182" font-size="16" font-weight="700" fill="#13295b" text-anchor="start" >User stories + entity sketch</text>
+<text x="1398" y="206" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Entity types, each with its</text>
+<text x="1398" y="226" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >properties, actions and events</text>
+<rect x="30" y="272" width="800" height="396" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<rect x="30" y="272" width="800" height="6" rx="3" fill="#1f5fc4"/>
+<text x="54" y="312" font-size="21" font-weight="700" fill="#13295b" text-anchor="start" >From a need to user stories: Madrid&#x27;s L-0005</text>
+<text x="54" y="338" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >What the workshops gave, what a desk rewrite added, and what is still missing</text>
+<circle cx="65" cy="363" r="11" fill="#1f5fc4"/>
+<text x="65" y="368" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >1</text>
+<text x="84" y="368" font-size="13" font-weight="700" fill="#1f5fc4" text-anchor="start" letter-spacing="0.6">THE NEED, AS THE WORKSHOP GAVE IT</text>
+<rect x="54" y="378" width="752" height="88" rx="8" fill="#fff" stroke="#d4dbe8"/>
+<path d="M54 402 V386 a8 8 0 0 1 8 -8 H798 a8 8 0 0 1 8 8 V402 z" fill="#eaf1fc"/>
+<text x="64" y="395" font-size="12" font-weight="700" fill="#13295b" text-anchor="start" >Who I am</text>
+<text x="64" y="422" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >Municipal service</text>
+<text x="64" y="439" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >manager / executive</text>
+<path d="M204 378 V466" stroke="#d4dbe8"/>
+<text x="214" y="395" font-size="12" font-weight="700" fill="#13295b" text-anchor="start" >What I want</text>
+<text x="214" y="422" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >Adapt lighting to the</text>
+<text x="214" y="439" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >real use of the space</text>
+<path d="M380 378 V466" stroke="#d4dbe8"/>
+<text x="390" y="395" font-size="12" font-weight="700" fill="#13295b" text-anchor="start" >Conditions</text>
+<text x="390" y="422" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >Different time slots, traffic</text>
+<text x="390" y="439" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >intensity, presence of people,</text>
+<text x="390" y="456" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >events and activities</text>
+<path d="M586 378 V466" stroke="#d4dbe8"/>
+<text x="596" y="395" font-size="12" font-weight="700" fill="#13295b" text-anchor="start" >Purpose</text>
+<text x="596" y="422" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >Provide the necessary lighting at</text>
+<text x="596" y="439" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >each moment, without keeping</text>
+<text x="596" y="456" font-size="13" font-weight="400" fill="#3c4658" text-anchor="start" >levels high when not needed</text>
+<circle cx="65" cy="487" r="11" fill="#1f5fc4"/>
+<text x="65" y="492" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >2</text>
+<text x="84" y="492" font-size="13" font-weight="700" fill="#1f5fc4" text-anchor="start" letter-spacing="0.6">SECOND ITERATION: 3 USER STORIES, WRITTEN AT A DESK</text>
+<text x="806" y="492" font-size="12" font-weight="400" fill="#6b7487" text-anchor="end" font-style="italic">the department and the split are our inference</text>
+<rect x="54.0" y="502" width="244.0" height="56" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="64.0" y="510" width="74" height="20" rx="10" fill="#1f5fc4"/>
+<text x="101.0" y="524" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">ACTION</text>
+<text x="288.0" y="524" font-size="12" font-weight="400" fill="#6b7487" text-anchor="end" >L-0005-a</text>
+<text x="64.0" y="548" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >Adjust a street&#x27;s light level</text>
+<rect x="308.0" y="502" width="244.0" height="56" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="318.0" y="510" width="92" height="20" rx="10" fill="#1f5fc4"/>
+<text x="364.0" y="524" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">PROPERTY</text>
+<text x="542.0" y="524" font-size="12" font-weight="400" fill="#6b7487" text-anchor="end" >L-0005-b</text>
+<text x="318.0" y="548" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >People and vehicles present</text>
+<rect x="562.0" y="502" width="244.0" height="56" rx="8" fill="#f6f8fc" stroke="#d4dbe8"/>
+<rect x="572.0" y="510" width="65" height="20" rx="10" fill="#1f5fc4"/>
+<text x="604.5" y="524" font-size="11" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">EVENT</text>
+<text x="796.0" y="524" font-size="12" font-weight="400" fill="#6b7487" text-anchor="end" >L-0005-c</text>
+<text x="572.0" y="548" font-size="14" font-weight="400" fill="#3c4658" text-anchor="start" >An event affects the street</text>
+<rect x="54" y="568" width="752" height="86" rx="8" fill="#fdf3dc" stroke="#c47f00" stroke-opacity=".6"/>
+<circle cx="77" cy="587" r="11" fill="#8a5a00"/>
+<text x="77" y="592" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >3</text>
+<text x="96" y="592" font-size="13" font-weight="700" fill="#8a5a00" text-anchor="start" letter-spacing="0.6">NOT ENOUGH AS INPUT TO STAGE 2</text>
+<text x="70" y="616" font-size="14" font-weight="400" fill="#13295b" text-anchor="start" >The table doesn&#x27;t say how presence is known today, which safety minimum applies and</text>
+<text x="70" y="635" font-size="14" font-weight="400" fill="#13295b" text-anchor="start" >who sets it, or which events count. Rewording can&#x27;t add facts that were never collected.</text>
+<rect x="860" y="272" width="810" height="396" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<rect x="860" y="272" width="810" height="6" rx="3" fill="#1f5fc4"/>
+<text x="884" y="312" font-size="21" font-weight="700" fill="#13295b" text-anchor="start" >Two approaches that work together</text>
+<text x="884" y="338" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Workshops find and prioritise needs; small groups turn them into stories and a sketch.</text>
+<rect x="884" y="358" width="357" height="40" rx="8" fill="#1f5fc4"/>
+<text x="900" y="384" font-size="16" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.5">WORKSHOPS</text>
+<text x="1225" y="384" font-size="15" font-weight="400" fill="#dbe7fb" text-anchor="end" font-style="italic">breadth</text>
+<text x="884" y="428" font-size="12" font-weight="700" fill="#1e8a3c" text-anchor="start" letter-spacing="0.8">WHAT WORKS</text>
+<circle cx="893" cy="449" r="9" fill="#1e8a3c"/>
+<path d="M888.5 449 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="910" y="454" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Many departments in one room</text>
+<circle cx="893" cy="476" r="9" fill="#1e8a3c"/>
+<path d="M888.5 476 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="910" y="481" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Needs in the city&#x27;s own words</text>
+<circle cx="893" cy="503" r="9" fill="#1e8a3c"/>
+<path d="M888.5 503 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="910" y="508" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Context, pain points and priorities</text>
+<text x="884" y="547" font-size="12" font-weight="700" fill="#c47f00" text-anchor="start" letter-spacing="0.8">STILL TO SOLVE</text>
+<circle cx="893" cy="568" r="9" fill="#c47f00"/>
+<text x="893" y="573" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="910" y="573" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Doesn&#x27;t ask how things are known today</text>
+<circle cx="893" cy="595" r="9" fill="#c47f00"/>
+<text x="893" y="600" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="910" y="600" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >One row can hold several needs</text>
+<circle cx="893" cy="622" r="9" fill="#c47f00"/>
+<text x="893" y="627" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="910" y="627" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Mixes themes, data and decisions</text>
+<rect x="1289" y="358" width="357" height="40" rx="8" fill="#1f5fc4"/>
+<text x="1305" y="384" font-size="16" font-weight="700" fill="#fff" text-anchor="start" letter-spacing="0.5">SMALL GROUPS</text>
+<text x="1630" y="384" font-size="15" font-weight="400" fill="#dbe7fb" text-anchor="end" font-style="italic">depth</text>
+<text x="1289" y="428" font-size="12" font-weight="700" fill="#1e8a3c" text-anchor="start" letter-spacing="0.8">WHAT WORKS</text>
+<circle cx="1298" cy="449" r="9" fill="#1e8a3c"/>
+<path d="M1293.5 449 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1315" y="454" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Asks until each fact is known or assigned</text>
+<circle cx="1298" cy="476" r="9" fill="#1e8a3c"/>
+<path d="M1293.5 476 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1315" y="481" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Every fact traced to who said it</text>
+<circle cx="1298" cy="503" r="9" fill="#1e8a3c"/>
+<path d="M1293.5 503 l3 3 l5.5 -6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1315" y="508" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Stories + entity sketch for Stage 2</text>
+<text x="1289" y="547" font-size="12" font-weight="700" fill="#c47f00" text-anchor="start" letter-spacing="0.8">STILL TO SOLVE</text>
+<circle cx="1298" cy="568" r="9" fill="#c47f00"/>
+<text x="1298" y="573" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="1315" y="573" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Not yet tested with a city department</text>
+<circle cx="1298" cy="595" r="9" fill="#c47f00"/>
+<text x="1298" y="600" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="1315" y="600" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >60–90 min per need: use on priorities</text>
+<circle cx="1298" cy="622" r="9" fill="#c47f00"/>
+<text x="1298" y="627" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" >!</text>
+<text x="1315" y="627" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >English only; needs a SIG facilitator</text>
+<circle cx="1265.0" cy="378" r="15" fill="#fff" stroke="#1f5fc4" stroke-width="2"/>
+<path d="M1258.0 378 H1272.0 M1265.0 371 V385" stroke="#1f5fc4" stroke-width="2.6"/>
+<rect x="30" y="684" width="1640" height="150" rx="12" fill="#fff" stroke="#d4dbe8" stroke-width="1.6" filter="url(#sh)"/>
+<path d="M180 684 H42 a12 12 0 0 0 -12 12 V822 a12 12 0 0 0 12 12 H180 z" fill="#13295b"/>
+<text x="105" y="756.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >WHAT&#x27;S</text>
+<text x="105" y="778.0" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >NEXT</text>
+<rect x="204" y="698" width="459" height="122" rx="9" fill="#fff" stroke="#1f5fc4" stroke-opacity=".45" stroke-width="2"/>
+<circle cx="238" cy="734" r="17" fill="#1f5fc4"/>
+<text x="238" y="740" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >1</text>
+<text x="268" y="740" font-size="18" font-weight="700" fill="#13295b" text-anchor="start" >Improve the skill</text>
+<text x="228" y="774" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Test it on the 11 pilot needs, fix what</text>
+<text x="228" y="796" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >the test shows, and agree it in the SIG.</text>
+<path d="M668 759.0 L692 759.0" fill="none" stroke="#4a5160" stroke-width="3.5" marker-end="url(#ah)"/>
+<rect x="699" y="698" width="459" height="122" rx="9" fill="#fff" stroke="#1f5fc4" stroke-opacity=".45" stroke-width="2"/>
+<circle cx="733" cy="734" r="17" fill="#1f5fc4"/>
+<text x="733" y="740" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >2</text>
+<text x="763" y="740" font-size="18" font-weight="700" fill="#13295b" text-anchor="start" >Focused street lighting workshop</text>
+<text x="723" y="774" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >Run with the skill on Madrid&#x27;s priority</text>
+<text x="723" y="796" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >needs, starting from the 19 questions.</text>
+<path d="M1163 759.0 L1187 759.0" fill="none" stroke="#4a5160" stroke-width="3.5" marker-end="url(#ah)"/>
+<rect x="1194" y="698" width="459" height="122" rx="9" fill="#fff" stroke="#1f5fc4" stroke-opacity=".45" stroke-width="2"/>
+<circle cx="1228" cy="734" r="17" fill="#1f5fc4"/>
+<text x="1228" y="740" font-size="17" font-weight="700" fill="#fff" text-anchor="middle" >3</text>
+<text x="1258" y="740" font-size="18" font-weight="700" fill="#13295b" text-anchor="start" >Extend to watering and other cities</text>
+<text x="1218" y="774" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >The same process for the 33 irrigation</text>
+<text x="1218" y="796" font-size="15" font-weight="400" fill="#3c4658" text-anchor="start" >needs, then any city and any service.</text>
+<rect x="30" y="850" width="1640" height="64" rx="12" fill="#13295b"/>
+<text x="56" y="889" font-size="15" font-weight="700" fill="#9cc0f5" text-anchor="start" letter-spacing="1">KEY LESSON</text>
+<text x="186" y="878" font-size="17" font-weight="400" fill="#fff" text-anchor="start" >Workshops tell us what the city needs. Small groups turn each need into user stories and an entity sketch,</text>
+<text x="186" y="900" font-size="17" font-weight="400" fill="#fff" text-anchor="start" >and ask the city for the facts no table holds: how each thing is known today, where, and how far to trust it.</text>
+<text x="850" y="942" font-size="12" font-weight="400" fill="#6b7487" text-anchor="middle" >Smart Cities SIG working analysis, October 2026. Based on workshops with Madrid municipality departments for public street lighting and for water management and irrigation.</text>
+</svg>

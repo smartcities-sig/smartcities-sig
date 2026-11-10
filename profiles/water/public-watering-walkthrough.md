@@ -119,7 +119,7 @@ Several modelling rules shoul de madee explicit, so that implementers can build 
 - Preserve context on vegetation type, shading, slope, and environmental conditions so the data remains meaningful in a digital twin.
 
 
-# Stage 2 — Reusable Abstractions Emergence
+# Stage 2 — Semantic Capabilities
 
 ## Candidate Interoperability Profile Concepts
 
@@ -132,7 +132,7 @@ Several modelling rules shoul de madee explicit, so that implementers can build 
 
 ## Interoperability Validation Scenarios
 
-# Stage 3 — Ecosystem and Interoperability Thinking
+# Stage 3 — Standards & Ecosystem Mapping
 
 ## OMA and Device Interoperability
 
@@ -142,9 +142,9 @@ Several modelling rules shoul de madee explicit, so that implementers can build 
 - The IoT laboratory of the City of Madrid is also referenced in the source material. https://iotmadlab.es
 
 
-# Stage 4 — Digital Twin on Smart Data Models
+# Stage 4 — Smart Data Models Realization
 
-## Smart Data Models as Semantic Integration Mechanisms 
+Stage 4 consolidates the Stage 3 results into the Water Management & Irrigation **Smart City Profile**: the consolidated Smart Data Models, the OMA objects that can feed them, the required metadata, and the recorded residual gaps. The Smart City Profile is checked against the Digital Twin questions in the [Semantic Capability Assessment Framework](/methodology/assessment-frameworks/semantic-capability-assessment.md#_4-digital-twin-questions): can a Digital Twin consume it?
 
-## Digital Twin Consumption Perspective 
+This section is not written yet. Its starting point is the [OMA – Smart Data Models mapping](./mappings/oma-smart-data-models-mapping-water.md). See [Stage 4 — Smart Data Models Realization](/methodology/core-methodology/stage-4-smart-data-models-realization.md) for the method. 
 

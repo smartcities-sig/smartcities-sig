@@ -343,7 +343,7 @@ Not every municipality observation should become a new capability. Prefer classi
 
 # Public Street Lighting Example
 
-The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 2 — Reusable Abstractions Emergence*) shows how the first candidate abstractions — lux, lumens, and watts; inferred versus measured values; environmental and aggregation concerns — emerged from municipality material and later became the capabilities above.
+The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 2 — Semantic Capabilities*) shows how the first candidate abstractions — lux, lumens, and watts; inferred versus measured values; environmental and aggregation concerns — emerged from municipality material and later became the capabilities above.
 
 ---
 
