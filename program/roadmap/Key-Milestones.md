@@ -35,7 +35,7 @@ text: |
 
     ⏰ 16:15 – 16:30
 
-    📄 [Download the presentation (PDF)](/docs/SCEWC26-215-MCD-SIG_Methodology_EN.pdf)
+    📄 [Download the presentation (PDF)](/content-images/content/docs/SCEWC26-215-MCD-SIG_Methodology_EN.pdf)
 ---
 ::eh-avatar
 ---
@@ -117,7 +117,7 @@ text: |
 
     ⏰ 11:15 – 11:30
 
-    📄 [Download the presentation (PDF)](/docs/SCEWC26-217-MCD-SIG_Watering_EN.pdf)
+    📄 [Download the presentation (PDF)](/content-images/content/docs/SCEWC26-217-MCD-SIG_Watering_EN.pdf)
 ---
 ::eh-avatar
 ---
@@ -199,7 +199,7 @@ text: |
 
     ⏰ 15:15 – 15:45
 
-    📄 [Download the presentation (PDF)](/docs/SCEWC26-216-MCD-SIG_Lighting_EN.pdf)
+    📄 [Download the presentation (PDF)](/content-images/content/docs/SCEWC26-216-MCD-SIG_Lighting_EN.pdf)
 ---
 ::eh-avatar
 ---
