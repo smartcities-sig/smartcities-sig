@@ -8,7 +8,7 @@ layout: doc
 
 This glossary collects the terms defined or consistently used across the Smart Cities SIG methodology documents, in alphabetical order, with one initial meaning per term.
 
-It is the single place where these terms are defined; other pages link here instead of redefining them. Entries or extensions marked *Status: Proposed* have not yet been reviewed by the SIG. An *Avoid* line lists earlier or ambiguous wording that should not be used for the term.
+It is the single place where these terms are defined; other pages link here instead of redefining them. A new term added before SIG review is marked *Status: Proposed* until the SIG accepts it. An *Avoid* line lists earlier or ambiguous wording that should not be used for the term.
 
 ---
 
@@ -61,7 +61,7 @@ The Stage 3 activity of aligning how different ecosystem participants (standards
 
 The Stage 1 summary of the entity types that the user stories mention (for example, a streetlight, a street segment, or a park zone), each with its properties, actions, and events, still in the municipality's own words. It is not a data model and uses no standard names. Stage 2 applies the semantic capabilities to each observable property in it; Stage 3 looks for candidate Smart Data Models for its entity types.
 
-*Status of extension: Proposed (Stage 1 skill design, 2026-10-18).* The sketch also records the relationships the municipality states between entities (for example, a circuit feeds a luminaire, a tree stands near a luminaire), labelled Proposed until the department confirms them.
+The sketch also records the relationships the municipality states between entities (for example, a circuit feeds a luminaire, a tree stands near a luminaire), labelled Proposed until the department confirms them.
 _Avoid_: entity model, data model (for the Stage 1 output)
 
 ### Estimated
@@ -131,7 +131,7 @@ An Observation Method value: a figure produced by applying a computational or an
 
 A service-specific question a municipality expects a Digital Twin to answer (for example, whether a street meets its minimum lighting level). Each is kept in the relevant Service Profile and keyed by semantic capability; the Semantic Capability Assessment Framework uses them as its first perspective.
 
-*Status of extension: Proposed (Stage 1 skill design, 2026-10-18).* In Stage 1 each user story yields at least one such question, written in the department's own words and with no capability label; Stage 2 adds the capability key.
+In Stage 1 each user story yields at least one such question, written in the department's own words and with no capability label; Stage 2 adds the capability key.
 
 ### Municipality Operational Reality
 
@@ -139,7 +139,7 @@ The starting point of the methodology's overall model — the actual, unprocesse
 
 ### Need
 
-*Status: Proposed (Stage 1 skill design, 2026-10-18).* A statement of what a municipal department wants, as the municipality gave it (for example, one row of a workshop table). It is never edited; one need usually gives several user stories, a requirement, or both.
+A statement of what a municipal department wants, as the municipality gave it (for example, one row of a workshop table). It is never edited; one need usually gives several user stories, a requirement, or both.
 _Avoid_: calling a need a user story, theme
 
 ### Network Operability
@@ -207,7 +207,7 @@ _Avoid_: Contextual Abstraction, Contextual Metadata (as a capability name)
 
 ### Operational Evidence
 
-*Status: Proposed (Stage 1 skill design, 2026-10-18).* The statements a municipal respondent makes during Stage 1 that explain the user stories and the entity sketch, each kept in the respondent's words and linked to the stories and entity-sketch rows it explains. One statement is an *evidence item*, of one of five kinds: an objective (how the department knows things are going well), a pain point (what goes wrong because of how something is known today), a distinction (two things that sound alike but differ), a context (a circumstance that changes how something is read, and how often it changes), or held elsewhere (information another department or a manufacturer holds). Stage 2 reads the evidence linked to each property when classifying it.
+The statements a municipal respondent makes during Stage 1 that explain the user stories and the entity sketch, each kept in the respondent's words and linked to the stories and entity-sketch rows it explains. One statement is an *evidence item*, of one of five kinds: an objective (how the department knows things are going well), a pain point (what goes wrong because of how something is known today), a distinction (two things that sound alike but differ), a context (a circumstance that changes how something is read, and how often it changes), or held elsewhere (information another department or a manufacturer holds). Stage 2 reads the evidence linked to each property when classifying it.
 _Avoid_: summary, notes, findings, observations
 
 ### Operational Meaning
@@ -246,7 +246,7 @@ _Avoid_: Stage 5, Stage 6
 
 ### Property Fact
 
-*Status: Proposed (Stage 1 skill design, 2026-10-18).* One of the eight things Stage 1 establishes about each property in the Entity Sketch: (a) which thing it belongs to, (b) its role — what people experience, what the equipment does, what it costs, a circumstance, or a record, (c) where it is known, (d) how it is known today, by whom, how often and how old, (e) what makes it good or bad and who sets that, (f) the circumstances that change how it is read, (g) what is decided or done with it, and (h) what goes wrong today because of how it is known. A property is complete when every property fact is answered or routed to a named unit as an open question. Operational Evidence explains the property facts; it does not replace them.
+One of the eight things Stage 1 establishes about each property in the Entity Sketch: (a) which thing it belongs to, (b) its role — what people experience, what the equipment does, what it costs, a circumstance, or a record, (c) where it is known, (d) how it is known today, by whom, how often and how old, (e) what makes it good or bad and who sets that, (f) the circumstances that change how it is read, (g) what is decided or done with it, and (h) what goes wrong today because of how it is known. A property is complete when every property fact is answered or routed to a named unit as an open question. Operational Evidence explains the property facts; it does not replace them.
 _Avoid_: property profile, card, evidence
 
 ### Provenance
@@ -259,7 +259,7 @@ An Observation Method value: a different quantity, measured directly, used as a 
 
 ### Requirement
 
-*Status: Proposed (Stage 1 skill design, 2026-10-18).* A need that says how the system should be built, which means to use, how data should be handled, or what systems must exchange, rather than what someone needs to know or do about a thing. It is not written as a user story, but it is always traced to the user stories whose operational need it serves. Stage 1 keeps requirements in a register, each linked to the user stories or entity sketch rows it relates to; Stage 2 receives the register without classifying it (how Stage 2 should treat requirements is [OI-019](https://github.com/smartcities-sig/sig-wg/blob/main/technical/open-issues.md#oi-019--treating-stage-1-requirements-in-stage-2)).
+A need that says how the system should be built, which means to use, how data should be handled, or what systems must exchange, rather than what someone needs to know or do about a thing. It is not written as a user story, but it is always traced to the user stories whose operational need it serves. Stage 1 keeps requirements in a register, each linked to the user stories or entity sketch rows it relates to; Stage 2 receives the register without classifying it (how Stage 2 should treat requirements is [OI-019](https://github.com/smartcities-sig/sig-wg/blob/main/technical/open-issues.md#oi-019--treating-stage-1-requirements-in-stage-2)).
 _Avoid_: technical story, non-functional story
 
 ### Residual Gap
