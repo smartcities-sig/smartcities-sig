@@ -28,6 +28,8 @@ Instead, the SIG acts as:
 - an interoperability coordination space,
 - and a collaborative ecosystem alignment mechanism.
 
+The terms used across the methodology are defined in the [Glossary](/methodology/glossary.md).
+
 ---
 
 # Why Raw Telemetry Is Not Enough

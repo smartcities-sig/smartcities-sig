@@ -11,6 +11,7 @@ This document describes the current structure of the Smart Cities SIG repository
 Folders are created only when there is content for them. Planned additions are listed separately below the tree, and each one is tied to a stage of the [methodology](/methodology/core-methodology/methodology-overview.md) or to the [release plan](/program/roadmap/release-planning.md).
 
 Within `methodology/` and `profiles/`, each kind of content has a single home:
+- term definitions live in `glossary.md`,
 - the methodology narrative lives in `core-methodology/methodology-overview.md`,
 - semantic capability definitions live in `core-methodology/stage-2-semantic-capabilities.md`,
 - assessment questions live in `assessment-frameworks/semantic-capability-assessment.md`,
@@ -44,6 +45,7 @@ smartcities-sig/
 │   └── participant-organizations.md
 │
 ├── methodology/                   How the work is done
+│   ├── glossary.md                The terms used across the SIG
 │   ├── core-methodology/          The four stages
 │   │   ├── methodology-overview.md
 │   │   ├── stage-1-operational-meaning.md
