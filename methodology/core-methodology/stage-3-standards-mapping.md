@@ -48,7 +48,7 @@ Different ecosystem participants contribute different forms of expertise. Only s
 
 | Participant | Example Contributions | Role in Stage 3 |
 |---|---|---|
-| Municipalities | Operational realities, pain points, service objectives | Source of operational meaning |
+| Municipalities | Operational needs, pain points, service objectives | Source of operational meaning |
 | OMA / LwM2M contributors | Device interoperability standards and objects | Assessed |
 | Smart Data Model ecosystems | Semantic integration structures and practices | Assessed |
 | FIWARE | Smart Data Model practices | Contributor |

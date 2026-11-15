@@ -148,7 +148,8 @@ A Digital Twin Question that the Digital Twin Operators have accepted. Stage 2 k
 
 ### Municipality Operational Reality
 
-The starting point of the methodology: a municipality's actual operational conditions, needs, and constraints, before any semantic or interoperability analysis.
+The starting point of the methodology: a municipality's actual operational conditions, needs, and constraints, before any semantic or interoperability analysis. It is broader than the needs a municipality states, because it also includes the constraints, context, and existing systems it may not state.
+_Avoid_: municipality operational needs (for the starting point as a whole)
 
 ### Need
 

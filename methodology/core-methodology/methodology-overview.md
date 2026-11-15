@@ -19,7 +19,7 @@ However, municipalities often face significant interoperability challenges:
 
 The Smart Cities SIG was created to help address this challenge.
 
-The SIG provides a collaborative space where municipalities, standards organizations, ecosystem initiatives, universities, vendors, and interoperability experts can jointly analyze municipality operational realities and progressively transform them into semantically reliable interoperability outputs suitable for Digital Twin consumption.
+The SIG provides a collaborative space where municipalities, standards organizations, ecosystem initiatives, universities, vendors, and interoperability experts can jointly analyze municipality operational needs and progressively transform them into semantically reliable interoperability outputs suitable for Digital Twin consumption.
 
 The SIG does not replace existing standards organizations, Smart Data Models ecosystems, or Digital Twin platforms.
 
@@ -49,7 +49,7 @@ The methodology therefore treats interoperability and semantic integrity as foun
 
 # Purpose of the Methodology
 
-The purpose of this methodology is to provide a practical and repeatable approach for transforming municipality operational realities into reusable interoperability understanding.
+The purpose of this methodology is to provide a practical and repeatable approach for transforming municipality operational needs into reusable interoperability understanding.
 
 The methodology focuses on:
 - preserving operational meaning,
