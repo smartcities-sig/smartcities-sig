@@ -1,12 +1,14 @@
 ---
 title: Smart Cities SIG Methodology Worksheet
-description: A fill-in template for analysing a municipal Service Domain in Stages 1 and 2 of the Smart Cities SIG methodology.
+description: A fill-in template that supports the Stage 2 analysis of a municipal Service Domain in the Smart Cities SIG methodology.
 layout: doc
 ---
 
 # {{ $doc.title }}
 
-This worksheet is the practical template for analysing a Service Domain — public lighting, irrigation, waste collection, parking, and so on — during [Stage 1](/methodology/core-methodology/stage-1-operational-meaning.md) and [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md).
+> **Predates the Stage 1 Package.** This worksheet was written before Stage 1 produced a [Stage 1 Package](/methodology/glossary.md#stage-1-package). It now serves as an aid for the [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md) analysis of a Service Domain, and will be revised after the SIG's evaluation of Stage 1. For what Stage 1 collects, see [Stage 1 — Operational Meaning](/methodology/core-methodology/stage-1-operational-meaning.md).
+
+This worksheet is a template for analysing a Service Domain — public lighting, irrigation, waste collection, parking, and so on — step by step, asking the questions that surface each semantic capability.
 
 Each step names the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) it feeds. The capabilities are defined only in Stage 2; this worksheet asks the questions that surface them for a specific service. For a filled-in example, see the [lighting vs irrigation comparison](/profiles/lighting-vs-irrigation-comparison.md).
 

@@ -8,16 +8,16 @@ layout: doc
 
 ## Introduction
 
-Stage 3 coordinates how the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) identified in Stage 2 may be realized across standards organizations, Smart Data Models ecosystems, Digital Twin platforms, and interoperability initiatives.
+Stage 3 coordinates how the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) identified in Stage 2 may be realized across standards organizations, Smart Data Models ecosystems, and interoperability initiatives. The Digital Twin is the consumer of the methodology's output, not an ecosystem assessed here; its acceptance check is part of [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md#checking-digital-twin-consumption).
 
 At this stage, operational meaning has already been captured and the semantic capabilities are defined. The objective is not to force a single implementation model or define a centralized architecture, but to:
 - assess which ecosystems can supply each capability,
-- coordinate ecosystem contributions,
-- align interoperability realization approaches,
-- and preserve semantic consistency for Digital Twin consumption.
+- find candidate Smart Data Models and OMA objects for each Service Domain,
+- record the gaps,
+- and coordinate ecosystem contributions, leaving the decision on which ecosystem realizes each capability to Stage 4.
 
-**Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md), the entity sketch from [Stage 1](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch), and the municipality operational questions in each Service Profile.
-**Output:** ecosystem assessment reports and coordinated realization approaches — the input to [Stage 4 — Smart Data Models Realization](/methodology/core-methodology/stage-4-smart-data-models-realization.md).
+**Input:** the classified properties and their trustworthiness conditions from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md), the entity types of the [Stage 1](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch) entity sketch, and the municipality operational questions in each Service Profile.
+**Output:** an ecosystem assessment report per ecosystem; [candidate](/methodology/glossary.md#candidate) Smart Data Models for the entity types; candidate OMA objects for the classified properties; the entity types for which no Smart Data Model fits; and the gaps found — the input to [Stage 4 — Smart Data Models Realization](/methodology/core-methodology/stage-4-smart-data-models-realization.md).
 
 For the SIG's role and the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
@@ -30,8 +30,8 @@ Stage 3 exists to answer the following questions:
 - Which ecosystem participants can contribute realization mechanisms?
 - Which standards or interoperability assets already exist?
 - What semantic gaps remain unresolved?
-- How can semantic capabilities be conveyed into Smart Data Models and Digital Twin ecosystems?
-- What interoperability validation considerations emerge?
+- Which Smart Data Models and OMA objects are candidates for the entity types and properties of each Service Domain?
+- Can each ecosystem carry each capability consistently?
 - How can semantic consistency be preserved across ecosystem contributions?
 
 ---
@@ -44,17 +44,17 @@ A single municipality use case may involve IoT devices, operational platforms, s
 
 # Ecosystem Collaboration Model
 
-Different ecosystem participants contribute different forms of expertise and realization capabilities.
+Different ecosystem participants contribute different forms of expertise. Only some of them are assessed with the Semantic Capability Assessment Framework; the others contribute without an assessment report.
 
-| Participant | Example Contributions |
-|---|---|
-| Municipalities | Operational realities, pain points, service objectives |
-| OMA / LwM2M contributors | Device interoperability standards and objects |
-| Smart Data Model ecosystems | Semantic integration structures and practices |
-| FIWARE | Digital platform and Digital Twin integration capabilities |
-| Universities | Semantic analysis and research support |
-| Vendors | Operational implementation realities |
-| Other SDOs and alliances | Domain-specific interoperability assets |
+| Participant | Example Contributions | Role in Stage 3 |
+|---|---|---|
+| Municipalities | Operational needs, pain points, service objectives | Source of operational meaning |
+| OMA / LwM2M contributors | Device interoperability standards and objects | Assessed |
+| Smart Data Model ecosystems | Semantic integration structures and practices | Assessed |
+| FIWARE | Smart Data Model practices | Contributor |
+| Universities | Semantic analysis and research support | Contributor |
+| Vendors | Operational implementation realities | Contributor |
+| Other SDOs and alliances | Domain-specific interoperability assets | Contributor; may be assessed later |
 
 ---
 
@@ -89,9 +89,9 @@ Bringing the assessment results together, and mapping each Service Domain onto S
 
 # Validation and Interoperability Considerations
 
-Stage 3 also introduces interoperability validation considerations, such as semantic consistency validation, interoperability verification, contextual completeness validation, measurement comparability, provenance integrity, and operational reliability evaluation.
+Stage 3 validates each ecosystem on its own: whether it can carry each capability consistently, considering semantic consistency, contextual completeness, measurement comparability, and provenance integrity.
 
-The objective is to ensure that semantically equivalent information remains interoperable, contextual meaning is preserved, and Digital Twin consumption remains operationally reliable. Validation approaches may evolve through ecosystem collaboration and implementation experience.
+The end-to-end validation — whether operational meaning survived realization, and whether a Digital Twin consuming the Smart City Profile can answer the municipality operational questions — belongs to [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md#checking-digital-twin-consumption). Validation approaches may evolve through ecosystem collaboration and implementation experience.
 
 ---
 
@@ -112,4 +112,4 @@ Premature architecture lock-in and over-standardization are covered by [Meaning 
 
 # Public Street Lighting Example
 
-The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 3 — Ecosystem and Interoperability Thinking*) shows this stage in practice, and the [OMA Semantic Capability Assessment](/methodology/assessment-frameworks/oma-capability-assessment.md) records the detailed OMA findings for Public Lighting.
+The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) (section *Stage 3 — Standards & Ecosystem Mapping*) shows this stage in practice, and the [OMA Semantic Capability Assessment](/methodology/assessment-frameworks/oma-capability-assessment.md) records the detailed OMA findings for Public Lighting.

@@ -4,7 +4,7 @@ description: How the Smart Cities SIG captures what a municipality is actually t
 layout: doc
 ---
 
-# Research Methodology
+# {{ $doc.title }}
 
 ## Introduction
 
@@ -19,8 +19,10 @@ Municipality operational documents often contain:
 
 Stage 1 is carried out in two complementary ways. **Workshops** with the different verticals of a municipality identify, validate, and prioritize needs. It is recommended that the user stories and the entity sketch, the structured material the later stages require, be worked on by small technical groups, starting from those needs.
 
-**Input:** municipality operational material, interviews, and workshops.
-**Output:** user stories, each with the questions the Digital Twin must answer; an entity sketch, including the relationships between its entities; operational objectives, operational pain points, semantic distinctions, contextual dependencies, and information held by other units; a register of requirements; and interoperability-relevant observations — the input to [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
+**Input:** municipality [needs](/methodology/glossary.md#need) — what each department wants, as it gave them — collected in workshops or in interviews, together with operational material such as reports, specifications, and procedures.
+**Output:** a [Stage 1 Package](/methodology/glossary.md#stage-1-package) for each Service Domain and municipality: user stories, each with at least one [Digital Twin Question](/methodology/glossary.md#digital-twin-question); an [entity sketch](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch) of entity types with their properties, actions, events, and relationships; [Operational Evidence](/methodology/glossary.md#operational-evidence) — objectives, pain points, semantic distinctions, contextual dependencies, and information held elsewhere; a register of [requirements](/methodology/glossary.md#requirement); open questions grouped by the unit that must answer them; and one [Stage 2 Brief](/methodology/glossary.md#stage-2-brief) per user story — the input to [Stage 2 — Semantic Capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md).
+
+The package format is a draft under evaluation by the SIG. Each element goes to a different stage: Stage 2 classifies the properties, including the properties derived from actions and events; Stage 3 uses the entity types; actions, events, relationships, and requirements pass through Stage 2 without being classified. Stage 1 is complete when someone who did not take part can give every property, using only the package, the information Stage 2 needs, or a named open question for what is missing.
 
 For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md). For a fill-in template covering this stage, see the [Methodology Worksheet](/methodology/core-methodology/methodology-worksheet.md).
 
@@ -35,9 +37,7 @@ Stage 1 exists to answer the following questions:
 - Which things does the municipality talk about, and what does it say about them?
 - What operational problem is being solved?
 - What do the measurements and operational concepts really mean?
-- What assumptions are implicitly present?
 - What contextual information affects interpretation?
-- What interoperability risks are already visible?
 
 Municipalities do not usually describe problems using interoperability terminology. They describe operational frustrations, service objectives, maintenance realities, environmental conditions, accountability concerns, performance expectations, and infrastructure limitations. Stage 1 turns that material into operational understanding without losing its meaning.
 
@@ -91,7 +91,7 @@ A needs-and-opportunities mapping session. Its purpose is to collect what the se
 - **Starts from:** the service domain to be explored.
 - **Participants:** diverse profiles of the service: managers, operators, technical specialists, and innovation and integration profiles.
 - **How it works:** a script of open questions organized in blocks: what is to be achieved, which conditions and resources are needed, and which ideas emerge. Each person contributes in writing (post-its), followed by a group discussion.
-- **Subsequent treatment:** what was written is transcribed literally, and each contribution is classified by level: *objective* (what is pursued), *decision* (what someone must be able to decide), *capability* (what the service must be able to do), or *data* (the information that feeds it). A fifth level, the technology solution, is left out of the analysis. Similar needs are grouped into broad categories.
+- **Subsequent treatment:** what was written is transcribed literally, and each contribution is classified by level: *objective* (what is pursued), *decision* (what someone must be able to decide), *function* (what the service must be able to do), or *data* (the information that feeds it). A fifth level, the technology solution, is left out of the analysis. Similar needs are grouped into broad categories.
 - **Result:** a list of needs grouped into categories, each described as "what I want" together with its development, accompanied by a detail report and an executive summary.
 - **Feeds the 2nd Workshop:** the list of needs is the only starting material of the 2nd Workshop.
 
@@ -143,7 +143,7 @@ In summary, the workshops produce the raw material (validated and prioritized ne
 
 # User Stories
 
-In small groups, the municipality's representatives describe, in their own words, the problems they want to solve and what a solution would let them do, starting from the needs validated in the workshops. Each need is written down as a **user story**, structured so that the people involved, the actions, the conditions, and the purpose can be picked out of it.
+In small groups, the municipality's representatives describe, in their own words, the problems they want to solve and what a solution would let them do, starting from the needs validated in the workshops. Each need gives one or more **user stories**, a requirement, or both. A user story is written so that the people involved, the actions, the conditions, and the purpose can be picked out of it.
 
 For example: *Night-shift maintenance crews want to see which streetlights on their route fall below the minimum illuminance, under fog or heavy rain, so that they can repair first where pedestrians are at risk.*
 
@@ -167,13 +167,13 @@ Once enough user stories are collected, they are analysed systematically to iden
 
 The result is an **entity sketch**: a structured summary of what the stories say, still in the municipality's words. It is not a data model, and it does not use the names of any standard. Actions and events are recorded even though not every ecosystem can represent them yet; how they are represented is decided in [Stage 4](/methodology/core-methodology/stage-4-smart-data-models-realization.md#open-questions-for-sig-discussion).
 
-[Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md#classifying-observations) examines each property of the sketch that can be observed.
+[Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md#classifying-observations) classifies each property of the sketch, including the properties derived from actions (how the user knows the action took effect) and events (what must be known about them). [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md#finding-candidate-models-and-objects) looks for candidate Smart Data Models for the entity types.
 
 ---
 
 # Returning to the Municipality
 
-Stage 1 is revisited as the later stages progress. Stage 2 may find a property that cannot be observed as described, and Stage 3 may find properties or needs the municipality did not mention. These come back to Stage 1 as questions for the municipality, and the user stories and the entity sketch are updated with its answers. See [how the stages fit together](/methodology/core-methodology/methodology-overview.md#core-methodology).
+Stage 1 is revisited as the later stages progress. Stage 2 may find a property that cannot be observed as described, and Stage 3 may find properties the municipality did not mention. These come back to Stage 1 as questions for the municipality, and the user stories and the entity sketch are updated with its answers. See [how the stages fit together](/methodology/core-methodology/methodology-overview.md#core-methodology).
 
 These questions should be handled through **consultation with the small groups**, rather than by convening a new workshop. The exact route depends on the information needed: the gap detected determines who needs to be consulted and how. Both who participates and the size of the group should be assessed according to the information needed.
 

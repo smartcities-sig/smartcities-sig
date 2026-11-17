@@ -27,8 +27,8 @@ This stage intentionally avoids:
 
 The detailed definition of this stage is still under development by the Smart Cities SIG. This document is a draft overview intended to support that discussion.
 
-**Input:** the semantic capabilities from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md) and the ecosystem assessment reports from [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md).
-**Output:** for each Service Domain, a **Smart City Profile**: the converged Smart Data Model realization, including new models drafted where none fitted, a catalogue of the OMA objects that can feed it, and the residual gaps recorded.
+**Input:** the semantic capabilities and the classified properties from [Stage 2](/methodology/core-methodology/stage-2-semantic-capabilities.md); from [Stage 3](/methodology/core-methodology/stage-3-standards-mapping.md), the ecosystem assessment reports, the candidate Smart Data Models and OMA objects, the entity types for which no Smart Data Model fits, and the gaps; and the [Stage 1](/methodology/core-methodology/stage-1-operational-meaning.md#entity-sketch) entity sketch, from which new models are drafted.
+**Output:** for each Service Domain, a **[Smart City Profile](/methodology/glossary.md#smart-city-profile)**: the converged Smart Data Model realization, including new models drafted where none fitted; a catalogue of the OMA objects that can feed it; the required metadata; and the residual gaps.
 
 For the methodology as a whole, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md).
 
@@ -73,13 +73,13 @@ Convergence is therefore not an administrative step. It is where interoperabilit
 
 # What Stage 4 Operates On
 
-Stage 4 does not begin from municipality material.
+Stage 4 does not begin from municipality material. The only Stage 1 element it uses directly is the entity sketch, from which new Smart Data Models are drafted; questions for the municipality go back through Stage 3 and Stage 1.
 
 Stage 4 operates on:
-- the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) defined in Stage 2,
+- the [semantic capabilities](/methodology/core-methodology/stage-2-semantic-capabilities.md) defined in Stage 2, and the properties classified against them,
 - the ecosystem assessment results produced during Stage 3,
 - the candidate Smart Data Models and OMA objects identified in Stage 3,
-- the entity types for which Stage 3 found no Smart Data Model,
+- the entity types for which Stage 3 found no Smart Data Model, and the Stage 1 entity sketch from which new models are drafted,
 - the semantic gaps and responsibilities recorded in those assessments,
 - and the contextual and provenance requirements preserved from Stage 1.
 
@@ -121,11 +121,11 @@ The outcome is a set of contextualized Smart Data Models consumable by Digital T
 
 # Mapping to Smart Data Models and Ontologies
 
-After the Stage 3 assessments, each Service Domain is mapped onto the semantic models that will carry it into Digital Twins. The [lighting vs irrigation comparison](/profiles/lighting-vs-irrigation-comparison.md) shows a worked example of both mappings.
+After the Stage 3 assessments, each Service Domain is mapped onto the semantic models that will carry it into Digital Twins. This section is the guidance used when matching candidates, drafting new models, and expressing the result (see [Convergence Activities](#convergence-activities)). The [lighting vs irrigation comparison](/profiles/lighting-vs-irrigation-comparison.md) shows a worked example of both mappings.
 
 ## Smart Data Models
 
-Pick the closest NGSI entities and properties for the service:
+Start from the candidate Smart Data Models that Stage 3 found for the entity types, and confirm, for each:
 - device and entity types,
 - outcome-related attributes (the ones the municipality really cares about),
 - and operational and cost attributes (supporting).
@@ -133,12 +133,12 @@ Pick the closest NGSI entities and properties for the service:
 Add extensions only when the core model does not cover the key outcome. When no existing model fits an entity type, a new model is drafted instead; see [Drafting New Smart Data Models](#drafting-new-smart-data-models).
 
 Questions to answer:
-- Which existing Smart Data Models best fit this service?
+- Which candidate Smart Data Model best fits each entity type?
 - Which properties represent outcome measurements, operational signals, and cost, energy, or resource consumption?
 
 ## SAREF and Other Ontologies
 
-Use SAREF's measurement pattern:
+The role of [SAREF](/methodology/glossary.md#saref-smart-applications-reference-ontology) and other ontologies in the Smart City Profile is still under discussion by the SIG. Where an ontology mapping is made, use SAREF's measurement pattern:
 - `saref:Device`, `saref:Sensor`, `saref:Actuator`,
 - and `saref:Measurement` that `saref:relatesToProperty` some domain property.
 
@@ -184,7 +184,7 @@ Each realization decision remains traceable back through the semantic capabiliti
 
 ## Checking Digital Twin Consumption
 
-The Smart City Profile is checked against the [Digital Twin questions](/methodology/assessment-frameworks/semantic-capability-assessment.md#_4-digital-twin-questions) of the Semantic Capability Assessment Framework: can a Digital Twin consuming the profile answer the municipality operational questions? The Digital Twin is the consumer of the methodology's output, not an ecosystem assessed in Stage 3. Anything it cannot answer is recorded as a residual gap or goes back to Stage 3.
+The Smart City Profile is checked against the [Digital Twin questions](/methodology/assessment-frameworks/semantic-capability-assessment.md#_4-digital-twin-questions) of the Semantic Capability Assessment Framework: can a Digital Twin consuming the profile answer the [municipality operational questions](/methodology/glossary.md#municipality-operational-question) that the Digital Twin Operators accepted in Stage 1? This is the end-to-end validation of the methodology; Stage 3 validates each ecosystem only on its own. The Digital Twin is the consumer of the methodology's output, not an ecosystem assessed in Stage 3. Anything it cannot answer is recorded as a residual gap or goes back to Stage 3.
 
 ---
 
@@ -209,7 +209,7 @@ The following questions remain open and are expected to shape the final definiti
 - What constitutes sufficient coverage for a capability to be considered realized?
 - How are conflicting assessment conclusions reconciled, and by whom?
 - How are residual gaps routed back to the originating standards organization?
-- What validation confirms that operational meaning survived realization?
+- What evidence is enough to confirm that operational meaning survived realization?
 - How are converged results maintained as ecosystem assessments are updated?
 - Who drafts and proposes a new Smart Data Model when none fits an entity type: SIG participants, the Smart Data Models programme, or both?
 - How are the actions and events captured in the Stage 1 entity sketch represented? Smart Data Models do not cover them yet; support is expected through NGSI-LD, and the W3C Web of Things Thing Model is one option under consideration.
@@ -239,7 +239,7 @@ Declaring convergence complete before assessment results are sufficiently mature
 
 # Public Street Lighting Example
 
-The [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) does not yet have a Stage 4 section. Its Stage 3 section, the [OMA assessment](/methodology/assessment-frameworks/oma-capability-assessment.md), the [Smart Data Models assessment](/methodology/assessment-frameworks/sdm-capability-assessment.md), and the [lighting mapping](/profiles/lighting/mappings/oma-smart-data-models-mapping-lighting.md) provide the inputs that Stage 4 convergence would work on.
+The Stage 4 section of the [Public Street Lighting walkthrough](/profiles/lighting/public-lighting-walkthrough.md) is not written yet. Its Stage 3 section, the [OMA assessment](/methodology/assessment-frameworks/oma-capability-assessment.md), the [Smart Data Models assessment](/methodology/assessment-frameworks/sdm-capability-assessment.md), and the [lighting mapping](/profiles/lighting/mappings/oma-smart-data-models-mapping-lighting.md) provide the inputs that Stage 4 convergence would work on.
 
 For Public Street Lighting, Stage 4 would include:
 - reconciling what device-level objects report against what contextual models must carry,
@@ -256,4 +256,4 @@ Smart Data Models in the street lighting domain, such as those describing street
 
 Without the assessment results produced during Stage 3, convergence has nothing to reconcile. Without the operational meaning and semantic capabilities preserved during Stages 1 and 2, convergence loses the traceability that makes realization verifiable.
 
-The outputs of Stage 4 become the inputs to Digital Twin consumption. For how the four stages fit together, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md#core-methodology).
+The outputs of Stage 4 become the inputs to Digital Twin consumption. Each Smart City Profile is then validated in a [Proof of Concept](/methodology/glossary.md#proof-of-concept), outside the four stages, whose lessons go back to Stage 1. For how the four stages fit together, see the [Methodology Overview](/methodology/core-methodology/methodology-overview.md#core-methodology).
